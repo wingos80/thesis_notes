@@ -345,7 +345,16 @@ The essential character of trial-and-error learning as selecting actions on the 
 
 **From chapter 2- multi-armed bandits:**
 
+This chapter gives an introduction on the RL problem -specifically maximizing return- using the illustrative RL problem of the multi-armed bandit, a simple and non-associative class of problems.
+
+> **Definition: Nonassociative**
+> Is an adjective used to describe how one variable does not depend on another, in contrast to associative where dependency may exist. Nonassociative tasks have no need to associate different actions with different situations, simply put there is only one situation and the agent just has to find the best action for that situation. For associative tasks, there is an associated *best action* for each situation (*state*).
+
 Exploitation is to take the action which your current estimates say give the highest return or has the value, while exploration is to select one of the actions that is not estimated to give the highest return or value. By using an epsilon greedy method for selecting action, it can be shown that asymptotically the optimal action is chosen with a probability greater than 1-epislon, which for small epsilons will mean near certainty. This is ofcourse only the case in the limit, which practically is improbable to achieve.
+
+
+> **Definition: Action-value function**
+> A value function that estimates the return (value) of a taking a certain action given a certain state.
 
 Estimating the return of an action can be trivially done by simply taking the realisation average, i.e. sum all rewards obtained from selecting an action, and then divide by the number of times that action was selected, which will yield an estimate of the actions' return. This method, however, is memory inefficient and can be memory intensive as the number of sample and actions grow. A smarter method of estimating return can be done by using an incremental formula, where the next return estimate is equal to the previous return estimate plus a factor of 1/n times the sampled reward minus previous return estimate:
 
@@ -356,10 +365,34 @@ This format of previous estimate plus a factor of difference in sample and estim
 Two methods for selecting actions are thus far introduced. First method is to deterministically select action with highest return estimate Q(a); so called action-value methods. Second method is to prefer actions with higher value estimates through a softmax function of $H(a)$; so called gradient based action-value methods.
 - equation 2.8-2.9 gives an interesting equation for having a moving average which is unbiased to initial conditions.
 
-> **Definition: Nonassociative**
-> Is an adjective used to describe how one variable does not depend on another, in contrast to associative where dependency may exist. Nonassociative tasks have no need to associate different actions with different situations, simply put there is only one situation and the agent just has to find the best action for that situation. For associative tasks, there is an associated *best action* for each situation (*state*).
 
-> **Definition: Action-value function**
-> A value function that estimates the return (value) of a taking a certain action given a certain state.
 
 **From chapter 3-finite markov decision processes:**
+
+This chapter gives an introduction on (finite) MDP, the mathematical framework used to describe all RL problems. The finite MDP is evaluative just like the multi-armed bandit problems where actions have rewards, but are also associative as there exists an optimal action for each situation (state). The important distinction which fintie MDPs bring over multi-armed bandits is the temporaly related nature of rewards, where the problem of exploitation vs exploration goes beyond estimating the optimal action for the initial state, but includes estimate the optimal action**s** which will bring the agent to future states and the highest long term return. Formally speaking, the bandit problem only required estimating an action value function that is purely a function of action $q*(a)$, and in the finite MDP case it is neccessary to estimate an action value function that is also a function of **states** $q*(s,a)$, or equivalently an estimation of the optimal state value function $v*(s)$.
+
+MDPs take on the general form as shown in figure 1, the entire system in an MDP is described by a set of 5 variables, the agent, the environment, and 3 time varying signals of action, state, and reward. An agent is defined typically by its policy and value functions, and the environment is defined by the dynamics functions which perscribes some state and reward given an action. MDPs suppose that any decision making process can be reduced to simply this set of five variables, and has proved to be a useful abstraction of reality in reinforcement learning. It is similar to the state space models of systems found in control theory, which has 3 signals: state, control input, and measured output, as well as 4 matrices which describe the state transition function, control input function, as well as the observtion functions.
+
+<figure>
+<img src="./pictures/mdp.png"
+    alt="Albuquerque, New Mexico">
+<figcaption><b>Figure 1</b>, fundamental dynamics of an MDP, which is defined fully by all the signals and blocks shown here (agent, environment, rewardaction, reward, and state).</figcaption>
+</figure>
+
+*The environment*
+
+It is completely characterized by the probabilities given by a discrete (or continuous) probability density function $p(s',r'|s,a)$, i.e. the probability of next state=s' next reward=r' given that the current state=s and the agent's action=a, p's functional mapping is thus p: S x R x S x A -> [0,1].
+
+By summing/integrating this probability density function over all possible rewards, it is possible to obtain a marginal probability density function which is called the state transition probability function in MDPs $p(s'|s,a) = \sum_{r\in R}p(s',r'|s,a)$, which describes the probability of the next state=s' given the environments' previous state=s and the agent took action=a.
+
+The expected reward $r(s,a)$ of a given s,a pair can be obtained by taking the expectation of $p(s',r'|s,a)$, $r(s,a) = \sum_{r \in R} r \sum_{s' \in S}p(s',r'|s,a)$.
+
+*The reward*
+
+When specifying the reward in an environment, it is important to remember to only reward an agent once the end goal is acheived, not once some sub goals are met. As it could be possible that achieving sub-goals and not the final goal provide the highest rewards, leading to an agent not learning to achieve the final goal. 
+
+*Return*
+
+Return G_t is defined as the sum of future rewards, $G_t = R_{t+1} + R_{t+2} + ... + R_{T}$, where T is the terminal time step. G_t can also be generalized to incorporate the idea of *discounting*, where rewards further in the future are *discounted* more, $G_{td} = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{T-t}R_{T} = \Sum_{k=0}^{\infty} \gamma^k R_{t+k+1}$, where $0 \leq \gamma \leq 1$ is called the discount rate. 
+
+It is useful to rewrite the return as an incremental or iterative function: $G_t = R_{t+1} + \gamma G_{t+1}$

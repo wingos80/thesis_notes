@@ -60,7 +60,7 @@ Ranked, 1 = highest priority
 > The Bellman equation refers to an equation which can be used to compute (typically) a given value function (but also other functions though i am not sure what other functions).
 
 <figure>
-<img src="./miscellaneous/pics/bellman_derive.png"
+<img src="./pictures/bellman_derive.png"
     alt="Albuquerque, New Mexico">
 <figcaption><b>Figure 1</b>, derivation of the bellman equation.</figcaption>
 </figure>
