@@ -3,14 +3,14 @@
 The thesis project will begin with a literature review. This review will begin by focusing on literature, mainly MSc theses, produced by the many students that Erik-jan has supervised, in addition to the introduction to reinforcement learning textbook by Brato & Sutton. The list of literature reviewed in this batch are as follows:
 
 1. W.J.E. Völker: Reinforcement Learning for Flight Control of the Flying V
-2. Barto & Sutton: Reinforcement learning, an introduction
-3. Thomas v.d. Laar: Deep Reinforcement Learning for Aircraft Landing
-4. Lucas Vieira: Safe & Intelligent Control.
-5. Peter Seres: Distributional Reinforcement Learning for Flight Control
-6. Zhou Xin Ge: End-to-End Hierarchical Reinforcement Learning for Adaptive Flight Control
-7. Ramesh Konatala: Design of Reinforcement Learning based Incremental Flight Control Laws for the Cessna Citation II(PH-LAB) Aircraft
-8. Stefan Heyer: Reinforcement Learning for Flight Control
-9. Jonathon Hoogvliet: Hierarchical Reinforcement Learning for Model-Free Flight Control
+2. Thomas v.d. Laar: Deep Reinforcement Learning for Aircraft Landing
+3. Lucas Vieira: Safe & Intelligent Control.
+4. Peter Seres: Distributional Reinforcement Learning for Flight Control
+5. Zhou Xin Ge: End-to-End Hierarchical Reinforcement Learning for Adaptive Flight Control
+6. Ramesh Konatala: Design of Reinforcement Learning based Incremental Flight Control Laws for the Cessna Citation II(PH-LAB) Aircraft
+7. Stefan Heyer: Reinforcement Learning for Flight Control
+8. Jonathon Hoogvliet: Hierarchical Reinforcement Learning for Model-Free Flight Control
+9. Barto & Sutton: Reinforcement learning, an introduction
 
 
 Item 1 is for getting some exposure to rl controllers used in the context of flight control, specifically that of the flying-V which is main focus of the thesis. This item is reviewed first because of the fact that it presents the crossection of rl for flight control and the flying v, which should provide a good overview of both topics. Item 2 is for exposure to reinforcement learning, with the aim of reviewing this item being to understand the history of reinforcement learning as well as several algorithms have been used by past students. Item 3 is a placeholder a piece of literature that focuses on the aircraft design of the flying-V, which will be gathered from reading item 2.
@@ -279,7 +279,30 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 ---
 
-## Item 2: Hierarchical Reinforcement Learning for Model-Free Flight Control
+## Item 9: Hierarchical Reinforcement Learning for Model-Free Flight Control
+
+
+### Questions & Answers-
+
+
+
+**From article:**
+
+1. Jonathon says that "episode lengths differ per hierarchical layer", and that "q-de controller is evaluated for 10.5 seconds, gamma-q for 94.1 seconds..."  but how is that possible? Is the entire agent not trained or ran at once?
+   1. He does not explain in his thesis, need to look for hints from other sources...
+
+### Notes-
+
+**From article:**
+
+- A sinusoidal training signal made agents during training more stochastic.
+- It would seem that one way in which HRL can be used to address curse of dimensionality is to simply reduce the number of cross-relations which exists in a Q table. E.g., if an environment has 5 number of states and 1 action, the dimension of the full Q-table would be 7. But seperating the environment into subproblems can allow for the Q-table to be reformulated, where instead of a single 7 dimensional Q-table, you could instead have e.g. 5 two-dimensional Q-tables. 
+- An attempt of using a discrete Q-table to encapsulate the entire task of aircraft altitude control was made, where it was found that the sample efficiency of this approach is absolutely diabolical, requriing 120 million samples to reach a comparatively poor tracking performance.
+- The time traces of all 3 controllers altitude tracking seems relatively poor, especially when compared to the likes of killian's controllers.
+
+---
+
+Item 10: Reinforcement learning, an introduction
 
 
 ### Questions & Answers-
@@ -288,11 +311,42 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 ### Notes-
 
-**From article:**
+**From chapter 1:**
 
-- It would seem that one way in which HRL can be used to address curse of dimensionality is to simply reduce the number of cross-relations which exists in a Q table. E.g., if an environment has 5 number of states and 1 action, the dimension of the full Q-table would be 7. But seperating the environment into subproblems can allow for the Q-table to be reformulated, where instead of a single 7 dimensional Q-table, you could instead have e.g. 5 two-dimensional Q-tables. 
-- An attempt of using a discrete Q-table to encapsulate the entire task of aircraft altitude control was made, where it was found that the sample efficiency of this approach is absolutely diabolical, requriing 120 million samples to reach a comparatively poor tracking performance.
-- The time traces of all 3 controllers altitude tracking seems relatively poor, especially when compared to the likes of killian's controllers.
+Elements of reinforcement learning:
+
+1. Policy
+    - Defines the agent's way of behaving at a given state, can be a lookup table, or a continuous function, or even a *search process*. It is allowed to be stochastic, where actions are given probabilities of being executed, or deterministic, where a certain action is taken for certain states.
+2. Reward signal
+   - Defines the goal of the reinforcement learning problem, from an optimization standpoint a Reward signal is akin to the cost function. In every RL problem, an agent receives a reward signal in the form of a real number at each and everystep; it is the main and only ingredient in the value function.
+3. Value function
+   - Indicates what is the *long run* reward for being in a certain state or being in a certain state *and* taking a certain action, in the former case the value function is called *state value function*, the latter case leads to the *action value function*. It is the total or expected (in the probability sense) reward that an agent can expect to obtain by being in a certain state/state-action pair. There exists distinct value functions for being in
+4. Environment model (optional)
+   - The mathematical models of the environment in which an agent is to act.
+
+Reinforcement learning's river of history has 3 main streams, the first one is the *optimal control* stream, the second is the *trial-and-error learning* stream, and the third stream is the *temporal-difference* method. In the early stages, the field of optimal control was concerned with designing control laws which could minimize any certain measure of a dynamical system over time. A very famous progenator of this field is Richard Bellman, who along with others extended the theory of two mathematicians: Hamilton and Jacobi, who developed the theory which allowed development for equations to provided neccessary and sufficient conditions for the optimality of a control law. It was with Chris Watkins' work in 1989 that the streams of optimal control and trial-and-error learning combined to give rise to approaching the biological phenomenon of learning by modelling environments as MDP's and using optimal control theory to determine actions in such an environment, leading to the field of *reinforcement learning*, which addressed the curse of dimensionalty head on and attempted to control for relatively more complex system models than optimal control theory original addressed. 
+
+The essential character of trial-and-error learning as selecting actions on the basis of evaluative feedback that does not rely on knowledge of what the correct action should be.
+
+**From chapter 2:**
+
+Exploitation is to take the action which your current estimates say give the highest return or has the value, while exploration is to select one of the actions that is not estimated to give the highest return or value. By using an epsilon greedy method for selecting action, it can be shown that asymptotically the optimal action is chosen with a probability greater than 1-epislon, which for small epsilons will mean near certainty. This is ofcourse only the case in the limit, which practically is improbable to achieve.
+
+Estimating the return of an action can be trivially done by simply taking the realisation average, i.e. sum all rewards obtained from selecting an action, and then divide by the number of times that action was selected, which will yield an estimate of the actions' return. This method, however, is memory inefficient and can be memory intensive as the number of sample and actions grow. A smarter method of estimating return can be done by using an incremental formula, where the next return estimate is equal to the previous return estimate plus a factor of 1/n times the sampled reward minus previous return estimate:
+
+$Q_{n+1} = Q_n + \frac{1}{n}(R_n - Q_n)$
+
+This format of previous estimate plus a factor of difference in sample and estimate, is a frequently occuring expression in reinforcement learning, for example in the case of bootstrapped learning.
+
+- equation 2.8-2.9 gives an interesting equation for having a moving average which is unbiased to initial conditions.
+- Two methods for selecting actions are thus far introduced. First method is to deterministically select action with highest return estimate Q(a). Second method is to prefer actions with higher value estimates through $H(a)$
+
+> **Definition: Nonassociative**
+> Is an adjective used to describe how one variable does not depend on another, in contrast to associative where dependency may exist. Nonassociative tasks have no need to associate different actions with different situations, simply put there is only one situation and the agent just has to find the best action for that situation. For associative tasks, there is an associated *best action* for each situation (*state*).
+
+> **Definition: Action-value function**
+> A value function that estimates the return (value) of a taking a certain action given a certain state.
+
 
 ---
 

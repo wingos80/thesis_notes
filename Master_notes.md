@@ -170,10 +170,14 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 
 - According to Zhou, HRL is for high-level guidance and navigation, would be an intereesting angle to look at the flying v control system, and she even further devloped HRL into a new algorithm coined hybrid HRL. But Jonathan hoogvliet might have already done his thesis on this, so now i should review his thesis.
 - Both [Zhou] and [Jonathon] introduce their own version of a "hybrid" hierarchical reinforcement learning algorithm. For Zhou, the hybrid part of the algorithm comes in how lower level policies are trained/executed (need to confirm) by continuous RL algorithms e.g. SAC, and higher level policies are trained/executed (need to confirm) by discrete RL algos e.g. Q-learning. For jonathon, the hybridness comes in the form of a discrete HRL agent with temporally-abstract actions (actions that execute for several timesteps) in addition to being able to invoke a PD controller.
+- Meaning of *if and only if* or *neccessary and sufficient*
+  - A statement "***p*** is sufficient for ***q***" means that if ***p*** is true, then ***q*** is true. But gives **no** indication on the truth of ***p*** if ***q*** is true. i.e. ***p*** => ***q***
+  - A statement "***p*** is neccessary for ***q***" means that if ***q*** is true, then ***p*** is true. But if ***p*** is true, then the statement gives no indication on if ***q*** is true. i.e. ***q*** => ***p***
+  - Therefore, a statement "***p*** is neccessary and sufficient for ***q***" means that if ***p*** is true, then ***q*** is also true, and if ***q*** is true, then so is ***p***. i.e. ***p*** <=> ***q***
 
 [Jonathon]: https://repository.tudelft.nl/islandora/object/uuid%3Ad66efdb7-d7c7-4c44-9b50-64678ffdf60d
 [Zhou]: https://repository.tudelft.nl/islandora/object/uuid%3A5b875915-2518-4ec8-a1a0-07ad057edab4
 
 > **Definition: Upper confidence bound (UCB)**
-> A type of action selection policy (in short a *policy*) which allows for exploration instead of solely exploitation, similar to epsilon-greedy, it bases action selection on uncertainty of an action's value by considering how often an action was selected.
+> A type of action selection policy (in short a policy) which allows for exploration instead of solely exploitation, similar to epsilon-greedy, it bases action selection on uncertainty of an action's value by increasing the valule of actions which are least selected. It is a heuristic for introducing an upper bound on the value of an action. UCB is hard to extend to general RL problems. Maybe could develop ways to generalize UCB.
 
