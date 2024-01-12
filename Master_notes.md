@@ -181,3 +181,6 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 > **Definition: Upper confidence bound (UCB)**
 > A type of action selection policy (in short a policy) which allows for exploration instead of solely exploitation, similar to epsilon-greedy, it bases action selection on uncertainty of an action's value by increasing the valule of actions which are least selected. It is a heuristic for introducing an upper bound on the value of an action. UCB is hard to extend to general RL problems. Maybe could develop ways to generalize UCB.
 
+### 12/1/2024
+
+- added more notes to the Sutton and Barto item in 1st_read_notes.md

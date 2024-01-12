@@ -96,6 +96,24 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 ---
 
+## Item 1 References
+
+[1] M Rivers. (2019). NASA Common Research Model: A History and Future Plans. *AIAA Aviation 2019 Forum*. doi: 10.2514/6.2019-2188 
+
+[2] A Samuel. (1959). Some studies in machine learning using the game of checkers. *IBM Journal on Research and Development*. url: https://api.semanticscholar.org/CorpusID:2126705
+
+[3] J Benad. (2015). The Flying V - A new Aircraft Configuration for Commercial Passenger Transport. Deutscher Luft-undRaumfahrtkongress 015, Rostock. doi: 10.25967/370094
+
+[4] T Cappuyns. (2019). Handling Qualities of a Flying V Configuration. TU Delft, http://resolver.tudelft.nl/uuid:69b56494-0731-487a-8e57-cec397452002 
+
+[5] K Dally. (2021). Deep Reinforcement Learning for Flight Control. TU Delft, http://resolver.tudelft.nl/uuid:fcef2325-4c90-4276-8bfc-1e230724c68a 
+
+[6] S van Overeem, X Wang, E-J van Kampen. (2022). Modelling and Handling Quality Assessment of the Flying-V Aircraft. *AIAA Scitech 2022 Forum*. doi: 10.2514/6.2022-1429 
+
+[7] M Palermo, R Vos. Experimental aerodynamic analysis of a 4.6%-scale flying-v subsonic transport. *AIAA Scitech 2020 Forum*. doi: 10.2514/6.2020-2228. 
+
+---
+
 ## Item 3: Deep Reinforcement Learning for Aircraft Landing
 
 ### Questions & Answers-
@@ -302,16 +320,13 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 ---
 
-Item 10: Reinforcement learning, an introduction
-
+## Item 10: Reinforcement learning, an introduction
 
 ### Questions & Answers-
 
-
-
 ### Notes-
 
-**From chapter 1:**
+**From chapter 1-introduction:**
 
 Elements of reinforcement learning:
 
@@ -328,7 +343,7 @@ Reinforcement learning's river of history has 3 main streams, the first one is t
 
 The essential character of trial-and-error learning as selecting actions on the basis of evaluative feedback that does not rely on knowledge of what the correct action should be.
 
-**From chapter 2:**
+**From chapter 2- multi-armed bandits:**
 
 Exploitation is to take the action which your current estimates say give the highest return or has the value, while exploration is to select one of the actions that is not estimated to give the highest return or value. By using an epsilon greedy method for selecting action, it can be shown that asymptotically the optimal action is chosen with a probability greater than 1-epislon, which for small epsilons will mean near certainty. This is ofcourse only the case in the limit, which practically is improbable to achieve.
 
@@ -338,8 +353,8 @@ $Q_{n+1} = Q_n + \frac{1}{n}(R_n - Q_n)$
 
 This format of previous estimate plus a factor of difference in sample and estimate, is a frequently occuring expression in reinforcement learning, for example in the case of bootstrapped learning.
 
+Two methods for selecting actions are thus far introduced. First method is to deterministically select action with highest return estimate Q(a); so called action-value methods. Second method is to prefer actions with higher value estimates through a softmax function of $H(a)$; so called gradient based action-value methods.
 - equation 2.8-2.9 gives an interesting equation for having a moving average which is unbiased to initial conditions.
-- Two methods for selecting actions are thus far introduced. First method is to deterministically select action with highest return estimate Q(a). Second method is to prefer actions with higher value estimates through $H(a)$
 
 > **Definition: Nonassociative**
 > Is an adjective used to describe how one variable does not depend on another, in contrast to associative where dependency may exist. Nonassociative tasks have no need to associate different actions with different situations, simply put there is only one situation and the agent just has to find the best action for that situation. For associative tasks, there is an associated *best action* for each situation (*state*).
@@ -347,21 +362,4 @@ This format of previous estimate plus a factor of difference in sample and estim
 > **Definition: Action-value function**
 > A value function that estimates the return (value) of a taking a certain action given a certain state.
 
-
----
-
-## References
-
-[1] M Rivers. (2019). NASA Common Research Model: A History and Future Plans. *AIAA Aviation 2019 Forum*. doi: 10.2514/6.2019-2188 
-
-[2] A Samuel. (1959). Some studies in machine learning using the game of checkers. *IBM Journal on Research and Development*. url: https://api.semanticscholar.org/CorpusID:2126705
-
-[3] J Benad. (2015). The Flying V - A new Aircraft Configuration for Commercial Passenger Transport. Deutscher Luft-undRaumfahrtkongress 015, Rostock. doi: 10.25967/370094
-
-[4] T Cappuyns. (2019). Handling Qualities of a Flying V Configuration. TU Delft, http://resolver.tudelft.nl/uuid:69b56494-0731-487a-8e57-cec397452002 
-
-[5] K Dally. (2021). Deep Reinforcement Learning for Flight Control. TU Delft, http://resolver.tudelft.nl/uuid:fcef2325-4c90-4276-8bfc-1e230724c68a 
-
-[6] S van Overeem, X Wang, E-J van Kampen. (2022). Modelling and Handling Quality Assessment of the Flying-V Aircraft. *AIAA Scitech 2022 Forum*. doi: 10.2514/6.2022-1429 
-
-[7] M Palermo, R Vos. Experimental aerodynamic analysis of a 4.6%-scale flying-v subsonic transport. *AIAA Scitech 2020 Forum*. doi: 10.2514/6.2020-2228. 
+**From chapter 3-finite markov decision processes:**
