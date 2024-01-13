@@ -59,7 +59,7 @@ Ranked, 1 = highest priority
 
 > [!Definition]+
 > **Bellman equation of the Value function**
-> The Bellman equation of the Value function is simply **the** definition of the value function for a given state. It returns the same value as the value function, so in the sense of what it computes the Bellman equation of a value function is equal to the value function. But the equation itself allows you to compute the value function, unlike the equation for the value function which is simply an expectation operator taken on the return of a state. It is written as a function of the dynamics of the MDP, the entire policy of the agent, every possible the rewards, and every next possible state's value function. The equation's derivation is shown in figure 1 [^from].
+> The Bellman equation of the Value function is simply **the** definition of the value function for a given state. It returns the same value as the value function, so in the sense of what it computes the Bellman equation of a value function is equal to the value function. But the equation itself allows you to compute the value function, unlike the equation for the value function which is simply an expectation operator taken on the return of a state. It is written as a function of the dynamics of the MDP, the entire policy of the agent, every possible the rewards, and every next possible state's value function. The equation's derivation is shown in figure 1 [from].
 
 > [!Definition]+
 > **Bellman equation**
@@ -72,7 +72,7 @@ Ranked, 1 = highest priority
 <figcaption><b>Figure 1</b>, derivation of the bellman equation.</figcaption>
 </figure>
 
-[^from]: https://stats.stackexchange.com/questions/243384/deriving-bellmans-equation-in-reinforcement-learning
+[from]: https://stats.stackexchange.com/questions/243384/deriving-bellmans-equation-in-reinforcement-learning
 
 
 ### 6/1/2024

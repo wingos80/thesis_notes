@@ -46,8 +46,7 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "2d6f129b3713a065",
@@ -92,7 +91,8 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -220,7 +220,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5d184d508ca2a056",
+  "active": "8d5764b22620574c",
   "lastOpenFiles": [
     "Master_notes.md",
     "1st_read_notes.md",

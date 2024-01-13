@@ -381,11 +381,11 @@ MDPs take on the general form as shown in figure 1, the entire system in an MDP 
 
 >**Environment**
 >
->It is completely characterized by the probabilities given by a discrete (or continuous) probability density function $p(s',r'|s,a)$, i.e. the probability of next state=s' next reward=r' given that the current state=s and the agent's action=a, p's functional mapping is thus p: S x R x S x A -> [0,1].
+>It is completely characterized by the probabilities given by a discrete (or continuous) probability density function $p(s',r|s,a)$, i.e. the probability of next state=s' next reward=r given that the current state=s and the agent's action=a, p's functional mapping is thus p: S x R x S x A -> [0,1].
 >
->By summing/integrating this probability density function over all possible rewards, it is possible to obtain a marginal probability density function which is called the state transition probability function in MDPs $p(s'|s,a) = \sum_{r\in R}p(s',r'|s,a)$, which describes the probability of the next state=s' given the environments' previous state=s and the agent took action=a.
+>By summing/integrating this probability density function over all possible rewards, it is possible to obtain a marginal probability density function which is called the state transition probability function in MDPs $p(s'|s,a) = \sum_{r\in R}p(s',r|s,a)$, which describes the probability of the next state=s' given the environments' previous state=s and the agent took action=a.
 >
->The expected reward $r(s,a)$ of a given s,a pair can be obtained by taking the expectation of $p(s',r'|s,a)$, $r(s,a) = \sum_{r \in R} r \sum_{s' \in S}p(s',r'|s,a)$.
+>The expected reward $r(s,a)$ of a given s,a pair can be obtained by taking the expectation of $p(s',r|s,a)$, $r(s,a) = \sum_{r \in R} r \sum_{s' \in S}p(s',r|s,a)$.
 
 > **Reward**
 >
@@ -394,6 +394,12 @@ MDPs take on the general form as shown in figure 1, the entire system in an MDP 
 
 > **Return**
 > 
-> Return $G_t$ is defined as the sum of future rewards, $G_t = R_{t+1} + R_{t+2} + ... + R_{T}$, where T is the terminal time step. $G_t$ can also be generalized to incorporate the idea of *discounting*, where rewards further in the future are *discounted* more, $G_{td} = R_{t+1} +  \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{T-t}R_{T} = \sum_{k=0}^{\infty}\gamma^k R_{t+k+1}$, where $0 \leq \gamma \leq 1$ is called the discount rate. 
+> Return $G_t$ is defined as the sum of future rewards, $G_t = R_{t+1} + R_{t+2} + ... + R_{T}$, where T is the terminal time step. The definition of $G_t$ can also be generalized to incorporate the idea of *discounting*, where rewards further in the future are *discounted* more, $G_{t} = R_{t+1} +  \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{T-t-1}R_{T} = \sum_\limits{k=t+1}^{T}\gamma^{k-t-1} R_{k}$, where $0 \leq \gamma \leq 1$ is called the discount rate. 
 > 
 > It is useful to compactly rewrite the return as an incremental function: $G_t = R_{t+1} + \gamma G_{t+1}$
+
+The notations used in RL can be unified between problems which are episodic or continuing(infinite)), by generalizing an episodic problem. Specifically, we can tweak the representation of episodic problems by adding a terminal state to the end of episodic problems. This terminal state is made *absorbing*, such that no state transition can occur that allows the environment to change from this state, and whos' reward is equal to zero. Adding this absorbing state to the terminal of episodic problems allows such problems to use the same notation as infinite length problems, especially when considering the definition of return $G_t$, which can be more concretely formally defined in the following:
+
+$G_t \doteq [R_{t+1} + \gamma R_{t+2} + \dots + \gamma^{T-t-1}R_T] = \sum_\limits{k=t+1}^{T}\gamma^{k-t-1} R_{k}, \quad T \in \{\mathcal{R}^+, +\infty\}, 0 \leq \gamma \leq 1$
+
+Where $T = \infty \; \& \; \gamma =1$ cannot be true simultaneously.
