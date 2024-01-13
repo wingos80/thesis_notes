@@ -1,6 +1,6 @@
 # 1st literature review
 
-The thesis project will begin with a literature review. This review will begin by focusing on literature, mainly MSc theses, produced by the many students that Erik-jan has supervised, in addition to the introduction to reinforcement learning textbook by Brato & Sutton. The list of literature reviewed in this batch are as follows:
+The thesis project will begin with a literature review. This review will begin by focusing on literature, mainly MSc theses, produced by the many students that Erik-jan has supervised, in addition to the introduction to reinforcement learning textbook by Barto & Sutton. The list of literature reviewed in this batch are as follows:
 
 1. W.J.E. Völker: Reinforcement Learning for Flight Control of the Flying V
 2. Thomas v.d. Laar: Deep Reinforcement Learning for Aircraft Landing
@@ -13,9 +13,9 @@ The thesis project will begin with a literature review. This review will begin b
 9. Barto & Sutton: Reinforcement learning, an introduction
 
 
-Item 1 is for getting some exposure to rl controllers used in the context of flight control, specifically that of the flying-V which is main focus of the thesis. This item is reviewed first because of the fact that it presents the crossection of rl for flight control and the flying v, which should provide a good overview of both topics. Item 2 is for exposure to reinforcement learning, with the aim of reviewing this item being to understand the history of reinforcement learning as well as several algorithms have been used by past students. Item 3 is a placeholder a piece of literature that focuses on the aircraft design of the flying-V, which will be gathered from reading item 2.
+Item 1 is for getting some exposure to rl controllers used in the context of flight control, specifically that of the flying-V which is main focus of the thesis. This item is reviewed first because of the fact that it presents the cross section of rl for flight control and the flying v, which should provide a good overview of both topics. Item 2 is for exposure to reinforcement learning, with the aim of reviewing this item being to understand the history of reinforcement learning as well as several algorithms have been used by past students. Item 3 is a placeholder a piece of literature that focuses on the aircraft design of the flying-V, which will be gathered from reading item 2.
 
-With these 3 pieces of literature, good initial coverage of reinforcement learning as a field should be obtained, as well as the flying-v as an aircraft design. Upon reading these pieces, further literature study can then be directed more efectively.
+With these 3 pieces of literature, good initial coverage of reinforcement learning as a field should be obtained, as well as the flying-v as an aircraft design. Upon reading these pieces, further literature study can then be directed more effectively.
 
 ---
 
@@ -25,7 +25,7 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 **From chapter 2:**
 1. What is the history and the derivation of the Bellman equation?
-   1. The Bellman equation does not neccessarily refer to a singal equation. The equation most colloquially called the Bellman equation is the Bellman equation of the Value function, which is simply **the** definition of the value function for a given state. It returns the same value as the value function, so in the sense of what it computes the Bellman equation of a value function is equal to the value function. But the equation itself allows you to compute the value function, unlike the equation for the value function which is simply an expectation operator taken on the return of a state.
+   1. The Bellman equation does not necessarily refer to a single equation. The equation most colloquially called the Bellman equation is the Bellman equation of the Value function, which is simply **the** definition of the value function for a given state. It returns the same value as the value function, so in the sense of what it computes the Bellman equation of a value function is equal to the value function. But the equation itself allows you to compute the value function, unlike the equation for the value function which is simply an expectation operator taken on the return of a state.
    2. The bellman equation for value function can be derived by starting from the expected value definition of the value function, expanding the return term by using it's recursive definition being the sum of current reward plus future returns, then expanding the expectation operator using the definition of the operator for a discrete random variable. This derivation is shown in figure 1 [from].
 	![[bellman_derive.png]]
 	<figure>
@@ -35,7 +35,7 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 [from]: https://stats.stackexchange.com/questions/243384/deriving-bellmans-equation-in-reinforcement-learning
 
 2. What is the distinction between the weight vector **w** and parameter vector **theta**??
-   1. **w** is the weight vector that parametrizes a function approximator for the state or action value functions, typically the approximator is something like an ANN hence usage of the term "weight vector". **theta** is the parameter vector for a policy, which does not neccessarily or usually mean an ANN, could also just be some function. But from reading other theses, it seems that generally both the policy and value functions can take an ANN form, thus the diffference in naming is only conventional.
+   1. **w** is the weight vector that parametrizes a function approximator for the state or action value functions, typically the approximator is something like an ANN hence usage of the term "weight vector". **theta** is the parameter vector for a policy, which does not necessarily or usually mean an ANN, could also just be some function. But from reading other theses, it seems that generally both the policy and value functions can take an ANN form, thus the difference in naming is only conventional.
 3. Willem states an interesting distinction between actor and critics, "The actor network then uses gradients to update the policy parameter vector θ and the critic network the value-function parameter vector w". So the actor only updates its policy, and the critic only updates its value function? 
    1. Turns out yes, an actors job is to provide the action that an agent takes, and the critics job is to provide a value function estimate that can be used to "gauge how adequate" the actions are.
 
@@ -46,7 +46,7 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 2. Pitch break, what is that?
    1. It's the onset/presence of longitudinal static instability in an aircraft, commonly happening at high angles of attack, where the C_M_alpha of the aircraft becomes positive (hence static instability).
 3. Is there a model of the flying-V which models its' pitch-break behaviour?
-   1. Reading Willems' thesis, there is only a limited fieldity of control surface effectiveness in the part of the flight envelope where pitch break occurs (above 15 degrees alpha), so not really.
+   1. Reading Willems' thesis, there is only a limited fidelity of control surface effectiveness in the part of the flight envelope where pitch break occurs (above 15 degrees alpha), so not really.
    
 **From chapter 6:**
 
@@ -57,8 +57,8 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 **From chapter 2:**
 
-<!-- - Reinforcement learning is built in the framework of Dynamic Programming. From DP, RL borrows the idea of iterative policy evaluation and policy improvement cycles to obtain the optimal policy for it's agent, and makes this iteration tractable by heuristically approximating the cycle giving rise to the group of RL algorithms knwon as incremental dynamic programming (iDP). -->
-- *Generalised policy iteration* (GPI) is a dynamic programming approach to finding an optimal policy and the true value function "simultaneously", which is aschieved by alternating between performing *policy evaluation* and *policy improvement*. Policy evaluation is done to improve the approximation of the value function, which is done by simply computing the bellman equation for value function, Eq 2.10 from Willem. Policy improvement is done to improve the policy itself, which is done by setting the policy to be equal to the action (which remember is a probability distribution!) which has the highest expected return, Eq 2.13 from Willem. GPI is a useful theoretical foundation for more advanced techniques such as *heuristic dynamic programming* (HDP), but GPI in its pure analytical form is too computationally expensive to compute/reach convergence especially for as complex a MDP as flight control, and require complete models of transition probabilityies (i.e. the complete dynamics of the MDP). 
+<!-- - Reinforcement learning is built in the framework of Dynamic Programming. From DP, RL borrows the idea of iterative policy evaluation and policy improvement cycles to obtain the optimal policy for it's agent, and makes this iteration tractable by heuristically approximating the cycle giving rise to the group of RL algorithms known as incremental dynamic programming (iDP). -->
+- *Generalized policy iteration* (GPI) is a dynamic programming approach to finding an optimal policy and the true value function "simultaneously", which is achieved by alternating between performing *policy evaluation* and *policy improvement*. Policy evaluation is done to improve the approximation of the value function, which is done by simply computing the bellman equation for value function, Eq 2.10 from Willem. Policy improvement is done to improve the policy itself, which is done by setting the policy to be equal to the action (which remember is a probability distribution!) which has the highest expected return, Eq 2.13 from Willem. GPI is a useful theoretical foundation for more advanced techniques such as *heuristic dynamic programming* (HDP), but GPI in its pure analytical form is too computationally expensive to compute/reach convergence especially for as complex a MDP as flight control, and require complete models of transition probabilities (i.e. the complete dynamics of the MDP). 
 - *Monte Carlo* (MC) methods are a class of methods that learn a value function by repeatedly and randomly the returns from visiting a given state, in contrast to GPI which learn the value function from analytically evaluation the expected returns as well as the bellman equation for value function. These methods do not *bootstrap*, as they do not base one value function estimate on another.
 - *Temporal difference* (TD) methods combine the ideas of GPI (or dynamic programming) and MC methods, and updates an estimate of the value function (or estimate of any variable) through a finite difference scheme of x_1 = x_0 + dt(dx). (p.s, found interesting paper from the dawn of time that maybe i should read [2], he also introduces *n-step TD* with notation which i dont understand, what is G_{t:t+n}).
 - Distinction between on and off policy learning: an RL agent in on policy learning optimizes the policy which it is using, while in off policy the agent optimizes a policy which it is not using. So for instance an offpolicy agent can use a pre-trained policy to explore a policy space and then use this exploration to improve a separate policy. Here a definition can be introduced, where the pre-trained policy is a "behaviour" policy, and the separate policy is the "estimation policy.
@@ -346,13 +346,15 @@ The essential character of trial-and-error learning as selecting actions on the 
 
 This chapter gives an introduction on the RL problem -specifically maximizing return- using the illustrative RL problem of the multi-armed bandit, a simple and non-associative class of problems.
 
-> **Definition: Nonassociative**
+> [!Definition]+
+> **Non-associative**
 > Is an adjective used to describe how one variable does not depend on another, in contrast to associative where dependency may exist. Nonassociative tasks have no need to associate different actions with different situations, simply put there is only one situation and the agent just has to find the best action for that situation. For associative tasks, there is an associated *best action* for each situation (*state*).
 
 Exploitation is to take the action which your current estimates say give the highest return or has the value, while exploration is to select one of the actions that is not estimated to give the highest return or value. By using an epsilon greedy method for selecting action, it can be shown that asymptotically the optimal action is chosen with a probability greater than 1-epislon, which for small epsilons will mean near certainty. This is ofcourse only the case in the limit, which practically is improbable to achieve.
 
 
-> **Definition: Action-value function**
+> [!Definition]+
+> **Action-value function**
 > A value function that estimates the return (value) of a taking a certain action given a certain state.
 
 Estimating the return of an action can be trivially done by simply taking the realisation average, i.e. sum all rewards obtained from selecting an action, and then divide by the number of times that action was selected, which will yield an estimate of the actions' return. This method, however, is memory inefficient and can be memory intensive as the number of sample and actions grow. A smarter method of estimating return can be done by using an incremental formula, where the next return estimate is equal to the previous return estimate plus a factor of 1/n times the sampled reward minus previous return estimate:
@@ -368,30 +370,30 @@ Two methods for selecting actions are thus far introduced. First method is to de
 
 **From chapter 3-finite markov decision processes:**
 
-This chapter gives an introduction on (finite) MDP, the mathematical framework used to describe all RL problems. The finite MDP is evaluative just like the multi-armed bandit problems where actions have rewards, but are also associative as there exists an optimal action for each situation (state). The important distinction which fintie MDPs bring over multi-armed bandits is the temporaly related nature of rewards, where the problem of exploitation vs exploration goes beyond estimating the optimal action for the initial state, but includes estimate the optimal action**s** which will bring the agent to future states and the highest long term return. Formally speaking, the bandit problem only required estimating an action value function that is purely a function of action $q*(a)$, and in the finite MDP case it is neccessary to estimate an action value function that is also a function of **states** $q*(s,a)$, or equivalently an estimation of the optimal state value function $v*(s)$.
+This chapter gives an introduction on (finite) MDP, the mathematical framework used to describe all RL problems. The finite MDP is evaluative just like the multi-armed bandit problems where actions have rewards, but are also associative as there exists an optimal action for each situation (state). The important distinction which finite MDPs bring over multi-armed bandits is the temporally related nature of rewards, where the problem of exploitation vs exploration goes beyond estimating the optimal action for the initial state, but includes estimate the optimal action**s** which will bring the agent to future states and the highest long term return. Formally speaking, the bandit problem only required estimating an action value function that is purely a function of action $q*(a)$, and in the finite MDP case it is necessary to estimate an action value function that is also a function of **states** $q*(s,a)$, or equivalently an estimation of the optimal state value function $v*(s)$.
 
-MDPs take on the general form as shown in figure 1, the entire system in an MDP is described by a set of 5 variables, the agent, the environment, and 3 time varying signals of action, state, and reward. An agent is defined typically by its policy and value functions, and the environment is defined by the dynamics functions which perscribes some state and reward given an action. MDPs suppose that any decision making process can be reduced to simply this set of five variables, and has proved to be a useful abstraction of reality in reinforcement learning. It is similar to the state space models of systems found in control theory, which has 3 signals: state, control input, and measured output, as well as 4 matrices which describe the state transition function, control input function, as well as the observtion functions.
+MDPs take on the general form as shown in figure 1, the entire system in an MDP is described by a set of 5 variables, the agent, the environment, and 3 time varying signals of action, state, and reward. An agent is defined typically by its policy and value functions, and the environment is defined by the dynamics functions which prescribes some state and reward given an action. MDPs suppose that any decision making process can be reduced to simply this set of five variables, and has proved to be a useful abstraction of reality in reinforcement learning. It is similar to the state space models of systems found in control theory, which has 3 signals: state, control input, and measured output, as well as 4 matrices which describe the state transition function, control input function, as well as the observation functions.
 
+![[mdp.png]]
 <figure>
-<img src="./pictures/mdp.png"
-    alt="Albuquerque, New Mexico">
-<figcaption><b>Figure 1</b>, fundamental dynamics of an MDP, which is defined fully by all the signals and blocks shown here (agent, environment, rewardaction, reward, and state).</figcaption>
+<figcaption><b>Figure 2</b>, fundamental dynamics of an MDP, which is defined fully by all the signals and blocks shown here (agent, environment, reward, action, reward, and state).</figcaption>
 </figure>
 
-*The environment*
+>**Environment**
+>
+>It is completely characterized by the probabilities given by a discrete (or continuous) probability density function $p(s',r'|s,a)$, i.e. the probability of next state=s' next reward=r' given that the current state=s and the agent's action=a, p's functional mapping is thus p: S x R x S x A -> [0,1].
+>
+>By summing/integrating this probability density function over all possible rewards, it is possible to obtain a marginal probability density function which is called the state transition probability function in MDPs $p(s'|s,a) = \sum_{r\in R}p(s',r'|s,a)$, which describes the probability of the next state=s' given the environments' previous state=s and the agent took action=a.
+>
+>The expected reward $r(s,a)$ of a given s,a pair can be obtained by taking the expectation of $p(s',r'|s,a)$, $r(s,a) = \sum_{r \in R} r \sum_{s' \in S}p(s',r'|s,a)$.
 
-It is completely characterized by the probabilities given by a discrete (or continuous) probability density function $p(s',r'|s,a)$, i.e. the probability of next state=s' next reward=r' given that the current state=s and the agent's action=a, p's functional mapping is thus p: S x R x S x A -> [0,1].
+> **Reward**
+>
+> When specifying the reward in an environment, it is important to remember to only reward an agent once the end goal is achieved, not once some sub goals are met. As it could be possible that achieving sub-goals and not the final goal provide the highest rewards, leading to an agent not learning to achieve the final goal. 
 
-By summing/integrating this probability density function over all possible rewards, it is possible to obtain a marginal probability density function which is called the state transition probability function in MDPs $p(s'|s,a) = \sum_{r\in R}p(s',r'|s,a)$, which describes the probability of the next state=s' given the environments' previous state=s and the agent took action=a.
 
-The expected reward $r(s,a)$ of a given s,a pair can be obtained by taking the expectation of $p(s',r'|s,a)$, $r(s,a) = \sum_{r \in R} r \sum_{s' \in S}p(s',r'|s,a)$.
-
-*The reward*
-
-When specifying the reward in an environment, it is important to remember to only reward an agent once the end goal is acheived, not once some sub goals are met. As it could be possible that achieving sub-goals and not the final goal provide the highest rewards, leading to an agent not learning to achieve the final goal. 
-
-*Return*
-
-Return G_t is defined as the sum of future rewards, $G_t = R_{t+1} + R_{t+2} + ... + R_{T}$, where T is the terminal time step. G_t can also be generalized to incorporate the idea of *discounting*, where rewards further in the future are *discounted* more, $G_{td} = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{T-t}R_{T} = \Sum_{k=0}^{\infty} \gamma^k R_{t+k+1}$, where $0 \leq \gamma \leq 1$ is called the discount rate. 
-
-It is useful to rewrite the return as an incremental or iterative function: $G_t = R_{t+1} + \gamma G_{t+1}$
+> **Return**
+> 
+> Return $G_t$ is defined as the sum of future rewards, $G_t = R_{t+1} + R_{t+2} + ... + R_{T}$, where T is the terminal time step. $G_t$ can also be generalized to incorporate the idea of *discounting*, where rewards further in the future are *discounted* more, $G_{td} = R_{t+1} +  \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{T-t}R_{T} = \sum_{k=0}^{\infty}\gamma^k R_{t+k+1}$, where $0 \leq \gamma \leq 1$ is called the discount rate. 
+> 
+> It is useful to compactly rewrite the return as an incremental function: $G_t = R_{t+1} + \gamma G_{t+1}$

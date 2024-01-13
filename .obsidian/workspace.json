@@ -60,7 +60,7 @@
               "type": "markdown",
               "state": {
                 "file": "1st_read_notes.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             },
@@ -92,8 +92,7 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -143,7 +142,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -159,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master_notes.md",
+                "file": "1st_read_notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master_notes.md",
+                "file": "1st_read_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +199,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master_notes.md"
+                "file": "1st_read_notes.md"
               }
             }
           }
@@ -220,11 +220,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5c2a229b65dac0c3",
+  "active": "5d184d508ca2a056",
   "lastOpenFiles": [
-    "Previous_RL_MSc_theses.md",
-    "1st_read_notes.md",
     "Master_notes.md",
+    "1st_read_notes.md",
+    "Previous_RL_MSc_theses.md",
     "Previous_RL_MSc_theses.pdf",
     "Master_notes.pdf",
     "Master_notes_tmp.html",

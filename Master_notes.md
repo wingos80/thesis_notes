@@ -16,7 +16,7 @@ Ranked, 1 = highest priority
 1. Read up on Sutton & Barto
 2. Read up on flying-V
 3. Read up on Hierarchical RL (maybe HRL for continuous algos? For SAC?)
-4. Look into evolutionary reinforcment learning (what's the deal with using GA over ES?)
+4. Look into evolutionary reinforcement learning (what's the deal with using GA over ES?)
 5. Look at Lucas/Caspers repos to study IDHP implementation
 
 ---
@@ -34,29 +34,35 @@ Ranked, 1 = highest priority
 
 ### 5/1/2024
 
-- *auxilliary stuff:* Needed to send proof of funding and BSc diploma to OCW for the knowledge embargo today.
+- *auxiliary stuff:* Needed to send proof of funding and BSc diploma to OCW for the knowledge embargo today.
 - Also wrote a couple definitions.
 
-- Return at any particular time instant G_t is equal to the sum of rewards from all subsequent time instances R_{t+1}. A reasonable deduction from this definition is that to maximum the value of an agents' return, one must select a sequence of actions to maximize thie sum of rewards. This would not be a problem if the rewards and actions were deterministic, however in most cases they are stochastic as is the case in the classical formulation of reinforcement learning problems. Meaning it is not possible to find the exact return given a set of actions, and therefore this approach is flawed. Fortunately, this can be fixed with a small tweak. This tweak is: instead of maximixing the value of an agents' return, one should seek to maximize the **expected value** of an agent's rewards from subsequent time instances. The important distinction between these two notions is in using the **expectation** of reward instead of the value of reward itself. And to further develop this tweak, the probabilities of rewards and actions then becomes a neccessary ingredient to optimiznig an agent's action.
+- Return at any particular time instant G_t is equal to the sum of rewards from all subsequent time instances R_{t+1}. A reasonable deduction from this definition is that to maximum the value of an agents' return, one must select a sequence of actions to maximize thie sum of rewards. This would not be a problem if the rewards and actions were deterministic, however in most cases they are stochastic as is the case in the classical formulation of reinforcement learning problems. Meaning it is not possible to find the exact return given a set of actions, and therefore this approach is flawed. Fortunately, this can be fixed with a small tweak. This tweak is: instead of maximizing the value of an agents' return, one should seek to maximize the **expected value** of an agent's rewards from subsequent time instances. The important distinction between these two notions is in using the **expectation** of reward instead of the value of reward itself. And to further develop this tweak, the probabilities of rewards and actions then becomes a necessary ingredient to optimizing an agent's action.
 
     The principle of maximizing an expected return is the principle of reinforcement learning in a nutshell, 
 
 - **MY PLAN:** to start out by reading the theory from willem's report, from which i can make a more broad literature study (BLS). The BLS shall be divided into: the RL segment, where i continue off of RL sources from willem; the flying-V segment; and looking at implementation + results of willem + Lucas. What i am more concerned with now are: when will embargo get approved, will i be able to implement correct RL algo, how will i find a novel RL algo.
 - For comparing algos, could either keep episode length fixed, or keep termination moving avg cost (MAC) fixed. For former, keep track of final MAC, for latter, keep track of how long to arrive at terminal MAC.
 - There is a ``* (1 - done_list)`` factor in the target term in the lunar lander DQN file, what is that?
-> **Definition: Dynamics of a MDP**
+
+> [!Definition]+
+> **Dynamics of a MDP**
 >  Dynamics of a MDP is expressed by a conditional probability function, p(s',r|s,a), i.e. probability of state being s' and reward being r given was that the previous state was s and action a was taken. This is sometimes called the "*four-argument p*".
 
-> **Definition: State transition probability**
+> [!Definition]+
+> **State transition probability**
 >  State transition probability is defined as p(s'|s,a), i.e. probability of state becoming s' given an agent was in state s and took action a.
 
-> **Definition: Value function**
+> [!Definition]+
+> **Value function**
 >  The value function states the **expected return** of a state, recall the definition of return. It is a.k.a the *state value function*
 
-> **Definition: Bellman equation of the Value function**
-> The Bellman equation of the Value function is simply **the** definition of the value function for a given state. It returns the same value as the value function, so in the sense of what it computes the Bellman equation of a value function is equal to the value function. But the equation itself allows you to compute the value function, unlike the equation for the value function which is simply an expectation operator taken on the return of a state. It is written as a function of the dynamics of the MDP, the entire policy of the agent, every possible the rewards, and every next possible state's value function. The equation's derivation is shown in figure 1 [from].
+> [!Definition]+
+> **Bellman equation of the Value function**
+> The Bellman equation of the Value function is simply **the** definition of the value function for a given state. It returns the same value as the value function, so in the sense of what it computes the Bellman equation of a value function is equal to the value function. But the equation itself allows you to compute the value function, unlike the equation for the value function which is simply an expectation operator taken on the return of a state. It is written as a function of the dynamics of the MDP, the entire policy of the agent, every possible the rewards, and every next possible state's value function. The equation's derivation is shown in figure 1 [^from].
 
-> **Definition: Bellman equation**
+> [!Definition]+
+> **Bellman equation**
 > The Bellman equation refers to an equation which can be used to compute (typically) a given value function (but also other functions though i am not sure what other functions).
 
 
@@ -66,7 +72,7 @@ Ranked, 1 = highest priority
 <figcaption><b>Figure 1</b>, derivation of the bellman equation.</figcaption>
 </figure>
 
-[from]: https://stats.stackexchange.com/questions/243384/deriving-bellmans-equation-in-reinforcement-learning
+[^from]: https://stats.stackexchange.com/questions/243384/deriving-bellmans-equation-in-reinforcement-learning
 
 
 ### 6/1/2024
@@ -94,10 +100,12 @@ Ranked, 1 = highest priority
 [Deadly triad]: https://k4ntz.medium.com/why-is-there-a-deadly-triad-issue-and-how-to-handle-it-e1839b1a8b40
 [online]: https://datascience.stackexchange.com/questions/13029/what-are-the-advantages-disadvantages-of-off-policy-rl-vs-on-policy-rl
 
-> **Definition: Actor Critic Design (ACD)**
+> [!Definition]+
+> **Actor Critic Design (ACD)**
 >  In ACD an internal division of tasks(controlling and learning) and components (actor and critic)is made in an effort to reduce the complexity of the total problem.
 
-> **Definition: $\epsilon$ greeedy**
+> [!Definition]+
+> **$\epsilon$ greedy**
 > To be epsilon greedy is to apply a greedy approach but allowing in a small (epsilon small) probability the selection of a non greedy option.
 
 ### 7/1/2024
@@ -139,31 +147,34 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 - A critique on SAC algorithms from Willem was the oscillatory nature, yet in his research he found that his TD3 also exhibited oscillations in its actions and even states.
 - Reinforcement learning in general is about finding the **optimal** policy or value functions that maximizes the expected discounted return.
 
-> **Definition: Estimator windup**
+> [!Definition]+
+> **Estimator windup**
 >  When the covariances of the estimator in an RLS increases exponentially due to e.g. lack of system excitation. This can be overcome by setting the forgetting factor as 1.
 
-
-> **Definition: Options**
+> [!Definition]+
+> **Options**
 >  The set of all primitive and temporally extended actions that an agent can take, often used in the context of semi-MDP and MDPs.
 
 ### 10/1/2024
 
 - *Actor-Critic* methods learn both a value function and the policy function simultaneously, as opposed to policy-gradient methods which only learn policy, or with dynamic programming methods which only learn the value function.
-- *Generalised policy iteration* (GPI) is a dynamic programming approach to finding an optimal policy and the true value function "simultaneously", which is aschieved by alternating between performing *policy evaluation* and *policy improvement*. Policy evaluation is done to improve the approximation of the value function, which is done by simply computing the bellman equation for value function, Eq 2.10 from Willem. Policy improvement is done to improve the policy itself, which is done by setting the policy to be equal to the action (which remember is a probability distribution!) which has the highest expected return, Eq 2.13 from Willem. GPI is a useful theoretical foundation for more advanced techniques such as *heuristic dynamic programming* (HDP), but GPI in its pure analytical form is too computationally expensive to compute/reach convergence especially for as complex a MDP as flight control, and require complete models of transition probabilityies (i.e. the complete dynamics of the MDP). 
+- *Generalised policy iteration* (GPI) is a dynamic programming approach to finding an optimal policy and the true value function "simultaneously", which is achieved by alternating between performing *policy evaluation* and *policy improvement*. Policy evaluation is done to improve the approximation of the value function, which is done by simply computing the bellman equation for value function, Eq 2.10 from Willem. Policy improvement is done to improve the policy itself, which is done by setting the policy to be equal to the action (which remember is a probability distribution!) which has the highest expected return, Eq 2.13 from Willem. GPI is a useful theoretical foundation for more advanced techniques such as *heuristic dynamic programming* (HDP), but GPI in its pure analytical form is too computationally expensive to compute/reach convergence especially for as complex a MDP as flight control, and require complete models of transition probabilities (i.e. the complete dynamics of the MDP). 
 - iADP was first proposed by Ye Zhou, Erik jan, and Qi Ping 
-- *Persistent excitation ([PE])*: during GPI, ADP and iADP require using PE to enable environment exploration. PE is done by adding disturbance (e.g. white noise) to the action values to ensure that the system states are excited at all times, this comes at the cost that the converged policies are not optimal. Fortunately, PE is only performed during the training stages of the algorithms, e.g. an iADP controller is trained with PE included to arrive at a set of incremental models ***F*** & ***G***, where after these models can be used for actual flight with no PE included in the iADP controller.
-  - **note**: the concept of PE originates in system identification, where the input signal with a PSD S_u to a system needs to satisfy the *persistently exciting in order n* property to ensure that it is possible to converge to a set of system parameters, i.e. st DG\*S_u = 0 can only imply DG=0, not S_u = 0. A corollary of this definition is that a white noise input signal is persistently exciting of *[all orders]*, which means a white noise input signal is sufficient for identifying model parameters for models of any order.
+- *Persistent excitation ([PE])*: during GPI, ADP and iADP require using PE to enable environment exploration. PE is done by adding disturbance (e.g. white noise) to the action values to ensure that the system states are excited at all times, this comes at the cost that the converged policies are not optimal. Fortunately, PE is only performed during the training stages of the algorithms, e.g. an iADP controller is trained with PE included to arrive at a set of incremental models $F$ & $G$, where after these models can be used for actual flight with no PE included in the iADP controller.
+  - **note**: the concept of PE originates in system identification, where the input signal with a PSD $S_u$ to a system needs to satisfy the *persistently exciting in order n* property to ensure that it is possible to converge to a set of system parameters, i.e. st $DG*S_u = 0$ can only imply DG=0, not $S_u$ = 0. A corollary of this definition is that a white noise input signal is persistently exciting of *[all orders]*, which means a white noise input signal is sufficient for identifying model parameters for models of any order.
   
 
-> **Definition: [Sample complexity]**
->  It describes how many examples are required to guarantee a *probably approximately correct* (PAC) solution, and is a function of accuracy and confidence. Note that this is the definition in the field of machine learning, in the field of reinforcemenet learning it has been used asa: **number of time steps (during exploration) in which the algorithm does not select near-optimal actions** by Sutton and Barto in their famous reinforcement learning book.
+> [!Definition]+
+> **Sample complexity**[^s]
+>  It describes how many examples are required to guarantee a *probably approximately correct* (PAC) solution, and is a function of accuracy and confidence. Note that this is the definition in the field of machine learning, in the field of reinforcement learning it has been used as: **number of time steps (during exploration) in which the algorithm does not select near-optimal actions** by Sutton and Barto in their famous reinforcement learning book.
 
 
-> **Definition: Probably approximately correct (PAC)**
+> [!Definition]+
+> **Probably approximately correct (PAC)**
 > A hypothesis can be called PAC learnable for a chosen accuracy and confidence parameter, with accuracy defining how far the classifier output can be from the true value, and confidence defining how likely the class is to meet this given accuracy.
 
 
-[Sample complexity]: https://ai.stackexchange.com/questions/38775/do-the-terms-sample-complexity-and-sample-efficiency-mean-the-same-thing-in
+[^s]: https://ai.stackexchange.com/questions/38775/do-the-terms-sample-complexity-and-sample-efficiency-mean-the-same-thing-in
 [all orders]: https://youtu.be/IDaCw3LjzC4?si=b9FxzgtakMqPjSfD&t=1668
 [PE]: https://repository.tudelft.nl/islandora/object/uuid%3A5b875915-2518-4ec8-a1a0-07ad057edab4
 
@@ -179,7 +190,8 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 [Jonathon]: https://repository.tudelft.nl/islandora/object/uuid%3Ad66efdb7-d7c7-4c44-9b50-64678ffdf60d
 [Zhou]: https://repository.tudelft.nl/islandora/object/uuid%3A5b875915-2518-4ec8-a1a0-07ad057edab4
 
-> **Definition: Upper confidence bound (UCB)**
+> [!Definition]+
+> **Upper confidence bound (UCB)**
 > A type of action selection policy (in short a policy) which allows for exploration instead of solely exploitation, similar to epsilon-greedy, it bases action selection on uncertainty of an action's value by increasing the valule of actions which are least selected. It is a heuristic for introducing an upper bound on the value of an action. UCB is hard to extend to general RL problems. Maybe could develop ways to generalize UCB.
 
 ### 12/1/2024
