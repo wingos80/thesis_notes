@@ -27,11 +27,10 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 1. What is the history and the derivation of the Bellman equation?
    1. The Bellman equation does not neccessarily refer to a singal equation. The equation most colloquially called the Bellman equation is the Bellman equation of the Value function, which is simply **the** definition of the value function for a given state. It returns the same value as the value function, so in the sense of what it computes the Bellman equation of a value function is equal to the value function. But the equation itself allows you to compute the value function, unlike the equation for the value function which is simply an expectation operator taken on the return of a state.
    2. The bellman equation for value function can be derived by starting from the expected value definition of the value function, expanding the return term by using it's recursive definition being the sum of current reward plus future returns, then expanding the expectation operator using the definition of the operator for a discrete random variable. This derivation is shown in figure 1 [from].
-    <figure>
-    <img src="../../miscellaneous/pics/bellman_derive.png"
-        alt="Albuquerque, New Mexico">
-    <figcaption><b>Figure 1</b>, derivation of the bellman equation.</figcaption>
-    </figure>
+	![[bellman_derive.png]]
+	<figure>
+	<figcaption><b>Figure 1</b>, derivation of the bellman equation.</figcaption>
+	</figure>
 
 [from]: https://stats.stackexchange.com/questions/243384/deriving-bellmans-equation-in-reinforcement-learning
 
