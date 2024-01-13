@@ -1,4 +1,4 @@
-# 1st literature review
+	# 1st literature review
 
 The thesis project will begin with a literature review. This review will begin by focusing on literature, mainly MSc theses, produced by the many students that Erik-jan has supervised, in addition to the introduction to reinforcement learning textbook by Barto & Sutton. The list of literature reviewed in this batch are as follows:
 
@@ -319,13 +319,12 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 ---
 
-## Item 10: Reinforcement learning, an introduction
+# Item 10: Reinforcement learning, an introduction
 
-### Questions & Answers-
 
-### Notes-
+## **From chapter 1-introduction:**
 
-**From chapter 1-introduction:**
+
 
 Elements of reinforcement learning:
 
@@ -342,7 +341,7 @@ Reinforcement learning's river of history has 3 main streams, the first one is t
 
 The essential character of trial-and-error learning as selecting actions on the basis of evaluative feedback that does not rely on knowledge of what the correct action should be.
 
-**From chapter 2- multi-armed bandits:**
+## **From chapter 2- multi-armed bandits:**
 
 This chapter gives an introduction on the RL problem -specifically maximizing return- using the illustrative RL problem of the multi-armed bandit, a simple and non-associative class of problems.
 
@@ -361,14 +360,14 @@ Estimating the return of an action can be trivially done by simply taking the re
 
 $Q_{n+1} = Q_n + \frac{1}{n}(R_n - Q_n)$
 
-This format of previous estimate plus a factor of difference in sample and estimate, is a frequently occuring expression in reinforcement learning, for example in the case of bootstrapped learning.
+This format of previous estimate plus a factor of difference in sample and estimate, is a frequently occurring expression in reinforcement learning, for example in the case of bootstrapped learning.
 
 Two methods for selecting actions are thus far introduced. First method is to deterministically select action with highest return estimate Q(a); so called action-value methods. Second method is to prefer actions with higher value estimates through a softmax function of $H(a)$; so called gradient based action-value methods.
 - equation 2.8-2.9 gives an interesting equation for having a moving average which is unbiased to initial conditions.
 
 
 
-**From chapter 3-finite markov decision processes:**
+## **From chapter 3-finite Markov decision processes:**
 
 This chapter gives an introduction on (finite) MDP, the mathematical framework used to describe all RL problems. The finite MDP is evaluative just like the multi-armed bandit problems where actions have rewards, but are also associative as there exists an optimal action for each situation (state). The important distinction which finite MDPs bring over multi-armed bandits is the temporally related nature of rewards, where the problem of exploitation vs exploration goes beyond estimating the optimal action for the initial state, but includes estimate the optimal action**s** which will bring the agent to future states and the highest long term return. Formally speaking, the bandit problem only required estimating an action value function that is purely a function of action $q*(a)$, and in the finite MDP case it is necessary to estimate an action value function that is also a function of **states** $q*(s,a)$, or equivalently an estimation of the optimal state value function $v*(s)$.
 
@@ -382,9 +381,12 @@ MDPs take on the general form as shown in figure 1, the entire system in an MDP 
 >**Environment**
 >
 >It is completely characterized by the probabilities given by a discrete (or continuous) probability density function $p(s',r|s,a)$, i.e. the probability of next state=s' next reward=r given that the current state=s and the agent's action=a, p's functional mapping is thus p: S x R x S x A -> [0,1].
->
->By summing/integrating this probability density function over all possible rewards, it is possible to obtain a marginal probability density function which is called the state transition probability function in MDPs $p(s'|s,a) = \sum_{r\in R}p(s',r|s,a)$, which describes the probability of the next state=s' given the environments' previous state=s and the agent took action=a.
->
+> > [!Definition]+
+> > **Dynamics of MDP**
+> > $p(s',r|s,a) \doteq Pr\{S_t = s', R_t = r | S_{t-1} = s, a_{t-1} = a\}$
+> 
+> By summing/integrating this probability density function over all possible rewards, it is possible to obtain a marginal probability density function which is called the state transition probability function in MDPs $p(s'|s,a) = \sum_{r\in R}p(s',r|s,a)$, which describes the probability of the next state=s' given the environments' previous state=s and the agent took action=a.
+> 
 >The expected reward $r(s,a)$ of a given s,a pair can be obtained by taking the expectation of $p(s',r|s,a)$, $r(s,a) = \sum_{r \in R} r \sum_{s' \in S}p(s',r|s,a)$.
 
 > **Reward**
@@ -392,14 +394,100 @@ MDPs take on the general form as shown in figure 1, the entire system in an MDP 
 > When specifying the reward in an environment, it is important to remember to only reward an agent once the end goal is achieved, not once some sub goals are met. As it could be possible that achieving sub-goals and not the final goal provide the highest rewards, leading to an agent not learning to achieve the final goal. 
 
 
-> **Return**
+>
+>**Return**
+>
+> Return $G_t$ is defined as the sum of future rewards, $G_t = R_{t+1} + R_{t+2} + ... + R_{T}$, where T is the terminal time step. The general definition of $G_t$ incorporates the idea of *discounting*, where rewards further in the future are *discounted* more and prevents rewards in continuing tasks from diverging:
+> > [!Definition]+ 
+> > **Return** $G_t$:
+> $G_{t} \doteq R_{t+1} +  \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{T-t-1}R_{T} = \sum_\limits{k=0}^{T}\gamma^{k} R_{k + t + 1}$
+> where $0 \leq \gamma \leq 1$ is called the discount rate. 
 > 
-> Return $G_t$ is defined as the sum of future rewards, $G_t = R_{t+1} + R_{t+2} + ... + R_{T}$, where T is the terminal time step. The definition of $G_t$ can also be generalized to incorporate the idea of *discounting*, where rewards further in the future are *discounted* more, $G_{t} = R_{t+1} +  \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{T-t-1}R_{T} = \sum_\limits{k=t+1}^{T}\gamma^{k-t-1} R_{k}$, where $0 \leq \gamma \leq 1$ is called the discount rate. 
+> It is useful to compactly rewrite the return as a recursive function: $G_t = R_{t+1} + \gamma G_{t+1}$
+> Th
+> To apply this definition of return to both episodic and continuing tasks, episodic tasks are defined to terminate with an absorbing state where the probability of transitioning out of the absorbing state is zero and its' reward is 0. This allows both type of tasks to use the $\lim\limits_{T \to \infty}$ definition of return.
+
+> **Value function**
 > 
-> It is useful to compactly rewrite the return as an incremental function: $G_t = R_{t+1} + \gamma G_{t+1}$
+> It is the expected return for the environment being in a certain state, and is written as a function $v_{\pi}(s)$ which denotes the value $v$ of being in a state $s$ and following the policy $\pi$
+> 
+> > [!Definition]+ 
+> > **Value function** $v_{\pi}(s)$:
+> $v_{\pi}(s) \doteq \mathbb{E}[G_t | S_t = s] = \mathbb{E}[R_{t+1} + \gamma G_{t+1} | S_t = s]$
 
-The notations used in RL can be unified between problems which are episodic or continuing(infinite)), by generalizing an episodic problem. Specifically, we can tweak the representation of episodic problems by adding a terminal state to the end of episodic problems. This terminal state is made *absorbing*, such that no state transition can occur that allows the environment to change from this state, and whos' reward is equal to zero. Adding this absorbing state to the terminal of episodic problems allows such problems to use the same notation as infinite length problems, especially when considering the definition of return $G_t$, which can be more concretely formally defined in the following:
+> **Action-value function**
+> 
+> It is the expected return if an agent takes a certain action when the environment is in a certain state, and is written as a function $v_{\pi}(s,a)$ which denotes the value $v$ of taking the action $a$ while being in a state $s$ and following the policy $\pi$ 
+> 
+> > [!Definition]+ 
+> > **Action-value function** $q_{\pi}(s)$:
+> $q_{\pi}(s) \doteq \mathbb{E}[G_t | S_t = s, a_t = a] = \mathbb{E}[R_{t+1} + \gamma G_{t+1} | S_t = s, a_t = a]$
 
-$G_t \doteq [R_{t+1} + \gamma R_{t+2} + \dots + \gamma^{T-t-1}R_T] = \sum_\limits{k=t+1}^{T}\gamma^{k-t-1} R_{k}, \quad T \in \{\mathcal{R}^+, +\infty\}, 0 \leq \gamma \leq 1$
+By expanding the expectation operator of either value functions and re-expressing the functions into a recursive formula, you arrive at what are known as the *Bellman Equations*;
 
-Where $T = \infty \; \& \; \gamma =1$ cannot be true simultaneously.
+
+> > [!Definition]+ 
+> > **Bellman equation for $v_{\pi}(s)$**
+> $v_{\pi}(s) = \sum\limits_{a}\pi(a|s)\sum\limits_{s',r}p(s',r|s,a)[r + \gamma v_{\pi}(s')]$
+> 
+> > [!Definition]+ 
+> > **Bellman equation for $q_{\pi}(s)$**
+> $q_{\pi}(s,a) = \sum\limits_{s',r}p(s',r|s,a)[r + \gamma \sum\limits_{a'} \pi(a'|s)q_{\pi}(s',a')]$
+
+ 
+The bellman equations relates the value of a certain state or state action pair to its successor state and vice versa. It can be used to interpret the meaning of the value functions, for instance the Bellman equation for $v_{\pi}(s)$ shows that $v_{\pi}(s)$ uses the probability of choosing each action $a$ and transitioning to a certain state $s'$ and weighs it against the reward of this state transition $s \to s'$ and the discounted value of $s'$, which is exactly what the expected return of a state is meant to signify.
+
+
+> **Bellman optimality equation**
+> 
+> It is a criterion which must be satisfied in order for a policy $\pi$ to be deemed the optimal policy $\pi_*$.
+> 
+> > [!Definition]+ 
+> > **Bellman optimality equation for ** $v_{\pi}(s)$:
+> $v_{*}(s) = \max\limits_a \mathbb{E}[R_{t+1} + \gamma v_*(S_{t+1}) | S_t=s, A_t=a]$
+
+If the optimal value functions were available, then maximizing return becomes a trivial task as it merely requires following a greedy policy, of selecting the action that has the highest action-value for any given state. However in many real life problems, the number of states and actions available, i.e. the dimensionality of the problem, is **a)**  too large for any computer to store an entire value function, and/or **b)** too large for any computer or algorithm to tractably compute the entire optimal value function. 
+For problems where it is possible to compute an approximation of and store the entire optimal value function containing the value of each state action pairs, they are called *tabular* cases and methods which utilizes these value functions are called *tabular methods*.
+
+For problems with high dimensionality, a *function* instead of a table could be used to compute and approximate the value functions, in which case only the parameters defining the function need to be stored.
+
+## **From chapter 4-  dynamic programming**
+
+
+Classical dynamic programming (DP) assumes knowledge of a perfect model of the environment and is computationally expensive, which limits its application to RL. 
+The great utility of DP is in contributing theory. DP based algorithms can turn the Bellman equations defined in the previous chapter into update rules that are used to compute the optimal value functions, and from which an MDP can be easily solved.
+
+Given an MDP with a finite set of states $\mathbb{S}$, there will be exactly $|\mathbb{S}|$ number of value functions. Assuming that the dynamics of the MDP is perfectly known, i.e. we know the probability density function $p(s',r|s,a)$ exactly, and given a certain policy $\pi(a|s)$, it is then possible to create a linear system of $|\mathbb{S}|$ equations with exactly $|\mathbb{S}|$ unknowns. Meaning it would be possible to find the exact value functions $v_{\pi}(s) \; \forall s \in \mathbb{S}$. The consideration of dimensionality returns as the number of terms in each equation in this system is equal to the number of actions times number of states times number of rewards, and as aforementioned the tractability of solving this system of equations diminishes quickly with additional dimensions.
+
+An iterative method of deriving the optimal value function for a given policy can be applied, and involves a back and forth series of *policy evaluation* and *policy improvement*, which as an intended byproduct produces the optimal policy.
+
+> [!Definition]+
+> **Policy evaluation**
+> 
+> The Bellman equation is computed for a given policy and initial value function, each evaluation provides a new estimate of the value function.
+> 
+>  
+>   $v_{k+1}(s) = \sum\limits_a \pi(a|s) \sum\limits_{s',r}p(s',r|s,a)[r + \gamma v_k(s')]$
+>  
+> To loop this update equation until convergence is to perform an evaluation of a policy, as it finds the value function for the given policy. 
+
+> [!Definition]+
+> **Policy improvement**
+> 
+> The old policy $\pi$ is replaced by a new policy $\pi'$ which takes an action $a'$ s.t. the action-value function $q_{\pi}(s,a')$ is greater than the value function $v_{\pi}(s)$. For instance, a greedy policy w.r.t. $v_{\pi}(s)$.
+
+The classical DP method is the perform these two steps in sequence over many iterations until the value function and policy are stable, i.e. converged. The *policy improvement theorem* states that by updating a policy to one which takes an action with a higher action-value than the value of the original policy, the value function of the new policy is guaranteed to be at least greater than that of the old policy.
+
+Solving an MDP, i.e. solving an RL problem by implementing an algorithm which iterates between policy evaluation and improvement to derive the optimal policy and value function is the general description of all RL algorithms, which can all be described as *Generalized Policy Iteration* algorithms. Each of which takes a different approach on each element of this iterative process. E.g. the use of ANNs to represent the value function, or performing varying number of evaluation steps versus improvement steps, or the treatment of the probability density functions as continuous or discrete.
+
+DP method of directly applying policy evaluation and improvement iterations is thought to be non-generalizable due to the *curse of dimensionality*, where the number of elements in the set of states increases exponentially as a function of the number of state variables. For example, the state space of a problem of 3 state variables spans 3 dimensions, $s_1, s_2, s_3$, let's declare each variable to vary between $10$ discrete values; introducing an additional state variable $s_4$ will increase the number of state combinations from $10^3 \to 10^4$, i.e. by simply introducing one additional state variable resulted in the size of the set of states to increase $10$ fold. 
+
+This in practice has proven to not be as big a hinderance as expected, due to Moore's law, and in general convergence speeds of DP methods can be greatly enhanced by initializing the algorithm with good estimates of the optimal policy and value function.
+
+
+> [!Definition]+
+> **Generalize Policy Iteration** 
+> A general algorithm which implements the idea of an evaluative process and an improvement process iteratively interacting with each other to solve an RL problem.
+
+## **From chapter 5- monte carle methods**
+
