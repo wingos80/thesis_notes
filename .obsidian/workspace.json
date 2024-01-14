@@ -32,7 +32,7 @@
                 "source": true
               }
             },
-            "group": "45a9fee5fb867680"
+            "group": "449dad1707cd6a51"
           },
           {
             "id": "f73d943d22794346",
@@ -47,7 +47,8 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "2d6f129b3713a065",
@@ -78,7 +79,7 @@
                 "source": false
               }
             },
-            "group": "45a9fee5fb867680"
+            "group": "449dad1707cd6a51"
           },
           {
             "id": "201d7836835eea8a",
@@ -93,7 +94,8 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -143,7 +145,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -159,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1st_read_notes.md",
+                "file": "Master_notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1st_read_notes.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +202,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1st_read_notes.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -220,11 +223,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5d184d508ca2a056",
+  "active": "5c2a229b65dac0c3",
   "lastOpenFiles": [
+    "1C31C000",
+    "0B31C000",
+    "1st_read_notes.md",
+    "1st_read_notes_tmp.html",
     "Untitled.canvas",
     "2024-01-14.md",
-    "1st_read_notes.md",
     "Master_notes.md",
     "Previous_RL_MSc_theses.md",
     "Pasted image 20240113162054.png",

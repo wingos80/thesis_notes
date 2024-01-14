@@ -497,7 +497,7 @@ This is the first *learning* method, as opposed to the previous dynamic programm
 
 > "Monte Carlo (MC) methods are ways of solving the reinforcement learning problem based on averaging sample returns"
 
-Such methods estimates *returns* of states or state-action pairs by taking large number of return from an agent acting in an environment or in a simulated environment, so called *actual* and *simulated* experience, then averaging them to find an estimate for the return of each sate-action pair. I.e. they can be used to estimate the state-value function or the action-value function. These methods adopt the policy evaluation and improvement steps from GPI with the exception being that value functions are **sampled** from experiences instead of **computed** using analytical models of the MDP.
+Such methods estimates *returns* of states or state-action pairs by taking large number of return from an agent acting in an environment or in a simulated environment, so called *actual* and *simulated* experience, then averaging them to find an estimate for the return of each sate-action pair. I.e. they use the sampled returns to estimate the state-value function or the action-value function, which by definition requires experiencing an entire episode before an update is performed, as only then is a return known. These methods adopt the policy evaluation and improvement steps from GPI with the exception being that value functions are **sampled** from experiences instead of **computed** using analytical models of the MDP. 
 
 An important property of MC methods is the fact that the estimated value functions for each state or state-action pair are independent from other states or state-action pairs, as each estimates do not use another estimate to compute its' value, in other words MC methods do not bootstrap.
 
@@ -543,10 +543,25 @@ The distinction between these two sampling methods is in their bias and variance
 
 Alternative to importance sampling, which performs estimation of the value function using trajectories from all episodes at once, an incremental update method is also used, utilizing the *bootstrapping* concept, or more simply known as a moving average.
 
-
 > [!Definition]+
 > **Incremental value function update**
 > $V_{\pi}(s) = V_i(s)$
 > $V_{i+1} \doteq V_i(s) + \frac{W_i}{C_i}[G_i - V_i]$
 > where $W_i$ is some variable or constant weight, and:
 > $C_{i+1} \doteq C_i + W_{i+1}$
+
+
+## **From chapter 6- temporal-difference learning**
+
+Temporal-difference (TD) methods combines the sampling trajectories for value function update from MC, and the bootstrapping nature of DP into one class of methods.
+
+Unlike MC methods which use sampled *returns* to update value function estimates, TD methods use sampled *rewards* as well as *previous estimates of the value function* to update its' estimate. Meaning this class of methods can update estimates every time step, as opposed to every episode as is the case in MC methods. 
+
+
+> [!Definition]+
+> **Simple TD estimate update**
+> $V_{\pi}(s) \leftarrow V_{\pi}(s) + \alpha[R_{t+1} + \gamma V_{\pi}(S_{t+1}) - V_{\pi}(S_t)]$
+
+The simple TD estimate update is also known as the *one-step TD* or *TD(0)*, a type of *n-step TD* and *TD($\lambda$)* algorithms respectively.
+
+While theoretically both TD and MC methods make value function estimates which are unbiased and converge as number of samples tend toward infinity, empirically TD-methods are known to converge at a faster rate than MC methods. A rule of thumb that distinguishes TD and MC methods is that TD produces estimates which would fit future data better, while MC methods fit to current data better.
