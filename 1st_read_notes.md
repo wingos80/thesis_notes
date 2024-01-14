@@ -1,4 +1,4 @@
-	# 1st literature review
+# 1st literature review
 
 The thesis project will begin with a literature review. This review will begin by focusing on literature, mainly MSc theses, produced by the many students that Erik-jan has supervised, in addition to the introduction to reinforcement learning textbook by Barto & Sutton. The list of literature reviewed in this batch are as follows:
 
@@ -476,9 +476,9 @@ An iterative method of deriving the optimal value function for a given policy ca
 > 
 > The old policy $\pi$ is replaced by a new policy $\pi'$ which takes an action $a'$ s.t. the action-value function $q_{\pi}(s,a')$ is greater than the value function $v_{\pi}(s)$. For instance, a greedy policy w.r.t. $v_{\pi}(s)$.
 
-The classical DP method is the perform these two steps in sequence over many iterations until the value function and policy are stable, i.e. converged. The *policy improvement theorem* states that by updating a policy to one which takes an action with a higher action-value than the value of the original policy, the value function of the new policy is guaranteed to be at least greater than that of the old policy.
+The classical DP method is the perform these two steps in sequence over many iterations until the value function and policy are stable, i.e. converged, which is only the case when both these estimates are optimal. This is because if either the value function or the policy are suboptimal, then  Thus in other words, the estimated value function and policy are optimal if and only if both estimates reached a state of stability in a policy iteration algorithm. The *policy improvement theorem* states that by updating a policy to one which takes an action with a higher action-value than the value of the original policy, the value function of the new policy is guaranteed to be at least greater than that of the old policy.
 
-Solving an MDP, i.e. solving an RL problem by implementing an algorithm which iterates between policy evaluation and improvement to derive the optimal policy and value function is the general description of all RL algorithms, which can all be described as *Generalized Policy Iteration* algorithms. Each of which takes a different approach on each element of this iterative process. E.g. the use of ANNs to represent the value function, or performing varying number of evaluation steps versus improvement steps, or the treatment of the probability density functions as continuous or discrete.
+Solving an MDP, i.e. solving an RL problem by implementing an algorithm which iterates between policy evaluation and improvement to derive the optimal policy and value function is the general description of all RL algorithms, which can all be described as *Generalized Policy Iteration* algorithms. Such algorithms do not have the true analytical dynamics of the MDP being addressed, which is one distinction between PI and GPI. Each of which takes a different approach on each element of this iterative process. E.g. the use of ANNs to represent the value function, or performing varying number of evaluation steps versus improvement steps, or the treatment of the probability density functions as continuous or discrete.
 
 DP method of directly applying policy evaluation and improvement iterations is thought to be non-generalizable due to the *curse of dimensionality*, where the number of elements in the set of states increases exponentially as a function of the number of state variables. For example, the state space of a problem of 3 state variables spans 3 dimensions, $s_1, s_2, s_3$, let's declare each variable to vary between $10$ discrete values; introducing an additional state variable $s_4$ will increase the number of state combinations from $10^3 \to 10^4$, i.e. by simply introducing one additional state variable resulted in the size of the set of states to increase $10$ fold. 
 
@@ -489,5 +489,18 @@ This in practice has proven to not be as big a hinderance as expected, due to Mo
 > **Generalize Policy Iteration** 
 > A general algorithm which implements the idea of an evaluative process and an improvement process iteratively interacting with each other to solve an RL problem.
 
-## **From chapter 5- monte carle methods**
+## **From chapter 5- monte carlo methods**
 
+This is the first *learning* method, as opposed to the previous dynamic programming method. Quoting from Sutton & Barto: 
+
+> "Monte Carlo (MC) methods are ways of solving the reinforcement learning problem based on averaging sample returns"
+
+Such methods estimates *returns* of states or state-action pairs by taking large number of return from an agent acting in an environment or in a simulated environment, so called *actual* and *simulated* experience, then averaging them to find an estimate for the return of each sate-action pair. I.e. they can be used to estimate the state-value function or the action-value function. These methods adopt the policy evaluation and improvement steps from GPI with the exception being that value functions are **sampled** from experiences instead of **computed** using analytical models of the MDP.
+
+An important property of MC methods is the fact that the estimated value functions for each state or state-action pair are independent from other states or state-action pairs, as each estimates do not use another estimate to compute its' value, in other words MC methods do not bootstrap.
+
+> [!Definition]+
+> **Bootstrap** 
+> To update estimates of the value of a state using estimates of the value of other states, which creates dependencies between estimates.
+
+Just like in GPI, the estimated value function and policy will only be stable in the sense that new updates do not change the estimates when they are optimal.

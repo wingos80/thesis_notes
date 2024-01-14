@@ -87,7 +87,7 @@ Ranked, 1 = highest priority
 2. Jonathan Hoogvliet (20 months, Nov 2019): **HRL** (Hierarchical Reinforcement learning) , novelty: the algo used
 3. Dave Kroezen (12 months, Apr 2019): **DHP**, novelty: the algo used
 4. Stefan Heyer (12 months, Mar 2019):  *IDHP* i think?
-5. Ramesh Konatale (21 months, Jan 2020): **IADP**, novelty: the algo used, used on Flying-V
+5. Ramesh Konatale (21 months, Jan 2020): **IADP**, novelty: the algo used
 6. Killian Dally (10 months, Feb 2021): **SAC**, novelty: the algo used (only used for non-terminal flight phase)
 7. Zhou Xin Ge (N/A, Aug 2021): **PPOC** (Proximal Policy optimization with Option-Critic), novelty: comparing/using PPOC & PPO
 8. Willem Völker (10 months, Jun 2022): **TD3** , novelty: the algo used (didnt seem like prev studs used TD3), used on flying-V
@@ -197,3 +197,7 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 ### 12/1/2024
 
 - added more notes to the Sutton and Barto item in 1st_read_notes.md
+
+### 12/1/2024
+
+- reading ch 5 and added more notes to the Sutton and Barto item in 1st_read_notes.md
