@@ -203,3 +203,4 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 - Reading ch 5 and added more notes to the Sutton and Barto item in 1st_read_notes.md
 - There are quite a lot of coding exercises that are on this book, i would like to dedicate about 2 days to doing these exercises;
 	- Example 6.5, windy gridworld
+	- Example 6.6, cliff walking

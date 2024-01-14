@@ -1,3 +1,7 @@
-# All compiled notes #
-######################
+# Ignore all compiled notes #
+#############################
 *.pdf
+
+# Ignore the temporary xlsx file #
+##################################
+~$thesis gantt chart.xlsx

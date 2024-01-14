@@ -47,7 +47,8 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "2d6f129b3713a065",
@@ -93,8 +94,7 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -161,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1st_read_notes.md",
+                "file": "Master_notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +178,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1st_read_notes.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,7 +201,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1st_read_notes.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -222,12 +222,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "521eae9362c4a106",
+  "active": "5c2a229b65dac0c3",
   "lastOpenFiles": [
+    "1st_read_notes.md",
     "Master_notes.md",
     "1C31C000",
     "0B31C000",
-    "1st_read_notes.md",
     "1st_read_notes_tmp.html",
     "Untitled.canvas",
     "2024-01-14.md",
