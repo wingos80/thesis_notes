@@ -476,7 +476,9 @@ An iterative method of deriving the optimal value function for a given policy ca
 > 
 > The old policy $\pi$ is replaced by a new policy $\pi'$ which takes an action $a'$ s.t. the action-value function $q_{\pi}(s,a')$ is greater than the value function $v_{\pi}(s)$. For instance, a greedy policy w.r.t. $v_{\pi}(s)$.
 
-The classical DP method is the perform these two steps in sequence over many iterations until the value function and policy are stable, i.e. converged, which is only the case when both these estimates are optimal. This is because if either the value function or the policy are suboptimal, then  Thus in other words, the estimated value function and policy are optimal if and only if both estimates reached a state of stability in a policy iteration algorithm. The *policy improvement theorem* states that by updating a policy to one which takes an action with a higher action-value than the value of the original policy, the value function of the new policy is guaranteed to be at least greater than that of the old policy.
+The classical DP method is the perform these two steps in sequence over many iterations until the value function and policy are stable, i.e. converged, which is only the case when both these estimates are optimal. This is because if a policy is suboptimal, then there exists another policy which has a higher value function, which in general is true by opting for a greedy policy. Upon switching to a new policy, the old estimate of the value function will no longer approximate the value function for this new policy, and thus when the Bellman equation is computed there will be a difference in the new and old value functions. However, if a policy is optimal, then in the policy improvement step no changes would be made to the current policy, and thus the estimated value function will still hold causing no changes to be observed between the previous and subsequent value function estimate from the Bellman equation. Thus stability can only exist in policy iteration once the policy is optimal, and by extension once the value function is optimal.
+
+ Thus in other words, the estimated value function and policy are optimal if and only if both estimates reached a state of stability in a policy iteration algorithm. The *policy improvement theorem* states that by updating a policy to one which takes an action with a higher action-value than the value of the original policy, the value function of the new policy is guaranteed to be at least greater than that of the old policy.
 
 Solving an MDP, i.e. solving an RL problem by implementing an algorithm which iterates between policy evaluation and improvement to derive the optimal policy and value function is the general description of all RL algorithms, which can all be described as *Generalized Policy Iteration* algorithms. Such algorithms do not have the true analytical dynamics of the MDP being addressed, which is one distinction between PI and GPI. Each of which takes a different approach on each element of this iterative process. E.g. the use of ANNs to represent the value function, or performing varying number of evaluation steps versus improvement steps, or the treatment of the probability density functions as continuous or discrete.
 
@@ -504,3 +506,47 @@ An important property of MC methods is the fact that the estimated value functio
 > To update estimates of the value of a state using estimates of the value of other states, which creates dependencies between estimates.
 
 Just like in GPI, the estimated value function and policy will only be stable in the sense that new updates do not change the estimates when they are optimal.
+
+### On/Off-policy methods
+
+Off-policy methods uses a behaviour policy $b$ to sample experiences from an MDP, which is used to estimate the value functions for a target policy $\pi$ where explicitly $b \neq \pi$.
+
+Whereas on-policy methods uses a policy $\pi$ to sample experiences in order to estimate value function of or improve $\pi$.
+
+On-policies method work with the same framework of GPI with the exception that the policy improvement iterations improve the policy by selecting an $\epsilon$ greedy policy rather than a purely greedy policy, to ensure that exploration of the state space still occurs.
+
+> [!Definition]+
+> **Coverage**
+> The behaviour policy must have non zero probability of picking actions that the target policy has a non-zero probability of picking, i.e. 
+> 
+> $\pi(a|s) > 0 \implies b(a|s) > 0$
+
+Importance sampling is one method used to enable using trajectories from $b$ to estimate values of $\pi$ or even improve it, where $V_{\pi}$ is estimated by taking a simple average of $G_b$ but with scaling on $G_b$ before using it to update $V_{\[i}$ using $\rho_{t:T-1}$ through either *ordinary importance sampling* or *weighted importance sampling*. 
+
+> [!Definition]+
+> **Importance-sampling ratio**
+> The ratio of the probability of an experienced trajectory occurring when following the target policy $\pi$ over the probability of it occurring following the behaviour policy $b$
+> $\rho_{t:T-1} \doteq \prod\limits_{k=t}^{T-1} \frac{\pi(A_k|S_k)}{b(A_k|S_k)}$
+
+
+> [!Definition]+
+> **Ordinary importance sampling**
+> $V_{\pi}(s) \doteq \frac{\sum_{t\in \tau(s)}\rho_{t:T-1}G_t}{|\tau(s)|}$
+
+Where $\tau(s)$ is the set of all timesteps where $s$ is visited.
+
+> [!Definition]+
+> **Weighted importance sampling**
+> $V_{\pi}(s) \doteq \frac{\sum_{t\in \tau(s)}\rho_{t:T-1}G_t}{\sum_{t\in \tau(s)}\rho_{t:T-1}}$
+
+The distinction between these two sampling methods is in their bias and variance of the estimated value function, the ordinary sampling provides an unbiased estimate with unbounded variance; weighted sampling provides an a biased estimate with bounded variance, a more desirable combination of properties than an unbounded variance since it results in more stable learning processes.
+
+Alternative to importance sampling, which performs estimation of the value function using trajectories from all episodes at once, an incremental update method is also used, utilizing the *bootstrapping* concept, or more simply known as a moving average.
+
+
+> [!Definition]+
+> **Incremental value function update**
+> $V_{\pi}(s) = V_i(s)$
+> $V_{i+1} \doteq V_i(s) + \frac{W_i}{C_i}[G_i - V_i]$
+> where $W_i$ is some variable or constant weight, and:
+> $C_{i+1} \doteq C_i + W_{i+1}$

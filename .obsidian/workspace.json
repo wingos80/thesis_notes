@@ -61,7 +61,7 @@
               "type": "markdown",
               "state": {
                 "file": "1st_read_notes.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             },
@@ -220,7 +220,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "521eae9362c4a106",
+  "active": "5d184d508ca2a056",
   "lastOpenFiles": [
     "Untitled.canvas",
     "2024-01-14.md",
