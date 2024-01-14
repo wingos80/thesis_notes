@@ -27,7 +27,7 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 1. What is the history and the derivation of the Bellman equation?
    1. The Bellman equation does not necessarily refer to a single equation. The equation most colloquially called the Bellman equation is the Bellman equation of the Value function, which is simply **the** definition of the value function for a given state. It returns the same value as the value function, so in the sense of what it computes the Bellman equation of a value function is equal to the value function. But the equation itself allows you to compute the value function, unlike the equation for the value function which is simply an expectation operator taken on the return of a state.
    2. The bellman equation for value function can be derived by starting from the expected value definition of the value function, expanding the return term by using it's recursive definition being the sum of current reward plus future returns, then expanding the expectation operator using the definition of the operator for a discrete random variable. This derivation is shown in figure 1 [from].
-	![[bellman_derive.png]]
+	![[pictures/bellman_derive.png]]
 	<figure>
 	<figcaption><b>Figure 1</b>, derivation of the bellman equation.</figcaption>
 	</figure>
@@ -46,7 +46,7 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 2. Pitch break, what is that?
    1. It's the onset/presence of longitudinal static instability in an aircraft, commonly happening at high angles of attack, where the C_M_alpha of the aircraft becomes positive (hence static instability).
 3. Is there a model of the flying-V which models its' pitch-break behaviour?
-   1. Reading Willems' thesis, there is only a limited fidelity of control surface effectiveness in the part of the flight envelope where pitch break occurs (above 15 degrees alpha), so not really.
+   1. Reading Willems' thesis, a model is not made for that level of alpha since there is only a limited fidelity of control surface effectiveness in the part of the flight envelope where pitch break occurs (above 15 degrees alpha), making a model for that region not useful.
    
 **From chapter 6:**
 
@@ -73,7 +73,7 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 **From chapter 3:**
 
 - In this chapter Willem describes a lot of the high level decisions he made during the thesis, such as which algo to choose, how to engineer the rewards (cost function), and compute resource.
-- Willem used a 8Gb Ram laptop with no gpu.
+- Willem used cloud computing since he only had an 8gb ram laptop with no gpu.
 - TD3 was chosen over SAC in the end, **a)** TD3 is deterministic (SAC is stochastic) so less dangerous for flying, **b)** "highly oscillatory actions" of SAC. But he notes that the differences between these two algos are otherwise small.
 
 **From chapter 4:**
@@ -241,8 +241,8 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 **From chapter 4:**
 
-1. It is implied that PE is only neccessary for the output feedback case of (i)ADP as Ramesh states that "... full state information is not available exploration of states is necessary", which has the implication that full state information is sufficient for exploration, but it appeared that according to [Zhou] PE is neccessary for ADP in general? 
-   1. It feels like that Ramesh is misusing the term "PE", because it seems that
+1. It is implied that PE is only neccessary for the output feedback case of (i)ADP as Ramesh states that "... full state information is not available exploration of states is necessary", which has the implication that full state information can supplement using PE for exploration, but it appeared that according to [Zhou] PE is neccessary for ADP in general? 
+   1. PE is used as a system identification input, where all system states are excited so that the state space can be explored, so Zhou is more correct. And it feels like that Ramesh is misusing the term "PE", or at least not properly explaining it enough, because it seems that persistent excitation can come in more forms than only white noise.
 
 [Zhou]: https://repository.tudelft.nl/islandora/object/uuid%3A5b875915-2518-4ec8-a1a0-07ad057edab4
 
@@ -250,8 +250,8 @@ With these 3 pieces of literature, good initial coverage of reinforcement learni
 
 **From article**
 
-- ADP methods require exploration of the states in order to learn the environment, which is done through [Persistent Excitation].PE is done by adding white noise to the action values to ensure that the system is excited at all times. Fortunately, PE is only performed during the training stages of the algorithms, e.g. an iADP controller is trained with PE included to arrive at a set of incremental models ***F*** & ***G***, where after these models can be used for actual flight with no PE included in the iADP controller.
-- It would be **very interesting** to compare iADP and IHDP through [Zhou]'s dissertation, where she implements (and derives!) both algorithms.
+- ADP methods require exploration of the states in order to learn the environment, which is done through [Persistent Excitation].PE can be done by adding white noise to the action values to ensure that the system is excited at all times. Fortunately, PE is only performed during the training stages of the algorithms, e.g. an iADP controller is trained with PE included to arrive at a set of incremental models ***F*** & ***G***, where after these models can be used for actual flight with no PE included in the iADP controller.
+- It would be **very interesting** to look at comparison of iADP and IHDP from [Zhou]'s dissertation, where she implements (and derives!) both algorithms.
 
 [Zhou]: https://repository.tudelft.nl/islandora/object/uuid%3A5b875915-2518-4ec8-a1a0-07ad057edab4
 [Persistent Excitation]: https://repository.tudelft.nl/islandora/object/uuid%3A5b875915-2518-4ec8-a1a0-07ad057edab4

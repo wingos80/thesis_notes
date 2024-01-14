@@ -6,7 +6,7 @@
       {
         "id": "587336c4284bc2c6",
         "type": "tabs",
-        "dimension": 50.26809651474531,
+        "dimension": 41.89008042895443,
         "children": [
           {
             "id": "521eae9362c4a106",
@@ -47,13 +47,12 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "2d6f129b3713a065",
         "type": "tabs",
-        "dimension": 49.73190348525469,
+        "dimension": 58.10991957104557,
         "children": [
           {
             "id": "5d184d508ca2a056",
@@ -94,7 +93,8 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -222,8 +222,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5c2a229b65dac0c3",
+  "active": "efe04034932d0268",
   "lastOpenFiles": [
+    "Previous_RL_MSc_theses.md",
     "1st_read_notes.md",
     "Master_notes.md",
     "1C31C000",
@@ -231,7 +232,6 @@
     "1st_read_notes_tmp.html",
     "Untitled.canvas",
     "2024-01-14.md",
-    "Previous_RL_MSc_theses.md",
     "Pasted image 20240113162054.png",
     "Pasted image 20240113162053.png",
     "Previous_RL_MSc_theses.pdf",

@@ -16,8 +16,9 @@ Ranked, 1 = highest priority
 1. Read up on Sutton & Barto
 2. Read up on flying-V
 3. Read up on Hierarchical RL (maybe HRL for continuous algos? For SAC?)
+5. Read Ye Zhou's PhD dissertation which presents iADP, IDHP, and hierarchical RL.
 4. Look into evolutionary reinforcement learning (what's the deal with using GA over ES?)
-5. Look at Lucas/Caspers repos to study IDHP implementation
+6. Look at Lucas/Caspers repos to study IDHP implementation
 
 ---
 
@@ -28,8 +29,8 @@ Ranked, 1 = highest priority
 
 - I am slowly developing a framework for the work i need to carry out to tackle this thesis, and it comes in 3 parts:
 
-    part 1, the flying v. I need to become an expert in everything related to the flying v\
-    part 2, RL. I need to become an expert in rl\
+    part 1, the flying v. I need to become an expert in everything related to the flying v
+    part 2, RL. I need to become an expert in rl
     part 3, the code. The code will be distinguished into 2 major parts, the simulation/training environment that i will need to create, with all the gym.methods() present; and then the actual RL algo to be used, which i will need to design from my knowledge of the field of RL and then implement in python, possibly following the outline of the algos in spinning up.
 
 ### 5/1/2024
@@ -165,16 +166,16 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
   
 
 > [!Definition]+
-> **Sample complexity**[^s]
+> **Sample complexity**
 >  It describes how many examples are required to guarantee a *probably approximately correct* (PAC) solution, and is a function of accuracy and confidence. Note that this is the definition in the field of machine learning, in the field of reinforcement learning it has been used as: **number of time steps (during exploration) in which the algorithm does not select near-optimal actions** by Sutton and Barto in their famous reinforcement learning book.
-
+>  
+>  A [discussion] on stack exchange about sample complexity vs sample efficiency.
 
 > [!Definition]+
 > **Probably approximately correct (PAC)**
 > A hypothesis can be called PAC learnable for a chosen accuracy and confidence parameter, with accuracy defining how far the classifier output can be from the true value, and confidence defining how likely the class is to meet this given accuracy.
 
-
-[^s]: https://ai.stackexchange.com/questions/38775/do-the-terms-sample-complexity-and-sample-efficiency-mean-the-same-thing-in
+[discussion]: https://ai.stackexchange.com/questions/38775/do-the-terms-sample-complexity-and-sample-efficiency-mean-the-same-thing-in
 [all orders]: https://youtu.be/IDaCw3LjzC4?si=b9FxzgtakMqPjSfD&t=1668
 [PE]: https://repository.tudelft.nl/islandora/object/uuid%3A5b875915-2518-4ec8-a1a0-07ad057edab4
 
