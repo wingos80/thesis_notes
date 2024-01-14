@@ -13,9 +13,8 @@ The thesis project will begin with a literature review. This review will begin b
 9. Barto & Sutton: Reinforcement learning, an introduction
 
 
-Item 1 is for getting some exposure to rl controllers used in the context of flight control, specifically that of the flying-V which is main focus of the thesis. This item is reviewed first because of the fact that it presents the cross section of rl for flight control and the flying v, which should provide a good overview of both topics. Item 2 is for exposure to reinforcement learning, with the aim of reviewing this item being to understand the history of reinforcement learning as well as several algorithms have been used by past students. Item 3 is a placeholder a piece of literature that focuses on the aircraft design of the flying-V, which will be gathered from reading item 2.
+Item 1 is for getting some exposure to rl controllers used in the context of flight control, specifically that of the flying-V which is main focus of the thesis. This item is reviewed first because of the fact that it presents the cross section of rl for flight control and the flying v, which should provide a good overview of both topics. Then items 2 till 8 are all past master theses whos' topic were in reinforcement learning for flight control and supervised by Erik-Jan van Kampen, a summary of each is available in [[Previous_RL_MSc_theses]]. Item 9 is for becoming proficient in the theoretical basis of reinforcement learning.
 
-With these 3 pieces of literature, good initial coverage of reinforcement learning as a field should be obtained, as well as the flying-v as an aircraft design. Upon reading these pieces, further literature study can then be directed more effectively.
 
 ---
 

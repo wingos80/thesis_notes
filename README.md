@@ -1,0 +1,1 @@
+Wing's MSc thesis notes, this repository will be updated whenever I make new notes in during my graduation thesis on reinforcement learning for flight control.

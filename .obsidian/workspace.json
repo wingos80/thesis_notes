@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1st_read_notes.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,8 +93,7 @@
             },
             "group": "bb71d8a6737ddad5"
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -144,8 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -161,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master_notes.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master_notes.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,7 +199,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master_notes.md"
+                "file": "README.md"
               }
             }
           }
@@ -222,14 +220,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "efe04034932d0268",
+  "active": "521eae9362c4a106",
   "lastOpenFiles": [
-    "Previous_RL_MSc_theses.md",
     "1st_read_notes.md",
+    "README.md",
+    "New Text Document.txt",
+    "Untitled.md",
+    "1st_read_notes_tmp.html",
+    "Previous_RL_MSc_theses.md",
     "Master_notes.md",
     "1C31C000",
     "0B31C000",
-    "1st_read_notes_tmp.html",
     "Untitled.canvas",
     "2024-01-14.md",
     "Pasted image 20240113162054.png",
