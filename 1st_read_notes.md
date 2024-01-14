@@ -565,3 +565,19 @@ Unlike MC methods which use sampled *returns* to update value function estimates
 The simple TD estimate update is also known as the *one-step TD* or *TD(0)*, a type of *n-step TD* and *TD($\lambda$)* algorithms respectively.
 
 While theoretically both TD and MC methods make value function estimates which are unbiased and converge as number of samples tend toward infinity, empirically TD-methods are known to converge at a faster rate than MC methods. A rule of thumb that distinguishes TD and MC methods is that TD produces estimates which would fit future data better, while MC methods fit to current data better.
+
+> [!Definition]+
+> **SARSA**
+> SARSA is an on-policy TD control algorithm, which executes actions based on an estimated action-value function $Q(s,a)$, and updates the value estimate at every time step.
+> 
+> $Q(S,A) \leftarrow Q(S,A) + \alpha[R + \gamma Q(S',A') - Q(S,A)]$
+
+> [!Definition]+
+> **Q-learning**
+> Q-learning is an off-policy TD control algorithm, which executes actions based on an estimated action-value function $Q(s,a)$, and updates the value estimate at every time step.
+> 
+> $Q(S,A) \leftarrow Q(S,A) + \alpha[R + \gamma \max\limits_aQ(S',a) - Q(S,A)]$
+
+There is a small difference between Q-learning and SARSA that makes Q-learning an off-policy RL algorithm and SARSA an on-policy one. In SARSA, the action-value (Q-value) estimate is updated based on the previous estimate of the Q-value as well as the Q-value estimate of the subsequent state in the trajectory, and the trajectory is the result of following a policy derived from the action-value function (Q-function), this results in SARSA being on-policy. In Q-learning, the Q-value estimate is updated not by using the Q-value of the next state in the trajectory, but rather by using the Q-value of a state that would have resulted by following a purely greedy policy, thus making Q-learning off-policy.
+
+
