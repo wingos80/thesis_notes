@@ -6,7 +6,7 @@
       {
         "id": "587336c4284bc2c6",
         "type": "tabs",
-        "dimension": 41.89008042895443,
+        "dimension": 52.62850467289719,
         "children": [
           {
             "id": "521eae9362c4a106",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "1st_read_notes.md",
                 "mode": "source",
                 "source": true
               }
@@ -52,7 +52,7 @@
       {
         "id": "2d6f129b3713a065",
         "type": "tabs",
-        "dimension": 58.10991957104557,
+        "dimension": 47.3714953271028,
         "children": [
           {
             "id": "5d184d508ca2a056",
@@ -143,7 +143,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -159,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "1st_read_notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "1st_read_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "1st_read_notes.md"
               }
             }
           }
@@ -222,13 +223,13 @@
   },
   "active": "521eae9362c4a106",
   "lastOpenFiles": [
+    "Master_notes.md",
     "1st_read_notes.md",
     "README.md",
     "New Text Document.txt",
     "Untitled.md",
     "1st_read_notes_tmp.html",
     "Previous_RL_MSc_theses.md",
-    "Master_notes.md",
     "1C31C000",
     "0B31C000",
     "Untitled.canvas",

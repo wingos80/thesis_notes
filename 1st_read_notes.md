@@ -580,3 +580,24 @@ While theoretically both TD and MC methods make value function estimates which a
 There is a small difference between Q-learning and SARSA that makes Q-learning an off-policy RL algorithm and SARSA an on-policy one. In SARSA, the action-value (Q-value) estimate is updated based on the previous estimate of the Q-value as well as the Q-value estimate of the subsequent state in the trajectory, and the trajectory is the result of following a policy derived from the action-value function (Q-function), this results in SARSA being on-policy. In Q-learning, the Q-value estimate is updated not by using the Q-value of the next state in the trajectory, but rather by using the Q-value of a state that would have resulted by following a purely greedy policy, thus making Q-learning off-policy.
 
 
+> [!Definition]+
+> **Maximization bias**
+> The positive bias on estimation of values that results from using the maximization operator on said estimated values. For example, the Q-value estimate in SARSA suffers from maximization bias, where the estimated Q-value is biased to be higher than the true Q-value, as it uses an $\epsilon$ greedy choice over the Q-values to sample the next action.
+
+
+Maximization bias is a fault of the algorithm, and can cause agents to take inefficient actions. One way to combat this is to use two different value estimates when extracting an action using the maximization operator, and when evaluating the value of extracted action. In the case of SARSA, instead of taking  $a' = \underset{a}{\text{argmax}}Q(s,a), \; Q_{a'} = Q(s,a')$, where $a'$ and $Q_{a'}$ are taken from the same Q-estimate $Q(s,a)$, the $a'$ should be a result of one estimate $Q_1(s,a)$ and $Q_{a'}$ should be the result of a separate estimate $Q_2(s,a')$:
+$$
+\begin{align}
+	a' &= \underset{a}{\text{argmax}}Q_1(s,a) \\
+	Q_{a'} &= Q_2(s,a')
+\end{align}
+$$
+
+This small change results in the value estimate of $Q_{a'}$ becoming unbiased. A second estimate of $Q_{a'}$ can also be obtained by simply reversing the roles of $Q_1$ and $Q_2$. This thus leads to the idea of Double learning.
+
+
+> [!Definition]+
+> **Double learning**
+> A method used to avoid maximization bias, where two estimates of a value are kept, and the maximization operator and estimate evaluation are taken separately on the two estimates.
+
+
