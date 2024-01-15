@@ -559,7 +559,7 @@ Unlike MC methods which use sampled *returns* to update value function estimates
 
 > [!Definition]+
 > **Simple TD estimate update**
-> $V_{\pi}(s) \leftarrow V_{\pi}(s) + \alpha[R_{t+1} + \gamma V_{\pi}(S_{t+1}) - V_{\pi}(S_t)]$
+> $V_{\pi}(S_t) \leftarrow V_{\pi}(S_t) + \alpha[R_{t+1} + \gamma V_{\pi}(S_{t+1}) - V_{\pi}(S_t)]$
 
 The simple TD estimate update is also known as the *one-step TD* or *TD(0)*, a type of *n-step TD* and *TD($\lambda$)* algorithms respectively.
 
@@ -600,4 +600,19 @@ This small change results in the value estimate of $Q_{a'}$ becoming unbiased. A
 > **Double learning**
 > A method used to avoid maximization bias, where two estimates of a value are kept, and the maximization operator and estimate evaluation are taken separately on the two estimates.
 
+
+## **From chapter 7-n step bootstrapping**
+
+TD and Monte Carlo methods are two basic frameworks for estimating value functions in an MDP, the only difference lies in what number is used to estimate the value function. In the TD case the value function is estimated using **rewards** that are sampled, while in MC methods **returns** are sampled to estimate the value functions. And in the former, bootstrapping operations are essentially the only operations used to update estimates, whilst MC methods can use either bootstrapping operations or a sample average to obtain the value function estimates. Both methods are free to work with either state-value functions, or action-value functions, or even *after state*-value functions which is a type of value function observed in some classes of MDP's.
+
+In any case, TD methods and MC methods lie on opposite extremes of the same spectrum, and this spectrum is the number of time steps taken before the reward sampled is used to update the value function estimate. With TD methods, the number of time step taken before updating the estimate is *one*, hence TD methods are called 1-step bootstrapping methods. 
+
+
+> [!Definition]+
+> **n step TD estimate update**
+> $V_{t+n}(S_t) \doteq V_{t+n-1}(S_t) + \alpha[G_{t:t+n}- V_{t+n-1}(S_t)]$
+> $G_{t:t+n} \doteq R_{t+1} + \gamma R_{t+2} + \dots + \gamma^{n-1}R_{t+n} + \gamma^nV_{t+n-1}(S_{t+n})$
+
+Thus instead of simply taking the next steps' reward to update the current states' value estimate, n number of subsequent rewards are used to update the value estimate. Again, the same idea can be applied to more than merely the state-value function estimate. 
+The more steps of rewards used to come up with an estimate of any return, the lower the error between the estimated value function and the true value function will become.
 
