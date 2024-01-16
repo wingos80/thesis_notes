@@ -6,7 +6,7 @@
       {
         "id": "587336c4284bc2c6",
         "type": "tabs",
-        "dimension": 52.62850467289719,
+        "dimension": 52.570093457943926,
         "children": [
           {
             "id": "521eae9362c4a106",
@@ -52,7 +52,7 @@
       {
         "id": "2d6f129b3713a065",
         "type": "tabs",
-        "dimension": 47.3714953271028,
+        "dimension": 47.429906542056074,
         "children": [
           {
             "id": "5d184d508ca2a056",
@@ -223,13 +223,17 @@
   },
   "active": "521eae9362c4a106",
   "lastOpenFiles": [
+    "03513D00",
+    "2FA5DC00",
+    "Previous_RL_MSc_theses.md",
     "Master_notes.md",
     "1st_read_notes.md",
+    "Previous_RL_MSc_theses_tmp.html",
+    "Master_notes_tmp.html",
+    "1st_read_notes_tmp.html",
     "README.md",
     "New Text Document.txt",
     "Untitled.md",
-    "1st_read_notes_tmp.html",
-    "Previous_RL_MSc_theses.md",
     "1C31C000",
     "0B31C000",
     "Untitled.canvas",
@@ -238,7 +242,6 @@
     "Pasted image 20240113162053.png",
     "Previous_RL_MSc_theses.pdf",
     "Master_notes.pdf",
-    "Master_notes_tmp.html",
     "pictures/bellman_derive.png",
     "1st_read_notes.pdf"
   ]

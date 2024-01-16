@@ -81,9 +81,6 @@ Item 1 is for getting some exposure to rl controllers used in the context of fli
     1. [model 1], simulation based on stability & control derivatives from a VLM based CFD simulation of the full scale flying V, (i assume is linear)
     2. [model 2], simulation of model 1 improved with wind tunnel measurements
     3. [model 3], simulation based on derivatives obtained from flying the RC-controlled 4.6% scale model flying-V.
-[model 1]: http://resolver.tudelft.nl/uuid:69b56494-0731-487a-8e57-cec397452002
-[model 2]: https://arc.aiaa.org/doi/epdf/10.2514/6.2022-1429
-[model 3]: https://repository.tudelft.nl/islandora/object/uuid:3cf35fb2-4fe7-49d7-9076-068c44fb2016?collection=education
 - The thesis and some other materials refer to a "NASA common research model", but dont ever say even at the briefest mention what it is, so frustrating. Remember to document in the weekly report!!!!!
 - J. Benad [3] from TU Berlin carried out the first preliminary design of the flying-V concept in collaboration with Airbus.
 - Willem uses the FCS sized by Cappuyns [4].
@@ -91,6 +88,9 @@ Item 1 is for getting some exposure to rl controllers used in the context of fli
 - The flying V's damping coefficient for short period, phugoid, and dutch roll would not meet regulatory requirements of level 1 handling quality *in some flight conditions and CG locations* without an SAS [6].
 - Flying V has a pitch break behaviour where it becomes statically unstable (*longitudinally*) beyond certain alphas (~15) [6].
 
+[model 1]: http://resolver.tudelft.nl/uuid:69b56494-0731-487a-8e57-cec397452002
+[model 2]: https://arc.aiaa.org/doi/epdf/10.2514/6.2022-1429
+[model 3]: https://repository.tudelft.nl/islandora/object/uuid:3cf35fb2-4fe7-49d7-9076-068c44fb2016?collection=education
 
 ---
 
@@ -520,7 +520,7 @@ On-policies method work with the same framework of GPI with the exception that t
 > 
 > $\pi(a|s) > 0 \implies b(a|s) > 0$
 
-Importance sampling is one method used to enable using trajectories from $b$ to estimate values of $\pi$ or even improve it, where $V_{\pi}$ is estimated by taking a simple average of $G_b$ but with scaling on $G_b$ before using it to update $V_{\[i}$ using $\rho_{t:T-1}$ through either *ordinary importance sampling* or *weighted importance sampling*. 
+Importance sampling is one method used to enable using trajectories from $b$ to estimate values of $\pi$ or even improve it, where $V_{\pi}$ is estimated by taking a simple average of $G_b$ but with scaling on $G_b$ before using it to update $V_{i}$ using $\rho_{t:T-1}$ through either *ordinary importance sampling* or *weighted importance sampling*. Notice that by weighting the experienced rewards with this factor, rewards that resulted from actions which $\pi$ is more likely to take than $b$ are weighed more heavily and vice versa. 
 
 > [!Definition]+
 > **Importance-sampling ratio**
@@ -616,3 +616,7 @@ In any case, TD methods and MC methods lie on opposite extremes of the same spec
 Thus instead of simply taking the next steps' reward to update the current states' value estimate, n number of subsequent rewards are used to update the value estimate. Again, the same idea can be applied to more than merely the state-value function estimate. 
 The more steps of rewards used to come up with an estimate of any return, the lower the error between the estimated value function and the true value function will become.
 
+This idea of taking n steps can be used in all kinds of estimation and algorithms, be it estimating the state-value function, the action-value function, or if the algorithm is off-policy. 
+For off-policy extension, while the importance sampling ratio mentioned before can be directly applied by taking the ratio for the duration from $t$ to $t+n$ for the state-value estimation case, or $t+1$ to $t+n+1$ for the action-value estimation case, a more efficient n step extension of off-policy algorithms exists.
+
+The n step tree backup algorithm is one such efficient extension. Suppose the behaviour policy $b$ experienced a trajectory which starts with a state-action pair, took 2 actions, and therefore has visited 3 states. In the tree backup algorithm, the target policy $\pi$ will be updated using the rewards of actions that this trajectory did not take
