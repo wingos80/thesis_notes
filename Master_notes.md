@@ -215,3 +215,8 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 - Reading ch 5 and added more notes to the Sutton and Barto item in 1st_read_notes.md
 - Implemented SARSA, Q-learning, and expected SARSA and solved the windy grid world problem from example 6.5
 - TD and Monte Carlo methods are two basic frameworks for estimating value functions in an MDP, the only difference lies in what number is used to estimate the value function. In the TD case the value function is estimated using **rewards** that are sampled, while in MC methods **returns** are sampled to estimate the value functions. And in the former, bootstrapping operations are essentially the only operations used to update estimates, whilst MC methods can use either bootstrapping operations or a sample average to obtain the value function estimates. Both methods are free to work with either state-value functions, or action-value functions, or even *after state*-value functions which is a type of value function observed in some classes of MDP's.
+
+## 16/1/2024
+
+- Finished reading Part I of Sutton & Barto, skimmed through chapters 9 and 10 in Part II.
+- In the case of using function approximators for the value functions. Suppose i am enacting a greedy policy and selecting whichever action has the highest action-value according to my function estimate, how am i to see which action has the highest action-value? Do i have to iterate through all actions, find the action-value for each, and then choose the action with the highest action-value as my policy action?

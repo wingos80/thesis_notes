@@ -620,3 +620,63 @@ This idea of taking n steps can be used in all kinds of estimation and algorithm
 For off-policy extension, while the importance sampling ratio mentioned before can be directly applied by taking the ratio for the duration from $t$ to $t+n$ for the state-value estimation case, or $t+1$ to $t+n+1$ for the action-value estimation case, a more efficient n step extension of off-policy algorithms exists.
 
 The n step tree backup algorithm is one such efficient extension. Suppose the behaviour policy $b$ experienced a trajectory which starts with a state-action pair, took 2 actions, and therefore has visited 3 states. In the tree backup algorithm, the target policy $\pi$ will be updated using the rewards of actions that this trajectory did not take
+
+
+## **From chapter 8- planning and learning with tabular methods**
+
+Planning and learning are two approaches that an RL algorithm can adopt in its' architecture, both of which at their core create estimates of a value function and uses that estimate to perform actions, it is in how they come up with the estimate that differs. To employ a planning approach, the RL algorithm will require a model of the environment or the MDP, which confers these algorithms the name *model-based* algorithms. With a learning approach, the algorithm does not require any model, and as such are called *model-free* algorithms.
+
+*What is planning?*
+Planning is when a model of the environment is used in value estimation before producing a policy, for example when the model is used to simulate a trajectory, and this trajectory is used to compute a value function which is then used to compute a policy.
+
+Planning approaches can allow an algorithm's value estimates to converge in less episodes than a learning approach. But for an algorithm to plan means the potential for prior suboptimal policies to be reinforced, in effect causing the agent to be stuck with a suboptimal policy or value estimate. This effect can be observed in simple maze problems, where for the first set of training episodes the shortest path leading the agents from the starting location and goal is found by the algorithm, and the use of planning allows the algorithm to reinforce using this path. But if in the second half of training an even shorter path is created in the environment, the algorithm would be unlikely to explore and come across this more optimal path.
+
+*What is learning?*
+Learning is when solely actual experience in an MDP is used for value estimation to produce a policy, for example when an agent performs actions in an MDP and an RL algorithm uses the experienced trajectory to compute values to compute a policy. 
+The temporal difference methods (TD(0), SARSA, Q-learning) and Monte Carlo algorithms presented thus far all use the learning approaches in their architecture.
+
+
+## **Part I summary**
+
+The space of all RL algorithms is spanned by a number of dimensions.
+
+1. The depth of steps taken to update a value estimate, i.e. how many sequential state-state transitions.
+2. The breadth of steps taken to update value estimate, i.e. how many state-state transitions are considered from a single state, expected value updates versus sampled value updates.
+3. On-policy vs off-policy, the characteristics of the policy in each version can be varied.
+4. Function approximation method, i.e. the size of state space that are tackled by the algorithm, covered in Part II not Part I.
+Most RL methods in practice estimate value functions at their core,
+
+
+
+## **From chapter 9- **
+
+The biggest problem with extending the RL theory in the discrete and limited state space case to a continuous state space is the combinatorial explosion in the number of states, and therefore number of values that can exist for a given MDP, this adverse effect is analogous to the curse of dimensionality, which describes how complexity of a problem exponentially increases as more variables or dimensions are introduced. This consequence does not merely impact the number of values that may need to be kept track of in a value function, but also in the exploration of the value function, since it is very unlikely that all states or state-action pairs will be visited.
+
+Therefore, the value functions in larger or continuous state spaces is best treated as an approximating function $\hat{v}(s,\mathbf{w})$ which is parameterized by some vector $\mathbf{w} \in \mathcal{R}^d$, and the true value function $v_{\pi}(s)$ will be approximated by this parameterized function $v_{\pi}(s) \approx \hat{v}(s,\mathbf{w})$.
+
+With this approximation, the value estimate update rules previously presented need to be re-expressed. Taking the example of state-value functions, the previous *tabular* update of the value estimate is:
+
+$$
+\begin{equation}
+	v_{k+1}(S_t) = v_{k}(S_t) + \alpha[G_{t+1} - v_{k}(S_t)]
+\end{equation}
+$$
+
+The new value estimate update using function approximators for the value function is then not performed on the value itself, but on the weight vector:
+
+$$
+\begin{equation}
+	\mathbf{w}_{k+1} = \mathbf{w}_{k} + \alpha[G_{t} - \hat{v}(S_t, \mathbf{w}_k)]\Delta\hat{v}(S_t, \mathbf{w}_k)
+\end{equation}
+$$
+
+With $\Delta\hat{v}(S_t, \mathbf{w}_k)$ being a column vector of partial derivatives of the approximator function w.r.t its' parameters, note that the term inside the square brackets is a scalar.
+
+%% This therefore implies that the term inside the square brackets is a matrix? %%
+
+These are MC updates, but a TD method for updating can also be used where the sampled reward $R_t$ plus discounted value $\gamma \hat{v}(S_{t+1},\mathbf{w})$ is used in place of $G_t$.
+
+
+
+
+## **From chapter 10- **

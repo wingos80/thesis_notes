@@ -2,6 +2,6 @@
 #############################
 *.pdf
 
-# # Ignore the temporary xlsx file #
-# ##################################
-# ~$thesis gantt chart.xlsx
+# Ignore the temporary xlsx file #
+##################################
+~$thesis gantt chart.xlsx
