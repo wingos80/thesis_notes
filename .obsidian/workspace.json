@@ -6,7 +6,7 @@
       {
         "id": "587336c4284bc2c6",
         "type": "tabs",
-        "dimension": 47.92225201072386,
+        "dimension": 48.30607476635514,
         "children": [
           {
             "id": "521eae9362c4a106",
@@ -19,10 +19,10 @@
                 "source": true
               }
             },
-            "group": "a415b9845619adf0"
+            "group": "1ff940fae5ae0811"
           },
           {
-            "id": "c0b7c0646b70513d",
+            "id": "56be3dff9e61d001",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,7 +32,7 @@
                 "source": true
               }
             },
-            "group": "afc8dee6283e1ec9"
+            "group": "3728c83ecf7ba10e"
           },
           {
             "id": "5c2a229b65dac0c3",
@@ -66,7 +66,7 @@
       {
         "id": "2d6f129b3713a065",
         "type": "tabs",
-        "dimension": 52.07774798927613,
+        "dimension": 51.69392523364486,
         "children": [
           {
             "id": "5d184d508ca2a056",
@@ -79,10 +79,10 @@
                 "source": false
               }
             },
-            "group": "a415b9845619adf0"
+            "group": "1ff940fae5ae0811"
           },
           {
-            "id": "2e2ece037d30cc1c",
+            "id": "163e94b3c07fef58",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -92,7 +92,7 @@
                 "source": false
               }
             },
-            "group": "afc8dee6283e1ec9"
+            "group": "3728c83ecf7ba10e"
           },
           {
             "id": "efe04034932d0268",
@@ -171,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -249,20 +248,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c0b7c0646b70513d",
+  "active": "56be3dff9e61d001",
   "lastOpenFiles": [
-    "CEE50300",
-    "pictures/bwb_examples.jpg",
-    "pictures/bwb_examples.jpg.crdownload",
-    "1st_read_notes.md",
     "2nd_read_notes.md",
+    "1st_read_notes.md",
+    "pictures/bwb_examples.jpg",
+    "03513D00",
+    "2FA5DC00",
     "Previous_RL_MSc_theses.md",
     "Master_notes.md",
-    "88769200",
-    "~$thesis gantt chart.xlsx",
+    "Previous_RL_MSc_theses_tmp.html",
+    "Master_notes_tmp.html",
+    "1st_read_notes_tmp.html",
     "README.md",
     "New Text Document.txt",
-    "1st_read_notes_tmp.html",
+    "Untitled.md",
     "1C31C000",
     "0B31C000",
     "Untitled.canvas",
@@ -271,7 +271,6 @@
     "Pasted image 20240113162053.png",
     "Previous_RL_MSc_theses.pdf",
     "Master_notes.pdf",
-    "Master_notes_tmp.html",
     "pictures/bellman_derive.png"
   ]
 }
