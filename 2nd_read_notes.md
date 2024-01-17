@@ -6,29 +6,29 @@ The list of literature reviewed in this batch are as follows:
 
 1. *Simon van Overeem*: Modelling and Handling Assessment of the Flying-V Aircraft
 2. *Simon van Overeem*: Handling Qualities Improvements for the Flying-V aircraft using Incremental Nonlinear Dynamic Inversion
-3. *M Palermo, R Vos*. Experimental aerodynamic analysis of a 4.6%-scale flying-v subsonic transport
-4. *Thibaut Cappuyns*: Handling Qualities of a Flying V configuration
-5. *J Benad* (2015): The Flying V - A new Aircraft Configuration for Commercial Passenger Transport
-6. *Jurian Stougie* (2022): INDI with Flight Envelope Protection for the Flying-V
-7. *Benad J, Vos R*: DESIGN OF A FLYING V SUBSONIC TRANSPORT
-8. *van Empelen S.A, Vos R*: Effect of engine integration on a 4.6%-scale flying-v subsonic transport
-9. *hearwood T.R., Nabawy M.R.A., Crowther W.J., Warsop C*: Coordinated Roll Control of Conformal Finless Flying Wing Aircraft
-10. *Ganesh TS, Keerthi MC, Girish Sabari, Sreeja Kumar S, Mrunalini B*: Control Tailless Aircraft.
-11. *Qu Xiaobo, Zhang Weiguo, Shi Jingping, Ni Yebin*: A yaw control method for tailless flying wing aircraft under low speed condition.
-12. *Bolsunovsky AL, Buzoverya NP, Gurevich BI, Denisov VE, Dunaevsky AI, Shkadov LM*: Flying wing - Problems and decisions
-13. *Bravo-Mosquera Pedro D, Catalano Fernando M, Zingg David W*: Unconventional aircraft for civil aviation: A review of concepts and design methodologies
-14. *Campos Luis MBC, Marques Joaquim MG*: On the handling qualities of two flying wing configurations
-15. *Mcdonald Robert A, German Brian J, Takahashi T, Bil C, Anemaat W, Chaput A, Vos R, Hrrison N*: Future aircraft concepts and design methods
-16. *Ruiz-Garcia A, Vos R, de Visser C C*: aerodynamic model identification of the flying v from wind tunnel data
-17. *CHEN Z., ZHANG M., CHEN Y., SANG W., TAN Z., LI D., ZHANG B*: Assessment on critical technologies for conceptual design of blended-wing-body civil aircraft
-18. *Shan Y., Wang S., Konvisarova A., Hu Y*: Attitude Control of Flying Wing UAV Based on Advanced ADRC
-19. *Wildschek A.a, Bartosiewicz Z.b, Mozyrska D.b*: A multi-input multi-output adaptive feed-forward controller for vibration alleviation on a large blended wing body airliner
-20. *Zhang Liqi, Zhao Yonghui*: Adaptive Feed-Forward Control for Gust Load Alleviation on a Flying-Wing Model Using Multiple Control Surfaces
+3. *Sjoerd Joosten* (2022): Piloted Assessment of the Lateral-Directional Handling Qualities of the Flying-V
+4. *M Palermo, R Vos*. Experimental aerodynamic analysis of a 4.6%-scale flying-v subsonic transport
+5. *Thibaut Cappuyns*: Handling Qualities of a Flying V configuration
+6. *J Benad* (2015): The Flying V - A new Aircraft Configuration for Commercial Passenger Transport
+7. *Jurian Stougie* (2022): INDI with Flight Envelope Protection for the Flying-V
+8. *Benad J, Vos R*: DESIGN OF A FLYING V SUBSONIC TRANSPORT
+9. *van Empelen S.A, Vos R*: Effect of engine integration on a 4.6%-scale flying-v subsonic transport
+10. *hearwood T.R., Nabawy M.R.A., Crowther W.J., Warsop C*: Coordinated Roll Control of Conformal Finless Flying Wing Aircraft
+11. *Ganesh TS, Keerthi MC, Girish Sabari, Sreeja Kumar S, Mrunalini B*: Control Tailless Aircraft.
+12. *Qu Xiaobo, Zhang Weiguo, Shi Jingping, Ni Yebin*: A yaw control method for tailless flying wing aircraft under low speed condition.
+13. *Bolsunovsky AL, Buzoverya NP, Gurevich BI, Denisov VE, Dunaevsky AI, Shkadov LM*: Flying wing - Problems and decisions
+14. *Bravo-Mosquera Pedro D, Catalano Fernando M, Zingg David W*: Unconventional aircraft for civil aviation: A review of concepts and design methodologies
+15. *Campos Luis MBC, Marques Joaquim MG*: On the handling qualities of two flying wing configurations
+16. *Mcdonald Robert A, German Brian J, Takahashi T, Bil C, Anemaat W, Chaput A, Vos R, Hrrison N*: Future aircraft concepts and design methods
+17. *Ruiz-Garcia A, Vos R, de Visser C C*: aerodynamic model identification of the flying v from wind tunnel data
+18. *CHEN Z., ZHANG M., CHEN Y., SANG W., TAN Z., LI D., ZHANG B*: Assessment on critical technologies for conceptual design of blended-wing-body civil aircraft
+19. *Shan Y., Wang S., Konvisarova A., Hu Y*: Attitude Control of Flying Wing UAV Based on Advanced ADRC
+20. *Wildschek A.a, Bartosiewicz Z.b, Mozyrska D.b*: A multi-input multi-output adaptive feed-forward controller for vibration alleviation on a large blended wing body airliner
+21. *Zhang Liqi, Zhao Yonghui*: Adaptive Feed-Forward Control for Gust Load Alleviation on a Flying-Wing Model Using Multiple Control Surfaces
 
 Literature sources:
 - From Willem's thesis
 - Scopus 
-
 
 <figure>
     <figcaption><b>Table 1</b>, search queries used on Scopus.</figcaption>
@@ -39,7 +39,7 @@ Literature sources:
 | Engineering | "flying-v" |
 | Engineering | "flying wing" AND "tailless" |
 | Engineering | "flying wing" AND "tailless" AND "flight control" |
-| Engineerin  | "flying wing" AND "sweep" |
+| Engineering | "flying wing" AND "sweep" |
 | Engineering | "flying wing" AND "high sweep" |
 | Engineering | "blended wing body" AND "flight control" |
 | Engineering | ( "flying wing" OR "blended wing body" ) AND ( "flight control" OR "handling" ) |
