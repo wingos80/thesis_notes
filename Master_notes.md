@@ -15,7 +15,7 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 Ranked, 1 = highest priority
 
 1. Read up on flying-V
-2. Read up on RL with curriculum
+2. See what curriculum RL is about
 3. Read Ye Zhou's PhD dissertation on iADP, IDHP
 4. Look into evolutionary reinforcement learning (what's the deal with using GA over ES?)
 5. Look at Lucas/Caspers repos to study IDHP implementation
@@ -24,7 +24,11 @@ Ranked, 1 = highest priority
 
 ## Research Objective
 
-> *To advance the state-of-the-art RL based fault tolerant flight controllers and contribute to the safety of autonomous flight, by studying and developing novel methods of hybrid RL algorithms.*
+> ~~*To advance the state-of-the-art RL based fault tolerant flight controllers and contribute to the safety of autonomous flight, by studying and developing novel methods of hybrid RL algorithms.*~~
+
+
+> *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing an intelligent flight control system for the Flying-V using novel methods of hybrid RL algorithms.*
+
 
 ### Research questions
 
@@ -244,4 +248,22 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 ## 16/1/2024
 
 - Finished reading Part I of Sutton & Barto, skimmed through chapters 9 and 10 in Part II.
-- In the case of using function approximators for the value functions. Suppose i am enacting a greedy policy and selecting whichever action has the highest action-value according to my function estimate, how am i to see which action has the highest action-value? Do i have to iterate through all actions, find the action-value for each, and then choose the action with the highest action-value as my policy action?
+- In the case of using function approximators for the value functions. Suppose i am enacting a greedy policy and selecting whichever action has the highest action-value according to my function estimate, how am i to see which action has the highest action-value? Do i have to iterate through all actions, find the action-value for each, and then choose the action with the highest action-value as my policy action? 
+	- For discrete action spaces with small number of actions possible, this is what is done. For larger ones, i will have to find out.
+
+## 17/1/2024
+
+- Gathered a list of interesting literature related to the flying-v and flying wings which will catch me up to date with the development of the flying v, and the flight control challenges currently facing the aircraft as well as flying wings in general.
+
+## 18/1/2024
+
+- Potential paragraph that i can directly use in thesis:
+	- Flying wing designs are inherently attractive design options due to the fact that it merges the key functions of lift generation and payload carrying into one single structure, the opposite case of the traditional tube-and-wing design that all modern passenger airlines adopt. This merger means that less material needs to be used to create the aircraft, since one structure serves two simultaneous purposes, thus the airplane can weigh less overall. Further weight savings come as a result of much more evenly matched weight and lift distribution across the aircraft, as the payload is no longer centered at mid-span but rather spread out across the wing span, thus the critical load junction along with structural reinforcements at wing root disappears. Additionally, the aerodynamics of the traditional design is slightly less efficient, since the tube fuselage does not generate any lift, and the joint section between fuselage and wing causes additional interference drag.  The Flying-V takes up this design philosophy in the form of two passenger tubes joint in a v configuration, embedded in a thick and heavily swept back set of wings.
+	- However, the flight dynamics of flying wings are less favourable than the tube-and-wing design. Certain flight dynamic modes of the Flying-V are unstable, and piloting can feel sluggish as signified by the low damping ratios of some modes. One logical solution to this problem is the addition of automatic flight control systems, which can help with stability correction and control enhancements.
+- The Flying-V *does not need high lift devices* due to a much larger wing surface area than traditional aircrafts, which reduces the complexity of the design.
+- INDI requires a control input model of the aircraft, which is a potential disadvantage for INDI compared to using RL based controllers as INDI would be sensitive to changes between modelled and actual control effectiveness.
+- Flying wings inherently have poor lateral handling qualities, due to lack of a vertical stabilizer. This means that they can be prone to sideslipping, or have poor yaw damping, and in the case of the Flying-V even an unstable Dutch roll mode.
+- **Curriculum learning** when applied in the context of reinforcement learning is to train an agent for a simpler task, before training it on more and more difficult tasks, ultimately ending in training for the full task. Origins of curriculum learning as a formal methodology sprouted in the field of supervised learning with the works of [Bengio et al] in 2009. But has its roots in the informal idea that learning should follow a *curriculum*, which is to say learning should have a logical sequence of learning goals that build towards learning more abstract ideas; this is an idea that humanity in many forms adopt throughout its' long history, examples would be the primary school to high school path, or training of domestic animals to obey simple commands before higher level tasks.
+- The idea of curriculum learning for online training of an adaptive controller seems very interesting. I think that the merits of adaptable controllers are one of the most attractive merits that RL possesses, and which makes it a standout option when compared to gain scheduled PID's. Where by using adaptable RL controllers, the engineering effort dedicated towards creating an entire array of controllers for each point in the flight envelop can be allocated towards other design efforts.
+
+[Bengio et al]: https://dl-acm-org.tudelft.idm.oclc.org/doi/10.1145/1553374.1553380

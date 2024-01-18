@@ -61,7 +61,7 @@
             "group": "bb71d8a6737ddad5"
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "2d6f129b3713a065",
@@ -121,7 +121,7 @@
             "group": "bb71d8a6737ddad5"
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -188,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master_notes.md",
+                "file": "Previous_RL_MSc_theses.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master_notes.md",
+                "file": "Previous_RL_MSc_theses.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master_notes.md"
+                "file": "Previous_RL_MSc_theses.md"
               }
             }
           }
@@ -249,15 +249,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5c2a229b65dac0c3",
+  "active": "f73d943d22794346",
   "lastOpenFiles": [
+    "2nd_read_notes.md",
+    "Previous_RL_MSc_theses.md",
+    "Master_notes.md",
+    "1st_read_notes.md",
+    "5ECAA500",
+    "~$thesis gantt chart.xlsx",
     "3B472200",
     "09472200",
-    "1st_read_notes.md",
-    "2nd_read_notes.md",
-    "Master_notes.md",
-    "Previous_RL_MSc_theses.md",
-    "~$thesis gantt chart.xlsx",
     "pictures/bwb_examples.jpg",
     "03513D00",
     "2FA5DC00",
@@ -267,8 +268,6 @@
     "README.md",
     "New Text Document.txt",
     "Untitled.md",
-    "1C31C000",
-    "0B31C000",
     "Untitled.canvas",
     "2024-01-14.md",
     "Pasted image 20240113162054.png",

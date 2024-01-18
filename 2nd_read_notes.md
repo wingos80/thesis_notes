@@ -10,7 +10,7 @@ The list of literature reviewed in this batch are as follows:
 4. *Ruiz-Garcia A, Vos R, de Visser C C* (2020): aerodynamic model identification of the flying v from wind tunnel data
 5. *M Palermo, R Vos* (2020): Experimental aerodynamic analysis of a 4.6%-scale flying-v subsonic transport
 6. *Thibaut Cappuyns* (2019): Handling Qualities of a Flying V configuration
-7. *Simon van Overeem* (2022): Modelling and Handling Assessment of the Flying-V Aircraft
+7. *Simon van Overeem* (2022): Modelling and Handling Quality Assessment of the Flying-V Aircraft
 8. *Sjoerd Joosten* (2022): Piloted Assessment of the Lateral-Directional Handling Qualities of the Flying-V
 9. *Kevin Siemonsma* (2022): Aerodynamic Model Identification of the Flying-V Using Flight Data
 10. *Jurian Stougie* (2022): INDI with Flight Envelope Protection for the Flying-V
@@ -144,9 +144,72 @@ From the models, it can be seen that indeed the aircraft is longitudinally stabl
 
 ---
 
+## Item 5:  Experimental aerodynamic analysis of a 4.6%-scale flying-v subsonic transport
+
+
+### Summary - 
+
+The flying-V's aerodynamic characteristics were analyzed using wind tunnel measurements of a scaled down model. The analysis done were only concerned with the longitudinal characteristics of the design, wherein the angle of attack, velocity, and elevon deflections were varied and resulting forces and moments were measured. Out of these test campaigns, a series of force and moment measurements were obtained which is used by other researchers to perform system identification on the Flying-V, in addition to notable results on its' flight dynamics.
+
+Firstly, the design demonstrates static stability up until angle of attack of around 19 degrees, whereafter instability sets in as the $C_{M_{\alpha}}$ value becomes positive, which will cause the aircraft to enter an aggressive pitch up: a phenomenon known as *pitch-break*. This is caused by the aerodynamic center of the wing shifting forward, presumably past the center of gravity, at high alphas.
+
+Secondly, the experiments showed that the control effectiveness of the elevons remain constant as a function of angles of attack. This is shown by the pitching moment derivatives of the two inboard elevons exhibiting marginal correlation to angle of attack, whilst remaining at effective magnitudes. Because the modelled Flying-V has multiple sets of elevons, all adjacent to one another, the wind tunnel experiments also tested the interacting behaviour between elevons. This interaction is captured in a coefficient $\xi_{ij}$, which roughly conveys by what factor the pitching moment derivative of elevon $i$ varies as the elevon $j$ is deflected. It is observed that the control effectiveness of an elevon falls as an adjacent one is deflected, this effect is weak for low angles of attack (below 10 degrees), but for higher angles of attack the interactions become more significant. When an adjacent elevon is negatively deflected, an elevon's control effectiveness increases between 20% to 100%, but when the an adjacent elevon is positively deflected, control effectiveness can be estimated to decrease by as much as 80%.
+
+### Questions & Answers -
+
+1. The power setting of the engine apparently has an effect on the aerodynamics?
+
+
+### Notes -
+
+- negative elevon deflection means downward deflection, remember that the deflection angle is defined wrt the right handed axis system. So maximum *positive* deflection means full down elevons, maximum *negative* deflection means full up elevons.
+
+---
+
+## Item 6: Handling Qualities of a Flying V configuration
 
 ### Summary - 
 
 
 ### Questions & Answers -
 ### Notes -
+
+
+
+--- 
+
+## Item 7: Modelling and Handling Quality Assessment of the Flying-V Aircraft
+
+### Summary - 
+
+A 6 DOF rigid body nonlinear flight simulation of the Flying-V is built, by combining aerodynamic data from CFD (VLM specifically) data and wind tunnel experiments. A linearization of the full nonlinear model is performed, from which it is then used to assess the handling quality of the Flying-V through first computing the eigenvalues corresponding to the 5 dynamic modes, and then by computing control anticipation parameters.
+
+The eigenvalue analysis is split between approach and cruise conditions, which are then split between fore and aft cg location. Several unstable modes during approach can be identified; these are the Dutch roll, phugoid, and spiral modes, while during cruise only the Dutch roll mode with a fore cg position is unstable. This comprises the primary findings of the eigenvalue analysis. The secondary findings is that the handling quality of the Flying-V can be slightly sluggish, where the damping ratio of several modes do not meet level 1 quality, with some unstable modes failing to meet the lowest quality of level 3.
+
+Then a CAP analysis of the Flying-V shows that the agility falls as center of gravity shifts aft, a finding consistent in [flying wing designs]. Furthermore, the aircraft exhibits primarily level 2 handling qualities, and in certain cg positions it borders on possessing level 1 qualities.
+
+Overall the flying V has a split level 1 and level 2 handling quality, with a number of level 3 or worse qualities; an undesirable characteristic for the aircraft to have. This could be seen as a sacrifice made by discarding the tube and wing design with horizontal and vertical stabilizers, which is a design that can be made naturally stable with relatively small and simple modifications. Nonetheless, these are flying qualities prior to design modifications or implementation of a stability or control augmentation system, also known as a flight controller or a fly by wire system.
+
+[flying wing designs]: https://www.dglr.de/publikationen/2018/450043.pdf
+
+### Questions & Answers -
+### Notes -
+
+- This introduction is very good at explaining the advantages of Flying-V
+- The intro is also very good and concise at explaining the handling quality/flight dynamic challenges faced by the Flying-V.
+- Level 1 handling quality is best, level 2 is stable but sluggish, level 3 is extra pilot effort or instability. 
+
+--- 
+
+## Item *WILDCARD*: Safe Exploration Algorithms for Reinforcement Learning Controllers
+
+doi: 10.1109/TNNLS.2017.2654539
+
+### Summary - 
+
+
+### Questions & Answers -
+### Notes -
+
+- *SSS* means safe state space.
+- original SHERPA can crash if the controlled system is difficult, and it is unable to distinguish between almost satisfactory controls and fatal controls. OptiSHERPA is thus introduced to address these drawbacks.
