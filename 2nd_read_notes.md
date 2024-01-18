@@ -5,9 +5,9 @@ The first literature review focused on getting a broad overview of what flight c
 The list of literature reviewed in this batch are as follows:
 
 1. *J Benad* (2015): The Flying V - A new Aircraft Configuration for Commercial Passenger Transport
-2. *Simon van Overeem* (2023): Handling Qualities Improvements for the Flying-V aircraft using Incremental Nonlinear Dynamic Inversion
-3. *Benad J, Vos R* (2022): Design of a Flying V Subsonic Transport
-4.  *Ruiz-Garcia A, Vos R, de Visser C C* (2020): aerodynamic model identification of the flying v from wind tunnel data
+2. *Benad J, Vos R* (2022): Design of a Flying V Subsonic Transport
+3. *Simon van Overeem* (2023): Handling Qualities Improvements for the Flying-V aircraft using Incremental Nonlinear Dynamic Inversion
+4. *Ruiz-Garcia A, Vos R, de Visser C C* (2020): aerodynamic model identification of the flying v from wind tunnel data
 5. *M Palermo, R Vos* (2020): Experimental aerodynamic analysis of a 4.6%-scale flying-v subsonic transport
 6. *Thibaut Cappuyns* (2019): Handling Qualities of a Flying V configuration
 7. *Simon van Overeem* (2022): Modelling and Handling Assessment of the Flying-V Aircraft
@@ -25,6 +25,7 @@ The list of literature reviewed in this batch are as follows:
 19. *Shan Y., Wang S., Konvisarova A., Hu Y*: Attitude Control of Flying Wing UAV Based on Advanced ADRC
 20. *Wildschek A.a, Bartosiewicz Z.b, Mozyrska D.b*: A multi-input multi-output adaptive feed-forward controller for vibration alleviation on a large blended wing body airliner
 21. *Zhang Liqi, Zhao Yonghui*: Adaptive Feed-Forward Control for Gust Load Alleviation on a Flying-Wing Model Using Multiple Control Surfaces
+22. 
 
 Literature sources:
 - From Willem's thesis
@@ -49,3 +50,103 @@ Literature sources:
 
 
 While the gathered literature all pertain to flying wing, it is important to note that the Flying-V is a special kind of flying wing due to its' high sweep angle, distinguishing it from more rectangular wing flying wing planforms; it is also shaped like a V instead of a Delta, distinguishing it from the delta flying wing planforms. An implication of this distinction is that flight control and handling properties specific to the Flying-V can conceivably not be observed in other flying wing designs, and vice-versa.
+
+The Flying-V as an aircraft concept is in the mid to early Technology Readiness Level. Active research efforts are being conducted on many fronts of the aircraft's design, ranging from aerodynamics, to structure and materials, to flight dynamics & controls and much more. It is the very act of carrying out these research efforts, in addition of course to the academic and engineering fruits of the research labour, that an early stage aircraft concept like the Flying-V will be brought closer to maturity; just as importantly, it will bring the level of awareness and acceptance by the industry and wider public alike higher. 
+
+
+
+---
+
+## Item 1: The Flying V - A new Aircraft Configuration for Commercial Passenger Transport
+
+### Summary -
+
+This paper proposes a flying wing design with a V design. The shape was chosen such that a circular cross section can be adopted for the passenger cabin to minimize wall stresses, and so that the streamwise cross-section of the cabin is elliptical which will fit more naturally into airfoil profiles. 
+
+In regards to controls, the Flying-V was designed to have longitudinal static stability by placing the neutral point aft of the center of gravity, and to have dynamic directional stability by giving the outer section of the wing a dihedral. The handling qualities of this aircraft design were demonstrated through the flight test of a remote controlled scaled down model, which was built with only one set of elevons. The model is then flight tested by an experienced remote control pilot, who comments the aircraft was easy to fly. The stall recovery ability of the design was also demonstrated, by incrementally increasing the angle of attack and reducing velocity, which eventually resulted in a stall. The design could then recover from the stall as its' nose dropped, sending the aircraft into a dive which allowed it to recover velocity and thus lift.
+
+### Questions & Answers -
+### Notes -
+
+- cylinder is a structurally efficient shape for a pressure vessel. By placing the passenger cabins along the span of a heavily swept back wing, it is possible to use a cylindrical shape to retain this structural efficiency, in addition to more efficiently fitting the cabin inside an airfoil profile.
+---
+
+## Item 2: Design of a Flying V Subsonic Transport
+
+### Summary -
+
+This paper accounts the development timeline of the Flying-V aircraft concept focusing on five fronts: the early formulation of the Flying-V concept, the aerodynamics and structural design, how the concept was extended to encompass a family of designs, flight dynamics and control of the design, and finally the interior design.
+
+The flying V concept was started by [Benad] and sought to improve the fuel efficiency of passenger airliners by blending the wings and body of an aircraft. This blending came in the form of two cylindrical passenger cabins that spanned the length of two highly swept back wings, resembling a V shape. Through this layout, several advantages were gained over the traditional tube and wing aircraft design. These advantages were: elliptical spanwise lift distribution, lack of need for high-lift devices, 10% higher lift to drag ratio, 2% lower empty weight compared to the reference aircraft A350-900, and reduced ground noise (see [Benad]).
+
+The concept was made more detailed through multi-disciplinary optimization of the aerodynamic properties and structural characteristics of the aircraft by [Faggiano]. Here, the circular cross-sections of the passenger cabins were replaced by oval cross sections to make the cabin shape conform more to the airfoil shapes. The aerodynamic design optimization conducted resulted in a Flying-V which had a 25% higher lift-to-drag ratio than the NASA CRM. Further studies into structural design were conducted by [van der Schaft] and [Claeys] to yield a structure that could handle a variety of loading scenarios, including high-g turns, side-gusts, taxiing, and pressurization; which had the conclusion that the Flying-V has a 17% decrease in FEM weight in comparison to an A350-like design.
+
+The Flying-V is made into a family of designs through the works of [Hillen], where the outer mould line was parameterized to enable the design to be varied easily. With this parameterization, 3 variants of the design were made, which could carry 293, 328, and 378 passengers respectively.
+
+Flight dynamics modelling of the aircraft were carried out in multiple efforts. [Palermo and Vos] built a half-wing model at 4.6% scale and conducted wind tunnel experiments to study the stall and lift characteristics of the design, noting the pitch breaking characteristic of the aircraft, and which provided data for [Garcia] to produce an aerodynamic model. The full aircraft at 4.6% scale was later constructed, and was used to gather outdoor flight data, providing a source for [Garcia et al] to further identify an aerodynamic model. 
+
+[Cappuyns]  then performed a study into the handling qualities of the Flying-V, which showed the lateral flight authority of the aircraft was limited in addition to the Dutch roll mode being mildly unstable, likely consequences of the lack of an effective vertical stabilizer. Which warrants for additional attention through additional sizing on the vertical tail planes, and the implementation of flight control systems designed to improve the damping behaviour and control authority of the pilot.
+
+
+
+[Benad]: https://pure.tudelft.nl/ws/portalfiles/portal/139663741/370094.pdf
+[Faggiano]: https://arc.aiaa.org/doi/epdf/10.2514/6.2017-3589
+[van der Schaft]: https://repository.tudelft.nl/islandora/object/uuid:d9c9c02f-d67a-4e3c-93a7-eb20ed67cd03?collection=education
+[Claeys]: https://repository.tudelft.nl/islandora/object/uuid:ee7f2ecb-cdb6-46de-8b57-d55b89f8c7e6?collection=education
+[Hillen]: https://repository.tudelft.nl/islandora/object/uuid:f4863ae4-2792-4335-b929-ff9dfdb6fed5?collection=education
+[Palermo and Vos]: https://arc.aiaa.org/doi/epdf/10.2514/6.2020-2228
+[Garcia]: https://arc.aiaa.org/doi/epdf/10.2514/6.2020-2739
+[Garcia et al]:https://arc.aiaa.org/doi/10.2514/6.2022-0713
+[Cappuyns]: https://repository.tudelft.nl/islandora/object/uuid:69b56494-0731-487a-8e57-cec397452002?collection=education
+
+
+### Questions & Answers -
+### Notes -
+
+---
+
+## Item 3: Handling Qualities Improvements for the Flying-V aircraft using Incremental Nonlinear Dynamic Inversion
+
+### Summary - 
+
+Previous studies into the handling qualities of the Flying-V demonstrated that the design itself lend to undesirable flight dynamics, especially for lateral control and the Dutch roll mode. Tailor made flight control system is one of the answers that can address this issue, and this paper presented INDI as a suitable control system candidate. INDI is an advanced form of control law that has proven robustness characteristics and only needing a control effectiveness model of the system, rather than the full system model like in the design of traditional control laws, thus reducing sensitivity to system model error. Nonetheless, INDI requires a sufficiently high sampling rate sensor suite to be effective.
+
+Using a combination of INDI and traditional PID controllers, a stability augmentation system and a control augmentation system were implemented, the former providing a stabilizing and damping effect to flight dynamics, and the latter providing pilots with fly-by-wire control over the aircraft. The robustness of this system was tested by adding white noise to the aerodynamic coefficients in the model of the Flying-V, and using the designed flight controller to follow a reference trajectory. It was shown that the median performance of the controller remains the same as the nominal case for model uncertainties of up to 25%, albeit with a marginally higher spread in performance. 
+
+
+### Questions & Answers -
+### Notes -
+
+- INDI requires a control input model of the aircraft, which is a potential disadvantage for INDI compared to using RL based controllers as INDI would be sensitive to changes between modelled and actual control effectiveness.
+
+---
+
+## Item 4: Aerodynamic model identification of the flying V from wind tunnel data
+
+
+### Summary - 
+
+A set of aerodynamic models modelling the forces and moments in the longitudinal plane are created, by using wind tunnel data to identify the aerodynamic coefficients in the models. The set of models are duplicated and modelled using polynomials and splines respectively, and then identified using an ordinary least squares method. These models are validated against a set of training data and can be considered to be accurate representation of the Flying-V's longitudinal flight dynamics.
+
+From the models, it can be seen that indeed the aircraft is longitudinally stable, as the $C_{M_{\alpha}}$ coefficient is negative in the polynomial model. This, however, is only true at lower angles of attack. Beyond high angles of attack around 19 degrees the $C_m$ data points increase as a function of angle of attack, meaning that $C_{M_{\alpha}}$ becomes positive. This observation in wind tunnel measurements is also translated into both the aerodynamic models.
+
+
+### Questions & Answers -
+
+1. "A global longitudinal aerodynamic model is estimated", global in what sense though?
+	1. 
+2. The $C_{M_{\alpha}}$ in the identified spline model is positive? Indicating longitudinal static instability? Confirm Roelof Vos measurements from his wind tunnel data paper.
+	1. In the polynomial model $C_{M_{\alpha}}$ is negative, suggesting stability. Why this coefficient has opposite signs between the spline and polynomial model is unknown.
+
+### Notes -
+
+- This paper did not give much not on the aerodynamic properties of the Flying-V, more so on how to identify the model and the identified models' quality.
+
+---
+
+
+### Summary - 
+
+
+### Questions & Answers -
+### Notes -

@@ -233,6 +233,8 @@ Item 1 is for getting some exposure to rl controllers used in the context of fli
 
 ### Questions & Answers-
 
+1. Why is the acronym iADP instead of IADP (all caps)
+
 **From chapter 3:**
 
 1. Does he omit the discussion of IDHP? And why?

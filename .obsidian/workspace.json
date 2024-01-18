@@ -61,7 +61,7 @@
             "group": "bb71d8a6737ddad5"
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "2d6f129b3713a065",
@@ -121,7 +121,7 @@
             "group": "bb71d8a6737ddad5"
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -171,7 +171,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -187,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2nd_read_notes.md",
+                "file": "Master_notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +205,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2nd_read_notes.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2nd_read_notes.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -248,15 +249,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "56be3dff9e61d001",
+  "active": "5c2a229b65dac0c3",
   "lastOpenFiles": [
-    "2nd_read_notes.md",
+    "3B472200",
+    "09472200",
     "1st_read_notes.md",
+    "2nd_read_notes.md",
+    "Master_notes.md",
+    "Previous_RL_MSc_theses.md",
+    "~$thesis gantt chart.xlsx",
     "pictures/bwb_examples.jpg",
     "03513D00",
     "2FA5DC00",
-    "Previous_RL_MSc_theses.md",
-    "Master_notes.md",
     "Previous_RL_MSc_theses_tmp.html",
     "Master_notes_tmp.html",
     "1st_read_notes_tmp.html",
@@ -269,8 +273,6 @@
     "2024-01-14.md",
     "Pasted image 20240113162054.png",
     "Pasted image 20240113162053.png",
-    "Previous_RL_MSc_theses.pdf",
-    "Master_notes.pdf",
     "pictures/bellman_derive.png"
   ]
 }

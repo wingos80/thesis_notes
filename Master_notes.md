@@ -1,11 +1,12 @@
 # Master Notes
 
-File containing todo list and all miscellaneous/thinking-out-loud notes throughout my thesis.
+File containing all miscellaneous/thinking-out-loud thoughts throughout my thesis.
 
 ## Table of Contents
 
 1. [List of TODOs](#todo)
-2. [Daily Notes](#daily)
+2. [Research Objective](#obj)
+3. [Daily Notes](#daily)
 
 ---
 
@@ -13,12 +14,36 @@ File containing todo list and all miscellaneous/thinking-out-loud notes througho
 
 Ranked, 1 = highest priority
 
-1. Read up on Sutton & Barto
-2. Read up on flying-V
-3. Read up on Hierarchical RL (maybe HRL for continuous algos? For SAC?)
-5. Read Ye Zhou's PhD dissertation which presents iADP, IDHP, and hierarchical RL.
+1. Read up on flying-V
+2. Read up on RL with curriculum
+3. Read Ye Zhou's PhD dissertation on iADP, IDHP
 4. Look into evolutionary reinforcement learning (what's the deal with using GA over ES?)
-6. Look at Lucas/Caspers repos to study IDHP implementation
+5. Look at Lucas/Caspers repos to study IDHP implementation
+
+---
+
+## Research Objective
+
+> *To advance the state-of-the-art RL based fault tolerant flight controllers and contribute to the safety of autonomous flight, by studying and developing novel methods of hybrid RL algorithms.*
+
+### Research questions
+
+1. What are the state-of-the-art DRL algorithms?
+	1. What RL algorithms are used in state-of-the-art flight control, and what are the algorithms used in other fields? 
+	2. What are the benefits and drawbacks of each algorithm?
+	3. What potential for improvement exist in each of these algorithms?
+2. Which of these algorithms are applicable to the problem of fault tolerant flight control?
+	1. What are desirable properties for an algorithm to possess for fault tolerance.
+	2. What fault cases are prevalent in aircrafts.
+3. How are DRL algorithms applied to flight control?
+	1. How are RL algorithms in general implemented?
+	2. How do RL algorithms interface with flight controllers?
+	3. What DoF flight simulation should be considered for this project?
+	4. How realistic should the flight dynamics used for RL training be?
+4. How does the implemented DRL algorithm compare to previous attempts at RL for fault tolerant flight control?
+	1. What metrics should be evaluated for the implemented algorithm?
+	2. How did the fault tolerance characteristics of the obtain controller differ from other methods.
+	3. What other differences are present between the implemented and previous DRL controllers
 
 ---
 
