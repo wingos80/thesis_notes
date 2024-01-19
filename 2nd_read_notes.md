@@ -201,7 +201,7 @@ Overall the flying V has a split level 1 and level 2 handling quality, with a nu
 
 --- 
 
-## Item *WILDCARD*: Safe Exploration Algorithms for Reinforcement Learning Controllers
+## Item \*: Safe Exploration Algorithms for Reinforcement Learning Controllers
 
 doi: 10.1109/TNNLS.2017.2654539
 
@@ -213,3 +213,36 @@ doi: 10.1109/TNNLS.2017.2654539
 
 - *SSS* means safe state space.
 - original SHERPA can crash if the controlled system is difficult, and it is unable to distinguish between almost satisfactory controls and fatal controls. OptiSHERPA is thus introduced to address these drawbacks.
+
+--- 
+
+## Item \*: Safe Curriculum Learning for Optimal Flight Control of Unmanned Aerial Vehicles with Uncertain System Dynamics
+
+MSc thesis of Tijmen Pollack.
+
+### Summary - 
+
+
+### Questions & Answers -
+### Notes -
+
+- The actor is a collection of NN's, and the critic is another collection of NN's
+- Implication of a system having Ergodicity is that there exists a path between any two points in the safe state space, the mathematical idea of Ergodicity applies more generally as well to meaning that a system will eventually visit all points in its' state space. 
+	- [this paper] talks about safe exploration of agents in MDPs, and elaborates on ergodicity: "*The essence of ergodicity is that any state is eventually reachable from any other state by following a suitable policy*".
+	- The paper also states that existing reinforcement learning algorithms provide strong exploration guarantees, but assumes this idea of ergodicity by assuming that it would be possible to go from a potential unsafe point in the state space back to a safe point. This of course is not true for all state spaces, for example it is possible to pilot an airplane to explore the stalling region of the state space, but in some cases it is not possible for an airplane to return from this stall region back to the nominal flight conditions; therefore not all state spaces are ergodic.
+- [this other paper] talks about curriculum learning.
+- *intra-task* learning is when the dynamics of the target or final MDP is shared by any and all of the intermediate MDPs,  meaning that the distinctions between subsequent stages of learning is in how much of the state space or action space are accessible. *Inter-task* on the other hand refers to learning where the target MDP has different dynamics than the intermediate MDP's.
+- He used an intra-task learning framework for the quadrotor training task, but i could not tell how he transferred (technically it's called mapping) the actor and critic networks from one learning stage to another stage.
+	- A detailed account of transfer learning (the field that has theories useful for transferring knowledge between learning stages in CRL) [can be found here]
+
+[this paper]: https://arxiv.org/abs/1205.4810
+[this other paper]: https://www.researchgate.net/publication/221250428_Assisting_Transfer-Enabled_Machine_Learning_Algorithms_Leveraging_Human_Knowledge_for_Curriculum_Design
+[can be found here]: https://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf
+
+--- 
+
+## Item \*: Safe Curriculum Learning for Optimal Flight Control of Unmanned Aerial Vehicles with Uncertain System Dynamics
+
+MSc thesis of Tijmen Pollack.
+
+### Summary - 

@@ -267,3 +267,16 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 - The idea of curriculum learning for online training of an adaptive controller seems very interesting. I think that the merits of adaptable controllers are one of the most attractive merits that RL possesses, and which makes it a standout option when compared to gain scheduled PID's. Where by using adaptable RL controllers, the engineering effort dedicated towards creating an entire array of controllers for each point in the flight envelop can be allocated towards other design efforts.
 
 [Bengio et al]: https://dl-acm-org.tudelft.idm.oclc.org/doi/10.1145/1553374.1553380
+
+## 19/1/2024
+
+- It is very useful to compare performance of an RL based controller to a PID/traditional controller, make sure to do this in the thesis!
+- I think reinforcement learning makes the most sense when the online version is used. With offline trained RL agents, the main advantages of doing so is that:
+	- the trained controller does not need to be obtained manually, it simply involves running the algorithm over many hours.
+	- it is possible to train the controller in different flight conditions, and training could extend indefinitely until the controller can perform satisfactorily in *all* conditions (in practice through past research it is shown that satisfactory performance is obtained within reasonable time frames for a typical controller synthesis campaign)
+	- performance and robustness can surpass traditional controllers
+But an extra advantage that RL based controllers can have over traditional controllers is that it is possible for the controller parameters to change during flight, i.e. instead of having a one-size-fits-all controller, with one single controller being trained to handle all circumstances (or similarly training several controllers to handle different events just like gain scheduling), it would be in a control systems' best interest for a controller to be in place that could adapt to changes in the airplane or the environment. 
+- An idea could be to use the hybrid format of Casper and Lucas, and then for the online training make use of SHERPA to make exploration online safer, or use curriculum learning just like Tijmen (could also only use SHERPA to action filter)
+- I also have the idea to see if there exist distributional methods of online reinforcement learning, seems to have a [textbook] dedicated to distributional RL which would be interesting to look at.
+
+[textbook]: https://www.distributional-rl.org/
