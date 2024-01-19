@@ -169,11 +169,14 @@ Secondly, the experiments showed that the control effectiveness of the elevons r
 ## Item 6: Handling Qualities of a Flying V configuration
 
 ### Summary - 
-
-
 ### Questions & Answers -
 ### Notes -
 
+- While the Flying-V is in the trim point on approach, the elevons would be more than 50% saturated if only 1 elevon is used, but if both are used then they would only be about 30% saturated.
+- The CAP of the Flying-V during cruise and approach (category B & C respectively) are found to lie mostly within the level 1 quality, showing that the design has a good is not too agile or too sluggish. Opposite of what Simon van Overeem found??
+- Thibaut has the CAP plots with $\omega_{sp}$ on y axis and $N_{\alpha}$ on the x axis, it is generated from a flight mechanics model of the Flying-V using self made VLM data.
+- Simon van overeem has the CAP plots with $CAP$ on y axis and $\zeta_{sp}$ on x axis, and is generated from a Flying-V model identified from combined previously obtained VLM and wind tunnel data.
+- Dutch roll during cruise and approach is the only unstable mode.
 
 
 --- 
@@ -198,6 +201,8 @@ Overall the flying V has a split level 1 and level 2 handling quality, with a nu
 - This introduction is very good at explaining the advantages of Flying-V
 - The intro is also very good and concise at explaining the handling quality/flight dynamic challenges faced by the Flying-V.
 - Level 1 handling quality is best, level 2 is stable but sluggish, level 3 is extra pilot effort or instability. 
+- During approach, phugoid, spiral, and Dutch roll are unstable.
+- During cruise, only dutch roll with forward cg is unstable.
 
 --- 
 
@@ -207,6 +212,7 @@ doi: 10.1109/TNNLS.2017.2654539
 
 ### Summary - 
 
+SHERPA is a safety filter algorithm that is used to evaluate whether an action is safe or not, by testing if the resulting state transition from the action will bring the agent outside of a set of safe state space interval, and if so it goes through a stored list of backup actions until it either finds a safe action or reverts to the previous action.
 
 ### Questions & Answers -
 ### Notes -
