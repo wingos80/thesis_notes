@@ -271,12 +271,20 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 ## 19/1/2024
 
 - It is very useful to compare performance of an RL based controller to a PID/traditional controller, make sure to do this in the thesis!
-- I think reinforcement learning makes the most sense when the online version is used. With offline trained RL agents, the main advantages of doing so is that:
-	- the trained controller does not need to be obtained manually, it simply involves running the algorithm over many hours.
-	- it is possible to train the controller in different flight conditions, and training could extend indefinitely until the controller can perform satisfactorily in *all* conditions (in practice through past research it is shown that satisfactory performance is obtained within reasonable time frames for a typical controller synthesis campaign)
+- I think reinforcement learning makes the most sense when the online version is used. With offline trained RL agents, the main advantages are:
+	- the trained controller does not need to be obtained manually, it instead involves running an algorithm over many hours which means that controllers are essentially obtained automatically.
+	- obtaining controllers also becomes a matter of having an effective enough RL algorithm, and having a representative model of the aircraft which you want to control
+	- it is possible to train the controller in different flight conditions, and training could extend indefinitely until the controller can perform satisfactorily in *all* conditions (past research indicates satisfactory performance can be reached in tractable times)
 	- performance and robustness can surpass traditional controllers
-But an extra advantage that RL based controllers can have over traditional controllers is that it is possible for the controller parameters to change during flight, i.e. instead of having a one-size-fits-all controller, with one single controller being trained to handle all circumstances (or similarly training several controllers to handle different events just like gain scheduling), it would be in a control systems' best interest for a controller to be in place that could adapt to changes in the airplane or the environment. 
+But an extra advantage that RL based controllers can have over traditional controllers is that it is possible for the controller parameters to change during flight, i.e. instead of having a one-size-fits-all controller, with one single controller being trained to handle all circumstances (or similarly training several controllers to handle different events just like gain scheduling). It would be in a control systems' best interest to have a controller that could adapt to changes in the airplane or the environment, normally that would be a pilot, but to have a software equivalent would be to add to the fault-tolerance of an aircraft in addition to reducing pilot workload.
 - An idea could be to use the hybrid format of Casper and Lucas, and then for the online training make use of SHERPA to make exploration online safer, or use curriculum learning just like Tijmen (could also only use SHERPA to action filter)
 - I also have the idea to see if there exist distributional methods of online reinforcement learning, seems to have a [textbook] dedicated to distributional RL which would be interesting to look at.
 
 [textbook]: https://www.distributional-rl.org/
+
+
+## 20/1/2024
+
+- Flying wing designs in general suffer from poor 
+- could validate RL controller by comparing it with a PID controller tuned to ensure satisfaction of lateral handling qualities.
+- Learn how online trained rl agents are trained, do they just have the agent fly the airplane once and then declare it is finished training? In other words, what is the difference between an online and an offline RL algorithm?

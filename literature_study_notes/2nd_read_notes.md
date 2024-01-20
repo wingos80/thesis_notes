@@ -16,16 +16,15 @@ The list of literature reviewed in this batch are as follows:
 10. *Jurian Stougie* (2022): INDI with Flight Envelope Protection for the Flying-V
 11. *van Empelen S.A, Vos R* (2021): Effect of engine integration on a 4.6%-scale flying-v subsonic transport
 12. *hearwood T.R., Nabawy M.R.A., Crowther W.J., Warsop C* (2023): Coordinated Roll Control of Conformal Finless Flying Wing Aircraft
-13. *Ganesh TS, Keerthi MC, Girish Sabari, Sreeja Kumar S, Mrunalini B* (2021): Control of Tailless Aircraft.
-14. *Bolsunovsky AL, Buzoverya NP, Gurevich BI, Denisov VE, Dunaevsky AI, Shkadov LM* (2001): Flying wing - Problems and decisions
-15. *Bravo-Mosquera Pedro D, Catalano Fernando M, Zingg David W* (2022): Unconventional aircraft for civil aviation: A review of concepts and design methodologies
-16. *Campos Luis MBC, Marques Joaquim MG* (2021): On the handling qualities of two flying wing configurations
-17. *Mcdonald Robert A, German Brian J, Takahashi T, Bil C, Anemaat W, Chaput A, Vos R, Hrrison N*: Future aircraft concepts and design methods
-18. *CHEN Z., ZHANG M., CHEN Y., SANG W., TAN Z., LI D., ZHANG B*: Assessment on critical technologies for conceptual design of blended-wing-body civil aircraft
-19. *Shan Y., Wang S., Konvisarova A., Hu Y*: Attitude Control of Flying Wing UAV Based on Advanced ADRC
-20. *Wildschek A.a, Bartosiewicz Z.b, Mozyrska D.b*: A multi-input multi-output adaptive feed-forward controller for vibration alleviation on a large blended wing body airliner
-21. *Zhang Liqi, Zhao Yonghui*: Adaptive Feed-Forward Control for Gust Load Alleviation on a Flying-Wing Model Using Multiple Control Surfaces
-22. 
+13. *Bolsunovsky AL, Buzoverya NP, Gurevich BI, Denisov VE, Dunaevsky AI, Shkadov LM* (2001): Flying wing - Problems and decisions
+14. *Bravo-Mosquera Pedro D, Catalano Fernando M, Zingg David W* (2022): Unconventional aircraft for civil aviation: A review of concepts and design methodologies
+15. *Campos Luis MBC, Marques Joaquim MG* (2021): On the handling qualities of two flying wing configurations
+16. *Mcdonald Robert A, German Brian J, Takahashi T, Bil C, Anemaat W, Chaput A, Vos R, Hrrison N*: Future aircraft concepts and design methods
+17. *CHEN Z., ZHANG M., CHEN Y., SANG W., TAN Z., LI D., ZHANG B*: Assessment on critical technologies for conceptual design of blended-wing-body civil aircraft
+18. *Shan Y., Wang S., Konvisarova A., Hu Y*: Attitude Control of Flying Wing UAV Based on Advanced ADRC
+19. *Wildschek A.a, Bartosiewicz Z.b, Mozyrska D.b*: A multi-input multi-output adaptive feed-forward controller for vibration alleviation on a large blended wing body airliner
+20. *Zhang Liqi, Zhao Yonghui*: Adaptive Feed-Forward Control for Gust Load Alleviation on a Flying-Wing Model Using Multiple Control Surfaces
+21. 
 
 Literature sources:
 - From Willem's thesis
@@ -173,7 +172,7 @@ Secondly, the experiments showed that the control effectiveness of the elevons r
 ### Notes -
 
 - While the Flying-V is in the trim point on approach, the elevons would be more than 50% saturated if only 1 elevon is used, but if both are used then they would only be about 30% saturated.
-- The CAP of the Flying-V during cruise and approach (category B & C respectively) are found to lie mostly within the level 1 quality, showing that the design has a good is not too agile or too sluggish. Opposite of what Simon van Overeem found??
+- The CAP of the Flying-V during cruise and approach (category B & C respectively) are found to lie mostly within the level 1 quality with few modes almost being level 2, showing that the design has a good is not too agile or too sluggish. Opposite of what Simon van Overeem found??
 - Thibaut has the CAP plots with $\omega_{sp}$ on y axis and $N_{\alpha}$ on the x axis, it is generated from a flight mechanics model of the Flying-V using self made VLM data.
 - Simon van overeem has the CAP plots with $CAP$ on y axis and $\zeta_{sp}$ on x axis, and is generated from a Flying-V model identified from combined previously obtained VLM and wind tunnel data.
 - Dutch roll during cruise and approach is the only unstable mode.
@@ -245,10 +244,34 @@ MSc thesis of Tijmen Pollack.
 [this other paper]: https://www.researchgate.net/publication/221250428_Assisting_Transfer-Enabled_Machine_Learning_Algorithms_Leveraging_Human_Knowledge_for_Curriculum_Design
 [can be found here]: https://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf
 
---- 
 
-## Item \*: Safe Curriculum Learning for Optimal Flight Control of Unmanned Aerial Vehicles with Uncertain System Dynamics
+---
 
-MSc thesis of Tijmen Pollack.
+## [Item] \*: Predictions of stability and control for a flying wing
+
+[Item]: https://www.sciencedirect.com/science/article/pii/S1270963814001837
 
 ### Summary - 
+
+
+### Questions & Answers -
+### Notes -
+
+- This paper also corroborates the pitch break behaviour of flying wings
+- Their flying wing design has rolling stability up until aoa of about 15 degrees.
+
+
+
+---
+
+
+## Item 15: On the handling qualities of two flying wing configurations
+
+
+### Summary - 
+
+
+### Questions & Answers -
+### Notes -
+
+- Dutch roll mode also has at best level 2 handling qualities in this papers' flying wing designs.
