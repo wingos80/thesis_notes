@@ -21,10 +21,9 @@ The list of literature reviewed in this batch are as follows:
 15. *Campos Luis MBC, Marques Joaquim MG* (2021): On the handling qualities of two flying wing configurations
 16. *Mcdonald Robert A, German Brian J, Takahashi T, Bil C, Anemaat W, Chaput A, Vos R, Hrrison N*: Future aircraft concepts and design methods
 17. *CHEN Z., ZHANG M., CHEN Y., SANG W., TAN Z., LI D., ZHANG B*: Assessment on critical technologies for conceptual design of blended-wing-body civil aircraft
-18. *Shan Y., Wang S., Konvisarova A., Hu Y*: Attitude Control of Flying Wing UAV Based on Advanced ADRC
+18. *Shan Y., Wang S., Konvisarova A., Hu Y*:  Attitude Control of Flying Wing UAV Based on Advanced ADRC
 19. *Wildschek A.a, Bartosiewicz Z.b, Mozyrska D.b*: A multi-input multi-output adaptive feed-forward controller for vibration alleviation on a large blended wing body airliner
 20. *Zhang Liqi, Zhao Yonghui*: Adaptive Feed-Forward Control for Gust Load Alleviation on a Flying-Wing Model Using Multiple Control Surfaces
-21. 
 
 Literature sources:
 - From Willem's thesis
@@ -275,3 +274,41 @@ MSc thesis of Tijmen Pollack.
 ### Notes -
 
 - Dutch roll mode also has at best level 2 handling qualities in this papers' flying wing designs.
+
+--- 
+
+## Item 16: Future aircraft concepts and design methods
+
+### Summary - 
+### Questions & Answers -
+### Notes -
+
+- 20% higher payload to range efficiency than tube and wing designs
+- Reducing of wetted area since payload structure and lift structure are integrated into one, meaning 5% lower friction drag
+
+---
+
+## Item 17: Assessment on critical technologies for conceptual design of blended-wing-body civil aircraft
+
+
+### Summary - 
+### Questions & Answers -
+### Notes -
+
+- Cayleys design refers to having separate structural components perform distinct and separate functions.
+- Aerodynamic efficiency of a blended wing body concept is espoused in this paper.
+- traditional BWB designs have limited moment arms which means control effectiveness of control surfaces are weaker than the TAW design.
+
+
+---
+
+## Item 18: Attitude Control of Flying Wing UAV Based on Advanced ADRC
+
+
+### Summary - 
+### Questions & Answers -
+
+1. the papers' abstract claims that it is obvious that the problem with flying wing UAVS are that they have strong coupling, with obvious nonlinear characteristics, and have significant changes in control authority throughout a flight. Any proof?
+	1. They cite 2 sources for these claims which were both in Chinese and locked behind pay wall.
+### Notes -
+

@@ -16,9 +16,9 @@ Ranked, 1 = highest priority
 
 1. Read up on flying-V
 2. See what curriculum RL is about
-3. Read Ye Zhou's PhD dissertation on iADP, IDHP
-4. Look into evolutionary reinforcement learning (what's the deal with using GA over ES?)
-5. Look at Lucas/Caspers repos to study IDHP implementation
+3. Read Ye Zhou's publications on iADP, IDHP
+4. Learn how online trained rl agents are trained, do they just have the agent fly the airplane once and then declare it is finished training? In other words, what is the difference between an online and an offline RL algorithm?
+
 
 ---
 
@@ -27,27 +27,23 @@ Ranked, 1 = highest priority
 > ~~*To advance the state-of-the-art RL based fault tolerant flight controllers and contribute to the safety of autonomous flight, by studying and developing novel methods of hybrid RL algorithms.*~~
 
 
-> *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing an intelligent flight control system for the Flying-V using novel methods of hybrid RL algorithms.*
+> *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system for the Flying-V.*
 
 
 ### Research questions
 
-1. What are the state-of-the-art DRL algorithms?
-	1. What RL algorithms are used in state-of-the-art flight control, and what are the algorithms used in other fields? 
-	2. What are the benefits and drawbacks of each algorithm?
-	3. What potential for improvement exist in each of these algorithms?
-2. Which of these algorithms are applicable to the problem of fault tolerant flight control?
-	1. What are desirable properties for an algorithm to possess for fault tolerance.
-	2. What fault cases are prevalent in aircrafts.
-3. How are DRL algorithms applied to flight control?
-	1. How are RL algorithms in general implemented?
-	2. How do RL algorithms interface with flight controllers?
-	3. What DoF flight simulation should be considered for this project?
-	4. How realistic should the flight dynamics used for RL training be?
-4. How does the implemented DRL algorithm compare to previous attempts at RL for fault tolerant flight control?
-	1. What metrics should be evaluated for the implemented algorithm?
-	2. How did the fault tolerance characteristics of the obtain controller differ from other methods.
-	3. What other differences are present between the implemented and previous DRL controllers
+1. Which reinforcement learning algorithms is most applicable to the problem of fault tolerant flight control?
+	1. What RL algorithms are used in state-of-the-art flight control? 
+	2. What desirable qualities should an algorithm possess for the best fault tolerant controller?
+	3. What preliminary comparison should be done to select the more applicable algorithm?
+2. What are the handling qualities or possible faults scenarios of the Flying-V that a controller should take into account?
+3. How can the identified algorithm be applied to control the Flying-V?
+	1. How are RL based flight controllers implemented?
+	2. How will the algorithm interface with existing simulations of the Flying-V?
+4. How does the implemented flight controller perform both in the presence of faults and in nominal flight?
+	1. What criteria should be kept track of to characterize a controllers fault tolerance?
+	2. What flight scenarios should be designed to test the performance of the controller?
+	3. How well does the nominal flight performance of the flight controller compare to other intelligent and?
 
 ---
 
@@ -58,7 +54,7 @@ Ranked, 1 = highest priority
 
 - I am slowly developing a framework for the work i need to carry out to tackle this thesis, and it comes in 3 parts:
 
-    part 1, the flying v. I need to become an expert in everything related to the flying v
+    part 1, the flying v. I need to become an expert in relevant topics on the flying v
     part 2, RL. I need to become an expert in rl
     part 3, the code. The code will be distinguished into 2 major parts, the simulation/training environment that i will need to create, with all the gym.methods() present; and then the actual RL algo to be used, which i will need to design from my knowledge of the field of RL and then implement in python, possibly following the outline of the algos in spinning up.
 
@@ -245,17 +241,17 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 - Implemented SARSA, Q-learning, and expected SARSA and solved the windy grid world problem from example 6.5
 - TD and Monte Carlo methods are two basic frameworks for estimating value functions in an MDP, the only difference lies in what number is used to estimate the value function. In the TD case the value function is estimated using **rewards** that are sampled, while in MC methods **returns** are sampled to estimate the value functions. And in the former, bootstrapping operations are essentially the only operations used to update estimates, whilst MC methods can use either bootstrapping operations or a sample average to obtain the value function estimates. Both methods are free to work with either state-value functions, or action-value functions, or even *after state*-value functions which is a type of value function observed in some classes of MDP's.
 
-## 16/1/2024
+### 16/1/2024
 
 - Finished reading Part I of Sutton & Barto, skimmed through chapters 9 and 10 in Part II.
 - In the case of using function approximators for the value functions. Suppose i am enacting a greedy policy and selecting whichever action has the highest action-value according to my function estimate, how am i to see which action has the highest action-value? Do i have to iterate through all actions, find the action-value for each, and then choose the action with the highest action-value as my policy action? 
 	- For discrete action spaces with small number of actions possible, this is what is done. For larger ones, i will have to find out.
 
-## 17/1/2024
+### 17/1/2024
 
 - Gathered a list of interesting literature related to the flying-v and flying wings which will catch me up to date with the development of the flying v, and the flight control challenges currently facing the aircraft as well as flying wings in general.
 
-## 18/1/2024
+### 18/1/2024
 
 - Potential paragraph that i can directly use in thesis:
 	- Flying wing designs are inherently attractive design options due to the fact that it merges the key functions of lift generation and payload carrying into one single structure, the opposite case of the traditional tube-and-wing design that all modern passenger airlines adopt. This merger means that less material needs to be used to create the aircraft, since one structure serves two simultaneous purposes, thus the airplane can weigh less overall. Further weight savings come as a result of much more evenly matched weight and lift distribution across the aircraft, as the payload is no longer centered at mid-span but rather spread out across the wing span, thus the critical load junction along with structural reinforcements at wing root disappears. Additionally, the aerodynamics of the traditional design is slightly less efficient, since the tube fuselage does not generate any lift, and the joint section between fuselage and wing causes additional interference drag.  The Flying-V takes up this design philosophy in the form of two passenger tubes joint in a v configuration, embedded in a thick and heavily swept back set of wings.
@@ -268,7 +264,7 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 
 [Bengio et al]: https://dl-acm-org.tudelft.idm.oclc.org/doi/10.1145/1553374.1553380
 
-## 19/1/2024
+### 19/1/2024
 
 - It is very useful to compare performance of an RL based controller to a PID/traditional controller, make sure to do this in the thesis!
 - I think reinforcement learning makes the most sense when the online version is used. With offline trained RL agents, the main advantages are:
@@ -276,15 +272,25 @@ DSAC, SAC, TD3, IDHP, IADP, PPO, flexible DDPG,
 	- obtaining controllers also becomes a matter of having an effective enough RL algorithm, and having a representative model of the aircraft which you want to control
 	- it is possible to train the controller in different flight conditions, and training could extend indefinitely until the controller can perform satisfactorily in *all* conditions (past research indicates satisfactory performance can be reached in tractable times)
 	- performance and robustness can surpass traditional controllers
-But an extra advantage that RL based controllers can have over traditional controllers is that it is possible for the controller parameters to change during flight, i.e. instead of having a one-size-fits-all controller, with one single controller being trained to handle all circumstances (or similarly training several controllers to handle different events just like gain scheduling). It would be in a control systems' best interest to have a controller that could adapt to changes in the airplane or the environment, normally that would be a pilot, but to have a software equivalent would be to add to the fault-tolerance of an aircraft in addition to reducing pilot workload.
+But an extra advantage that RL based controllers can have over traditional controllers is that it is possible for the controller parameters to change during flight, i.e. instead of having a one-size-fits-all controller, with one single controller being trained to handle all circumstances (or similarly training several controllers to handle different events just like gain scheduling). It would be in a control systems' best interest to have a controller that could adapt to ce equivalent would be to add to the fault-tolerance of an aircraft in addition to reducing pilot workload.
 - An idea could be to use the hybrid format of Casper and Lucas, and then for the online training make use of SHERPA to make exploration online safer, or use curriculum learning just like Tijmen (could also only use SHERPA to action filter)
-- I also have the idea to see if there exist distributional methods of online reinforcement learning, seems to have a [textbook] dedicated to distributional RL which would be interesting to look at.
+- I also have the idea to see if there exist distributional methods of online reinforcement learning, seems to have a [textbook] dedicated to distributional RL which has a chapter on incremental algorithms.
 
 [textbook]: https://www.distributional-rl.org/
 
 
-## 20/1/2024
+### 20/1/2024
 
-- Flying wing designs in general suffer from poor 
-- could validate RL controller by comparing it with a PID controller tuned to ensure satisfaction of lateral handling qualities.
-- Learn how online trained rl agents are trained, do they just have the agent fly the airplane once and then declare it is finished training? In other words, what is the difference between an online and an offline RL algorithm?
+- Should validate RL controller by comparing it with a PID controller tuned to ensure satisfaction of lateral handling qualities.
+- [SAC gSDE] claims that it can reduce the jerky action signals that can result from deep reinforcement learning.
+[SAC gSDE]: https://arxiv.org/pdf/2005.05719v2.pdf
+%% - "By taking into account the Bellman optimality equation 12, it is possible to train a DQN in a reinforcement learning manner through the minimization of the mean squared error. The optimal expected Q value can be estimated within a training iteration $i$ based on a set of reference parameters $\theta$ calculated in a previous iteration$i'$ " from *a survey of deep learning techniques for autonomous driving* %%
+- I am trying approach the literature review from the "supply side" like what Erik said, but I feel lost with this approach, i am not really sure what i am looking for, while i know that i want to research online methods of reinforcement learning, i cannot seem to find any useful articles.
+- Journals which are reputable: IEEE transactions on intelligent transport systems, JMLR (journal of machine learning research)
+- These are the state of the art RL algorithms i could find: SAC, TD3, PPO, IADP, IDHP, RAINBOW DQN,
+
+### 21/1/2024
+
+- plan for today:
+	1. read up on zhou's papers about idhp and iadp
+	2. do broad literature search to see what kind of online/adaptive reinforcement learning controller research has been taken.
