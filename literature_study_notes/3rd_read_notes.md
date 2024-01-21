@@ -6,7 +6,8 @@ This literature review focuses on the field of RL, seeing what algorithms exists
 
 | Subject Area|  Query |
 | ------------   |  ------- |
-| Engineering | "reinforcement learning" AND "control systems"|
+|  | "reinforcement learning" AND "control systems"|
+|  | "reinforcement learning" AND "flight control"|
 
 
 ---
@@ -45,6 +46,38 @@ doi: 10.2514/1.G001762
 
 ---
 
+## Item 3: Incremental Model Based Online Dual Heuristic Programming for Nonlinear Adaptive Control
+
+### Questions
+
+1. She keeps referring to the need to learn a *global system model* in adaptive critic designs, but what is this global system model? I need to research and learn more about adaptive critic design.
+
+### Notes-
+
+- Adaptive critic can also be called actor critic methods, since policy evaluation (the critic) and policy improvement (the actor) are approximated by two function approximators.
+- 3 main groups of ACDs can be identified:
+	1. Heuristic dynamic programming, the most basic form and uses critics to estimate cost-to-go/rewards.
+	2. Dual heuristic programming, critics approximate gradients of cost-to-go/rewards with respect to critic inputs
+	3. Globalized dual heuristic programming, which approximates cost-to-go/rewards as well as its' derivative.
+- The 3 versions of ACD can all be extended to *action depended* versions of themselves, where the output (action) of the actor is fed as input to the critic functions.
+-  Idea: current online-offline hybrids which lucas and casper made only deals with the actors in both halves of the algorithm, but if globalized DHP is used, then it would be possible to use the offline critic for the online algorithm too? (***with this idea i found a paper published also by zhou on an efficient online implementation of GDHP, see item 4, the next literature reviewed***)
+- "conventional DHP controllers use 3 nonlinear function approximators to approximate 3 things: the actor, the critic, and the global system", this is in contrast with the internal structure of IDHP, where only 2 nonlinear function approximators are kept as only the actor and critics are approximated nonlinearly, while the global system is approximated with an RLS regressor instead.
+- The critic in a DHP and the IDHP approximates the derivatives of the value function with respect to the state vector of the system being controlled, i.e. the state variables of the environment if we were to speak in terms of the gymnasium language.
+- The actor in DHP and IDHP is once again our favourite operator: the argmin operator (actually does not look like that this function is used at all?)
+- Eq 17 is an impressive substitution wow!
+
+
+---
+
+## Item 4: Efficient Online Globalized Dual Heuristic Programming With an Associated Dual Network
+
+- GDHP requires calculating second order gradients, supposedly these sources should provide some information on that [source 1], [source 2]. Source 2 should also talk about why theoretically GDHP should be more powerful than DHP or HP.
+- Previous attempts to find more practical methods of implementing GDHP faces the dichotomy of either high computational load for good accuracies or low computational load for bad accuracies.
+[source 1]: https://repository.essex.ac.uk/21300/1/IEEE%20SecondOrderBackpropForVGL.pdf
+[source 2]: https://ieeexplore-ieee-org.tudelft.idm.oclc.org/document/623201
+
+---
+
 **From Stefan Heyer's thesis, i found a paper that seemed very seminal in the field of ADP, which i am interested in becase the incremental version of it can be used as an online controller. And i also checked the list of papers that cited this seminal paper, which seems to suggest novel RL algorithms, which are listed in the following**
 
 1. J. Ye, Y. Bian, B. Luo, M. Hu, B. Xu and R. Ding, "Costate-Supplement ADP for Model-Free Optimal Control of Discrete-Time Nonlinear Systems," in _IEEE Transactions on Neural Networks and Learning Systems_, vol. 35, no. 1, pp. 45-59, Jan. 2024, doi: 10.1109/TNNLS.2022.3172126.
@@ -52,7 +85,7 @@ doi: 10.2514/1.G001762
 3. Y. Li and E. -J. v. Kampen, "Incremental Generalized Policy Iteration for Adaptive Attitude Tracking Control of a Spacecraft," 2023 European Control Conference (ECC), Bucharest, Romania, 2023, pp. 1-6, doi: 10.23919/ECC57647.2023.10178221.
 4. L. Chen and Q. Quan, "Reinforcement Learning for Non-Affine Nonlinear Non-Minimum Phase System Tracking Under Additive-State-Decomposition-Based Control Framework," 2023 IEEE 12th Data Driven Control and Learning Systems Conference (DDCLS), Xiangtan, China, 2023, pp. 2043-2049, doi: 10.1109/DDCLS58216.2023.10166298.
 
-## Item 3: Adaptive critic designs
+## Item \*: Adaptive critic designs
 
 link: https://ieeexplore-ieee-org.tudelft.idm.oclc.org/document/623201
 

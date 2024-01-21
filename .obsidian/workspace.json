@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "88777f26eefad9ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/3rd_read_notes.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
             "id": "6609fa4b9f72cb5b",
             "type": "leaf",
             "state": {
@@ -39,9 +27,54 @@
               "state": {
                 "file": "Master_notes.md",
                 "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "09ec483ffb160f59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "literature_study_notes/2nd_read_notes.md",
+                "mode": "preview",
                 "source": false
               }
             }
+          },
+          {
+            "id": "2c2591bc22c24661",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "literature_study_notes/3rd_read_notes.md",
+                "mode": "source",
+                "source": true
+              }
+            },
+            "group": "0ed62f2027e7749c"
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "87c641cdbb65e1e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "75418a3677f0666e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "literature_study_notes/3rd_read_notes.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "0ed62f2027e7749c"
           }
         ]
       }
@@ -171,17 +204,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "88777f26eefad9ce",
+  "active": "2c2591bc22c24661",
   "lastOpenFiles": [
+    "5CCD0D00",
+    "~$thesis gantt chart.xlsx",
+    "literature_study_notes/2nd_read_notes.md",
     "Master_notes.md",
     "literature_study_notes/Previous_RL_MSc_theses.md",
     "literature_study_notes/3rd_read_notes.md",
-    "295E8B00",
-    "literature_study_notes/2nd_read_notes.md",
-    "92B63B00",
-    "~$thesis gantt chart.xlsx",
-    "Master_notes.pdf",
     "literature_study_notes/1st_read_notes.md",
+    "420EAB00",
+    "295E8B00",
+    "92B63B00",
+    "Master_notes.pdf",
     "pictures/bellman_derive.png",
     "literature_study_notes/1st_read_notes.pdf",
     "literature_study_notes/1st_read_notes_tmp.html",
@@ -191,7 +226,6 @@
     "Previous_RL_MSc_theses.md",
     "9F292200",
     "53A2B100",
-    "5ECAA500",
     "pictures/bwb_examples.jpg",
     "README.md",
     "Untitled.canvas",
