@@ -71,12 +71,18 @@ doi: 10.2514/1.G001762
 
 ## Item 4: Efficient Online Globalized Dual Heuristic Programming With an Associated Dual Network
 
+### Notes-
+
 - GDHP requires calculating second order gradients, supposedly these sources should provide some information on that [source 1], [source 2]. Source 2 should also talk about why theoretically GDHP should be more powerful than DHP or HP.
 - Previous attempts to find more practical methods of implementing GDHP faces the dichotomy of either high computational load for good accuracies or low computational load for bad accuracies.
+- The proposed GDHP algorithm is called IGDHPa (incremental GDHP association), incremental because the algorithm's model of the global system a.k.a. plant is identified incrementally taking the form of a time varying LTI, association because the algorithm has a DHP style critic network which is *associated* to the HDP style critic network that the algorithm also has.
 [source 1]: https://repository.essex.ac.uk/21300/1/IEEE%20SecondOrderBackpropForVGL.pdf
 [source 2]: https://ieeexplore-ieee-org.tudelft.idm.oclc.org/document/623201
 
 ---
+
+## Item 5: 
+
 
 **From Stefan Heyer's thesis, i found a paper that seemed very seminal in the field of ADP, which i am interested in becase the incremental version of it can be used as an online controller. And i also checked the list of papers that cited this seminal paper, which seems to suggest novel RL algorithms, which are listed in the following**
 

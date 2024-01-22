@@ -26,24 +26,26 @@ Ranked, 1 = highest priority
 
 > ~~*To advance the state-of-the-art RL based fault tolerant flight controllers and contribute to the safety of autonomous flight, by studying and developing novel methods of hybrid RL algorithms.*~~
 
+### **Research Objective**
 
 > *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system for the Flying-V.*
 
 
-### Research questions
+### **Research Questions**
 
-1. Which reinforcement learning algorithms is most applicable to the problem of fault tolerant flight control?
+1. What reinforcement learning algorithm has most promise to the problem of fault tolerant flight control?
 	1. What RL algorithms are used in state-of-the-art flight control? 
 	2. What desirable qualities should an algorithm possess for the best fault tolerant controller?
-	3. What preliminary comparison should be done to select the more applicable algorithm?
+	3. What preliminary comparison should be done to select the most promising algorithm?
 2. What are the handling qualities or possible faults scenarios of the Flying-V that a controller should take into account?
 3. How can the identified algorithm be applied to control the Flying-V?
 	1. How are RL based flight controllers implemented?
 	2. How will the algorithm interface with existing simulations of the Flying-V?
 4. How does the implemented flight controller perform both in the presence of faults and in nominal flight?
 	1. What criteria should be kept track of to characterize a controllers fault tolerance?
-	2. What flight scenarios should be designed to test the performance of the controller?
-	3. How well does the nominal flight performance of the flight controller compare to other intelligent and?
+	2. Noting the possible fault scenarios and handling qualities of the Flying-V, what flight scenarios should be designed to test the performance of the controller?
+	3. How well does the nominal flight performance of the proposed flight controller compare to other intelligent and traditional controllers?
+	4. How are the fault tolerance characteristics of the proposed flight controller compared to other intelligent and traditional controllers?
 
 ---
 
