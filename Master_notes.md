@@ -19,7 +19,6 @@ Ranked, 1 = highest priority
 3. Read Ye Zhou's publications on iADP, IDHP
 4. Learn how online trained rl agents are trained, do they just have the agent fly the airplane once and then declare it is finished training? In other words, what is the difference between an online and an offline RL algorithm?
 
-
 ---
 
 ## Research Objective
@@ -296,3 +295,7 @@ But an extra advantage that RL based controllers can have over traditional contr
 - plan for today:
 	1. read up on zhou's papers about idhp and iadp
 	2. do broad literature search to see what kind of online/adaptive reinforcement learning controller research has been taken.
+
+### 22/1/2024
+
+- "hedonistic machines"

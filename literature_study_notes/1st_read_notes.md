@@ -441,11 +441,11 @@ The bellman equations relates the value of a certain state or state action pair 
 
 > **Bellman optimality equation**
 > 
-> It is a criterion which must be satisfied in order for a policy $\pi$ to be deemed the optimal policy $\pi_*$.
+> It is a criterion which must be satisfied in order for a policy $\pi$ to be deemed the optimal policy $\pi_*$. The criterion is that the value function of the optimal policy must equal to the expected return of the same policy.
 > 
 > > [!Definition]+ 
 > > **Bellman optimality equation for ** $v_{\pi}(s)$:
-> $v_{*}(s) = \max\limits_a \mathbb{E}[R_{t+1} + \gamma v_*(S_{t+1}) | S_t=s, A_t=a]$
+> $v_{*}(s) = \max\limits_a \mathbb{E}[R_{t+1} + \gamma v_*(S_{t+1}) | S_t=s, A_t=a] = \max\limits_a\sum\limits_{s',r}p(s',r|s,a)[r + \gamma v_*(s')]$
 
 If the optimal value functions were available, then maximizing return becomes a trivial task as it merely requires following a greedy policy, of selecting the action that has the highest action-value for any given state. However in many real life problems, the number of states and actions available, i.e. the dimensionality of the problem, is **a)**  too large for any computer to store an entire value function, and/or **b)** too large for any computer or algorithm to tractably compute the entire optimal value function. 
 For problems where it is possible to compute an approximation of and store the entire optimal value function containing the value of each state action pairs, they are called *tabular* cases and methods which utilizes these value functions are called *tabular methods*.

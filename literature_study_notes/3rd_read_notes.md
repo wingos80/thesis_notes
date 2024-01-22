@@ -81,10 +81,46 @@ doi: 10.2514/1.G001762
 
 ---
 
-## Item 5: 
+## Item 5: Optimal and Autonomous Control Using Reinforcement Learning: A Survey
+
+### Follow up papers:
+
+1. *A novel actor–critic–identifier architecture for approximate optimal control of uncertain nonlinear systems*. A paper on synchronous actor-critic update which should be "online".
+	1. They use an integral bellman equation.
+	2. It seems that the algorithm is indeed online, they only train the agent on one episode which is 10 seconds long, and within the first 3 seconds the estimates have all converged.
+	3. The proposed algorithm solves the HJB equations, and uses a *Bellman residual error* to update the critic and actor networks		
+		> The **HJB equation** is a necessary and sufficient condition for optimality of a given control action w.r.t. a given loss function. Iteratively solving this equation can provide the optimal value function for a given MDP.
+		> The **Bellman residual** expresses the residual (error) between a value function estimate and a value function evaluated from a policy?
+
+---
 
 
-**From Stefan Heyer's thesis, i found a paper that seemed very seminal in the field of ADP, which i am interested in becase the incremental version of it can be used as an online controller. And i also checked the list of papers that cited this seminal paper, which seems to suggest novel RL algorithms, which are listed in the following**
+## Item 6: Adaptive Dynamic Programming for Control: A Survey and Recent Advances
+
+### Notes-
+- Very good introduction and litearture study on origins of adaptive dynamic programming.
+- Origins of the Name of ADP:
+	- ADP can be an acronym standing for either approximate or adaptive dynamic programming.
+	- [First use] of the acronym ADP, and then explored formally by [Papachristos]
+	- [Werbos] introduced the class of adaptive critic designs 
+- kernel ADP's combine kernel machines with neural networks?
+- *[Global ADP]*, a control method which solves a relaxed version of the HJB, providing a control policy which has **global asymptotic stable**. Should look into papers which cite this one and see how they use this.
+- Generalized PI has been developed into a formal [algorithm], but can be used to refer to the general algorithm of iterative policy evaluation and policy improvement. 
+- There also exists formalized Generalized VI [algorithms].
+- Integral reinforcement learning allows for policy evaluation even when system dynamics are unknown.
+- A mathematical definition for persistent excitation condition is given.
+
+[First use]: https://scholar.harvard.edu/files/rzeckhauser/files/depletable_natural_resources.pdf
+[Papachristos]: https://www.proquest.com/openview/04b160da9282e5ad0815d5a55424a6ee/1?pq-origsite=gscholar&cbl=18750&diss=y
+[Global ADP]: https://doi.org/10.3182/20140824-6-ZA-1003.00523
+[algorithm]: https://doi.org/10.1109/tnnls.2017.2661865
+[algorithms]: https://doi.org/10.1049/iet-cta.2011.0783
+
+---
+
+## Item 7: Research on Intelligent Control Method of Launch Vehicle Landing Based on Deep Reinforcement Learning
+
+**From Stefan Heyer's thesis, i found a paper that seemed very seminal in the field of ADP, which i am interested in because the incremental version of it can be used as an online controller. And i also checked the list of papers that cited this seminal paper, which seems to suggest novel RL algorithms, which are listed in the following**
 
 1. J. Ye, Y. Bian, B. Luo, M. Hu, B. Xu and R. Ding, "Costate-Supplement ADP for Model-Free Optimal Control of Discrete-Time Nonlinear Systems," in _IEEE Transactions on Neural Networks and Learning Systems_, vol. 35, no. 1, pp. 45-59, Jan. 2024, doi: 10.1109/TNNLS.2022.3172126.
 2. D. Wang, J. Wang, M. Zhao, P. Xin and J. Qiao, "Adaptive Multi-Step Evaluation Design With Stability Guarantee for Discrete-Time Optimal Learning Control," in IEEE/CAA Journal of Automatica Sinica, vol. 10, no. 9, pp. 1797-1809, September 2023, doi: 10.1109/JAS.2023.123684.
