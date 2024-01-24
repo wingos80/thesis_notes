@@ -299,3 +299,22 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 22/1/2024
 
 - "hedonistic machines"
+- i should use the word "self play" and "tabular rasa" in my thesis heheh.
+
+### 23/1/2024
+
+- Value iteration is identical to Policy iteration with only a single change. Whereas in PI the policy evaluation iteration loop is continued for k number of iterations with k potentially being infinity, VI simply performs only one iteration of policy evaluation.
+- Dynamic programming approaches seeks to find the optimal policy and its' corresponding value function through evaluating the bellman equations to iteratively approach the optimal value; this is an example of a model based approach. A model free approach instead uses experienced trajectories in an environment to iteratively approach the optimal policy and value function.
+- A key to TD learning converging is that every step taken in an environment inevitably involves the dynamics and rewards which the environment has to offer, and then more steps we take, the more grounded in reality are the rewards and transitions that our agent observes.
+- **interesting note**, greedy policy improvement using a state-value function estimate **is not model free**, as the updated policy in this case would be:
+  $\pi'(s) = \underset{x}{\mathrm{argmax}}\,[R_a + p(s'|s, a)V(s')]$
+  Which notably requires the dynamics of the MDP $p(s'|s,a)$ to be known.
+  Whereas if one were to use the action-value functions to perform policy improvement, the policy update rule would instead simply be:
+  $pi'(s) = \underset{x}{\mathrm{argmax}}\,q(s,a)$
+  I.e. simply the action for which the corresponding q value is maximum. Thus by keeping track of an action-value estimate instead of a state-value estimate, it is possible to omit the need for any MDP model in policy improvement.
+  The takeaway from this note is that to apply the idea of policy or value iteration to obtain model-free reinforcement learning algorithms, an immediate choice to make is to keep track of action-value estimates of an MDP instead of state-value estimates, as it would true model-free policy update rules.
+  - **value vs policy based methods**, basically all value-based methods commands the agent to take the action which maximizes the estimated value functions, i.e. action = argmax of value estimate. This can be complicated to do when number of actions are high. Policy based methods can avod needing to evaluate an argmax operator. And for partially observed or uncertain MDPs, it is often better to use policy-based methods, which have a probability distribution over all actions. And stochastic policies can perform better than deterministic policies when *state aliasing* occurs.
+
+### 24/1/2024
+
+- learning from simulated experience instead of rea-world experience can result in very effective reinforcement learning algorithms.
