@@ -27,24 +27,37 @@ Ranked, 1 = highest priority
 
 ### **Research Objective**
 
-> *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system for the Flying-V.*
+>~~*To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system for the Flying-V.*~~
+
+> *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system that can stabilize and demonstrate the handling qualities of the Flying-V.*
+
+%% 
+should change q1 to be more generic/make most promising more quantifiable
+
+make q3 more specific
+
+q4a success rate/monte carlo
+
+q4d should probably change intelligent/traditional to other SOTA controller %%
 
 
 ### **Research Questions**
 
-1. What reinforcement learning algorithm has most promise to the problem of fault tolerant flight control?
-	1. What RL algorithms are used in state-of-the-art flight control? 
-	2. What desirable qualities should an algorithm possess for the best fault tolerant controller?
-	3. What preliminary comparison should be done to select the most promising algorithm?
-2. What are the handling qualities or possible faults scenarios of the Flying-V that a controller should take into account?
+1. What reinforcement learning algorithm can yield a flight controller which is the most tolerant to faults while providing good reference tracking?
+	1. What RL algorithms are considered to be state-of-the-art? 
+	2. In what ways can an RL based flight controller be made fault tolerant?
+	3. Upon applying the candidate algorithms to a simpler dynamical system than a nonlinear simulation of the Flying-V, which algorithm demonstrates the highest degree of reference tracking and fault tolerance?
+2. What are the flight control related challenges when it comes to designing a controller for the Flying-V?
+	1. What are the flight handling qualities of the Flying-V?
+	2. What are some of the potential fault scenarios that warrant attention in the Flying-V?
 3. How can the identified algorithm be applied to control the Flying-V?
-	1. How are RL based flight controllers implemented?
+	1. How should the implemented controller be structured?
 	2. How will the algorithm interface with existing simulations of the Flying-V?
 4. How does the implemented flight controller perform both in the presence of faults and in nominal flight?
-	1. What criteria should be kept track of to characterize a controllers fault tolerance?
+	1. What criteria should be kept track of to characterize a controllers fault tolerance (fault tolerance success rate, nMAE of tracking error, variance of nMAE...)?
 	2. Noting the possible fault scenarios and handling qualities of the Flying-V, what flight scenarios should be designed to test the performance of the controller?
-	3. How well does the nominal flight performance of the proposed flight controller compare to other intelligent and traditional controllers?
-	4. How are the fault tolerance characteristics of the proposed flight controller compared to other intelligent and traditional controllers?
+	3. How well does the nominal flight performance of the proposed flight controller compare to other state-of-the-art controllers?
+	4. How are the fault tolerance characteristics of the proposed flight controller compared to other state-of-the-art controllers?
 
 ---
 
@@ -318,3 +331,8 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 24/1/2024
 
 - learning from simulated experience instead of rea-world experience can result in very effective reinforcement learning algorithms.
+- rough meeting notes from yesterday:
+	- liguo sun @BUAA - working on incremental ADP methods outside delft
+	- ferrari and stengel adp controller for business jet
+	- enns + si helicopter apache adp type methods
+	- contact dirench for indi flying v controller for potential comparison

@@ -32,7 +32,7 @@
                 "source": true
               }
             },
-            "group": "df22782118e1028c"
+            "group": "fbb1c2559b551726"
           },
           {
             "id": "09ec483ffb160f59",
@@ -92,7 +92,7 @@
                 "source": false
               }
             },
-            "group": "df22782118e1028c"
+            "group": "fbb1c2559b551726"
           },
           {
             "id": "83a9e68af871c392",
@@ -133,7 +133,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -264,6 +264,8 @@
   },
   "active": "0a04e8ac4dc62552",
   "lastOpenFiles": [
+    "2DD9FF00",
+    "~$thesis gantt chart.xlsx",
     "literature_study_notes/1st_read_notes.md",
     "literature_study_notes/3rd_read_notes.md",
     "literature_study_notes/2nd_read_notes.md",
@@ -274,7 +276,6 @@
     "test.md",
     "Master_notes_tmp.html",
     "5CCD0D00",
-    "~$thesis gantt chart.xlsx",
     "420EAB00",
     "295E8B00",
     "92B63B00",
