@@ -118,7 +118,61 @@ doi: 10.2514/1.G001762
 
 ---
 
-## Item 7: Research on Intelligent Control Method of Launch Vehicle Landing Based on Deep Reinforcement Learning
+## Item 7: DDPG-based active disturbance rejection 3D path-following control for powered parafoil under wind disturbances
+
+### Notes-
+
+- They posed DDPG as a more widely adopted algorithm for continuous state-action spaces alternate to DQN which is a little less modern, which in itself is more preferable over Q-learning due to the former being able to be effective under continuous spaces while the latter suffers from the curse of dimensionality as a result of its' tabular memory.
+- The application of DDPG was not on controlling the system directly, but on deciding for parameters of a controller which is in turn used to control the system.
+- The state consists of 2 variable (it's a 2d state space), first dimension is altitude error $s_1 = z - z_d$, second dimension is lateral position error $s_2 = \Delta d$. Reward is defined as the negative of the sum of the two states $r = -(s_1 + s_2)$, and return is defined as the integral of reward over time.
+
+---
+
+## Item 8: Learning Extreme Hummingbird Maneuvers on Flapping Wing Robots
+
+
+### Notes-
+
+- The goal is to make an at-scale hummingbird robot perform the same evasive flight maneuver that hummingbirds are able to make.
+- The proposed approach is to adopt a hybrid controller composed of two controllers, a model-based nonlinear controller for nominal flight control, and a model-free reinforcement learning controller which activates when performing the maneuver and adds its' own control commands to the nonlinear controllers' commands. This hybrid method was deemed necessary as the nonlinear adaptive controller is not accurate enough to provide stabilizing control to the system.
+	- The model-based controller is an adaptive sliding mode controller, with additional terms in the control law that ensures robustness to model uncertainty.
+	- The model-free controller is based on DDPG with MLPs approximating the functions of the critic and actor.
+- The RL problem was posed as follows. The robot is initialized flying upright, and the goal is for it to translate backwards by some distance $x_d$ while simultaneously ending up with the body frame being rotated 180 degrees about the $z$ (yaw) axis.
+- The implementation of DDPG was based on [Deepmind's implementation]
+
+[Deepmind's implementation]: https://arxiv.org/abs/1509.02971
+
+---
+
+## Item 9: The Option Keyboard: Combining Skills in Reinforcement Learning
+
+a publication from deepmind
+
+- The authors introduce a new hierarchical reinforcement learning framework, with the central notion of an *option keyboard*, which is a generalization of the idea of actions and options. This keyboard provides RL agents with a hierarchical interface to various levels of actions, where various options can be combined to execute complex tasks, leading to an even more emergent behaviour.
+- Mentioned the ideas of generalized policy evaluation and generalized policy improvement to build up the framework needed to introduce the option keyboard, did not really understand the maths behind the reasoning.
+
+---
+
+## Item 10: Fast reinforcement learning with generalized policy updates
+
+another publication from deepmind
+
+- The idea of Fast reinforcement learning stems from seeking a way to reconcile the discrepancy between learning times of human and RL agents in simple tasks, the example given is that of learning how to play an Atari game. Whereas a human can learn roughly how to play a game in 15 minutes, for an RL agent to achieve the same level of play would require weeks upon weeks of uninterrupted play time. It is hypothesized by the authors here that this discrepancy arises from how RL agents have to learn essentially from scratch, but that if they were endowed with mechanisms to leverage prior knowledge, they would be much smarter.
+- This mechanism is very useful to an agent that has successfully learnt an advantageous behaviour in one task, and needs to learn a behaviour in another task.
+- They provide a formal definition of GPI.
+
+
+
+
+
+---
+
+
+---
+
+## Item ...: Research on Intelligent Control Method of Launch Vehicle Landing Based on Deep Reinforcement Learning
+
+---
 
 **From Stefan Heyer's thesis, i found a paper that seemed very seminal in the field of ADP, which i am interested in because the incremental version of it can be used as an online controller. And i also checked the list of papers that cited this seminal paper, which seems to suggest novel RL algorithms, which are listed in the following**
 

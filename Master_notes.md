@@ -336,3 +336,25 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- ferrari and stengel adp controller for business jet
 	- enns + si helicopter apache adp type methods
 	- contact dirench for indi flying v controller for potential comparison
+
+### 25/1/2024
+
+#### Model based algorithms notes:
+- Model based algorithms can have several pros and cons, 
+  **Pros**:
+  1. A model of an MDP is easy to learn in discrete state-action cases.
+  2. Improves sample efficiency, as the agent is reconstructing a picture of the world (the model of the MDP) with the experiences it is learning (state transitions) which it then uses to improve its' understanding of the environment (improved value estimates).
+**Cons**:
+1. Wastage of compute on irrelevant details, not all state transitions are necessarily meaningful to learn or keep track of, in addition it could introduce information that provides no help in moving the agent towards a target.
+2. Continuous state-action spaces do not lend for easy model estimation
+3. Computing a policy from the model, especially in continuous state-action spaces, is non-trivial and in tractable cases are often expensive to compute.
+- The Dyna algorithm is a model-based reinforcement learning framework, when you design an algorithm which uses a learnt model to gain more experience from the MDP, which is done by sampling state transitions from your learnt model. This framework can be tweaked in several ways:
+	1. First way is in what kind of model you choose to learn, this model can be as simple as keeping track of all trajectories, wherein an experience sample would be done by taking a state and action tuple as input and then choosing an experience from memory which also had these state and action, and then returning as output the subsequent state and reward that resulted from this experience.  **This kind of a model is a non-parametric model**, where you can only query state and actions the agent has experienced and the retrieve the state and rewards that resulted from that combination, sampling from such models is known as **experience replay**.
+	   
+	   And then a more complicated version of the model could be a Bayesian model, where probability distributions that state the likelihood of observing a subsequent state and reward given a state and action tuple. Here the complexity of the model can be further refined by the method used to identify this probability distribution, which could be done by minimizing the KL divergence between observed data and estimated distribution, or by sample counting which would give a maximum likelihood estimate of the distribution.
+	   
+	   Semantically ways to learn models are to learn the full MDP's dynamics, or to learn expected values, or to learn probability distributions.
+	
+   2. Second way is in the way that the model is used to generate simulated or synthetic experience. Here one way of generating experience is to sample the model by taking a previously experienced state and executed action in that state, and seeing what the model predicted to have been the state transitioned to and the resulting reward. Another way could be sampling a trajectory of experience, where instead of only retrieving the next immediate state and reward combination, further experience can be sampled from trajectory by seeing what actions have been taken in that subsequent state, and then using this state action tuple to again sample another state and reward transition.
+      
+      Alternatively, any sampling methods used can be repeated for any number of times, or more succinctly called planning steps. Where taking 1 sampled experience or trajectory would be taking 1 planning step, and taking 4 sampled experiences or trajectories would be called taking 4 planning steps.
