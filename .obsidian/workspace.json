@@ -74,7 +74,7 @@
             "group": "7ee0d48d679bd63a"
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "87c641cdbb65e1e0",
@@ -147,7 +147,7 @@
             "group": "7ee0d48d679bd63a"
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -214,7 +214,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master_notes.md",
+                "file": "literature_study_notes/3rd_read_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -231,7 +231,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master_notes.md",
+                "file": "literature_study_notes/3rd_read_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -254,7 +254,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master_notes.md"
+                "file": "literature_study_notes/3rd_read_notes.md"
               }
             }
           }
@@ -276,12 +276,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0a04e8ac4dc62552",
+  "active": "2c2591bc22c24661",
   "lastOpenFiles": [
-    "literature_study_notes/3rd_read_notes.md",
     "Master_notes.md",
     "literature_study_notes/Previous_RL_MSc_theses.md",
     "literature_study_notes/1st_read_notes.md",
+    "literature_study_notes/3rd_read_notes.md",
     "literature_study_notes/2nd_read_notes.md",
     "2DD9FF00",
     "~$thesis gantt chart.xlsx",

@@ -148,6 +148,8 @@ doi: 10.2514/1.G001762
 
 a publication from deepmind
 
+### Notes-
+
 - The authors introduce a new hierarchical reinforcement learning framework, with the central notion of an *option keyboard*, which is a generalization of the idea of actions and options. This keyboard provides RL agents with a hierarchical interface to various levels of actions, where various options can be combined to execute complex tasks, leading to an even more emergent behaviour.
 - Mentioned the ideas of generalized policy evaluation and generalized policy improvement to build up the framework needed to introduce the option keyboard, did not really understand the maths behind the reasoning.
 
@@ -157,19 +159,43 @@ a publication from deepmind
 
 another publication from deepmind
 
+### Notes-
+
 - The idea of Fast reinforcement learning stems from seeking a way to reconcile the discrepancy between learning times of human and RL agents in simple tasks, the example given is that of learning how to play an Atari game. Whereas a human can learn roughly how to play a game in 15 minutes, for an RL agent to achieve the same level of play would require weeks upon weeks of uninterrupted play time. It is hypothesized by the authors here that this discrepancy arises from how RL agents have to learn essentially from scratch, but that if they were endowed with mechanisms to leverage prior knowledge, they would be much smarter.
 - This mechanism is very useful to an agent that has successfully learnt an advantageous behaviour in one task, and needs to learn a behaviour in another task.
 - They provide a formal definition of GPI.
 
+ 
+---
+
+## Item 11: Discrete Globalized Dual Heuristic Dynamic Programming in Control of the Two-Wheeled Mobile Robot
+
+
+### Notes-
+
+- [this paper] says DHP is better than HDP
+- Their definition of the HDP, DHP, and GDHP architectures are completely different from what i am aware of.
+- Their architecture of the GDHP involves the following, the actor is made up of $n$ neural networks where $n$ is the number of actions, and the critic is made up of one neural network which predicts the value function *but is updated according to the DHP and DHP rules???*
+
+[this paper]: https://www.scientific.net/SSP.164.419
+
+---
+
+## Item 12: Online Learning Control Using Adaptive Critic Designs With Sparse Kernel Machines
+
+- First to integrate Kernel Method into critics of an ACD method, what is a kernel method???
+- They suggest sparse kernel machines have better generalization capability than MLPs.
+- They require a model to predict the state transitions.
+- So instead of using neural networks/MLPs to approximate the actor policy and critic value function, they used kernel machines.
+
+--- 
+
+## Item 13: Reinforcement Q-learning for optimal tracking control of linear discrete-time systems with unknown dynamics
 
 
 ---
 
-
----
-
-## Item ...: Research on Intelligent Control Method of Launch Vehicle Landing Based on Deep Reinforcement Learning
-
+## Item 14: 
 ---
 
 **From Stefan Heyer's thesis, i found a paper that seemed very seminal in the field of ADP, which i am interested in because the incremental version of it can be used as an online controller. And i also checked the list of papers that cited this seminal paper, which seems to suggest novel RL algorithms, which are listed in the following**
