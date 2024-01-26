@@ -358,3 +358,8 @@ But an extra advantage that RL based controllers can have over traditional contr
    2. Second way is in the way that the model is used to generate simulated or synthetic experience. Here one way of generating experience is to sample the model by taking a previously experienced state and executed action in that state, and seeing what the model predicted to have been the state transitioned to and the resulting reward. Another way could be sampling a trajectory of experience, where instead of only retrieving the next immediate state and reward combination, further experience can be sampled from trajectory by seeing what actions have been taken in that subsequent state, and then using this state action tuple to again sample another state and reward transition.
       
       Alternatively, any sampling methods used can be repeated for any number of times, or more succinctly called planning steps. Where taking 1 sampled experience or trajectory would be taking 1 planning step, and taking 4 sampled experiences or trajectories would be called taking 4 planning steps.
+
+
+### 26/1/2024
+
+- Deepmind has published researches that i would classify as pushes towards generalized artificial intelligence. Taking the example of FastRL, this framework seeks to come up with ways that will allow for learned policies on several tasks to be combined together into a *generalized* policy, which can direct the agent to performing combinations of tasks or to specifically avoid performing tasks.
