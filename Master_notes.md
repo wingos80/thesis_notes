@@ -29,7 +29,7 @@ Ranked, 1 = highest priority
 
 >~~*To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system for the Flying-V.*~~
 
-> *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system that can stabilize and demonstrate the handling qualities of the Flying-V.*
+> *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system that can stabilize and improve the handling qualities of the Flying-V.*
 
 %% 
 should change q1 to be more generic/make most promising more quantifiable

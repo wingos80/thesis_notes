@@ -7,7 +7,8 @@ This literature review focuses on the field of RL, seeing what algorithms exists
 | Subject Area|  Query |
 | ------------   |  ------- |
 |  | "reinforcement learning" AND "control systems"|
-|  | "reinforcement learning" AND "flight control"|
+|  | "reinforcement learning" AND "flight control"||
+|  | "reinforcement learning" AND "fault tolerant control"|
 
 
 ---
@@ -183,6 +184,8 @@ another publication from deepmind
 
 ## Item 12: Online Learning Control Using Adaptive Critic Designs With Sparse Kernel Machines
 
+### Notes-
+
 - First to integrate Kernel Method into critics of an ACD method, what is a kernel method???
 - They suggest sparse kernel machines have better generalization capability than MLPs.
 - They require a model to predict the state transitions.
@@ -192,21 +195,46 @@ another publication from deepmind
 
 ## Item 13: Reinforcement Q-learning for optimal tracking control of linear discrete-time systems with unknown dynamics
 
+### Notes-
+
+- Remark 6 notes several sources stating the need for persistent excitation
+- They use a LS method to solve the policy evaluation equation in order to update the P matrix, need to find how LS methods work.
+- The presented Q-learning method does not use action-value functions, and hence no function approximators either. Instead they straight forwardly solve the algebraic riccati equations for optimal performance.
+
 
 ---
 
-## Item 14: 
----
-
-**From Stefan Heyer's thesis, i found a paper that seemed very seminal in the field of ADP, which i am interested in because the incremental version of it can be used as an online controller. And i also checked the list of papers that cited this seminal paper, which seems to suggest novel RL algorithms, which are listed in the following**
+**From Stefan Heyer's thesis, i found a paper that seemed very seminal in the field of ADP, which i am interested in because the incremental version of it is very adaptive and thus can be used as an online controller. And i also checked the list of papers that cited this seminal paper, which seems to suggest novel RL algorithms, which are listed in the following**
 
 1. J. Ye, Y. Bian, B. Luo, M. Hu, B. Xu and R. Ding, "Costate-Supplement ADP for Model-Free Optimal Control of Discrete-Time Nonlinear Systems," in _IEEE Transactions on Neural Networks and Learning Systems_, vol. 35, no. 1, pp. 45-59, Jan. 2024, doi: 10.1109/TNNLS.2022.3172126.
 2. D. Wang, J. Wang, M. Zhao, P. Xin and J. Qiao, "Adaptive Multi-Step Evaluation Design With Stability Guarantee for Discrete-Time Optimal Learning Control," in IEEE/CAA Journal of Automatica Sinica, vol. 10, no. 9, pp. 1797-1809, September 2023, doi: 10.1109/JAS.2023.123684.
 3. Y. Li and E. -J. v. Kampen, "Incremental Generalized Policy Iteration for Adaptive Attitude Tracking Control of a Spacecraft," 2023 European Control Conference (ECC), Bucharest, Romania, 2023, pp. 1-6, doi: 10.23919/ECC57647.2023.10178221.
 4. L. Chen and Q. Quan, "Reinforcement Learning for Non-Affine Nonlinear Non-Minimum Phase System Tracking Under Additive-State-Decomposition-Based Control Framework," 2023 IEEE 12th Data Driven Control and Learning Systems Conference (DDCLS), Xiangtan, China, 2023, pp. 2043-2049, doi: 10.1109/DDCLS58216.2023.10166298.
 
-## Item \*: Adaptive critic designs
+## Item 14: Adaptive critic designs
 
 link: https://ieeexplore-ieee-org.tudelft.idm.oclc.org/document/623201
 
 
+---
+
+## Item 15: Incremental Generalized Policy Iteration for Adaptive Attitude Tracking Control of a Spacecraft
+
+### Notes-
+
+- Using the original formulation of a GPI algorithm, an incremental form is developed by inserting an RLS identified system model into the Bellman equation, which allows for the equation to be computed to build the policy iteration algorithm.
+
+---
+
+## Item 16: Adaptive Multi-Step Evaluation Design With Stability Guarantee for Discrete-Time Optimal Learning Control
+
+### Notes-
+
+- [this source] implemented a multi-step ADP algorithm (might be the first?), creating the class of algorithms called Multi-step ADP (MsADP), the variant of  ADP used is HDP, thus the paper presented a MsHDP alorithm.
+- This paper then extends that idea further to create an *integrated* MsADP, specifically the MsHDP. The core idea of *integrate* MsHDP is to use small $N$'s in the initial iterations, with $N$ being the number of steps taken in the Multi-**step** of the MsHDP, then after the onset of theoretical stability of the algorithm $N$ can be increased to massively speed up policy convergence.
+- There also exists an [integrate VI algorithm].
+- The idea behind an *integrated* algorithm is that PI only converges when using an admissible control policy, i.e. a stable one. However, VI can work even with an inadmissible policy. Therefore, the strategy is to initially use VI, i.e. use less steps in the beginning for the Multi-step part of the algorithm, and then once a stability criterion is reached, to switch over to using large number of steps to emulate PI, which converges faster at the expense of extra compute.
+
+
+[this source]: https://www.sciencedirect.com/science/article/pii/S0020025516312853
+[integrate VI algorithm]: https://ieeexplore.ieee.org/document/9536025?denied=
