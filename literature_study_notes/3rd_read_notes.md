@@ -232,9 +232,35 @@ link: https://ieeexplore-ieee-org.tudelft.idm.oclc.org/document/623201
 
 - [this source] implemented a multi-step ADP algorithm (might be the first?), creating the class of algorithms called Multi-step ADP (MsADP), the variant of  ADP used is HDP, thus the paper presented a MsHDP alorithm.
 - This paper then extends that idea further to create an *integrated* MsADP, specifically the MsHDP. The core idea of *integrate* MsHDP is to use small $N$'s in the initial iterations, with $N$ being the number of steps taken in the Multi-**step** of the MsHDP, then after the onset of theoretical stability of the algorithm $N$ can be increased to massively speed up policy convergence.
-- There also exists an [integrate VI algorithm].
+- There also exists an [integrated VI algorithm]?
 - The idea behind an *integrated* algorithm is that PI only converges when using an admissible control policy, i.e. a stable one. However, VI can work even with an inadmissible policy. Therefore, the strategy is to initially use VI, i.e. use less steps in the beginning for the Multi-step part of the algorithm, and then once a stability criterion is reached, to switch over to using large number of steps to emulate PI, which converges faster at the expense of extra compute.
+
+Couple questions:
+1. Is it worth investigating a multistep version of DHP vs HDP?
+2. If so, how can a Ms version of DHP be developed using the framework proposed?
+
+For q1, according to Zhou 
+> "DHP methods are most favored within the ACD category because they have higher success rate and accuracy than the HDP and lower computational complexity than the GDHP"
+which is indeed confirmed in several papers, such as:
+1. G. K. Venayagamoorthy, R. G. Harley, D. C. Wunsch, Comparison of heuristic dynamic programming and dual heuristic programming adaptive critics for neurocontrol of a turbogenerator, IEEE Transactions on Neural Networks 13 (3) (2002) 764–773.
+2. J. Si, Y.-T. Wang, Online learning control by association and reinforcement, IEEE Transactions on Neural Networks 12 (2) (2001) 264–276.
+3. D. V. Prokhorov, D. C. Wunsch, Adaptive critic designs, IEEE transactions on Neural Networks 8 (5) (1997) 997–1007.
+
+Therefore, it is possible that an MsDHP would out perform MsHDP when it comes to performance and robustness. However, it is necessary to also consider if IDHP is already fulfilling the same purpose as MsDHP, since the primary benefit of IDHP is the rapid convergence to a stable policy, and the benefit of MsDHP would also be a rapid convergence to stable policy.
+
+The incremental part of IDHP or IHDP is there to eliminate the need to model the underlying system being controlled. In traditional ADP's, there exists some model of the system that the algorithm keeps track of. Usually, this either means that you need to have a degree of a-priori knowledge of the system which can allow for sufficient modelling of the state transition dynamics, or alternatively you need to build a system which is usually done slowly through function approximators such as neural networks. Incremental versions of ADP algorithms use an online model identification approach and the assumption of high sampling rate to utilize an RLS identified time varying linear system as the system model, instead of the usual nonlinear models or expensive-to-create yet poorly-generalized time independent linear models. This means that now a big portion of the computational complexity of ADP algorithms is eliminated, as RLS is a very efficient operation, and under high sampling rates of typically around 100 Hz can offer sufficient approximation of state transition dynamics. And thus, this allows ADP algorithms to create online adaptive controllers.
+
+Comparing this solution to the MsHDP solution, it was found that MsHDP does not use a system model, while IHDP does (the recursively identified one), this discrepancy needs to be studied further by reading the original papers describing HDP/ADP. The paper [Online Adaptive Critic Flight Control] is read to learn more about this (did not read in detail).
+
+On further reflection, instead of directly adopting the Algorithm of MsHDP, it may be better to adopt the more general idea of multi-step bootstrapping, such as n-step TD learning, and apply it to IDHP. The questions to be asked in this case are:
+
+1. How would IDHP be made multistep?
+	1. Could be done by expanding equation 15 in Zhou's IDHP paper:
+		$e_c(t) = \frac{\delta [\mathcal{J}(x_{t-1}) - c_{t-1} - \gamma \mathcal{J}(x_t)]}{\delta x_{t-1}} = \lambda(x_{t-1}) - \frac{\delta c_{t-1}}{\delta x_{t-1}} - \gamma \lambda(x_t)\frac{\delta x_t}{\delta x_{t-1}}$
+		$e_{Ms\ c}(t) = \frac{\delta [\mathcal{J}(x_{t-2}) - c_{t-2} - \gamma \mathcal{J}(x_{t-1}) - \gamma^2 \mathcal{J}(x_{t})]}{\delta x_{t-2}} = \lambda(x_{t-2}) - \frac{\delta c_{t-2}}{\delta x_{t-2}} - \gamma \lambda(x_{t-1})\frac{\delta x_{t-1}}{\delta x_{t-2}}- \gamma^2 \lambda(x_t)\frac{\delta x_t}{\delta x_{t-1}}\frac{\delta x_{t-1}}{\delta x_{t-2}}$
+1. At first glance or surface level inspection, is there any additional benefit to using a multi-step IDHP?
 
 
 [this source]: https://www.sciencedirect.com/science/article/pii/S0020025516312853
-[integrate VI algorithm]: https://ieeexplore.ieee.org/document/9536025?denied=
+[integrated VI algorithm]: https://ieeexplore.ieee.org/document/9536025?denied=
+[Online Adaptive Critic Flight Control]: http://lisc.mae.cornell.edu/LISCpapers/Online%20Adaptive%20Critic%20Flight%20Control.pdf

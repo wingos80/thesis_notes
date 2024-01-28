@@ -6,7 +6,7 @@
       {
         "id": "2d6f129b3713a065",
         "type": "tabs",
-        "dimension": 50.33512064343163,
+        "dimension": 51.07238605898124,
         "children": [
           {
             "id": "6609fa4b9f72cb5b",
@@ -73,12 +73,12 @@
             "group": "7ee0d48d679bd63a"
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "87c641cdbb65e1e0",
         "type": "tabs",
-        "dimension": 49.66487935656836,
+        "dimension": 48.92761394101876,
         "children": [
           {
             "id": "be7d39d4ee524fc6",
@@ -212,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature_study_notes/3rd_read_notes.md",
+                "file": "Master_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "literature_study_notes/3rd_read_notes.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "literature_study_notes/3rd_read_notes.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -274,10 +274,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7a062e655cdb890f",
+  "active": "0a04e8ac4dc62552",
   "lastOpenFiles": [
-    "Master_notes.md",
     "literature_study_notes/3rd_read_notes.md",
+    "Master_notes.md",
     "literature_study_notes/2nd_read_notes.md",
     "literature_study_notes/Previous_RL_MSc_theses.md",
     "literature_study_notes/1st_read_notes.md",
