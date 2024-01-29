@@ -38,7 +38,8 @@ make q3 more specific
 
 q4a success rate/monte carlo
 
-q4d should probably change intelligent/traditional to other SOTA controller %%
+q4d should probably change intelligent/traditional to other SOTA controller 
+%%
 
 
 ### **Research Questions**
@@ -46,7 +47,7 @@ q4d should probably change intelligent/traditional to other SOTA controller %%
 1. What reinforcement learning algorithm can yield a flight controller which is the most tolerant to faults while providing good reference tracking?
 	1. What RL algorithms are considered to be state-of-the-art? 
 	2. In what ways can an RL based flight controller be made fault tolerant?
-	3. Upon applying the candidate algorithms to a simpler dynamical system than a nonlinear simulation of the Flying-V, which algorithm demonstrates the highest degree of reference tracking and fault tolerance?
+	3. Which algorithm demonstrates the highest degree of reference tracking and fault tolerance when applied to a system with some simple dynamics?
 2. What are the flight control related challenges when it comes to designing a controller for the Flying-V?
 	1. What are the flight handling qualities of the Flying-V?
 	2. What are some of the potential fault scenarios that warrant attention in the Flying-V?
@@ -368,7 +369,16 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 - Deeper study into using MsHDP in thesis, how can this extend to Ms***D***HP? Does it even make sense to do so?
   
-  ### 28/1/2024
+### 28/1/2024
 
 - Continuing study from yesterday, it could make sense to extend to MsDHP, sources confirm that DHP generally has better control performance (e.g. tracking error) and learning performance (e.g. sample efficiency or iterations to converge) than HDP.
 - Idea of MsDHP can even be extended to IDHP, initially there was some headache with seeing how i could port the algorithms from MsHDP directly to IDHP. But on further reflection, it is easier and more sensible to derive from the IDHP algorithm a multi-step extension of IDHP, which I think I have accomplished.
+
+### 29/1/2024
+
+- Encoding the states of an environment into a different representation through coarse encoding, then it is possible to give more authority to a function approximator to provide better value estimates. This is done in the hopes that blowing up the state space representation of any state values into a *feature based* representation might be rich enough that even a linear function approximator suffices.
+- Using function approximators in general removes the Markovian property of any MDP, and the a degree of partial unobservability is introduced.
+- Action-value approximation can use a state and action dependent feature vector, or it can use a state dependent feature vector and an action dependent parameter vector. The former is called an *action-in* approach while the latter is *action-out*.
+- How to avoid deadly triad? Can try to incorporate eligibility traces and tune the $\lambda$ parameter, as it is sometimes the case that there exists a set of values of $\lambda$ for which the triad is not deadly. Or we can consider using a different type of loss and change the parameter update rules, such as using:
+	- Residual Bellman, loss = $\mathbb{E}[\delta_t^2]$, update = $\Delta w_t  = \alpha \delta_t\Delta [v_w(S_t) - \gamma v_w(S_{t+1})]$ (generally this works poorly apparently)
+	- Bellman error, loss = $\mathbb{E}[\delta_t]^2$, update = $\Delta w_t  = \alpha \delta_t\Delta [v_w(S_t) - \gamma v_w(S'_{t+1})]$ 

@@ -264,3 +264,23 @@ On further reflection, instead of directly adopting the Algorithm of MsHDP, it m
 [this source]: https://www.sciencedirect.com/science/article/pii/S0020025516312853
 [integrated VI algorithm]: https://ieeexplore.ieee.org/document/9536025?denied=
 [Online Adaptive Critic Flight Control]: http://lisc.mae.cornell.edu/LISCpapers/Online%20Adaptive%20Critic%20Flight%20Control.pdf
+
+
+---
+
+
+**A fairly seminal algorithm in DRL is SAC, which demonstrated marked sample efficiency and performance improvements over pre-existing algorithms, the following items include the original SAC article itself and influential articles which cited it.**
+
+
+
+---
+
+## Item 17: Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor
+
+### Notes-
+
+- When they modify the definition of a return to a more general maximum entropy return as follows: $J(\pi) = \sum\limits_{t=0}^T\mathbb{E}_{(s_t,a_t)\sim \rho_{\pi}}[r(s_t,a_t) + \alpha \mathcal{H}(\pi(\bullet | s_t))]$, where the first term in the expectation operator is the traditional reward signal in an MDP, and the second term is a scaled entropy operation performed on a certain policy $\pi$
+  
+  When they introduce this new return value, I am pretty sure they name it a *soft* Q-value, even though they don't state this explicitly. Annoying.
+
+- SAC as an algorithm is then constituted of two components, the policy evaluation component where the *soft* Q-value of a function is evaluated; and the policy iteration component where an improved policy is first obtained, and then a similar policy that exists in a predefined set of policies is identified by taking the argmin of the KL-divergence operator between the improved policy and an exponentiation of the policy's soft Q-value, thus called *soft* policy improvement..
