@@ -371,4 +371,4 @@ But an extra advantage that RL based controllers can have over traditional contr
   ### 28/1/2024
 
 - Continuing study from yesterday, it could make sense to extend to MsDHP, sources confirm that DHP generally has better control performance (e.g. tracking error) and learning performance (e.g. sample efficiency or iterations to converge) than HDP.
-- Idea of MsDHP can even be extended to IDHP, initially there was some headache with seeing how i could port the algorithms from MsHDP directly to IDHP. But on further reflection, it is easier and more sensible to derive starting from the IDHP algorithm a multi-step extension of IDHP, which i think i have accomplished.
+- Idea of MsDHP can even be extended to IDHP, initially there was some headache with seeing how i could port the algorithms from MsHDP directly to IDHP. But on further reflection, it is easier and more sensible to derive from the IDHP algorithm a multi-step extension of IDHP, which I think I have accomplished.
