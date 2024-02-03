@@ -6,7 +6,7 @@
       {
         "id": "2d6f129b3713a065",
         "type": "tabs",
-        "dimension": 51.07238605898124,
+        "dimension": 49.865951742627345,
         "children": [
           {
             "id": "6609fa4b9f72cb5b",
@@ -32,7 +32,7 @@
                 "source": true
               }
             },
-            "group": "fbb1c2559b551726"
+            "group": "2a18f9c900d67a35"
           },
           {
             "id": "8c187e676f79de03",
@@ -78,7 +78,7 @@
       {
         "id": "87c641cdbb65e1e0",
         "type": "tabs",
-        "dimension": 48.92761394101876,
+        "dimension": 50.134048257372655,
         "children": [
           {
             "id": "be7d39d4ee524fc6",
@@ -104,7 +104,7 @@
                 "source": false
               }
             },
-            "group": "fbb1c2559b551726"
+            "group": "2a18f9c900d67a35"
           },
           {
             "id": "83a9e68af871c392",
@@ -212,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature_study_notes/3rd_read_notes.md",
+                "file": "Master_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -229,7 +229,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "literature_study_notes/3rd_read_notes.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -252,7 +252,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "literature_study_notes/3rd_read_notes.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -274,23 +274,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "75418a3677f0666e",
+  "active": "0a04e8ac4dc62552",
   "lastOpenFiles": [
+    "literature_study_notes/3rd_read_notes.md",
     "Master_notes.md",
-    "4651A200",
-    "literature_study_notes/Previous_RL_MSc_theses.md",
-    "63099200",
-    "D9E89200",
-    "8DB89200",
-    "C8989200",
-    "FAD79200",
-    "0C249200",
+    "literature_study_notes/1st_read_notes.md",
+    "latex/01_Literature_Study.tex.txt",
+    "latex/02_Literature_Study.tex.txt",
+    "latex/New Text Document.txt",
+    "latex",
+    "New folder",
+    "D87C1A00",
     "~$thesis gantt chart.xlsx",
     "literature_study_notes/2nd_read_notes.md",
-    "literature_study_notes/3rd_read_notes.md",
-    "7B694000",
-    "literature_study_notes/1st_read_notes.md",
-    "2DD9FF00",
+    "taxonomy/rl_taxonomy.drawio",
+    "taxonomy",
+    "literature_study_notes/Previous_RL_MSc_theses.md",
+    "4651A200",
     "test.md",
     "pictures/bellman_derive.png",
     "1st_read_notes.md",

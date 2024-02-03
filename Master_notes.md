@@ -14,10 +14,10 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 
 Ranked, 1 = highest priority
 
-1. Read up on flying-V
-2. See what curriculum RL is about
-3. Read Ye Zhou's publications on iADP, IDHP
-4. Learn how online trained rl agents are trained, do they just have the agent fly the airplane once and then declare it is finished training? In other words, what is the difference between an online and an offline RL algorithm?
+1. Go through all papers citing the multi-step HDP
+2. Draft research plan
+3. Draft literature study
+4. Freeze research objectives
 
 ---
 
@@ -29,34 +29,42 @@ Ranked, 1 = highest priority
 
 >~~*To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system for the Flying-V.*~~
 
-> *To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system that can stabilize and improve the handling qualities of the Flying-V.*
+> ~~*To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system that can stabilize and improve the handling qualities of the Flying-V.*~~
+
+> *To advance the field of automatic flight control and increase the technological readiness of the Flying-V, through development of an intelligent and fault tolerant reinforcement based flight controller tailored for the Flying-V.*
 
 %% 
-should change q1 to be more generic/make most promising more quantifiable
+reconcile robustness n performance in q1, focus on fault tolerant, and then subq say what is the performance of this controller/
 
-make q3 more specific
+q4 switch fault n nominal order (minor comment)
 
-q4a success rate/monte carlo
+maybe some kind of absolute fault tolerant requirement?
 
-q4d should probably change intelligent/traditional to other SOTA controller 
+consider expanding the scope to include robustness to uncertainties, disturbances, noises?
 %%
 
+The online-offline hybrid approach to applying RL to flight controllers seems the most promising solution to tackle the challenge of fault tolerance. The "offline" algorithms come in the form of model free actor critic methods, which while being relatively sample inefficient to the "online" algorithms, are firstly able to generalize to more control tasks as they through learn policies and value function estimates by repeated traversals across the state-action space, and secondly can provide an initialization condition for the "online" algorithms which have been pre-trained and tested rather than from tabular rasa, otherwise requiring online system identification and inconvenient persistent excitations.
+
+The research plan will set a goal to implement and evaluate such an online-offline hybrid controller for attitude control of the Flying-V. This goal is recognized as being optimistic, seeing as previous efforts to perform such a task had more time to do so. But the plan will nonetheless be formed around this goal, and contingencies will be planned by placing intermediate sub-goals between commencing the first research phase and achieving the final goal. The first of the sub-goals would be to implement an IDHP algorithm, this implementation is prioritized as this incremental model-based algorithm is considered to be highly adaptive and can thus provide truly online control, which will have better odds of controlling the aircraft in face of sudden changes in system dynamics as a result of faults. The second sub-goal would be to implement the "offline" learning algorithms, which can take the form of as basic as SAC, to DSAC, or even the state of the art RUN-DSAC algorithm. The third sub-goal would be to extend IDHP to a Multi-step algorithm.
+
+To achieve this goal, the following research questions are posed.
 
 ### **Research Questions**
 
-1. What reinforcement learning algorithm can yield a flight controller which is the most tolerant to faults while providing good reference tracking?
+1. What reinforcement learning algorithm can yield a flight controller which is the most tolerant to faults?
 	1. What RL algorithms are considered to be state-of-the-art? 
-	2. In what ways can an RL based flight controller be made fault tolerant?
-	3. Which algorithm demonstrates the highest degree of reference tracking and fault tolerance when applied to a system with some simple dynamics?
+	2. In what ways can fault tolerance be built into a RL based flight controller?
+	3. Which algorithms demonstrate the best fault tolerance?
+	4. How are the reference tracking performance of these algorithms?
 2. What are the flight control related challenges when it comes to designing a controller for the Flying-V?
-	1. What are the flight handling qualities of the Flying-V?
-	2. What are some of the potential fault scenarios that warrant attention in the Flying-V?
+	1. What are potential fault scenarios that warrant attention from the AFCS system in the Flying-V?
+	2. What criteria should be used to characterize a controllers fault tolerance (fault tolerance success rate, nMAE of tracking error, variance of nMAE...)?
 3. How can the identified algorithm be applied to control the Flying-V?
-	1. How should the implemented controller be structured?
-	2. How will the algorithm interface with existing simulations of the Flying-V?
-4. How does the implemented flight controller perform both in the presence of faults and in nominal flight?
-	1. What criteria should be kept track of to characterize a controllers fault tolerance (fault tolerance success rate, nMAE of tracking error, variance of nMAE...)?
-	2. Noting the possible fault scenarios and handling qualities of the Flying-V, what flight scenarios should be designed to test the performance of the controller?
+	1. How should the flight control system be structured (cascaded control structure, what signals to feedback)?
+	2. What is the MDP in the case of controlling the Flying-V (the state variables, action variables, environment to be controlled)?
+4. How does the implemented flight controller perform during nominal flight and in the presence of faults?
+	1. Noting the possible fault scenarios and handling qualities of the Flying-V, what flight scenarios should be designed to test the performance of the controller (what faults to use, what tracking signals to use, superimposed faults...)?
+	2. What is the degree of fault tolerance of the implemented controller (added this to have some kind of absolute judgement of the performance of the controller, but i am thinking could also make the next two comparisons use absolute values instead of relative, i.e. don't say that one controller is 10 times better, say one controller has x nMAE while another has y nMAE)?
 	3. How well does the nominal flight performance of the proposed flight controller compare to other state-of-the-art controllers?
 	4. How are the fault tolerance characteristics of the proposed flight controller compared to other state-of-the-art controllers?
 
@@ -382,3 +390,47 @@ But an extra advantage that RL based controllers can have over traditional contr
 - How to avoid deadly triad? Can try to incorporate eligibility traces and tune the $\lambda$ parameter, as it is sometimes the case that there exists a set of values of $\lambda$ for which the triad is not deadly. Or we can consider using a different type of loss and change the parameter update rules, such as using:
 	- Residual Bellman, loss = $\mathbb{E}[\delta_t^2]$, update = $\Delta w_t  = \alpha \delta_t\Delta [v_w(S_t) - \gamma v_w(S_{t+1})]$ (generally this works poorly apparently)
 	- Bellman error, loss = $\mathbb{E}[\delta_t]^2$, update = $\Delta w_t  = \alpha \delta_t\Delta [v_w(S_t) - \gamma v_w(S'_{t+1})]$ 
+
+### 30/1/2024
+
+- I've come to realise i do not need to put in explicit references to the specific algorithm or frame-work i end up using during my thesis, or which i've come to the conclusion seems most appropriate for my current set of research questions. Because doing so would be **a)** putting the answers of the questions inside the question, and **b)** would probably involve re-drafting some of the research questions to flesh out the algorithm better, which would in some sense make all the literature review done thus far meaningless as they have been devoted to arriving at the framework building these new questions in the first place.
+- What is the eligibility trace?
+- found really nice [summary] of sutton & barto.
+- The supposed dichotomy of offline and online algorithms posed by Casper and Lucas is a pseudo dichotomy, as the difference in their algorithm is falsely attributed to the nature of how each one adapts its' parameters. Both algorithms work online, where parameters of both algorithms change as an agent steps through an environment. The real difference is firstly in how sample efficient they are, as "online" algorithms simply have much better sample efficiency than "offline" algorithms. Benefits of "online" algorithms are that they can adapt very quickly to model changes, a disadvantage is estimator windup when the system is not excited persistently, and can suffer in performance from biased and noisy sensor measurements. Also, cite [killian's paper] for suggestions to use an online adaptive controller to augment SAC.
+
+[summary]: https://lcalem.github.io/blog/2019/02/25/sutton-chap12#121-the-lambda-return
+[killian's paper]: https://doi-org.tudelft.idm.oclc.org/10.2514/6.2022-2078
+
+
+
+### 31/1/2024
+
+- What is TD learning? In layman terms, it is to learning a guess from a guess. It directly uses previous estimates of any variable to edge the estimation closer to the true value.
+- **Target** is to be thought of as the value that an estimate should converge towards. In MC methods, an estimated value function is updated towards its' target which is the sampled return. In TD methods, the target is still a return but in this case it is made up of the reward observed over one step plus the estimated return thereafter, thus the TD target is composed of observed and estimated environmental variables. This split of the target into an observed and estimated half is what is known as bootstrapping, it is using the algorithms' previous estimate of a value to improve on the estimation.
+- To be online is to update estimates throughout an episode, instead of only at the end of one. 
+- **Gradient methods** describes the subset of algorithms using function approximators for any of its' estimates which uses gradient methods to update the function approximators.
+- **Projected Bellman Error** $\overline{PBE}$,  
+
+### 1/2/2024
+
+
+- IDHP gains much higher adaptability over its' non incremental counterpart through the use of online RLS identified system models.
+- Adaptive dynamic programming methods have been the method of choice for RL-based adaptive controllers, for example [Zhang C et al] applied DHP with an online identified system model using just-in-time learning (JITL) to create an adaptive controller capable of adapting parameters in fractions of one episode. JITL is interesting to note since the end result is also a time varying LTI system, except to identify this LTI an ARX model is used. ADP in the form of Policy iteration is applied by [Zhang K et al] to tackle the challenge of fault tolerant control in the face of actuator failure for a purely mathematical nonlinear system. The spectrum between PI and Value iteration was also explored through the works of [Luo B et al] who combined the two ideas into a multi-step HDP algorithm that allows for switching between PI and VI; this method is subsequently extended to an algorithm which adaptively changes between PI and VI to balance the fruits of faster convergence under PI and larger pool of admissible policies under VI, and is applied to a power generator system to demonstrate its' online learning ability through adaptation of parameters within fractions of one episode.
+- These examples are contrasted against DRL and model-free algorithms, which produces lower sample efficiency and hence online adaptability due to the larger number of parameters in a DRL and the lack of information on system dynamics from being model-free. For example, the works of [Killian Dally] shows that in the order of $10^5$ time steps each with a duration of $0.01s$ are required before SAC can converge to a usable policy, and [van Hasselt] published results of the Rainbow DQN algorithm which required number of time steps in the order of $10^7$ for convergence to a stable and performant policy. 
+
+[Zhang C et al]: https://doi-org.tudelft.idm.oclc.org/10.1002/oca.2791
+[Zhang K et al]: https://doi-org.tudelft.idm.oclc.org/10.1016/j.jfranklin.2018.07.009
+[Luo B et al]: http://dx.doi.org/10.1016/j.ins.2017.05.005
+[Killian Dally]: https://arxiv.org/abs/2202.09262
+[van Hasselt]: https://arxiv.org/abs/1710.02298
+
+### 2/2/2024
+
+- cite werbos for beginning of adp.
+- drafting the literature study
+- deriving the equations for multi-step idhp
+
+### 3/2/2024
+
+
+

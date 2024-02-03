@@ -56,7 +56,7 @@ doi: 10.2514/1.G001762
 ### Notes-
 
 - Adaptive critic can also be called actor critic methods, since policy evaluation (the critic) and policy improvement (the actor) are approximated by two function approximators.
-- 3 main groups of ACDs can be identified:
+- 3 main groups of ACDs can be identified: cite
 	1. Heuristic dynamic programming, the most basic form and uses critics to estimate cost-to-go/rewards.
 	2. Dual heuristic programming, critics approximate gradients of cost-to-go/rewards with respect to critic inputs
 	3. Globalized dual heuristic programming, which approximates cost-to-go/rewards as well as its' derivative.
@@ -75,7 +75,7 @@ doi: 10.2514/1.G001762
 ### Notes-
 
 - GDHP requires calculating second order gradients, supposedly these sources should provide some information on that [source 1], [source 2]. Source 2 should also talk about why theoretically GDHP should be more powerful than DHP or HP.
-- Previous attempts to find more practical methods of implementing GDHP faces the dichotomy of either high computational load for good accuracies or low computational load for bad accuracies.
+- Previous attempts to find more practical methods of implementing GDHP faces the dichotomy of either high computational load for good accuracies or low computational load for bad accuracies, cite
 - The proposed GDHP algorithm is called IGDHPa (incremental GDHP association), incremental because the algorithm's model of the global system a.k.a. plant is identified incrementally taking the form of a time varying LTI, association because the algorithm has a DHP style critic network which is *associated* to the HDP style critic network that the algorithm also has.
 [source 1]: https://repository.essex.ac.uk/21300/1/IEEE%20SecondOrderBackpropForVGL.pdf
 [source 2]: https://ieeexplore-ieee-org.tudelft.idm.oclc.org/document/623201
@@ -99,7 +99,7 @@ doi: 10.2514/1.G001762
 ## Item 6: Adaptive Dynamic Programming for Control: A Survey and Recent Advances
 
 ### Notes-
-- Very good introduction and litearture study on origins of adaptive dynamic programming.
+- Very good introduction and literature study on origins of adaptive dynamic programming, cite
 - Origins of the Name of ADP:
 	- ADP can be an acronym standing for either approximate or adaptive dynamic programming.
 	- [First use] of the acronym ADP, and then explored formally by [Papachristos]
@@ -174,7 +174,7 @@ another publication from deepmind
 
 ### Notes-
 
-- [this paper] says DHP is better than HDP
+- [this paper] says DHP is better than HDP, cite
 - Their definition of the HDP, DHP, and GDHP architectures are completely different from what i am aware of.
 - Their architecture of the GDHP involves the following, the actor is made up of $n$ neural networks where $n$ is the number of actions, and the critic is made up of one neural network which predicts the value function *but is updated according to the DHP and DHP rules???*
 
@@ -265,7 +265,48 @@ On further reflection, instead of directly adopting the Algorithm of MsHDP, it m
 [integrated VI algorithm]: https://ieeexplore.ieee.org/document/9536025?denied=
 [Online Adaptive Critic Flight Control]: http://lisc.mae.cornell.edu/LISCpapers/Online%20Adaptive%20Critic%20Flight%20Control.pdf
 
+---
 
+**It is unsure what the effects of multi-step will be on IDHP. Whether it will improve the algorithm, slow it down, or break the algorithm causing divergence for instance. So all the papers citing the original MsHDP paper will be read to see if they provide any glimpses.**
+
+**p.s. i still don't understand what these people's definition of value iteration and policy iteration algorithms are. It seems they formulate these algorithms differently than what sutton and barto have.**
+
+## Item 16.0: Multi-step heuristic dynamic programming for optimal control of nonlinear discrete-time systems
+
+
+---
+
+## Item 16.1: Deterministic policy gradient adaptive dynamic programming for model-free optimal control
+
+https://doi.org/10.1016/j.neucom.2019.11.032
+
+### Notes-
+
+- Does not implement the multi-step HDP or evaluates it. Instead develops a model-free off-policy adaptive dynamic programming algorithm called "DPGADP"
+---
+
+## Item 16.2: Learning-based T-sHDP for optimal control of a class of nonlinear discrete-time systems
+
+### Notes-
+
+- Their description of PI and VI provides additional info on what VI is. It appears that PI starts without a value function, VI on the other hand does start with a value function.
+- I don't understand how this algorithm works
+
+---
+
+## Item 16.3: Online Optimal Control of Discrete-Time Systems Based on Globalized Dual Heuristic Programming with Eligibility Traces
+
+https://doi-org.tudelft.idm.oclc.org/10.1109/IAI53119.2021.9619346
+
+### Notes-
+
+- Cite, definition of admissible is when a control law does not cause a cost function to diverge, and that the control law should be stabilizing. A definition that they took from [abu-khalaf]
+- Cite [this old textbook], a dynamic programming approach that adopts a backwards march in time has been theoretically shown to be able to solve the hamilton-bellman-jacobi equations, i.e. to obtain the optimal control actions for any posed cost function. BUT, this approach scales poorly when the state space expands, and is subject to the curse of dimensionality.
+- I
+
+
+[abu-khalaf]: https://doi-org.tudelft.idm.oclc.org/10.1016/j.automatica.2004.11.034
+[this old textbook]: https://psycnet.apa.org/record/1961-01474-000
 ---
 
 
@@ -283,4 +324,34 @@ On further reflection, instead of directly adopting the Algorithm of MsHDP, it m
   
   When they introduce this new return value, I am pretty sure they name it a *soft* Q-value, even though they don't state this explicitly. Annoying.
 
-- SAC as an algorithm is then constituted of two components, the policy evaluation component where the *soft* Q-value of a function is evaluated; and the policy iteration component where an improved policy is first obtained, and then a similar policy that exists in a predefined set of policies is identified by taking the argmin of the KL-divergence operator between the improved policy and an exponentiation of the policy's soft Q-value, thus called *soft* policy improvement..
+- SAC as an algorithm is then constituted of two components, the policy evaluation component where the *soft* Q-value of a function is evaluated; and the policy iteration component where an improved policy is first obtained, and then a similar policy that exists in a predefined set of policies is identified by taking the argmin of the KL-divergence operator between the improved policy and an exponentiation of the policy's soft Q-value, thus called *soft* policy improvement.
+
+
+
+---
+
+## Item 18: MOPO: Model-based Offline Policy Optimization
+
+
+### Notes-
+
+- This paper calls SAC a SOTA algorithm, use this as citation, cite.
+- Mentions this model based off policy algo called [MBPO]
+- They use model the MDP model, a.k.a. transition probabilities/MDP dynamics, as a gaussian with mean vector and covariance matrix given by a neural network.
+
+[MBPO]: https://arxiv.org/abs/1906.08253
+
+
+--- 
+
+## Item 19: When to Trust Your Model: Model-Based Policy Optimization
+
+MBPO from item 18
+
+### Notes-
+
+- They "query the model only for short rollouts", need to find what rollouts mean.
+- This paper really loves model-based algorithms, cite this for any model-based discussion.
+- "learned models can be incorporated into model-free algorithms to boost their learning rate."
+- They demonstrate that their model-based algorithm is much more sample efficient than model-free models
+- I was reading all about model based learning but went to call my gf :3

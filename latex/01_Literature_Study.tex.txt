@@ -1,0 +1,69 @@
+\documentclass[../report.tex]{subfiles}
+\begin{document}
+\chapter{Literature Study}
+\label{ch:literature_study}
+
+A thesis project always commences with a study of pre-existing literature, this is intended to introduce the main concepts that will be used as the foundation of the methodologies used, as well as supplement the discussion of any results gathered. To conduct a literature study is to survey the vast wealth of material that has been produced by researchers and practitioners of the fields related to a research project, thus the first field to be surveyed will be that of Reinforcement Learning, and the second field to be surveyed is the developments of the Flying-V. 
+
+
+\section{Reinforcement Learning Foundations}
+
+\subsection{Markov Decision Process}
+
+The Markov decision process is the mathematical framework that can be used to model how an agent interacts with an environment. This framework is the most fundamental to reinforcement learning, as it is the language through which many of the ideas of reinforcement learning are formulated.
+
+A Markov decision
+
+\textbf{Distinction between Reward and Return}
+
+In reinforcement learning nomenclature, a distinction in terminology exists between the reward being received every time step, and the cumulative reward that an agent receives over many time steps. While rewards are received every time step, when they are summed up over time, they are then referred to as the \textit{return}. For example, an episodic return refers to how much cumulative reward an agent has received over the span of an episode. 
+
+\subsection{Value Function}
+
+Value functions describes how much reward in total an agent will receive in the expectation. Two types of value functions are commonly used in reinforcement learning, the state-value function and the action-value function. The state-value function is defined as a mapping from any state to the expected return from that state onwards, mathematically this is defined as:
+
+\begin{equation}
+    V_{\pi}(s) = \mathbb{E}_{\pi}[G_t | S_t = s]
+\end{equation}
+
+Where $V_{\pi}(s)$ is the value of state $s$, and $G_t$ is the return from time $t$ onwards when following the policy $\pi$. The state-value function can be intuitively understood as how worthwhile it is to be in a certain state. The action-value function is defined as a mapping from any state-action pair to the expected return from that state-action pair onwards, this can again mathematically stated as follows:
+
+\begin{equation}
+    Q_{\pi}(s, a) = \mathbb{E}_{\pi}[G_t | S_t = s, A_t = a]
+\end{equation}
+
+Where $Q_{\pi}(s, a)$ is the value of taking action $a$ in state $s$, and $G_t$ is the return from time $t$ onwards when following the policy $\pi$. The action-value function can be intuitively understood as how worthwhile it is to take a certain action in a certain state.
+
+
+\subsection{Bellman Equations}
+
+\subsection{Policy}
+
+\subsection{Environment}
+
+
+\section{Dynamic Programming}
+
+\subsection{Adaptive Critic Design}
+
+
+\section{Deep Reinforcement Learning}
+
+\subsection{Temporal Difference Learning}
+
+\subsection{Deep Learning}
+
+Deep learning refers to the subfield of machine learning which studies deep neural networks and their applications. This field has its origins in the ideas of artificial neural networks and is a scientific effort that has dramatically changed the idea of what an artificial neural network is and what it might be capable of. Deep neural networks fundamentally are an expansion of artificial neural networks, they use the same basic architecture of a neural network, with layers of interconnected neurons between a surface or input layer and a final output layer. The distinction between deep and artificial neural networks is that deep neural networks use many more layers and nodes than are typical in artificial networks,
+
+\subsection{Merging TD \& Deep Learning}
+
+The story of this merger starts with using function approximations to extend temporal difference algorithms to higher dimensional states and action spaces, with deep neural networks demonstrating a clear benefit in scalability and generalization due to their high approximation power. However, these function approximations need not necessarily be deep neural networks; in fact, early works focused on the application of simpler and smaller-scale approximations. Such as using coarse tile encoding, linear polynomials, Fourier basis, and many more.
+
+
+\section{Synopsis}
+
+
+
+\end{document}
+
+
