@@ -14,14 +14,12 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 
 Ranked, 1 = highest priority
 
-1. Go through all papers citing the multi-step HDP
-2. Draft research plan
-3. Draft literature study
-4. Freeze research objectives
+1. Draft research plan
+2. Draft literature study
 
 ---
 
-## Research Objective
+## Research Objective <a name="obj"></a>
 
 > ~~*To advance the state-of-the-art RL based fault tolerant flight controllers and contribute to the safety of autonomous flight, by studying and developing novel methods of hybrid RL algorithms.*~~
 
@@ -438,8 +436,9 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 9/2/2024
 
 - Question, in the IDHP critic update equation, why is the error term $e_c(t)$ defined as 
-- Interesting research direction could also be to compare IDGP and IGDHP, [Prokhorov and Wunsch] claim that DHP is usually sufficient enough of an improvement over HDP and thus use of GDHP is usually not warranted. Also would be interesting to investigate augmenting IDHP with multi-step or eligibility trace. And frankly these would make for very interesting research objectives and i am slightly inclined to make my MSc research objective be focused on these. However, i am also interested in trying to come up with fault tolerant controllers and see an autopilot be able to fly a plane no matter what faults i impose on the aircraft, i have put it in my research objectives after all... If i proceed with the current fault tolerant line of research objective, i So yeah this is an interesting dilemma.
-- Understand if i should augment the critic update like: lambda + c + c +lambda or lamdba + c + lamda + c + lambda
+- Interesting research direction could also be to compare IDGP and IGDHP, [Prokhorov and Wunsch] claim that DHP is usually sufficient enough of an improvement over HDP and thus use of GDHP is usually not warranted. Also would be interesting to investigate augmenting IDHP with multi-step or eligibility trace. And frankly these would make for very interesting research objectives and i am slightly inclined to make my MSc research objective be focused on these. However, i am also interested in trying to come up with fault tolerant controllers and see an autopilot be able to fly a plane no matter what faults i impose on the aircraft, i have put it in my research objectives after all... If i proceed with the current fault tolerant line of research objective.  So yeah this is an interesting dilemma.
+- [Trust region policy] methods try to improve the policy by maximizing a certain objective function, while subjecting the policy updates to a limit in their magnitude.
 
 
-[Prokhorov and Wunsch]: https://doi-org.tudelft.idm.oclc.org/10.1109/72.623201
+[Prokhorov and Wunsch]: https://ieeexplore.ieee.org/document/623201
+[Trust region policy]: https://arxiv.org/pdf/1502.05477.pdf
