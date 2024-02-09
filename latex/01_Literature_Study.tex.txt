@@ -8,11 +8,35 @@ A thesis project always commences with a study of pre-existing literature, this 
 
 \section{Reinforcement Learning Foundations}
 
+The basic idea of reinforcement learning is to have some learner associate rewards with actions that helps realise a goal, and promote the learner to take more of such actions by asking it to maximize the reward. The learner is not told what the goal is explicitly, its' only interface with the world around it is through executing these actions, and observing that it has transitioned into some state and received some reward. Reinforcement learning can be thought of as a way in which theorists have attempted to codify, and formulate algorithms for, the universal experience of learning through trial and error. Much like how a child learns to walk, or a dog learns to sit, it is through reinforcement learning that machines can learn how to perform tasks that might not be easily programmed. Through this codification, computer programmes have been made which demonstrated impressive levels of learning; for example programmes can learn through reinforcement learning to play various high-dimensional board games to a level of expertise surpassing any living player \cite{alpha_zero}, and a robotic arm can learn hand dexterity and mimick the hand movements of a human \cite{OpenAI_dexterity}.
+
+Understanding how the reinforcement learning algorithms work behind such examples and how they may be applied to flight control will require understanding it's foundations first, thus this section will introduce the basic terminologies and ideas used to build these algorithms.
+
+
 \subsection{Markov Decision Process}
 
-The Markov decision process is the mathematical framework that can be used to model how an agent interacts with an environment. This framework is the most fundamental to reinforcement learning, as it is the language through which many of the ideas of reinforcement learning are formulated.
+The Markov decision process is the mathematical framework that are used to model sequential decision processes such as how an agent interacts with an environment, and it is what contextualizes all the ideas in reinforcement learning, for instance the basic notion that an agent performs an action and receives a reward.
 
-A Markov decision
+In such a framework, there exists only two entities: the agent and the environment, and information flows from one entity to another to model making decisions and their consequences. In reinforcement learning the agent is sometimes also called the learner, it selects an action $A_t$ which gets fed to the environment, and the environment will provide the corresponding state $S_{t+1}$ which the agent has transitioned to as a result of action $A_t$ and the reward associated to that state transition $R_{t+1}$, the agent can subsequently use $S_{t+1}$ and $R_{t+1}$ to decide on the next time step's action $A_{t+1}$. A graphical depiction of this agent-environment interface in the Markov decision process is shown in Figure ....
+
+\begin{figure}
+
+\end{figure}
+
+
+
+
+This time evolution of an agent interacting with the enironment and the environment responding accordingly is recorded in a so-called trajectory, which is a chain of state-action-reward for the entire duration of the decision process in the form expressed in \autoref{eq:trajectory}.
+
+\begin{equation} \label{eq:trajectory}
+    S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, \dots, S_{T-1}, A_{T-1}, R_{T}, S_{T}, A_{T}
+\end{equation}
+
+
+
+ Figure xxx shows this idea in a graphical form.
+
+Markov decision processes are used to model sequential decision processes, and  a simple illustrative example is shown in Figure xxx for the case of a warehouse robot. 
 
 \textbf{Distinction between Reward and Return}
 
@@ -33,7 +57,6 @@ Where $V_{\pi}(s)$ is the value of state $s$, and $G_t$ is the return from time 
 \end{equation}
 
 Where $Q_{\pi}(s, a)$ is the value of taking action $a$ in state $s$, and $G_t$ is the return from time $t$ onwards when following the policy $\pi$. The action-value function can be intuitively understood as how worthwhile it is to take a certain action in a certain state.
-
 
 \subsection{Bellman Equations}
 
@@ -57,7 +80,7 @@ Deep learning refers to the subfield of machine learning which studies deep neur
 
 \subsection{Merging TD \& Deep Learning}
 
-The story of this merger starts with using function approximations to extend temporal difference algorithms to higher dimensional states and action spaces, with deep neural networks demonstrating a clear benefit in scalability and generalization due to their high approximation power. However, these function approximations need not necessarily be deep neural networks; in fact, early works focused on the application of simpler and smaller-scale approximations. Such as using coarse tile encoding, linear polynomials, Fourier basis, and many more.
+Basic temporal difference algorithms utilize tabular look ups to retreive the value function of each state or state-action pair, this can hinder scaling to larger problem spaces which have many state or action variables, as the number of values to be stored increases combinatorially. The idea was thus put forth that function approximators should be used to approximate these look up tables which provided the scaling power necessary for higher dimensional tasks \cite{function_approximators}, with deep neural networks and multi layer perceptrons becoming popular approximators as they demonstrate a better scalability and approximation power \cite{drl_benchmarking}\cite{drl_atari}\cite{drl_humanlvl}. However, these function approximators need not necessarily be deep neural networks; in fact, early works focused on the application of simpler and smaller-scale approximations. Such as using coarse tile encoding, linear polynomials, Fourier basis, and many more.
 
 
 \section{Synopsis}
@@ -65,5 +88,3 @@ The story of this merger starts with using function approximations to extend tem
 
 
 \end{document}
-
-
