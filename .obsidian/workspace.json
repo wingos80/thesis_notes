@@ -86,7 +86,7 @@
             "group": "7ee0d48d679bd63a"
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       },
       {
         "id": "87c641cdbb65e1e0",
@@ -221,7 +221,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -237,7 +238,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature_study_notes/4th_read_notes.md",
+                "file": "Master_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -254,7 +255,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "literature_study_notes/4th_read_notes.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -277,7 +278,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "literature_study_notes/4th_read_notes.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -299,13 +300,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f3115b60d1923a17",
+  "active": "0a04e8ac4dc62552",
   "lastOpenFiles": [
+    "literature_study_notes/3rd_read_notes.md",
+    "literature_study_notes/4th_read_notes.md",
     "report/IDHP_extensions (2).pdf.crdownload",
     "report/IDHP_extensions.pdf.crdownload",
     "report/IDHP_extensions.pdf",
-    "literature_study_notes/3rd_read_notes.md",
-    "literature_study_notes/4th_read_notes.md",
     "Master_notes.md",
     "EEB13E00",
     "ADB13E00",
@@ -316,7 +317,6 @@
     "latex/02_Literature_Study.tex.txt",
     "latex/New Text Document.txt",
     "latex",
-    "New folder",
     "literature_study_notes/2nd_read_notes.md",
     "test.md",
     "pictures/bellman_derive.png",

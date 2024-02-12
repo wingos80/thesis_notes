@@ -446,3 +446,7 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 11/2/2024
 
 - The reward signal is sometimes called a cost-to-go function in ADP field such as by Zhou, or a utility function by jun hyeon.
+
+### 12/2/2024
+
+- Find out if AD versions of ADP are commonly used. So far it seems they are not so maybe there is a reason they aren't popular.
