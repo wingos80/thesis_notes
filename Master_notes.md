@@ -442,3 +442,7 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 [Prokhorov and Wunsch]: https://ieeexplore.ieee.org/document/623201
 [Trust region policy]: https://arxiv.org/pdf/1502.05477.pdf
+
+### 11/2/2024
+
+- The reward signal is sometimes called a cost-to-go function in ADP field such as by Zhou, or a utility function by jun hyeon.

@@ -4,12 +4,6 @@ This literature review focuses on the field of RL, seeing what algorithms exists
     <figcaption><b>Table 1</b>, broader RL based search queries used on Scopus.</figcaption>
 </figure>
 
-| Subject Area|  Query |
-| ------------   |  ------- |
-|  | "reinforcement learning" AND "control systems"|
-|  | "reinforcement learning" AND "flight control"||
-|  | "reinforcement learning" AND "fault tolerant control"|
-
 
 ---
 
@@ -302,8 +296,6 @@ https://doi-org.tudelft.idm.oclc.org/10.1109/IAI53119.2021.9619346
 
 - Cite, definition of admissible is when a control law does not cause a cost function to diverge, and that the control law should be stabilizing. A definition that they took from [abu-khalaf]
 - Cite [this old textbook], a dynamic programming approach that adopts a backwards march in time has been theoretically shown to be able to solve the hamilton-bellman-jacobi equations, i.e. to obtain the optimal control actions for any posed cost function. BUT, this approach scales poorly when the state space expands, and is subject to the curse of dimensionality.
-- I
-
 
 [abu-khalaf]: https://doi-org.tudelft.idm.oclc.org/10.1016/j.automatica.2004.11.034
 [this old textbook]: https://psycnet.apa.org/record/1961-01474-000
@@ -354,4 +346,22 @@ MBPO from item 18
 - This paper really loves model-based algorithms, cite this for any model-based discussion.
 - "learned models can be incorporated into model-free algorithms to boost their learning rate."
 - They demonstrate that their model-based algorithm is much more sample efficient than model-free models
-- I was reading all about model based learning but went to call my gf :3
+
+---
+
+
+## Item 20: On integral generalized policy iteration for continuous-time linear quadratic regulations
+
+### Notes-
+
+- Cite, ADP methods are rooted deeply in optimal control, they are commonly applied in the context of optimal control, with their reward signals formulated in the same way as an LQR cost function.
+
+---
+
+## Item 21: # Adaptive optimal control for continuous-time linear systems based on policy iteration
+
+
+### Notes-
+
+- Cite, this paper analytically solves the LQR problem by finding the solution to the algebraic riccati equation. It then compares the P matrix obtained through this analysis with the P matrix that is obtained through an adaptive critic algorithm and shows that the two arrived at the same matrix.
+- They used a policy iteration algorithm.
