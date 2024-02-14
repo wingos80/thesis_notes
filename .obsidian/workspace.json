@@ -44,7 +44,8 @@
                 "mode": "preview",
                 "source": false
               }
-            }
+            },
+            "group": "972edcd56518ed6f"
           },
           {
             "id": "7a062e655cdb890f",
@@ -86,7 +87,7 @@
             "group": "7ee0d48d679bd63a"
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "87c641cdbb65e1e0",
@@ -129,7 +130,8 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "972edcd56518ed6f"
           },
           {
             "id": "75418a3677f0666e",
@@ -171,7 +173,7 @@
             "group": "170e239352ce1f9c"
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -238,7 +240,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master_notes.md",
+                "file": "literature_study_notes/3rd_read_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -255,7 +257,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master_notes.md",
+                "file": "literature_study_notes/3rd_read_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -278,7 +280,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master_notes.md"
+                "file": "literature_study_notes/3rd_read_notes.md"
               }
             }
           }
@@ -300,24 +302,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0a04e8ac4dc62552",
+  "active": "7a062e655cdb890f",
   "lastOpenFiles": [
-    "literature_study_notes/3rd_read_notes.md",
+    "literature_study_notes/2nd_read_notes.md",
+    "literature_study_notes/1st_read_notes.md",
     "literature_study_notes/4th_read_notes.md",
+    "literature_study_notes/3rd_read_notes.md",
+    "Master_notes.md",
+    "literature_study_notes/Previous_RL_MSc_theses.md",
     "report/IDHP_extensions (2).pdf.crdownload",
     "report/IDHP_extensions.pdf.crdownload",
     "report/IDHP_extensions.pdf",
-    "Master_notes.md",
     "EEB13E00",
     "ADB13E00",
-    "literature_study_notes/Previous_RL_MSc_theses.md",
     "~$thesis gantt chart.xlsx",
-    "literature_study_notes/1st_read_notes.md",
     "latex/01_Literature_Study.tex.txt",
     "latex/02_Literature_Study.tex.txt",
     "latex/New Text Document.txt",
     "latex",
-    "literature_study_notes/2nd_read_notes.md",
     "test.md",
     "pictures/bellman_derive.png",
     "1st_read_notes.md",
