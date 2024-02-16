@@ -172,8 +172,7 @@
             },
             "group": "170e239352ce1f9c"
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -304,12 +303,14 @@
   },
   "active": "7a062e655cdb890f",
   "lastOpenFiles": [
+    "literature_study_notes/Previous_RL_MSc_theses.md",
+    "report/figures/01/gpi.png",
+    "literature_study_notes/3rd_read_notes.md",
     "literature_study_notes/2nd_read_notes.md",
+    "Master_notes.md",
+    "E7883300",
     "literature_study_notes/1st_read_notes.md",
     "literature_study_notes/4th_read_notes.md",
-    "literature_study_notes/3rd_read_notes.md",
-    "Master_notes.md",
-    "literature_study_notes/Previous_RL_MSc_theses.md",
     "report/IDHP_extensions (2).pdf.crdownload",
     "report/IDHP_extensions.pdf.crdownload",
     "report/IDHP_extensions.pdf",
@@ -319,7 +320,6 @@
     "latex/01_Literature_Study.tex.txt",
     "latex/02_Literature_Study.tex.txt",
     "latex/New Text Document.txt",
-    "latex",
     "test.md",
     "pictures/bellman_derive.png",
     "1st_read_notes.md",

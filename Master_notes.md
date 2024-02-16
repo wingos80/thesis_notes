@@ -457,3 +457,19 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- Policy iteration, an algorithm for solving the optimal control problem where an initial admissible control policy is chosen, the policy is then evaluated by computing its value function, then the policy is improved using this function, policy evaluation and improvement is done iteratively in that order until value function convergence.
 	- Value iteration, an algorithm for solving the optimal control problem, where an initial value function estimate is chosen, a policy improvement (or rather definition) update is performed with this value function, then the value function is updated using this value function, policy improvement and evaluation is done iteratively in that order until value function convergence.
 - In fact, reading the paper more carefully, i notice that their definition of value iteration and policy iteration and Sutton & Barto's definition of the same algorithms are identical. PI is when the value function estimate of a given policy is iterated ad nauseum until the estimate stops changing, and a policy improvement is performed on this estimate thereafter; while VI is when the value function estimate is only iterated once, and a policy improvement is done using this estimate thereafter.
+
+
+### 15/2/2024
+
+**Erik meeting notes:**
+- idea of detecting faults and switching off multi step
+- make what time step the terms are calculated more clear
+- Add sub-question to define fault tolerance in q1
+- 1c change "demonstrate" to "what has shown", because then you will be implementing and testing a lot of algorithms.
+- 1d also change the same basically
+- 2, add nominal challenges as well not only faulty challenge
+- remove 4a handling qualities
+- non-minimum phase sounds challenging for rls
+
+- Understand this 2022 paper, and then highlight the cool stuff and send to erik
+- Highlight the 2008 paper.
