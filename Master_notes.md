@@ -15,11 +15,13 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 Ranked, 1 = highest priority
 
 1. Draft research plan
+	1. The research questions in this plan are the truncated version!!! They leave out the redacted and supplementary texts!
 2. Draft literature study (should add text to touch over exploration vs exploitation)
 	1. Finish writing DRL sections
 		1. Would be nice to define some expressions with which to illustrate gradient descent optimizers, like defining the loss function or the gradients and partial derivatives....
 	2. Finish writing flying-v sections
 	3. Writing a section on the state of the art of RL.
+		1. For FTC RL, one promising approach in literature is to use ADP style RL's, which is logical since they are more adaptive than model-free DRL algorithms. (see ftc rl folder under 4th literature study)
 	4. Write chapter intro
 	5. Write section intros
 
@@ -37,37 +39,38 @@ Ranked, 1 = highest priority
 
 > *To advance the state-of-the-art reinforcement learning based flight controllers and further the technological readiness level of the Flying-V, by developing an intelligent and fault tolerant flight control system for the Flying-V.*
 
-%% 
-reconcile robustness n performance in q1, focus on fault tolerant, and then subq say what is the performance of this controller/
-
-q4 switch fault n nominal order (minor comment)
-
-maybe some kind of absolute fault tolerant requirement?
-
-consider expanding the scope to include robustness to uncertainties, disturbances, noises?
-%%
-
 The online-offline hybrid approach to applying RL to flight controllers seems the most promising solution to tackle the challenge of fault tolerance. The "offline" algorithms come in the form of model free actor critic methods, which while being relatively sample inefficient to the "online" algorithms, are firstly able to generalize to more control tasks as they through learn policies and value function estimates by repeated traversals across the state-action space, and secondly can provide an initialization condition for the "online" algorithms which have been pre-trained and tested rather than from tabular rasa, otherwise requiring online system identification and inconvenient persistent excitations.
 
 The research plan will set a goal to implement and evaluate such an online-offline hybrid controller for attitude control of the Flying-V. At this stage it is not possible to tell whether this goal is too achievable or overly ambitious, but to be conservative keeping in mind time constraints it will be assumed that this goal is ambitious. Therefore, contingencies will be planned in the form of placing intermediate sub-goals between commencing the first research phase and achieving the final goal. The first of the sub-goals would be to implement an augmented IDHP algorithm, this implementation is prioritized as this incremental model-based algorithm is considered to be highly adaptive and can thus provide truly online control, which will have better odds of controlling the aircraft in face of sudden changes in system dynamics as a result of faults; achieving this sub-goal would yield the academic contribution of this MSc research, by contributing towards the development of the IDHP algorithm. The second sub-goal would be to implement the "offline" learning algorithms, which can take the form of as basic as SAC, to DSAC, or even the state of the art RUN-DSAC algorithm; achieving this sub-goal will yield the societal contribution of this research, as an offline-online hybrid algorithm has much improved flight performance and fault tolerance characteristics than a purely online trained controller.
 
 To achieve this goal, the following research questions are posed.
 
+%% 
+- Add sub-question to define fault tolerance in q1
+- 1c change "demonstrate" to "what has shown", because then you will be implementing and testing a lot of algorithms.
+- 1d also change the same basically
+- 2, add nominal challenges as well not only faulty challenge
+- remove 4a handling qualities
+- non-minimum phase sounds challenging for rls
+%%
+
 ### **Research Questions**
 
 1. What reinforcement learning algorithm can yield a flight controller which is the most tolerant to faults?
 	1. What RL algorithms are considered to be state-of-the-art? 
-	2. In what ways can fault tolerance be built into a RL based flight controller?
-	3. Which algorithms demonstrate the best fault tolerance?
-	4. How are the reference tracking performance of these algorithms?
+	2. ~~In what ways can fault tolerance be built into a RL based flight controller?~~
+	3. How is fault tolerance defined and tested in past research **OR** what should the definition of fault tolerance be?
+	4. Which algorithms have been shown to demonstrate the best fault tolerance?
+	5. What reference tracking performance have these algorithms shown in past research?
 2. What are the flight control related challenges when it comes to designing a controller for the Flying-V?
-	1. What are potential fault scenarios that warrant attention from the AFCS system in the Flying-V?
-	2. What criteria should be used to characterize a controllers fault tolerance (fault tolerance success rate, nMAE of tracking error, variance of nMAE...)?
+	1. What are the flight dynamic properties of the Flying-V and what implications do they have on an AFCS system?
+	2. What are potential fault scenarios that warrant attention from the AFCS system in the Flying-V?
+	3. What criteria and metrics should be used to characterize a controllers fault tolerance (fault tolerance success rate, nMAE of tracking error, variance of nMAE...)?
 3. How can the identified algorithm be applied to control the Flying-V?
 	1. How should the flight control system be structured (cascaded control structure, what signals to feedback)?
-	2. What is the MDP in the case of controlling the Flying-V (the state variables, action variables, environment to be controlled)?
+	2. What are the variables defining the MDP in the case of controlling the Flying-V (the state variables, action variables, environment to be controlled)?
 4. How does the implemented flight controller perform during nominal flight and in the presence of faults?
-	1. Noting the possible fault scenarios and handling qualities of the Flying-V, what flight scenarios should be designed to test the performance of the controller (what faults to use, what tracking signals to use, superimposed faults...)?
+	1. Noting the dynamical properties and possible fault scenarios of the Flying-V, what flight scenarios should be designed to test the performance of the controller (what faults to use, what tracking signals to use, superimposed faults...)?
 	2. What is the degree of fault tolerance of the implemented controller (added this to have some kind of absolute judgement of the performance of the controller, but i am thinking could also make the next two comparisons use absolute values instead of relative, i.e. don't say that one controller is 10 times better, say one controller has x nMAE while another has y nMAE)?
 	3. How well does the nominal flight performance of the proposed flight controller compare to other state-of-the-art controllers?
 	4. How are the fault tolerance characteristics of the proposed flight controller compared to other state-of-the-art controllers?
