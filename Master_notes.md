@@ -15,7 +15,13 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 Ranked, 1 = highest priority
 
 1. Draft research plan
-2. Draft literature study
+2. Draft literature study (should add text to touch over exploration vs exploitation)
+	1. Finish writing DRL sections
+		1. Would be nice to define some expressions with which to illustrate gradient descent optimizers, like defining the loss function or the gradients and partial derivatives....
+	2. Finish writing flying-v sections
+	3. Writing a section on the state of the art of RL.
+	4. Write chapter intro
+	5. Write section intros
 
 ---
 
@@ -471,5 +477,18 @@ But an extra advantage that RL based controllers can have over traditional contr
 - remove 4a handling qualities
 - non-minimum phase sounds challenging for rls
 
-- Understand this 2022 paper, and then highlight the cool stuff and send to erik
-- Highlight the 2008 paper.
+- Understand this 2022 paper, and then highlight the cool stuff and send to erik, **done**
+- Highlight the 2008 paper, **done**
+
+### 16/2/2024
+
+- working on literature study, almost finished writing on ADP/ACD section, only have GDHP section to write.
+
+### 17/2/2024
+
+- continue writing ls, 
+- cite [ferrari] and [enns] for old studies into adp for flight control.
+- don't forget to unify the drawing styles of figures.
+
+[ferrari]: https://arc-aiaa-org.tudelft.idm.oclc.org/doi/10.2514/1.12597
+[enns]: https://ieeexplore-ieee-org.tudelft.idm.oclc.org/stamp/stamp.jsp?tp=&arnumber=1215408

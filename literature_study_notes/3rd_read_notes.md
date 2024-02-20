@@ -365,3 +365,12 @@ MBPO from item 18
 
 - Cite, this paper analytically solves the LQR problem by finding the solution to the algebraic riccati equation. It then compares the P matrix obtained through this analysis with the P matrix that is obtained through an adaptive critic algorithm and shows that the two arrived at the same matrix.
 - They used a policy iteration algorithm.
+
+
+---
+
+## Item 22: Optimal control of unknown nonaffine nonlinear discrete-time systems based on adaptive dynamic programming
+
+- Reading this to get more information on how GDHP is derived and implemented
+- Instead of using one variable to denote all the parameters of the neural networks, they chose to use one for the weights between input and hidden layer, and one for hidden to output.
+- They use a parameter $\theta$ to decide how much resemblance their GDHP has to HDP and DHP, where $\theta = 0$ results in their GDHP being equivalent to HDP, and $\theta = 1$ turns GDHP into DHP.
