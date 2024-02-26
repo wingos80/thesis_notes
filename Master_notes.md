@@ -17,13 +17,9 @@ Ranked, 1 = highest priority
 1. Draft research plan
 	1. The research questions in this plan are the truncated version!!! They leave out the redacted and supplementary texts!
 2. Draft literature study (should add text to touch over exploration vs exploitation)
-	1. Finish writing DRL sections
-		1. Would be nice to define some expressions with which to illustrate gradient descent optimizers, like defining the loss function or the gradients and partial derivatives....
-	2. Finish writing flying-v sections
-	3. Writing a section on the state of the art of RL.
-		1. For FTC RL, one promising approach in literature is to use ADP style RL's, which is logical since they are more adaptive than model-free DRL algorithms. (see ftc rl folder under 4th literature study)
+	3. Write chapter conclusion (put the overview rl algo tree here?)
 	4. Write chapter intro
-	5. Write section intros
+	5. Make the 3 control setup figures
 
 ---
 
@@ -495,3 +491,32 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 [ferrari]: https://arc-aiaa-org.tudelft.idm.oclc.org/doi/10.2514/1.12597
 [enns]: https://ieeexplore-ieee-org.tudelft.idm.oclc.org/stamp/stamp.jsp?tp=&arnumber=1215408
+
+### 22/2/2024
+
+- One version of research phase 1 plan is the provided one, second version is i do eligibility trace augmentation first, and then have multi-step IDHP/offline-online hybrid as the nice-to-have augmentation.
+- What did Erik mean exactly with calculating the previous partial with the new information?
+
+### 24/2/2024
+
+- This paper: The evolution of jet airliners explained through the range equation, shows an interesting result where the range factor of latest airplane designs have increased 100% from 1970 to 2010.
+
+
+
+1/2 - 1
+3/2 - 2
+9/2 - 2
+11/2 - 4
+12/2 - 5
+13/2 - 5
+14/2 - 6
+15/2 - 9
+16/2 - 12
+17/2 - 13
+18/2 - 14
+19/2 - 17
+20/2 - 17
+21/2 - 20
+22/2 - 21
+23/2 - 24
+24/2 - 28
