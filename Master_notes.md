@@ -501,7 +501,16 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 - This paper: The evolution of jet airliners explained through the range equation, shows an interesting result where the range factor of latest airplane designs have increased 100% from 1970 to 2010.
 
+### 28/2/2024
 
+- For meeting!!
+	- For normal linear systems, you can find system transfer functions in xyz ways. But what about when your modelled dynamics are in quaternions?
+- question: Enns in his helicopter paper mentioned this thing called "zero-trim requirement". What is that?
+
+![[./pictures/zero_trim_req.png]]
+<figure>
+<figcaption><b>Figure 2</b>, zero trim requirement?.</figcaption>
+</figure>
 
 1/2 - 1
 3/2 - 2
