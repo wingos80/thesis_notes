@@ -9,19 +9,6 @@
         "dimension": 49.865951742627345,
         "children": [
           {
-            "id": "6609fa4b9f72cb5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/Previous_RL_MSc_theses.md",
-                "mode": "source",
-                "source": true
-              }
-            },
-            "group": "32d729b69352b518"
-          },
-          {
             "id": "0a04e8ac4dc62552",
             "type": "leaf",
             "state": {
@@ -32,106 +19,14 @@
                 "source": true
               }
             }
-          },
-          {
-            "id": "8c187e676f79de03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/2nd_read_notes.md",
-                "mode": "preview",
-                "source": false
-              }
-            },
-            "group": "972edcd56518ed6f"
-          },
-          {
-            "id": "7a062e655cdb890f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/3rd_read_notes.md",
-                "mode": "source",
-                "source": true
-              }
-            },
-            "group": "a4931c2d77aab38a"
-          },
-          {
-            "id": "f3115b60d1923a17",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/4th_read_notes.md",
-                "mode": "source",
-                "source": true
-              }
-            },
-            "group": "170e239352ce1f9c"
-          },
-          {
-            "id": "b0e364141a9abdff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/1st_read_notes.md",
-                "mode": "source",
-                "source": false
-              }
-            },
-            "group": "7ee0d48d679bd63a"
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "87c641cdbb65e1e0",
         "type": "tabs",
         "dimension": 50.134048257372655,
         "children": [
-          {
-            "id": "be7d39d4ee524fc6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/Previous_RL_MSc_theses.md",
-                "mode": "preview",
-                "source": false
-              }
-            },
-            "group": "32d729b69352b518"
-          },
-          {
-            "id": "83a9e68af871c392",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/2nd_read_notes.md",
-                "mode": "source",
-                "source": false
-              }
-            },
-            "group": "972edcd56518ed6f"
-          },
-          {
-            "id": "75418a3677f0666e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/3rd_read_notes.md",
-                "mode": "preview",
-                "source": true
-              }
-            },
-            "group": "a4931c2d77aab38a"
-          },
           {
             "id": "50e8d40dfc2bdb1b",
             "type": "leaf",
@@ -141,32 +36,6 @@
                 "currentVersion": "1.5.8"
               }
             }
-          },
-          {
-            "id": "76b0f5b774468216",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/1st_read_notes.md",
-                "mode": "source",
-                "source": true
-              }
-            },
-            "group": "7ee0d48d679bd63a"
-          },
-          {
-            "id": "7cb6fceee5f288af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature_study_notes/4th_read_notes.md",
-                "mode": "source",
-                "source": false
-              }
-            },
-            "group": "170e239352ce1f9c"
           }
         ]
       }
@@ -298,6 +167,12 @@
   },
   "active": "0a04e8ac4dc62552",
   "lastOpenFiles": [
+    "3_literature_study_notes/Previous_RL_MSc_theses.md",
+    "3_literature_study_notes/4th_read_notes.md",
+    "3_literature_study_notes/3rd_read_notes.md",
+    "3_literature_study_notes/2nd_read_notes.md",
+    "3_literature_study_notes/1st_read_notes.md",
+    "3_literature_study_notes",
     "980F3530",
     "Master_notes.md",
     "msdhp_new.md",
@@ -328,8 +203,6 @@
     "pictures/drawing.svg",
     "pictures/v_3.pdf",
     "pictures/v_side.png.crdownload",
-    "pictures/v_front.png.crdownload",
-    "pictures/v_top.png.crdownload",
     "as.md",
     "test.md",
     "1st_read_notes.md",
