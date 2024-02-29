@@ -6,7 +6,6 @@
       {
         "id": "2d6f129b3713a065",
         "type": "tabs",
-        "dimension": 49.865951742627345,
         "children": [
           {
             "id": "0a04e8ac4dc62552",
@@ -14,26 +13,21 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_fleeting_notes/Archimedes basically used interval analysis.md",
+                "file": "1_fleeting_notes/SAC is different from IDHP.md",
                 "mode": "source",
                 "source": true
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "87c641cdbb65e1e0",
-        "type": "tabs",
-        "dimension": 50.134048257372655,
-        "children": [
+          },
           {
-            "id": "50e8d40dfc2bdb1b",
+            "id": "b0fb754bd10e37cd",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.5.8"
+                "file": "Master_notes.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
@@ -103,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1_fleeting_notes/Archimedes basically used interval analysis.md",
+                "file": "1_fleeting_notes/SAC is different from IDHP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1_fleeting_notes/Archimedes basically used interval analysis.md",
+                "file": "1_fleeting_notes/SAC is different from IDHP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1_fleeting_notes/Archimedes basically used interval analysis.md"
+                "file": "1_fleeting_notes/SAC is different from IDHP.md"
               }
             }
           }
@@ -167,6 +161,14 @@
   },
   "active": "0a04e8ac4dc62552",
   "lastOpenFiles": [
+    "2_permanent_notes/RL.md",
+    "1_fleeting_notes/SAC is different from IDHP.md",
+    "2_permanent_notes/Interval analysis.md",
+    "pictures/Pasted image 20240229123655.png",
+    "pictures/Pasted image 20240229123953.png",
+    "pictures/Pasted image 20240229123803.png",
+    "Master_notes.md",
+    "1_fleeting_notes/Archimedes basically used interval analysis.md",
     "3_literature_study_notes/Previous_RL_MSc_theses.md",
     "3_literature_study_notes/4th_read_notes.md",
     "3_literature_study_notes/3rd_read_notes.md",
@@ -174,11 +176,8 @@
     "3_literature_study_notes/1st_read_notes.md",
     "3_literature_study_notes",
     "980F3530",
-    "Master_notes.md",
     "msdhp_new.md",
     "Pasted image 20240228172741.png",
-    "2_permanent_notes/Interval analysis.md",
-    "1_fleeting_notes/Archimedes basically used interval analysis.md",
     "2_permanent_notes",
     "1_fleeting_notes",
     "pictures/zero_trim_req.png",
@@ -198,9 +197,6 @@
     "literature_study_notes/4th_read_notes.md",
     "literature_study_notes/2nd_read_notes.md",
     "report/figures/01/3_elevons_split_flap.png",
-    "report/figures/01/3_elevons.png",
-    "report/figures/01/2_elevons.png",
-    "pictures/drawing.svg",
     "pictures/v_3.pdf",
     "pictures/v_side.png.crdownload",
     "as.md",
