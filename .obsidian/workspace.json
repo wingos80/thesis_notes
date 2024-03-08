@@ -8,30 +8,32 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a04e8ac4dc62552",
+            "id": "b0fb754bd10e37cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_fleeting_notes/SAC is different from IDHP.md",
+                "file": "1_literature_study_notes/1st_read_notes.md",
                 "mode": "source",
                 "source": true
               }
             }
           },
           {
-            "id": "b0fb754bd10e37cd",
+            "id": "2b835746bf9fa1f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Master_notes.md",
-                "mode": "source",
+                "file": "3_new_notes/@Q - Eligibility trace vs momentum.md",
+                "mode": "preview",
+                "backlinks": false,
                 "source": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -50,21 +52,6 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
-          {
-            "id": "c76ee93b5566b3a6",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
@@ -97,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1_fleeting_notes/SAC is different from IDHP.md",
+                "file": "3_new_notes/@Q - Eligibility trace vs momentum.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,9 +101,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1_fleeting_notes/SAC is different from IDHP.md",
+                "file": "3_new_notes/@Q - Eligibility trace vs momentum.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -127,7 +114,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "alphabeticalReverse",
-                "useHierarchy": false
+                "useHierarchy": true
               }
             }
           },
@@ -137,17 +124,37 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1_fleeting_notes/SAC is different from IDHP.md"
+                "file": "3_new_notes/@Q - Eligibility trace vs momentum.md"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
+      },
+      {
+        "id": "1d0be6017575a28d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c76ee93b5566b3a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 286.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,53 +166,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0a04e8ac4dc62552",
+  "active": "2b835746bf9fa1f0",
   "lastOpenFiles": [
+    "3_new_notes/@Q - What RLS covariance windup and why does it happen.md",
+    "2_old_notes/SAC is different from IDHP.md",
+    "2_old_notes/ADP, AD version.md",
+    "3_new_notes/@Q - Eligibility trace vs momentum.md",
+    "Master_notes.md",
+    "3_new_notes/@P - RLS covariance windup.md",
+    "4_notes_template/@Q - Question.md",
+    "3_new_notes/@P - Archimedes and interval analysis.md",
+    "2_old_notes/RLS covariance wind up.md",
+    "3_new_notes/@L - EW RLS.md",
+    "4_notes_template/@P - Personal note 1.md",
+    "2_old_notes/Eyeball norm.md",
+    "2_old_notes/EW-RLS.md",
+    "3_new_notes/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
+    "3_new_notes/@L - Momentum and mood in policy-gradient reinforcement learning.md",
+    "2_old_notes/Archimedes basically used interval analysis.md",
+    "4_notes_template/@L - Literature note.md",
+    "Momentum and mood in policy-gradient reinforcement learning.pdf",
+    "3_new_notes",
+    "4_notes_template",
+    "1_literature_study_notes/4th_read_notes.md",
+    "1_literature_study_notes/1st_read_notes.md",
+    "pictures/Pasted image 20240306140839.png",
+    "README.md",
+    "pictures/trim_and_linearize/short_period_impulse_10.pdf",
+    "pictures/trim_and_linearize/short_period_10steps_10.pdf",
+    "pictures/trim_and_linearize/short_period_impulse_1.pdf",
+    "pictures/trim_and_linearize/short_period_10steps_1.pdf",
+    "pictures/trim_and_linearize/short_period_10steps_5.pdf",
+    "pictures/trim_and_linearize/short_period_impulse_5.pdf",
+    "pictures/Pasted image 20240306140104.png",
+    "1_fleeting_notes/Linearizing Flying-V dynamics.md",
+    "pictures/trim_and_linearize/short_period.pdf",
+    "pictures/deflection_signs.png",
+    "pictures/trim_and_linearize/marginally_stable.png",
     "2_permanent_notes/RL.md",
-    "1_fleeting_notes/SAC is different from IDHP.md",
     "2_permanent_notes/Interval analysis.md",
     "pictures/Pasted image 20240229123655.png",
     "pictures/Pasted image 20240229123953.png",
     "pictures/Pasted image 20240229123803.png",
-    "Master_notes.md",
-    "1_fleeting_notes/Archimedes basically used interval analysis.md",
-    "3_literature_study_notes/Previous_RL_MSc_theses.md",
-    "3_literature_study_notes/4th_read_notes.md",
-    "3_literature_study_notes/3rd_read_notes.md",
-    "3_literature_study_notes/2nd_read_notes.md",
-    "3_literature_study_notes/1st_read_notes.md",
-    "3_literature_study_notes",
-    "980F3530",
-    "msdhp_new.md",
+    "1_literature_study_notes/Previous_RL_MSc_theses.md",
+    "1_literature_study_notes/3rd_read_notes.md",
+    "1_literature_study_notes/2nd_read_notes.md",
     "Pasted image 20240228172741.png",
-    "2_permanent_notes",
-    "1_fleeting_notes",
     "pictures/zero_trim_req.png",
     "Pasted image 20240228172747.png",
-    "literature_study_notes/Previous_RL_MSc_theses.md",
-    "literature_study_notes/1st_read_notes.md",
-    "asd.md",
-    "report/figures/01/3_elevons.pdf",
-    "report/figures/01/3_elevons.svg",
-    "report/figures/01/2_elevons.pdf",
-    "report/figures/01/3_elevons_split_flap.pdf",
-    "report/figures/01/f_16_chasers.png",
-    "report/figures/01/f_16_chasers.webp",
-    "report/figures/01/f_16_chasers.webp.crdownload",
-    "Untitreled.md",
-    "literature_study_notes/3rd_read_notes.md",
-    "literature_study_notes/4th_read_notes.md",
-    "literature_study_notes/2nd_read_notes.md",
-    "report/figures/01/3_elevons_split_flap.png",
-    "pictures/v_3.pdf",
-    "pictures/v_side.png.crdownload",
-    "as.md",
-    "test.md",
-    "1st_read_notes.md",
-    "2nd_read_notes.md",
-    "Previous_RL_MSc_theses.md",
-    "README.md",
-    "Untitled.canvas",
-    "2024-01-14.md"
+    "Untitled.canvas"
   ]
 }

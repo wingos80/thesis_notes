@@ -1,5 +1,7 @@
 [
   "markdown-sync-scroll",
   "obsidian-latex",
-  "zettelkasten-llm-tools"
+  "zettelkasten-llm-tools",
+  "tag-wrangler",
+  "obsidian-admonition"
 ]

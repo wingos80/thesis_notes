@@ -1,1 +1,0 @@
-Archimedes' method of inscribing and circumscribing a circle is a form of interval analysis: it sets an interval in which the circumference of the circle exists in.

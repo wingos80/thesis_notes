@@ -1,1 +1,0 @@
-The reason [[SAC is different from IDHP]] is because one is from td-learning while one is from DP learning.

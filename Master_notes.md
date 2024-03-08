@@ -1,5 +1,7 @@
 # Master Notes
 
+
+@gsdg
 File containing all miscellaneous/thinking-out-loud thoughts throughout my thesis.
 
 ## Table of Contents
@@ -14,12 +16,19 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 
 Ranked, 1 = highest priority
 
-1. Draft research plan
-	1. The research questions in this plan are the truncated version!!! They leave out the redacted and supplementary texts!
-2. Draft literature study (should add text to touch over exploration vs exploitation)
-	3. Write chapter conclusion (put the overview rl algo tree here?)
-	4. Write chapter intro
-	5. Make the 3 control setup figures
+1. Make more extensive model matching experiments, i.e. test both models for more input signals!
+	1. zero input initially, and non zero thereafter
+	2. Square wave input
+	3. Sine wave input
+2. Read the elig vs momentum papers erik sent, the last two papers at first glance contradicts each other???
+3. Implement IDHP:
+	1. Look over RLS to see if implemented everything
+	2. Implement high level IDHP class which calls the implemented actor, critic, and RLS classes, and updates all of them according to the IDHP rule
+	3. Write the scripts that runs IDHP with the Flying-V LTI.
+4. Run an IDHP implementation on LTI
+5. Update Literature study:
+	1. Mention willem's work in section 1.5.2
+	2. check for typos (theres an extra square bracket at the end of 1.5.2)
 
 ---
 
@@ -511,6 +520,38 @@ But an extra advantage that RL based controllers can have over traditional contr
 <figure>
 <figcaption><b>Figure 2</b>, zero trim requirement?.</figcaption>
 </figure>
+
+### 2/3/2024
+
+- For meeting
+	- What is LOES in Jurian's scripts?
+	- What is are these p,q,r stars? are they "non-dimensionalized" rates? (even though it looks like the units of the stars are in degrees)
+	- Why is the trimmed aircraft not trimmed? Using the trimmed states does not make the airplane sit still
+	- The RLS that was taught to me in the system id course taught by Coen and Daan is different than the RLS used for IDHP. I am wondering now if the RLS taught in that course is actually not RLS, but a "piece-wise" OLS which Zhou mentions in one of her papers.
+	- ![[Pasted image 20240306140104.png]]
+	- ![[Pasted image 20240306140839.png]]
+	- From what i understood, the only difference between IDHP and DHP is how the system model is identified, the actor and critic updates between these two algorithms are identical. Confirm with Erik and see if as far as he is aware, if my understanding is correct.
+	- Setting RLS forgetting factor to 1.
+
+### 4/3/2024
+
+- Regarding what linear model to use, i have narrowed down to going with three options:
+	- Linearize for short-period, find linear model between elevator <-> alpha and q. 
+		- Pros: More logical to do reference following with such model as we can follow a pitch rate reference, very simple as only one input and two outputs, several past theses and research used this model.
+		- Cons: Pitching motion is less troublesome on the flying-v than yawing motions so this model is theoretically less important than a yawing model,
+	- Linearize for dutch-roll/yawing motion, find linear model between rudder <-> beta and r.
+		- Pros: Directly models simplified Dutch roll which is unstable in the flying-v, also only has 1 input and two outputs.
+		- Cons: logically can only do regularization task since you don't typically try to command a sideslip angle in cruise,
+
+### 6/3/2024
+
+- The RLS which is used in IDHP seems really cool, i want to checkout its derivation
+
+### 7/3/204
+
+- Make different model matching
+- Burhan
+
 
 1/2 - 1
 3/2 - 2
