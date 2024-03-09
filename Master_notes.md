@@ -1,7 +1,6 @@
 # Master Notes
 
 
-@gsdg
 File containing all miscellaneous/thinking-out-loud thoughts throughout my thesis.
 
 ## Table of Contents
@@ -20,13 +19,12 @@ Ranked, 1 = highest priority
 	1. zero input initially, and non zero thereafter
 	2. Square wave input
 	3. Sine wave input
-2. Read the elig vs momentum papers erik sent, the last two papers at first glance contradicts each other???
-3. Implement IDHP:
+2. Implement IDHP:
 	1. Look over RLS to see if implemented everything
 	2. Implement high level IDHP class which calls the implemented actor, critic, and RLS classes, and updates all of them according to the IDHP rule
 	3. Write the scripts that runs IDHP with the Flying-V LTI.
-4. Run an IDHP implementation on LTI
-5. Update Literature study:
+3. Run an IDHP implementation on LTI
+4. Update Literature study:
 	1. Mention willem's work in section 1.5.2
 	2. check for typos (theres an extra square bracket at the end of 1.5.2)
 

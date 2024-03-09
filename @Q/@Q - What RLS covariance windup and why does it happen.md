@@ -5,16 +5,16 @@
 
 ---
 
-## Question
-
-What is covariance windup and why does it occur in RLS estimators?
-
 ## Context
 
-Trying to learn more about the RLS estimator used in IDHP. In Casper and Stefan's work, they set the gamma of RLS to be 1, in order to counter the effects of covariance exponentially increasing when the system is unexcited. This effectively reduces the RLS into an OLS which uses all past data to identify the system model, **which makes the controller less adaptive!!**
+Trying to learn more about the RLS estimator used in IDHP, and learned more from Simon Haykins paper [[@L - Adaptive Filter Theory Ch 13]] . In Casper and Stefan's work, they set the gamma of RLS to be 1, in order to counter the effects of covariance exponentially increasing when the system is unexcited. This effectively reduces the RLS into an OLS which uses all past data to identify the system model, **which makes the controller less adaptive!!**
 
 So i got interested in the theory behind covariance windup.
 
+
+## Question
+
+What is covariance windup and why does it occur in RLS estimators?
 
 ## Answer
 

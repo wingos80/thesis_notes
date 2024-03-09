@@ -13,41 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_literature_study_notes/1st_read_notes.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "2b835746bf9fa1f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3_new_notes/@Q - Eligibility trace vs momentum.md",
+                "file": "@Q/@Q - Eligibility trace vs momentum.md",
                 "mode": "preview",
-                "backlinks": false,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "ac7701593f16b762",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3_new_notes/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-                "mode": "source",
                 "backlinks": true,
-                "source": false
+                "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3_new_notes/@Q - Eligibility trace vs momentum.md",
+                "file": "@Q/@Q - Eligibility trace vs momentum.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3_new_notes/@Q - Eligibility trace vs momentum.md",
+                "file": "@Q/@Q - Eligibility trace vs momentum.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -138,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3_new_notes/@Q - Eligibility trace vs momentum.md"
+                "file": "@Q/@Q - Eligibility trace vs momentum.md"
               }
             }
           }
@@ -180,48 +153,48 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2b835746bf9fa1f0",
+  "active": "b0fb754bd10e37cd",
   "lastOpenFiles": [
-    "3_new_notes/@L - Momentum and mood in policy-gradient reinforcement learning.md",
-    "3_new_notes/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-    "3_new_notes/@Q - Eligibility trace vs momentum.md",
-    "3_new_notes/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
-    "3_new_notes/@Q - What RLS covariance windup and why does it happen.md",
+    "0_notes_template/@P - Personal note.md",
+    "0_notes_template/@L - Literature note.md",
+    "0_notes_template/@Q - Question.md",
+    "@Q/@Q - What RLS covariance windup and why does it happen.md",
+    "@Q/@Q - Eligibility trace vs momentum.md",
+    "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
+    "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
+    "@L/@L - Adaptive Filter Theory Ch 13.md",
+    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
+    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
+    "@P/@P - Archimedes and interval analysis.md",
+    "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
+    "Master_notes.md",
+    "1_literature_study_notes/1st_read_notes.md",
+    "@L",
+    "@Q",
+    "@P",
     "2_old_notes/SAC is different from IDHP.md",
     "pictures/Pasted image 20240309134008.png",
-    "3_new_notes/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
-    "3_new_notes/@L - EW RLS.md",
     "2_old_notes/ADP, AD version.md",
-    "Master_notes.md",
     "3_new_notes/@P - RLS covariance windup.md",
-    "4_notes_template/@Q - Question.md",
-    "3_new_notes/@P - Archimedes and interval analysis.md",
     "2_old_notes/RLS covariance wind up.md",
-    "4_notes_template/@P - Personal note 1.md",
     "2_old_notes/Eyeball norm.md",
     "2_old_notes/EW-RLS.md",
     "2_old_notes/Archimedes basically used interval analysis.md",
-    "4_notes_template/@L - Literature note.md",
     "Momentum and mood in policy-gradient reinforcement learning.pdf",
     "3_new_notes",
-    "4_notes_template",
+    "0_notes_template",
     "1_literature_study_notes/4th_read_notes.md",
-    "1_literature_study_notes/1st_read_notes.md",
     "pictures/Pasted image 20240306140839.png",
     "README.md",
     "pictures/trim_and_linearize/short_period_impulse_10.pdf",
     "pictures/trim_and_linearize/short_period_10steps_10.pdf",
     "pictures/trim_and_linearize/short_period_impulse_1.pdf",
     "pictures/trim_and_linearize/short_period_10steps_1.pdf",
-    "pictures/trim_and_linearize/short_period_10steps_5.pdf",
-    "pictures/trim_and_linearize/short_period_impulse_5.pdf",
     "pictures/Pasted image 20240306140104.png",
     "1_fleeting_notes/Linearizing Flying-V dynamics.md",
-    "pictures/trim_and_linearize/short_period.pdf",
     "pictures/deflection_signs.png",
     "pictures/trim_and_linearize/marginally_stable.png",
     "2_permanent_notes/RL.md",
-    "2_permanent_notes/Interval analysis.md",
     "pictures/Pasted image 20240229123655.png",
     "pictures/Pasted image 20240229123953.png",
     "pictures/Pasted image 20240229123803.png",

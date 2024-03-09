@@ -1,9 +1,16 @@
 
-- Date & time:*current date and time*
+- Date & time: 08/03/2024
 - Tag: #question
 - Project:
 
 ---
+
+
+## Context
+
+I had a random thought one day when considering eligibility traces and how they can be augmented into IDHP, and realised that the changes i would have to make resembles momentum approaches to gradient descent, so i began to wonder, what is their difference? 
+
+This adds to the knowledge of eligibility traces, and understanding of how to improve sample efficiency of algorithms.
 
 ## Question
 
@@ -13,11 +20,6 @@ This similarity was also spotted by the author of [this post]. So this begs the 
 
 [this post]: https://stats.stackexchange.com/questions/408046/difference-between-eligibility-traces-and-momentum
 
-## Context
-
-I had a random thought one day when considering eligibility traces and how they can be augmented into IDHP, and realised that the changes i would have to make resembles momentum approaches to gradient descent, so i began to wonder, what is their difference? 
-
-This adds to the knowledge of eligibility traces, and understanding of how to improve sample efficiency of algorithms.
 
 ## Answer
 
@@ -28,7 +30,7 @@ Which shows that the two can be used together, but does not really answer the bi
 
 [[@L - Applicability of Momentum in the Methods of Temporal Learning]]
 
-The answer is essentially that eligibility traces only use the latest TD errors for parameter updates whilst keeping track of what parameters were *eligible* for update in the past. Whereas momentum effectively uses all previous TD errors (albeit at diminishing magnitude) since it keeps track of not only what parameters were *eligible*, but also by how much they changed. This answer is further corroborated by additional sources:
+Thus **the answer** is: eligibility traces **only use the latest TD errors** for parameter updates whilst keeping track of what parameters were *eligible* for update in the past. Whereas momentum effectively **uses all previous TD errors** (albeit at diminishing magnitude) since it keeps track of not only what parameters were *eligible*, but also by how much they changed. This answer is further corroborated by additional sources:
 
 [[@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space]]
 [[@L - Learning with Eligibility Traces in Adaptive Critic Designs]]

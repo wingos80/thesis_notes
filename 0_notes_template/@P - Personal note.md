@@ -1,5 +1,5 @@
 
-- Date & time: *current date and time*
+- Date & time:  
 - Tag: #personal
 - Project:
 
