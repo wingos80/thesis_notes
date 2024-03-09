@@ -28,8 +28,13 @@ Which shows that the two can be used together, but does not really answer the bi
 
 [[@L - Applicability of Momentum in the Methods of Temporal Learning]]
 
-The answer is essentially that eligibility traces only use the latest TD errors for parameter updates whilst keeping track of what parameters were *eligible* for update in the past. Whereas momentum effectively uses all previous TD errors (albeit at diminishing magnitude) since it keeps track of not only what parameters were *eligible*, but also by how much they changed.
+The answer is essentially that eligibility traces only use the latest TD errors for parameter updates whilst keeping track of what parameters were *eligible* for update in the past. Whereas momentum effectively uses all previous TD errors (albeit at diminishing magnitude) since it keeps track of not only what parameters were *eligible*, but also by how much they changed. This answer is further corroborated by additional sources:
+
+[[@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space]]
+[[@L - Learning with Eligibility Traces in Adaptive Critic Designs]]
+
+All of these sources show results that eligibility traces produce better results than momentum in terms of e.g. sample efficiency, asymptotic performance, and success/no failure rates.
 
 ## Proof
 
-See [[@L - Applicability of Momentum in the Methods of Temporal Learning]]
+See linked literature notes.

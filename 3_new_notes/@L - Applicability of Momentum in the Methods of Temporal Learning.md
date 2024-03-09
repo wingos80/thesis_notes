@@ -19,7 +19,9 @@ This paper first poses two momentum modifications:
 1. Momentum augmented TD(0), so called momentum(0)
 2. Momentum augmented TD($\lambda$), so called momentum($\lambda$)
 
-Annoyingly, he does not test how the performance of momentum($\lambda$) is compared to TD($\lambda$). Effectively, this paper compares the utility of eligibility traces versus momentum gradient descent, and shows that eligibility traces are superior in sampling efficiency and asymptotic performance (note that asymptotic performances could not be clearly ascertained since he does not run the experiments long enough).
+His results shows that momentum(0) is worse than TD($\lambda$).
+
+Slightly annoyingly, he does not test how the performance of momentum($\lambda$) is compared to TD($\lambda$). Effectively, this paper compares the utility of eligibility traces versus momentum gradient descent, and shows that eligibility traces are superior in sampling efficiency and asymptotic performance (note that asymptotic performances could not be clearly ascertained since he does not run the experiments long enough).
 
 
 ### Regarding distinction between eligibility trace and momentum:
