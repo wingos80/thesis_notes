@@ -23,20 +23,22 @@ This similarity was also spotted by the author of [this post]. So this begs the 
 
 ## Answer
 
-This paper presents an algorithm which *combines* eligibility traces and momentum into one algorithm, without making any disambiguation on the similarities of the two:
-[[@L - Momentum and mood in policy-gradient reinforcement learning]]
+This paper, [[@L - Momentum and mood in policy-gradient reinforcement learning]], presents an algorithm which *combines* eligibility traces and momentum into one algorithm, without making any disambiguation on the similarities of the two.
 
-Which shows that the two can be used together, but does not really answer the big question. This second paper however, does:
 
-[[@L - Applicability of Momentum in the Methods of Temporal Learning]]
+Which shows that the two can be used together, but does not really answer the big question. This second paper [[@L - Applicability of Momentum in the Methods of Temporal Learning]] however, does.
 
-Thus **the answer** is: eligibility traces **only use the latest TD errors** for parameter updates whilst keeping track of what parameters were *eligible* for update in the past. Whereas momentum effectively **uses all previous TD errors** (albeit at diminishing magnitude) since it keeps track of not only what parameters were *eligible*, but also by how much they changed. This answer is further corroborated by additional sources:
+Thus the answer is that eligibility traces **only use the latest TD errors** for parameter updates whilst keeping track of what parameters were *eligible* for update in the past. Whereas momentum effectively **uses all previous TD errors** (albeit at diminishing magnitude) since it keeps track of not only what parameters were *eligible*, but also by how much they changed. This answer is further corroborated by additional sources:
 
 [[@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space]]
 [[@L - Learning with Eligibility Traces in Adaptive Critic Designs]]
 
-All of these sources show results that eligibility traces produce better results than momentum in terms of e.g. sample efficiency, asymptotic performance, and success/no failure rates.
+Interestingly, all of these sources show results that eligibility traces produce better results than momentum in terms of e.g. sample efficiency, asymptotic performance, and success/no failure rates.
 
 ## Proof
 
-See linked literature notes.
+See linked literature notes:
+[[@L - Momentum and mood in policy-gradient reinforcement learning]]
+[[@L - Applicability of Momentum in the Methods of Temporal Learning]]
+[[@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space]]
+[[@L - Learning with Eligibility Traces in Adaptive Critic Designs]]
