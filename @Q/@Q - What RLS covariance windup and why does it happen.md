@@ -29,7 +29,11 @@ There are certain steps in the RLS algorithm that requires some sort of division
 
 $$
 \begin{align*}
-P_{n+1} &= \frac{1}{\gamma}(P_n - k_n u_n^{\top}P_n)\\
+u_n  &= \begin{bmatrix}
+		x_n \\
+		a_n
+		\end{bmatrix}^{\top}\\
+P_{n} &= \frac{1}{\gamma}(P_{n-1} - k_{n-1} u_{n-1}^{\top}P_{n-1})\\
 k_n &= \frac{P_n u_n}{\gamma + u_n^{\top}P_nu_n}\\
 \text{Now assume that}&\text{ u is the same at every time step} \\
 P_0 &= I \\

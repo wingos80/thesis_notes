@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2d6f129b3713a065",
+        "id": "0ea4446f055bd962",
         "type": "tabs",
         "children": [
           {
-            "id": "b0fb754bd10e37cd",
+            "id": "115534f5e8a1b838",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@Q/@Q - Eligibility trace vs momentum.md",
+                "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -55,7 +55,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 287.5
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -71,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "@Q/@Q - Eligibility trace vs momentum.md",
+                "file": "Master_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "@Q/@Q - Eligibility trace vs momentum.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "@Q/@Q - Eligibility trace vs momentum.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -153,21 +153,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b0fb754bd10e37cd",
+  "active": "115534f5e8a1b838",
   "lastOpenFiles": [
+    "pictures/coding/2024-03-13 132952, half eta equals half dt.png",
+    "@P/@P - 8th Progress meeting.md",
+    "Master_notes.md",
+    "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
     "0_notes_template/@P - Personal note.md",
+    "pictures/coding/2024-03-12 195932, identity rls params with innovation.png",
+    "pictures/coding/2024-03-12 195212, identity rls params no innovation.png",
+    "pictures/coding/yayyyyy_first_working.png",
+    "pictures/coding",
+    "pictures/New folder",
+    "report/IDHP_pseudo_code.pdf.crdownload",
+    "report/IDHP_pseudo_code.pdf",
+    "@Q/@Q - Eligibility trace vs momentum.md",
+    "@Q/@Q - What RLS covariance windup and why does it happen.md",
+    "pictures/Pasted image 20240311114531.png",
+    "Pasted image 20240311114510.png",
+    "pictures/Pasted image 20240311114508.png",
+    "@P/@P - Archimedes and interval analysis.md",
+    "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
+    "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
+    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
+    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
+    "@L/@L - Adaptive Filter Theory Ch 13.md",
     "0_notes_template/@L - Literature note.md",
     "0_notes_template/@Q - Question.md",
-    "@Q/@Q - What RLS covariance windup and why does it happen.md",
-    "@Q/@Q - Eligibility trace vs momentum.md",
-    "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
-    "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
-    "@L/@L - Adaptive Filter Theory Ch 13.md",
-    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
-    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-    "@P/@P - Archimedes and interval analysis.md",
-    "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
-    "Master_notes.md",
     "1_literature_study_notes/1st_read_notes.md",
     "@L",
     "@Q",
@@ -186,20 +198,9 @@
     "1_literature_study_notes/4th_read_notes.md",
     "pictures/Pasted image 20240306140839.png",
     "README.md",
-    "pictures/trim_and_linearize/short_period_impulse_10.pdf",
-    "pictures/trim_and_linearize/short_period_10steps_10.pdf",
-    "pictures/trim_and_linearize/short_period_impulse_1.pdf",
-    "pictures/trim_and_linearize/short_period_10steps_1.pdf",
     "pictures/Pasted image 20240306140104.png",
     "1_fleeting_notes/Linearizing Flying-V dynamics.md",
     "pictures/deflection_signs.png",
-    "pictures/trim_and_linearize/marginally_stable.png",
-    "2_permanent_notes/RL.md",
-    "pictures/Pasted image 20240229123655.png",
-    "pictures/Pasted image 20240229123953.png",
-    "pictures/Pasted image 20240229123803.png",
-    "Pasted image 20240228172741.png",
-    "pictures/zero_trim_req.png",
     "Untitled.canvas"
   ]
 }

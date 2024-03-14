@@ -528,6 +528,7 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- The RLS that was taught to me in the system id course taught by Coen and Daan is different than the RLS used for IDHP. I am wondering now if the RLS taught in that course is actually not RLS, but a "piece-wise" OLS which Zhou mentions in one of her papers.
 	- ![[Pasted image 20240306140104.png]]
 	- ![[Pasted image 20240306140839.png]]
+	- ![[Pasted image 20240311114531.png]]
 	- From what i understood, the only difference between IDHP and DHP is how the system model is identified, the actor and critic updates between these two algorithms are identical. Confirm with Erik and see if as far as he is aware, if my understanding is correct.
 	- Setting RLS forgetting factor to 1.
 
@@ -544,13 +545,51 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 6/3/2024
 
 - The RLS which is used in IDHP seems really cool, i want to checkout its derivation
+- Flying-V meeting:
+	- Elevator deflection up till ~15 is considered linear dynamics enough, beyond which would not be modelled well by VLM data.
+	- Pitch break happens earlier the faster you go.
+	- RANS is ran on full scale flying-V.
 
 ### 7/3/204
 
-- Make different model matching
+- Make different model matching for linear-nonlinear short period model match
 - Burhan
 
+### 10/3/2024
 
+- realised that for the errors in IDHP, the time step from which different implementations take the reward value from differs, some do it in this way (junhyeon, zhou):
+	$$e = V(t) + r_t + \gamma V(t+1)$$
+	some do it this way (casper):
+	$$e = V(t) + r_{t+1} + \gamma V(t+1)$$
+
+### 11/3/2024
+
+- Direnc explaining Jurian model meeting:
+	- Algebraic loop, cool name, dunno what it is.
+	- data_coupled, VLM_WTE_AeroData.HQ.json comes from simon ()
+	- data, FV_reset.HQ.json is from airbus/odilila...
+
+### 12/3/2024
+
+- flying-v roelof meeting:
+	- uncorrelated sine waves? Significance is....?
+	- high frequency input has higher control effectiveness?
+- Coding notes:
+	- I know there's something wrong with the short-period model/how I'm interfacing with it since when I have a constant input of 20, which should mean 20 degrees elevator deflection, the alpha of the airplane stays at around 6 degrees.
+	- And there's something wrong with RLS since the norm of epsilon is zero:
+		- Tried
+	- Possibly a bug in critic actor updates, since their weights make big jumps mid way through episode
+- A sign for actor weight update in my IDHP pseudo code file is wrong? No idea why
+- Text Erik to ask if he has Zhou's code/ parameters/ resources for her paper: Incremental Model Based Online Dual Heuristic Programming for Nonlinear Adaptive Control. Similar thing, text asking if he has any resources like progress meeting notes that documented how Casper encountered preliminary design of IDHP.
+
+### 13/3/2024
+
+- In RLS, whether i have the parameter updates start at 1sst or second timestep does not matter.
+- Debugging report:
+	- There was nothing wrong with the short period mode, i was simply using the wrong units for plotting. The elevator command is in degrees, but the states alpha and q were in radians.
+	- Old RLS bug has been fixed, needed to correct variable updates in IDHP loop. **NEW** RLS bug arises, a) estimator is simply not really changing the parameters, b) the estimated F and G matrices breaks IDHP if i initialize & fix them as the true A and B matrices?
+	- critic and actor updates have been verified to work, tried all possible combination of signs and double checked code with equations.
+- **Create a pickling routine, where i pickle the hyperparameters of the algo, along with monte carlo results of this instance.**
 1/2 - 1
 3/2 - 2
 9/2 - 2
