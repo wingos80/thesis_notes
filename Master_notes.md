@@ -590,6 +590,37 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- Old RLS bug has been fixed, needed to correct variable updates in IDHP loop. **NEW** RLS bug arises, a) estimator is simply not really changing the parameters, b) the estimated F and G matrices breaks IDHP if i initialize & fix them as the true A and B matrices?
 	- critic and actor updates have been verified to work, tried all possible combination of signs and double checked code with equations.
 - **Create a pickling routine, where i pickle the hyperparameters of the algo, along with monte carlo results of this instance.**
+
+### 15/3/2024
+
+- Realised i did not initialize the networks correctly, i was not correctly varying the gaussian from which actor weights were chosen.
+- Realized there was still some copy() bug, finally fixed it. Now can go ahead with meaningful experiments to the algorithm.
+
+### 16/3/2024
+
+- experiments:
+	- Using state + error as info to networks
+	- anneal the learning rates
+	- Varying hidden layer size with everything else constant
+- need to somehow:
+	- gather frequencies of the hyperparameter set
+	- gather episode time of the set
+	- gather return of the set
+- Refactoring tasks:
+	- Add doc strings
+	- Remove hard coding, e.g. dont hard code state dimensions, action dimensions...
+	- Revisit config dicts
+	- Add assertion checks for array shapes!
+	- Revisit function, variable, class names
+	- Revisit folder/file structures
+
+### 17/3/2024
+
+- trying 3 types of network inputs:
+	- error: networks converge fastest, small variance in performances, and tracking performance is ok
+	- states plus error: networks frequently diverge, when converged tracking performance ranges from good to oscillatory
+	- states plus ref: 
+	- tracked state plus ref state?
 1/2 - 1
 3/2 - 2
 9/2 - 2
