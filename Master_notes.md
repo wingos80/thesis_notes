@@ -607,11 +607,11 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- gather episode time of the set
 	- gather return of the set
 - Refactoring tasks:
-	- Add doc strings
 	- Remove hard coding, e.g. dont hard code state dimensions, action dimensions...
 	- Revisit config dicts
 	- Add assertion checks for array shapes!
 	- Revisit function, variable, class names
+	- Add doc strings
 	- Revisit folder/file structures
 
 ### 17/3/2024
@@ -621,6 +621,22 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- states plus error: networks frequently diverge, when converged tracking performance ranges from good to oscillatory
 	- states plus ref: 
 	- tracked state plus ref state?
+- Need to do hparam tests for high low eta with high eta super high (500+-)
+
+
+### 19/3/2024
+
+- transiency metric? Rate/speed of convergence metric?
+
+### 25/3/2024
+
+- Try using more reference signals!!! Need to see that observations on just the sinusoidal task generalize!
+
+### 26/3/2024
+
+- Switched neural network evaluation from tensorflow to manual, so instead of simply passing a network input to a tensorflow network function, the network input is pass through each network layer manually. This lead to an increase in compute time, with pure tensorflow python could compute approximately 100 time steps per second, the manual implementation can compute approximately 80 time steps per second.
+
+
 1/2 - 1
 3/2 - 2
 9/2 - 2
