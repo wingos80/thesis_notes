@@ -635,7 +635,12 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 26/3/2024
 
 - Switched neural network evaluation from tensorflow to manual, so instead of simply passing a network input to a tensorflow network function, the network input is pass through each network layer manually. This lead to an increase in compute time, with pure tensorflow python could compute approximately 100 time steps per second, the manual implementation can compute approximately 80 time steps per second.
+
+### 27/3/2024
 - for hyperparams, need to print the entire x array fammmmm pleasssssuh, otherwise can't do any cool data evaluation uh.....
+- run some fault case tests
+	- Eligibility traces basically do not improve convergence property of IDHP post fault, most likely hyperparameters were over fitted to the initialization phase.
+- run some mc tests of with and without eligibility traces.
 
 1/2 - 1
 3/2 - 2
@@ -653,4 +658,4 @@ But an extra advantage that RL based controllers can have over traditional contr
 21/2 - 20
 22/2 - 21
 23/2 - 24
-24/2 - 28
+	24/2 - 28
