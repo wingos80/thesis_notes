@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
+                "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -71,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
+                "file": "Master_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -155,9 +155,10 @@
   },
   "active": "115534f5e8a1b838",
   "lastOpenFiles": [
+    "README.md",
+    "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
     "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
     "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
-    "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
     "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
     "@Q/@Q - Eligibility traces for neural networks.md",
     "1_literature_study_notes/1st_read_notes.md",
@@ -200,7 +201,6 @@
     "2_old_notes/SAC is different from IDHP.md",
     "2_old_notes/ADP, AD version.md",
     "3_new_notes/@P - RLS covariance windup.md",
-    "2_old_notes/RLS covariance wind up.md",
     "Untitled.canvas"
   ]
 }

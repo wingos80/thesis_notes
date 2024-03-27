@@ -635,7 +635,7 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 26/3/2024
 
 - Switched neural network evaluation from tensorflow to manual, so instead of simply passing a network input to a tensorflow network function, the network input is pass through each network layer manually. This lead to an increase in compute time, with pure tensorflow python could compute approximately 100 time steps per second, the manual implementation can compute approximately 80 time steps per second.
-
+- for hyperparams, need to print the entire x array fammmmm pleasssssuh, otherwise can't do any cool data evaluation uh.....
 
 1/2 - 1
 3/2 - 2
