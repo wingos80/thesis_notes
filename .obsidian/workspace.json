@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -71,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master_notes.md"
+                "file": "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md"
               }
             }
           }
@@ -155,8 +155,18 @@
   },
   "active": "115534f5e8a1b838",
   "lastOpenFiles": [
-    "@Q/@Q - Eligibility trace vs momentum.md",
+    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
+    "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
+    "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
+    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
+    "@Q/@Q - Eligibility traces for neural networks.md",
+    "1_literature_study_notes/1st_read_notes.md",
+    "1_literature_study_notes/2nd_read_notes.md",
+    "1_literature_study_notes/3rd_read_notes.md",
+    "1_literature_study_notes/4th_read_notes.md",
+    "1_literature_study_notes/Previous_RL_MSc_theses.md",
     "Master_notes.md",
+    "@Q/@Q - Eligibility trace vs momentum.md",
     "pictures/actor.pdf",
     "pictures/actor.svg",
     "pictures/g25.pdf",
@@ -167,7 +177,6 @@
     "pictures/nn.svg.crdownload",
     "~$thesis gantt chart.xlsx",
     "@P/@P - Archimedes and interval analysis.md",
-    "@Q/@Q - Eligibility traces for neural networks.md",
     "@P/@P - 9th Progress meeting.md",
     "pictures/coding/elig_experiment/reward_log.pdf",
     "pictures/coding/elig_experiment/reward_nolog.pdf",
@@ -186,20 +195,12 @@
     "pictures/coding/2024-03-12 195932, identity rls params with innovation.png",
     "pictures/coding/2024-03-12 195212, identity rls params no innovation.png",
     "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
-    "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
-    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
     "@L/@L - Adaptive Filter Theory Ch 13.md",
     "0_notes_template/@L - Literature note.md",
-    "1_literature_study_notes/1st_read_notes.md",
     "2_old_notes/SAC is different from IDHP.md",
     "2_old_notes/ADP, AD version.md",
     "3_new_notes/@P - RLS covariance windup.md",
     "2_old_notes/RLS covariance wind up.md",
-    "2_old_notes/Eyeball norm.md",
-    "2_old_notes/EW-RLS.md",
-    "2_old_notes/Archimedes basically used interval analysis.md",
-    "1_literature_study_notes/4th_read_notes.md",
     "Untitled.canvas"
   ]
 }
