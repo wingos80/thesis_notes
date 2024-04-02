@@ -642,20 +642,26 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- Eligibility traces basically do not improve convergence property of IDHP post fault, most likely hyperparameters were over fitted to the initialization phase.
 - run some mc tests of with and without eligibility traces.
 
-1/2 - 1
-3/2 - 2
-9/2 - 2
-11/2 - 4
-12/2 - 5
-13/2 - 5
-14/2 - 6
-15/2 - 9
-16/2 - 12
-17/2 - 13
-18/2 - 14
-19/2 - 17
-20/2 - 17
-21/2 - 20
-22/2 - 21
-23/2 - 24
-	24/2 - 28
+
+### 29/03/2024
+
+- lambda = 0 is identical to if i just use tensorflow gradient tapes for critic and actor updates.
+- For some reason, looks like the actor networks are usually initialized to be as positive gains? When it should be a more even spread of positive and negative gains
+	- TURNS OUT, it is because the weights in first and second layer are IDENTICAL!?!? If they weren't then there would be  more 
+	- Spend an hour and try to make my own initializer? this issue is kind of annoying
+	- Current IDHP cannot flip the sign of the actor policy easily, it cannot go from positive to negative gain quick enough.
+- IDHP is on-policy btw.
+
+### 30/3/2024
+
+- turns out my implementation of auto-diff was wrong, the old auto-diff for y=tanh(x) actually had dy = 1-x^2 instead of dy = 1-y^2, whoops. But even with this erroneous auto-diff, eligibility traces for some reason still brought IDHP back to a stable controller.
+- python logging module seems useful
+
+### 1/4/2024
+
+- people often refer to model free reinforcement learning when the algorithm do not need a model to be initialized for the agent to learn.
+
+### 2/4/2024
+
+- changing reward scaling seems to have big effect on idhp performance.
+- maybe use low pass filters for the eligibility traces??

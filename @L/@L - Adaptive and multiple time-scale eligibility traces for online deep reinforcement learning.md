@@ -13,4 +13,10 @@ Came across this when first writing up the IDHP augmentations document, but real
 
 The paper: https://doi.org/10.1016/j.robot.2021.104019
 
-Need to read in more detail, but from preliminary reading this paper proposes to use a distance metric between eligibility trace and current gradient to decide what gradients to use for weight updates, thus solving the "gradient divergence issue".
+This paper observes that in the case of neural networks, the gradients that are accumulated can diverge from the gradients computed using the latest parameters. This effect is called "gradient divergence", and is more marked the deeper the neural network is.
+
+To overcome this divergence, this paper proposes to use a series of eligibility traces, instead of only 1 trace, with each trace corresponding to different time scales by decaying each trace with different rate $\lambda$s. The parameter updates of the neural network is done using only the top most trace (the trace with highest $\lambda$, which decays slowest!). Furthermore, each trace's decay rate is made a function of the output divergence between subsequent neural networks with parameters $\theta_{t}$ and $\theta_{t-1}$ respectively, this divergence can be the Euclidean norm in the case of deterministic neural networks (which is the case for both actor and critic in IDHP), or a probabilistic measure such as KL-divergence if stochastic networks were considered.
+
+Sidenote, they refer to this one other source that says shallow NN's do not face the issue of gradient divergence as much as DNNs: https://doi.org/10.1016/j.neunet.2017.12.012
+
+
