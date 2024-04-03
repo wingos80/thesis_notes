@@ -29,7 +29,7 @@
                 "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": false
+                "source": true
               }
             }
           }
@@ -155,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 286.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,10 +170,11 @@
   },
   "active": "f4eb5e000a675108",
   "lastOpenFiles": [
+    "@P/@P - 10th Progress meeting.md",
+    "Master_notes.md",
+    "19A32000",
     "@P/@P - 9th Progress meeting.md",
     "@P/@P - 8th Progress meeting.md",
-    "Master_notes.md",
-    "@P/@P - 10th Progress meeting.md",
     "@Q/@Q - Eligibility traces for neural networks.md",
     "@Q/@Q - What RLS covariance windup and why does it happen.md",
     "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
@@ -202,7 +204,6 @@
     "pictures/coding/elig_experiment/reward_log.pdf",
     "pictures/coding/elig_experiment/reward_nolog.pdf",
     "pictures/coding/elig_experiment/noelig_States_and_action.pdf",
-    "pictures/coding/elig_experiment/States_and_action.pdf",
     "pictures/coding/elig_experiment/rewards.png",
     "0_notes_template/@Q - Question.md",
     "pictures/coding/2024-03-17 191802, sys id first.png",
@@ -214,7 +215,6 @@
     "pictures/coding/2024-03-12 195212, identity rls params no innovation.png",
     "0_notes_template/@L - Literature note.md",
     "2_old_notes/SAC is different from IDHP.md",
-    "2_old_notes/ADP, AD version.md",
     "Untitled.canvas"
   ]
 }
