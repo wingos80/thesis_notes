@@ -21,7 +21,20 @@
             }
           },
           {
-            "id": "f4eb5e000a675108",
+            "id": "52bace2346df2ab2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "@P/@P - 10th Progress meeting.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c9749d5a3307ff69",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -29,12 +42,12 @@
                 "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": true
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5
+    "width": 287.5,
+    "collapsed": true
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -168,17 +182,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f4eb5e000a675108",
+  "active": "c9749d5a3307ff69",
   "lastOpenFiles": [
+    "pictures/11th_progress_report_gantt.png",
+    "~$thesis gantt chart.xlsx",
+    "pictures/coding/elig_experiment/rt_PSD_alpha_responses.pdf",
+    "pictures/coding/elig_experiment/rt_States_and_action.pdf",
+    "pictures/coding/elig_experiment/rt_Alpha_error.pdf",
+    "pictures/coding/elig_experiment/rt_PSD_alpha_responses.png",
+    "pictures/coding/elig_experiment/rt_States_and_action.png",
+    "pictures/coding/elig_experiment/rt_Alpha_error.png",
+    "pictures/coding/ms_experiment/ms_PSD_alpha_responses.pdf",
+    "pictures/coding/ms_experiment/ms_States_and_action.pdf",
+    "pictures/coding/ms_experiment/ms_Alpha_error.pdf",
+    "pictures/coding/ms_experiment/vanilla_PSD_alpha_responses.pdf",
+    "pictures/coding/ms_experiment/vanilla_States_and_action.pdf",
+    "pictures/coding/ms_experiment/vanilla_Alpha_error.pdf",
+    "@P/@P - Cuda workshop.md",
     "@P/@P - 10th Progress meeting.md",
-    "Master_notes.md",
-    "19A32000",
     "@P/@P - 9th Progress meeting.md",
-    "@P/@P - 8th Progress meeting.md",
+    "Master_notes.md",
+    "@Q/@Q - Eligibility trace vs momentum.md",
     "@Q/@Q - Eligibility traces for neural networks.md",
+    "@P/@P - Archimedes and interval analysis.md",
+    "1_literature_study_notes/1st_read_notes.md",
+    "@P/@P - 8th Progress meeting.md",
     "@Q/@Q - What RLS covariance windup and why does it happen.md",
     "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
-    "@P/@P - Archimedes and interval analysis.md",
     "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
     "@L/@L - Adaptive Filter Theory Ch 13.md",
     "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
@@ -186,35 +216,20 @@
     "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
     "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
     "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
-    "1_literature_study_notes/1st_read_notes.md",
     "1_literature_study_notes/2nd_read_notes.md",
     "1_literature_study_notes/3rd_read_notes.md",
     "1_literature_study_notes/4th_read_notes.md",
     "1_literature_study_notes/Previous_RL_MSc_theses.md",
-    "@Q/@Q - Eligibility trace vs momentum.md",
-    "pictures/actor.pdf",
     "pictures/actor.svg",
-    "pictures/g25.pdf",
-    "pictures/critic.pdf",
-    "pictures/nn.pdf",
     "pictures/nn - Copy.svg",
     "pictures/nn.svg",
-    "pictures/nn.svg.crdownload",
-    "~$thesis gantt chart.xlsx",
-    "pictures/coding/elig_experiment/reward_log.pdf",
-    "pictures/coding/elig_experiment/reward_nolog.pdf",
-    "pictures/coding/elig_experiment/noelig_States_and_action.pdf",
     "pictures/coding/elig_experiment/rewards.png",
     "0_notes_template/@Q - Question.md",
     "pictures/coding/2024-03-17 191802, sys id first.png",
     "pictures/coding/2024-03-16 164435, accurate RLS inaccurate IDHP.png",
     "pictures/coding/2024-03-16 124729, weird divergence.png",
-    "pictures/coding/2024-03-13 132952, half eta equals half dt.png",
     "0_notes_template/@P - Personal note.md",
-    "pictures/coding/2024-03-12 195932, identity rls params with innovation.png",
-    "pictures/coding/2024-03-12 195212, identity rls params no innovation.png",
     "0_notes_template/@L - Literature note.md",
-    "2_old_notes/SAC is different from IDHP.md",
     "Untitled.canvas"
   ]
 }

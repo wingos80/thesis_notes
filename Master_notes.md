@@ -15,18 +15,17 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 
 Ranked, 1 = highest priority
 
-1. Make more extensive model matching experiments, i.e. test both models for more input signals!
-	1. zero input initially, and non zero thereafter
-	2. Square wave input
-	3. Sine wave input
-2. Implement IDHP:
-	1. Look over RLS to see if implemented everything
-	2. Implement high level IDHP class which calls the implemented actor, critic, and RLS classes, and updates all of them according to the IDHP rule
-	3. Write the scripts that runs IDHP with the Flying-V LTI.
-3. Run an IDHP implementation on LTI
-4. Update Literature study:
-	1. Mention willem's work in section 1.5.2
-	2. check for typos (theres an extra square bracket at the end of 1.5.2)
+1. Write mid-term report
+	1. results
+	2. theory
+	3. introduction
+2. gather results:
+	1. find best hparams for each of the algos
+	2. run nominal, inverted elevator, damaged elevator, and shifted cg for all algos
+	3. show results of all algos
+		1. make better visualization plots, min max ound for converged runs, transparent lines for outliers
+		2. find better convergence time metric (what value to use for convergence time, maybe there's better way to measure convergence rate?)
+	4. write results in mid term report
 
 ---
 
@@ -68,13 +67,14 @@ To achieve this goal, the following research questions are posed.
 	4. What reference tracking/control performance have these algorithms shown in past research?
 	5. What promising augmentations to reinforcement learning algorithms can be made and experimented with?
 2. How can the identified algorithm be applied to control the PH-LAB research aircraft?
-	1. How should the flight control system be structured (cascaded control structure, what signals to feedback)?
-	2. What are the variables defining the MDP in the case of controlling the PH-LAB (the state variables, action variables, environment to be controlled)?
+	1. How can the identified augmentations be made to the reinforcement learning algorithm studied?
+	2. How should the flight control system be structured (cascaded control structure, what signals to feedback)?
+	3. What are the variables defining the MDP in the case of controlling the PH-LAB (the state variables, action variables, environment to be controlled)?
 3. How does the implemented flight controller perform during nominal flight and in the presence of faults?
 	1. What flight scenarios should be designed to test the performance and fault tolerance of the controller (what faults to use, what tracking signals to use, superimposed faults...)?
 	2. What is the nominal performance and degree of fault tolerance of the implemented controller?
-	3. How well does the nominal flight performance of the proposed flight controller compare to other state-of-the-art controllers?
-	4. How are the fault tolerance characteristics of the proposed flight controller compared to other state-of-the-art controllers?
+	3. How do the proposed augmentations affect the flight control characteristics of the reinforcement learning algorithm?
+	4. How well does the nominal and faulty flight performance of the proposed flight controller compare to a traditional PID controller?
 
 ---
 
@@ -663,4 +663,36 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 - changing reward scaling (kappa) seems to have big effect on idhp performance.
 - maybe use low pass filters for the eligibility traces??
+- Current state: IDHP vanilla is fault tolerant for citation though not to degree of stefan or casper, but is not fault tolerant for flying v. When vanilla eligibility traces are used, idhp weights diverge, though divergence can be solved by bounding the elements of the eligibility trace between -1 and 1; with this solution the fault tolerance of eligibility IDHP is found to be.
+- Before anything, need to see if i can tune vanilla IDHP to fly the flying v under the inversion fault scenario, after i find a config that can do this, i try to make eligibility IDHP fly the faulty flying-v.
 
+### 3/4/2024
+
+- steps:
+	1. finish running some more hparam for flying v
+	2. do some manual tuning for flying v w kappa = 100, eta_c_h = 0.4, sweeping eta_a
+	3. do some quick hparam tuning for citation with eligibility, some things to try:
+		1. Try doing actor only elig
+		2. Try doing bounded elig
+	5. run 12 hour hparams for citation with the most successful elig setting from step 3.
+	6. After this, it should be late thursday, implement replacing elig traces and repeat step 3.
+	7. After that, run gridded hparam tests for vanilla idhp on citation, keep in mind to vary kappa! Thats what we want to investigate the efffect of!
+
+### 5/4/2024
+
+- hyperparameters of the IDHP are tuned to maximize the total return of an episode while using eligibility traces, and the traces are removed to demonstrate the effect which removing traces has on performance of the controller.
+
+### 6/4/2024
+
+- text spilios asking for quick 20 minutes meeting for help with making fault tolerant controller with making robust controller.
+	- The course *from what i gathered* mainly taught robust control against disturbance or noise to maintain good reference tracking whilst minimizing control usage. But i want to see if i could come about with a controller robust against parameter uncertainties, or parameter changes in the system. I have heard that to tackle parameter uncertainties it is more traditional to use LFT's and model the uncertainties *explicitly*(?), however i want to probe how relevant mixed sens control would be for param uncertainty, or what it would take to try to obtain a controller robust against param uncertainty.
+	- I'd like to chat with you so that i may know what attempting this task would entail, thus helping me decide if i should attempt it, and if so how i might go about solving it.
+- idea for data representation: min max bounds for "nominal" idhp runs, and then transparent lines for the "outlier" unconverged idhp runs which oscillate a lot or went to min max elevator deflection.
+
+### 9/4/2024
+
+- interesting idea, what if we just keep solving an LQR, or perform pole placement, or some kind of linear controller synthesize routine for each time step using the system identified through the RLS model?
+
+10/4/2024
+
+- for each algorithm, find the best performing hparam of that algorithm under the inversion fault (but with low learning rate of critic eta_c_l equal to 0), and then use that as the best hparam for the given algorithm. Comparison of the different algorithms will be done by using this hparam.
