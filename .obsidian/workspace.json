@@ -39,6 +39,19 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "@P/@P - 11th Progress meeting.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d43bc108cda8a033",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -82,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5,
-    "collapsed": true
+    "width": 287.5
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -182,8 +194,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c9749d5a3307ff69",
+  "active": "d43bc108cda8a033",
   "lastOpenFiles": [
+    "pictures/coding/hparam_search/plot_all2.pdf",
+    "Pasted image 20240416192244.png",
+    "Pasted image 20240416191146.png",
+    "@P/@P - 11th Progress meeting.md",
+    "Master_notes.md",
+    "@P/@P - 10th Progress meeting.md",
     "pictures/11th_progress_report_gantt.png",
     "~$thesis gantt chart.xlsx",
     "pictures/coding/elig_experiment/rt_PSD_alpha_responses.pdf",
@@ -199,9 +217,7 @@
     "pictures/coding/ms_experiment/vanilla_States_and_action.pdf",
     "pictures/coding/ms_experiment/vanilla_Alpha_error.pdf",
     "@P/@P - Cuda workshop.md",
-    "@P/@P - 10th Progress meeting.md",
     "@P/@P - 9th Progress meeting.md",
-    "Master_notes.md",
     "@Q/@Q - Eligibility trace vs momentum.md",
     "@Q/@Q - Eligibility traces for neural networks.md",
     "@P/@P - Archimedes and interval analysis.md",
@@ -225,11 +241,7 @@
     "pictures/nn.svg",
     "pictures/coding/elig_experiment/rewards.png",
     "0_notes_template/@Q - Question.md",
-    "pictures/coding/2024-03-17 191802, sys id first.png",
-    "pictures/coding/2024-03-16 164435, accurate RLS inaccurate IDHP.png",
-    "pictures/coding/2024-03-16 124729, weird divergence.png",
     "0_notes_template/@P - Personal note.md",
-    "0_notes_template/@L - Literature note.md",
     "Untitled.canvas"
   ]
 }

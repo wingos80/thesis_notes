@@ -41,7 +41,7 @@ Ranked, 1 = highest priority
 
 > ~~*To advance the state-of-the-art reinforcement learning based flight controllers and further the technological readiness level of the Flying-V, by developing an intelligent and fault tolerant flight control system for the Flying-V.*~~
 
-> To advance the state-of-the-art reinforcement learning based flight controllers and improve their fault tolerance, by researching sample efficiency improving augmentations to online reinforcement learning algorithms.
+> To advance the state-of-the-art reinforcement learning based flight controllers and improve their fault tolerance, by researching sample efficiency improving augmentations to reinforcement learning algorithms.
 
 The online-offline hybrid approach to applying RL to flight controllers seems the most promising solution to tackle the challenge of fault tolerance. The "offline" algorithms come in the form of model free actor critic methods, which while being relatively sample inefficient to the "online" algorithms, are firstly able to generalize to more control tasks as they through learn policies and value function estimates by repeated traversals across the state-action space, and secondly can provide an initialization condition for the "online" algorithms which have been pre-trained and tested rather than from tabular rasa, otherwise requiring online system identification and inconvenient persistent excitations.
 
@@ -67,14 +67,14 @@ To achieve this goal, the following research questions are posed.
 	4. What reference tracking/control performance have these algorithms shown in past research?
 	5. What promising augmentations to reinforcement learning algorithms can be made and experimented with?
 2. How can the identified algorithm be applied to control the PH-LAB research aircraft?
-	1. How can the identified augmentations be made to the reinforcement learning algorithm studied?
+	1. How can the identified augmentations be integrated to the reinforcement learning algorithm studied?
 	2. How should the flight control system be structured (cascaded control structure, what signals to feedback)?
 	3. What are the variables defining the MDP in the case of controlling the PH-LAB (the state variables, action variables, environment to be controlled)?
 3. How does the implemented flight controller perform during nominal flight and in the presence of faults?
 	1. What flight scenarios should be designed to test the performance and fault tolerance of the controller (what faults to use, what tracking signals to use, superimposed faults...)?
-	2. What is the nominal performance and degree of fault tolerance of the implemented controller?
+	2. What is the nominal performance and fault tolerance of the implemented controller?
 	3. How do the proposed augmentations affect the flight control characteristics of the reinforcement learning algorithm?
-	4. How well does the nominal and faulty flight performance of the proposed flight controller compare to a traditional PID controller?
+	4. How well does the nominal performance and fault tolerance of the proposed flight controller compare to a traditional PID controller?
 
 ---
 
@@ -693,6 +693,19 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 - interesting idea, what if we just keep solving an LQR, or perform pole placement, or some kind of linear controller synthesize routine for each time step using the system identified through the RLS model?
 
-10/4/2024
+### 10/4/2024
 
 - for each algorithm, find the best performing hparam of that algorithm under the inversion fault (but with low learning rate of critic eta_c_l equal to 0), and then use that as the best hparam for the given algorithm. Comparison of the different algorithms will be done by using this hparam.
+
+### 16/4/2024
+
+- write progress report summarize what happened in todays meeting
+- look into shift cg, derive the correct equations for it and note it down in latex (in the progress report)
+	- Use table 7-2 in FD reader for stability derivatives as a function of cg pos,
+	- for the control derivatives, only the pitching moment derivative wrt elevator deflection is affected by shift in cg (vertical force as derivative wrt deflection unaffected, use the following equation to derive cmde as a function of cg position: ![[Pasted image 20240416192244.png]]
+- implement correct shifted cg
+- run shifted cg from start and middle and compare and note down observations on progress report
+
+### 17/4/2024
+
+- about data clustering. Could create clusters of samples in the hyperparameter space, and then colour the points in metric space according to these clusters!!
