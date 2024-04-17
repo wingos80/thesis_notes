@@ -709,3 +709,4 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 17/4/2024
 
 - about data clustering. Could create clusters of samples in the hyperparameter space, and then colour the points in metric space according to these clusters!!
+- Need to fix all the x's in literature review to s; use s to represent states of the MDP/environment, x to represent the states of the model which is inside the environment.
