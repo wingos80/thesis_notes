@@ -1,0 +1,1 @@
+{'avg_PSD_err': 0.1368, 'avg_c': -0.6917, 'avg_t': 30.1673, 'diverged': 0, 'unsteady_convergence': 6}

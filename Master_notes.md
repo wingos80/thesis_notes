@@ -21,11 +21,24 @@ Ranked, 1 = highest priority
 	3. introduction
 2. gather results:
 	1. find best hparams for each of the algos
+		1. run damped elevator for less damped elevator
+		2. run for larger ensemble
 	2. run nominal, inverted elevator, damaged elevator, and shifted cg for all algos
 	3. show results of all algos
 		1. make better visualization plots, min max ound for converged runs, transparent lines for outliers
 		2. find better convergence time metric (what value to use for convergence time, maybe there's better way to measure convergence rate?)
 	4. write results in mid term report
+3. PDF changes to make:
+	1. use s to represent states of the MDP/environment, x to represent the states of the model which is inside the environment.
+	2. Change order of equation and variable explanation, explanation after equation!!!
+	3. remove all mention of flying v
+	4. denote time as subscript in variables?
+	5. Add SGD or nn weight optimizer section in ls?
+4. I think i fucked up formulation of the critic. The output of the critic should be derivative of the value function wrt mdp states, not model states (which is what i have implemented). While mathematically my implementation still evaluates out to the correct update rules, it is more rigorous to define critic as derivative of value function wrt mdp states.
+5. Change logs for future idhp:
+	1. Change the adaptivity rule to be triggered based on mse of past 50 time steps
+	2. Change critic output to be derivative of value function wrt mdp states, instead of wrt model states.
+	3. 
 
 ---
 
@@ -41,7 +54,9 @@ Ranked, 1 = highest priority
 
 > ~~*To advance the state-of-the-art reinforcement learning based flight controllers and further the technological readiness level of the Flying-V, by developing an intelligent and fault tolerant flight control system for the Flying-V.*~~
 
-> To advance the state-of-the-art reinforcement learning based flight controllers and improve their fault tolerance, by researching sample efficiency improving augmentations to reinforcement learning algorithms.
+> ~~To advance the state-of-the-art reinforcement learning based flight controllers and improve their fault tolerance, by researching sample efficiency improving augmentations to reinforcement learning algorithms.~~
+
+> To advance the state-of-the-art reinforcement learning based flight controllers and improve their fault tolerance, by researching novel augmentations to reinforcement learning algorithms.
 
 The online-offline hybrid approach to applying RL to flight controllers seems the most promising solution to tackle the challenge of fault tolerance. The "offline" algorithms come in the form of model free actor critic methods, which while being relatively sample inefficient to the "online" algorithms, are firstly able to generalize to more control tasks as they through learn policies and value function estimates by repeated traversals across the state-action space, and secondly can provide an initialization condition for the "online" algorithms which have been pre-trained and tested rather than from tabular rasa, otherwise requiring online system identification and inconvenient persistent excitations.
 
@@ -60,19 +75,19 @@ To achieve this goal, the following research questions are posed.
 
 ### **Research Questions**
 
-1. What reinforcement learning algorithm can yield an adaptive flight controller which is the most tolerant to faults?
+1. What reinforcement learning algorithm should be studied in the present research?
 	1. What RL algorithms are considered to be state-of-the-art? 
 	2. How is fault tolerance defined and tested in past research?
 	3. Which algorithms have been shown to provide the best fault tolerance?
 	4. What reference tracking/control performance have these algorithms shown in past research?
 	5. What promising augmentations to reinforcement learning algorithms can be made and experimented with?
-2. How can the identified algorithm be applied to control the PH-LAB research aircraft?
+2. How can the proposed algorithm be applied to control the PH-LAB research aircraft?
 	1. How can the identified augmentations be integrated to the reinforcement learning algorithm studied?
 	2. How should the flight control system be structured (cascaded control structure, what signals to feedback)?
 	3. What are the variables defining the MDP in the case of controlling the PH-LAB (the state variables, action variables, environment to be controlled)?
 3. How does the implemented flight controller perform during nominal flight and in the presence of faults?
 	1. What flight scenarios should be designed to test the performance and fault tolerance of the controller (what faults to use, what tracking signals to use, superimposed faults...)?
-	2. What is the nominal performance and fault tolerance of the implemented controller?
+	2. What are the nominal performance and fault tolerance behaviour of the implemented controller?
 	3. How do the proposed augmentations affect the flight control characteristics of the reinforcement learning algorithm?
 	4. How well does the nominal performance and fault tolerance of the proposed flight controller compare to a traditional PID controller?
 
@@ -709,5 +724,139 @@ But an extra advantage that RL based controllers can have over traditional contr
 ### 17/4/2024
 
 - about data clustering. Could create clusters of samples in the hyperparameter space, and then colour the points in metric space according to these clusters!!
-- Need to fix all the x's in literature review to s; use s to represent states of the MDP/environment, x to represent the states of the model which is inside the environment.
 - When cg is shifted aft, divergence occurs even when gradient of critic set to 0
+
+### 19/4/2024
+
+- in the citation full-nonlinear model, try using average MSE over past time like in caspers paper, tune a little bit, and see if can get better results.
+- tune the multistep idhp for the best shift_cg and damp elevator possible, and just take whatever inverted elevator we can get.
+
+### 20/4/2024
+
+- originally thought about doing the k-means clusters to show where in the metrics space do each hparam cluster lie in the inverted elevator fault and the shift cg fault, which would show (i think) that for the same hparam the controller performance is very different in these two scenarios. But now i think maybe that is not so relevant...
+
+
+### 21/4/2024
+
+- need to come up with a better convergence rate metric. With the current convergence metric of time for settling below 0.5 degrees error, this first controller has a better convergence rate than the second controller:
+- 1st controller, 1 late converged controller 27.05 avg convergence time:
+- ![[Pasted image 20240421225307.png]]
+- ![[Pasted image 20240421225339.png]]
+- 2nd controller, 9 unsteady convergence 36.25 avg convergence time:
+- ![[Pasted image 20240421225552.png]]
+- ![[Pasted image 20240421225603.png]]
+- \k344_etaah4.351_etaal0.064_etach0.398_etacl0.0_lh0.848_ll0.249\config-8_d0_p0.1136_c-0.6281_t36.2187_uc9
+
+
+vanilla stats:
+nominal:
+- {'avg_PSD_err': 0.0105, 'avg_c': -0.1162, 'avg_t': 21.266, 'diverged': 0, 'unsteady_convergence': 10}
+inverted:
+- {'avg_PSD_err': 0.1662, 'avg_c': -0.7637, 'avg_t': 33.6, 'diverged': 0, 'unsteady_convergence': 7}
+damped:
+- {'avg_PSD_err': 0.0105, 'avg_c': -0.1399, 'avg_t': 55.5953, 'diverged': 0, 'unsteady_convergence': 30}
+shifted:
+- {'avg_PSD_err': 0.0125, 'avg_c': -0.1249, 'avg_t': 31.1227, 'diverged': 0, 'unsteady_convergence': 21}
+
+idhprt stats:
+nominal:
+- {'avg_PSD_err': 0.0087, 'avg_c': -0.1164, 'avg_t': 18.0793, 'diverged': 0, 'unsteady_convergence': 8}
+inverted:
+- {'avg_PSD_err': 0.3151, 'avg_c': -53.8383, 'avg_t': 34.3287, 'diverged': 0, 'unsteady_convergence': 8}
+damped:
+- {'avg_PSD_err': 0.009, 'avg_c': -0.1325, 'avg_t': 57.346, 'diverged': 0, 'unsteady_convergence': 30}
+shifted:
+- {'avg_PSD_err': 0.0107, 'avg_c': -0.1192, 'avg_t': 32.6273, 'diverged': 0, 'unsteady_convergence': 30}
+
+idhpat stats:
+nominal:
+- {'avg_PSD_err': 0.0086, 'avg_c': -0.0958, 'avg_t': 10.5993, 'diverged': 0, 'unsteady_convergence': 4}
+inverted:
+- {'avg_PSD_err': 0.1044, 'avg_c': -0.5719, 'avg_t': 30.7307, 'diverged': 0, 'unsteady_convergence': 5}
+damped:
+- {'avg_PSD_err': 0.0088, 'avg_c': -0.1216, 'avg_t': 55.1027, 'diverged': 0, 'unsteady_convergence': 29}
+shifted:
+- {'avg_PSD_err': 0.0103, 'avg_c': -0.1075, 'avg_t': 31.8513, 'diverged': 0, 'unsteady_convergence': 26}
+
+1st midhp controller stats:
+nominal:
+- {'avg_PSD_err': 0.01, 'avg_c': -0.1195, 'avg_t': 16.5113, 'diverged': 0, 'unsteady_convergence': 7}
+inverted:
+- {'avg_PSD_err': 0.097, 'avg_c': -0.5283, 'avg_t': 28.0127, 'diverged': 0, 'unsteady_convergence': 1}
+damped:
+- {'avg_PSD_err': 0.0984, 'avg_c': -3.6812, 'avg_t': 57.816, 'diverged': 0, 'unsteady_convergence': 30}
+shifted:
+- {'avg_PSD_err': 0.683, 'avg_c': -7.9871, 'avg_t': 51.03, 'diverged': 0, 'unsteady_convergence': 30}
+
+2nd midhp controller stats:
+nominal:
+- {'avg_PSD_err': 0.0102, 'avg_c': -0.1209, 'avg_t': 22.3853, 'diverged': 0, 'unsteady_convergence': 10}
+inverted:
+- {'avg_PSD_err': 0.1368, 'avg_c': -0.6917, 'avg_t': 30.1673, 'diverged': 0, 'unsteady_convergence': 6}
+damped:
+- {'avg_PSD_err': 0.0103, 'avg_c': -0.149, 'avg_t': 57.558, 'diverged': 0, 'unsteady_convergence': 30}
+shifted:
+- {'avg_PSD_err': 0.0124, 'avg_c': -0.1291, 'avg_t': 32.672, 'diverged': 0, 'unsteady_convergence': 30}
+
+3rd midhp controller stats:
+nominal:
+- {'avg_PSD_err': 0.0103, 'avg_c': -0.1202, 'avg_t': 19.5847, 'diverged': 0, 'unsteady_convergence': 8}
+inverted:
+- {'avg_PSD_err': 0.1825, 'avg_c': -0.9059, 'avg_t': 42.598, 'diverged': 0, 'unsteady_convergence': 20}
+damped:
+- {'avg_PSD_err': 0.0104, 'avg_c': -0.1354, 'avg_t': 55.486, 'diverged': 0, 'unsteady_convergence': 30}
+shifted:
+- {'avg_PSD_err': 0.0122, 'avg_c': -0.116, 'avg_t': 27.472, 'diverged': 0, 'unsteady_convergence': 0}
+
+
+1st midhprt controller stats:
+nominal:
+- {'avg_PSD_err': 0.0093, 'avg_c': -0.1125, 'avg_t': 16.1673, 'diverged': 0, 'unsteady_convergence': 7}
+inverted:
+- {'avg_PSD_err': 0.1042, 'avg_c': -0.5695, 'avg_t': 26.83, 'diverged': 0, 'unsteady_convergence': 0}
+damped:
+- {'avg_PSD_err': 0.0097, 'avg_c': -0.1393, 'avg_t': 56.5187, 'diverged': 0, 'unsteady_convergence': 29}
+shifted:
+- {'avg_PSD_err': 0.0152, 'avg_c': -0.147, 'avg_t': 39.1767, 'diverged': 0, 'unsteady_convergence': 30}
+
+2nd midhprt controller stats:
+nominal:
+- {'avg_PSD_err': 0.0091, 'avg_c': -0.1118, 'avg_t': 17.078, 'diverged': 0, 'unsteady_convergence': 8}
+inverted:
+- {'avg_PSD_err': 0.14, 'avg_c': -0.7074, 'avg_t': 30.7907, 'diverged': 0, 'unsteady_convergence': 6}
+damped:
+- {'avg_PSD_err': 0.0105, 'avg_c': -0.1358, 'avg_t': 57.4387, 'diverged': 0, 'unsteady_convergence': 30}
+shifted:
+- {'avg_PSD_err': 0.0109, 'avg_c': -0.1222, 'avg_t': 35.9407, 'diverged': 0, 'unsteady_convergence': 30}
+
+
+1st midhpat controller stats:
+nominal:
+- {'avg_PSD_err': 0.0096, 'avg_c': -0.1136, 'avg_t': 12.1107, 'diverged': 0, 'unsteady_convergence': 4}
+inverted:
+- {'avg_PSD_err': 0.0938, 'avg_c': -0.5229, 'avg_t': 27.0533, 'diverged': 0, 'unsteady_convergence': 1}
+damped:
+- {'avg_PSD_err': 0.0127, 'avg_c': -0.1566, 'avg_t': 56.8813, 'diverged': 0, 'unsteady_convergence': 29}
+shifted:
+- {'avg_PSD_err': 0.7797, 'avg_c': -6.8297, 'avg_t': 58.9693, 'diverged': 0, 'unsteady_convergence': 30}
+
+2nd midhpat controller stats:
+nominal:
+- {'avg_PSD_err': 0.0102, 'avg_c': -0.1266, 'avg_t': 43.434, 'diverged': 0, 'unsteady_convergence': 22}
+inverted:
+- {'avg_PSD_err': 0.1136, 'avg_c': -0.6281, 'avg_t': 36.2187, 'diverged': 0, 'unsteady_convergence': 9}
+damped:
+- {'avg_PSD_err': 0.0106, 'avg_c': -0.1764, 'avg_t': 57.9473, 'diverged': 0, 'unsteady_convergence': 30}
+shifted:
+- {'avg_PSD_err': 0.012, 'avg_c': -0.1228, 'avg_t': 30.028, 'diverged': 0, 'unsteady_convergence': 4}
+
+3rd midhpat controller stats:
+nominal:
+- {'avg_PSD_err': 0.009, 'avg_c': -0.0949, 'avg_t': 10.0807, 'diverged': 0, 'unsteady_convergence': 4}
+inverted:
+- {'avg_PSD_err': 1.3833, 'avg_c': -67.8136, 'avg_t': 58.8893, 'diverged': 0, 'unsteady_convergence': 29}
+damped:
+- {'avg_PSD_err': 0.0091, 'avg_c': -0.1176, 'avg_t': 50.2767, 'diverged': 0, 'unsteady_convergence': 25}
+shifted:
+- {'avg_PSD_err': 0.0105, 'avg_c': -0.1037, 'avg_t': 27.7393, 'diverged': 0, 'unsteady_convergence': 0}
+

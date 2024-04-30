@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0ea4446f055bd962",
+        "id": "0d29a781b32744fb",
         "type": "tabs",
         "children": [
           {
-            "id": "115534f5e8a1b838",
+            "id": "d417617fb86adf51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@P/@P - 10th Progress meeting.md",
+                "file": "1_literature_study_notes/3rd_read_notes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "52bace2346df2ab2",
+            "id": "f482f91ca858dbaf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@P/@P - 10th Progress meeting.md",
+                "file": "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,20 +34,7 @@
             }
           },
           {
-            "id": "c9749d5a3307ff69",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "@P/@P - 11th Progress meeting.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d43bc108cda8a033",
+            "id": "40a6211751ab5b8c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -60,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -194,53 +181,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d43bc108cda8a033",
+  "active": "40a6211751ab5b8c",
   "lastOpenFiles": [
+    "~$thesis gantt chart.xlsx",
+    "pictures/coding/hparam_search/midhp/option3/None/Weight_norms_evolution.pdf",
+    "pictures/coding/hparam_search/midhp/option3/None/States_and_action.pdf",
+    "pictures/coding/hparam_search/midhp/option3/None/RLS_parameter_norms.pdf",
+    "pictures/coding/hparam_search/midhp/option3/None/RLS_model_error_norm.pdf",
+    "pictures/coding/hparam_search/midhp/option3/None/PSD_alpha_responses.pdf",
+    "pictures/coding/hparam_search/midhp/option3/None/NEGATIVE_Reward_history.pdf",
+    "pictures/coding/hparam_search/midhp/option3/None/metrics.txt",
+    "pictures/coding/hparam_search/midhp/option3/None/metrics.pickle",
+    "pictures/coding/hparam_search/midhp/option3/None/idhp_config.txt",
+    "pictures/coding/hparam_search/midhp/option3/None/idhp_config.pickle",
+    "@P/@P - 12th Progress meeting.md",
     "1_literature_study_notes/3rd_read_notes.md",
-    "pictures/shift_cg/shift_midway/Critic_gradients.pdf",
-    "pictures/shift_cg/shift_midway/Weights_evolution.pdf",
-    "pictures/shift_cg/shift_midway/States_and_action.pdf",
-    "pictures/shift_cg/shift_midway",
-    "pictures/shift_cg/shit-midway",
-    "pictures/shift_cg/New folder",
-    "pictures/shift_cg/shift_at_start/Critic_gradients.pdf",
-    "pictures/shift_cg/shift_at_start/State_and_action.pdf",
-    "pictures/shift_cg/shift_at_start/State_and_Action.pdf",
-    "pictures/shift_cg/shift_at_start/Weights_evolution.pdf",
-    "1_literature_study_notes/2nd_read_notes.md",
-    "1_literature_study_notes/1st_read_notes.md",
     "1_literature_study_notes/4th_read_notes.md",
-    "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
-    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
-    "@L/@L - Adaptive Filter Theory Ch 13.md",
+    "Master_notes.md",
     "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
+    "@Q/@Q - Eligibility trace vs momentum.md",
+    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
+    "@Q/@Q - What RLS covariance windup and why does it happen.md",
+    "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
+    "pictures/inkscape/drawing.svg.2024_04_24_17_52_16.0.svg",
+    "pictures/inkscape/drawing.svg",
+    "1_literature_study_notes/1st_read_notes.md",
+    "1_literature_study_notes/2nd_read_notes.md",
+    "@P/@P - 11th Progress meeting.md",
+    "pictures/drawing.svg",
+    "pictures/inkscape/v_top.png",
+    "pictures/inkscape/v_side.png",
+    "pictures/inkscape/v_front.png",
+    "pictures/drawio/rl_taxonomy.drawio.png",
+    "pictures/inkscape/nn.svg",
+    "pictures/inkscape/test.svg",
+    "README.md",
+    "pictures/Pasted image 20240421225248.png",
+    "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
+    "1_literature_study_notes/Previous_RL_MSc_theses.md",
+    "@P/@P - 10th Progress meeting.md",
+    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
+    "@L/@L - Adaptive Filter Theory Ch 13.md",
     "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
     "2_old_notes/SAC is different from IDHP.md",
     "0_notes_template/@L - Literature note.md",
-    "Master_notes.md",
-    "pictures/Pasted image 20240416192244.png",
-    "pictures/Pasted image 20240416191146.png",
-    "@P/@P - 11th Progress meeting.md",
-    "@P/@P - 10th Progress meeting.md",
-    "pictures/11th_progress_report_gantt.png",
-    "pictures/coding/elig_experiment/rt_PSD_alpha_responses.png",
-    "pictures/coding/elig_experiment/rt_States_and_action.png",
-    "pictures/coding/elig_experiment/rt_Alpha_error.png",
     "@P/@P - Cuda workshop.md",
     "@P/@P - 9th Progress meeting.md",
-    "@Q/@Q - Eligibility trace vs momentum.md",
     "@Q/@Q - Eligibility traces for neural networks.md",
     "@P/@P - Archimedes and interval analysis.md",
-    "@P/@P - 8th Progress meeting.md",
-    "@Q/@Q - What RLS covariance windup and why does it happen.md",
-    "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
-    "README.md",
-    "1_literature_study_notes/Previous_RL_MSc_theses.md",
-    "pictures/actor.svg",
-    "pictures/nn - Copy.svg",
-    "pictures/nn.svg",
-    "pictures/coding/elig_experiment/rewards.png",
     "Untitled.canvas"
   ]
 }
