@@ -1,0 +1,77 @@
+%% Creator: Inkscape 1.3.2 (091e20e, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'traces.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{963.04750938bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.32043008)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{traces.pdf}}%
+    \put(-0.51827216,-0.33155242){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{A}\textbf{i}\textbf{r}\textbf{c}\textbf{r}\textbf{a}\textbf{f}\textbf{t}\textbf{ }\textbf{M}\textbf{o}\textbf{d}\textbf{e}\textbf{l}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{traces.pdf}}%
+    \put(-0.3719277,-0.32706699){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{R}\textbf{e}\textbf{w}\textbf{a}\textbf{r}\textbf{d}\textbf{ }\textbf{\&}\textbf{ }\textbf{O}\textbf{u}\textbf{t}\textbf{p}\textbf{u}\textbf{t}\end{tabular}}}}%
+    \put(-0.35423132,-0.33828053){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{F}\textbf{u}\textbf{n}\textbf{c}\textbf{t}\textbf{i}\textbf{o}\textbf{n}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{traces.pdf}}%
+    \put(-0.35617873,-0.34917867){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}($\autoref{tab:mdp_env_summary}$)\end{tabular}}}}%
+    \put(-0.51711522,-0.34294845){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}($\autoref{eq:sp_lti}$)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{traces.pdf}}%
+    \put(-0.46463309,-0.28375302){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textbf{Environment}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{traces.pdf}}%
+    \put(-0.43828279,-0.4681616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textbf{Agent}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{traces.pdf}}%
+    \put(-0.42745505,-0.30323226){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l},\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{traces.pdf}}%
+    \put(0.60430077,0.23548385){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Times at which a state is visited\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{traces.pdf}}%
+    \put(0.60430077,0.13225806){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Accumulating trace\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{traces.pdf}}%
+    \put(0.60430077,0.04838711){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Replacing trace\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

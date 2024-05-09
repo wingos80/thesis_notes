@@ -1,0 +1,79 @@
+%% Creator: Inkscape 1.3.2 (091e20e, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'mdp_env.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{423.57390156bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.50343724)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{mdp_env.pdf}}%
+    \put(0.218325,0.36002259){\makebox(0,0)[lt]{\lineheight{1.25}\smash{
+        \begin{tabular}[t]{c}
+            Aircraft Model\\
+            (Eq \ref{eq:sp_lti})
+        \end{tabular}
+        }}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{mdp_env.pdf}}%
+    \put(0.55065723,0.36915053){\makebox(0,0)[lt]{\lineheight{1.25}\smash{
+        \begin{tabular}[t]{c}
+            Reward \& Output \\
+            Function \\
+            (Tab \ref{tab:mdp_env_summary})
+        \end{tabular}
+        }}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{mdp_env.pdf}}%
+    \put(0.3748961,0.46370042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textbf{Environment}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{mdp_env.pdf}}%
+    \put(0.42604256,0.04442484){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textbf{Agent}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{mdp_env.pdf}}%
+    \put(0.42940897,0.41741196){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textit{,}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{mdp_env.pdf}}%
+  \end{picture}%
+\endgroup%

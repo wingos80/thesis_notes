@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{406.49894174bp}%
+    \setlength{\unitlength}{423.57390156bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,34 +50,22 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.52458414)%
+  \begin{picture}(1,0.50343724)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{mdp_env.pdf}}%
-    \put(0.21,0.37){
-        \makebox(0,0)[lt]{
-            \lineheight{1.25}\smash{
-                \begin{tabular}[t]{c}
-                \textbf{Aircraft Model} \\
-                (\autoref{eq:sp_lti})
-            \end{tabular}
-            }
-        }
-    }%
+    \put(0.222925,0.35302259){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Aircraft Model\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{mdp_env.pdf}}%
+    \put(0.55565723,0.36915053){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Reward \& Output\end{tabular}}}}%
+    \put(0.595892,0.34365515){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Function\end{tabular}}}}%
+    \put(0.59146479,0.31887685){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}($\autoref{tab:mdp_env_summary}$)\end{tabular}}}}%
+    \put(0.22555542,0.32711228){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}($\autoref{eq:sp_lti}$)\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{mdp_env.pdf}}%
-    \put(0.571,0.382){\makebox(0,0)[lt]{\lineheight{1.25}\smash{
-        \begin{tabular}[t]{c}
-            \textbf{Reward \& Output}\\
-            \textbf{Function} \\
-            (\autoref{tab:mdp_env_summary})
-        \end{tabular}
-    }}}%
+    \put(0.37492871,0.46170042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Environment\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{mdp_env.pdf}}%
-    \put(0.36236665,0.48109422){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\Large\textbf{Environment}\end{tabular}}}}%
+    \put(0.42607517,0.04242484){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Agent\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{mdp_env.pdf}}%
-    \put(0.42479384,0.04420692){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\Large\textbf{Agent}\end{tabular}}}}%
+    \put(0.42940897,0.41741196){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textit{,}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{mdp_env.pdf}}%
-    \put(0.44744612,0.43494544){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l},\end{tabular}}}}%
   \end{picture}%
 \endgroup%

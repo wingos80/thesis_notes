@@ -13,29 +13,21 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 
 ## List of TODOs <a name="todo"></a>
 
-Ranked, 1 = highest priority
-
 1. Write mid-term report
 	1. results
+		1. Need to make rls verification ahhhhh (think about how to work it in tho...)
 	2. theory
+		1. In the eligibility trace section, mention the biased gradient updates using momentum
 	3. introduction
-2. gather results:
-	1. find best hparams for each of the algos
-		1. run damped elevator for less damped elevator
-		2. run for larger ensemble
-	2. run nominal, inverted elevator, damaged elevator, and shifted cg for all algos
-	3. show results of all algos
-		1. make better visualization plots, min max ound for converged runs, transparent lines for outliers
-		2. find better convergence time metric (what value to use for convergence time, maybe there's better way to measure convergence rate?)
-	4. write results in mid term report
-3. PDF changes to make:
-	1. use s to represent states of the MDP/environment, x to represent the states of the model which is inside the environment.
-	2. Change order of equation and variable explanation, explanation after equation!!!
-	3. remove all mention of flying v
-	4. denote time as subscript in variables?
+2. PDF changes to make:
+	1. Make sure that variable + unit convention is followed:
+		1. For units, write in normal text not math mode
+		2. Use abbreviated 
+	2. use s to represent states of the MDP/environment, x to represent the states of the model which is inside the environment.
+	3. Change order of equation and variable explanation, explanation after equation!!!
+	4. remove all mention of flying v
 	5. Add SGD or nn weight optimizer section in ls?
-4. I think i fucked up formulation of the critic. The output of the critic should be derivative of the value function wrt mdp states, not model states (which is what i have implemented). While mathematically my implementation still evaluates out to the correct update rules, it is more rigorous to define critic as derivative of value function wrt mdp states.
-5. Change logs for future idhp:
+3. Change logs for future idhp:
 	1. Change the adaptivity rule to be triggered based on mse of past 50 time steps
 	2. Change critic output to be derivative of value function wrt mdp states, instead of wrt model states.
 	3. 
@@ -749,5 +741,41 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 ### 1/5/2024
 
-- 
+- the critic and actor update rules in pseudo code needs to be more explicit and correct.
+- actor update in eligibility trace section needs to be made more clear.
 
+
+### 4/5/2024
+
+- the way i tuned hyperpaarmeters:
+	- tune hyperparameter to find best shift cg fault tolerance behaviour 
+
+### 5/5/2024
+
+- The mdp flow diagram actually only needs to feed reward derivative from environment to agent, make this fix
+![[Pasted image 20240505201607.png]]
+
+### 6/5/2024
+
+- trying 4 new midhp controller options, see if the lower etaal helps with convergence at end of episode!!
+
+### 7/5/2024
+
+- to measure settling time of different controllers, the original approach was to see when does the tracking error fall below x value. But this was a very poor criteria which resulted in metrics that did not reflect what was being shown in the time traces. More elaborate ways of measuring settling time were thought of (measuring "half life" of error by tracking time taken for error to go half way from max to min, fitting an exponential function and using the exponent as the decay rate ...). Ultimately, it was decided that these were simply too convoluted, and would make the results more difficult to interpret. Thus, a much simpler and straight forward approach from classical control is used: using settling time of a step reference tracking task.
+- Tune idhpat, and then go home and start writing code to count how many runs diverged in the inverted case and record this number, then write code to clean the data and plot the upper lower max bounds for the four controllers.
+- Divergence defined as if error did not settle below 0.5 degrees within 10 seconds of the fault
+	- idhp diverged: 26
+	- idhp(L) diverged: 89
+	- midhp diverged: 52
+	- midhp(L) diverged: 29
+- Results:
+	- Do nominal comparisons between vanilla and augmented (using same hyper parameters), show step response differences between the four algos. Here you can talk about convergence time (settle within +-0.25 deg of final error?) and convergence quality (difference between final error and reference value?).
+	- Do faulty comparisons, here use the optimized hyperparameters. Start with the box plots, then can present some of the state action graphs
+- How is mean absolute error calculated in the other papers?
+
+### 9/5/2024
+
+- write up the two experiment results first:
+	- comparing the settling time and final error in exp 1
+	- comparing sum tracking error in exp 2
+- do the weight comparisons between 4 algorithms

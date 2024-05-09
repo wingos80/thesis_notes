@@ -54,24 +54,24 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{traces.pdf}}%
-    \put(-0.50751946,-0.39391801){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{A}\textbf{i}\textbf{r}\textbf{c}\textbf{r}\textbf{a}\textbf{f}\textbf{t}\textbf{ }\textbf{M}\textbf{o}\textbf{d}\textbf{e}\textbf{l}\end{tabular}}}}%
+    \put(-0.51827216,-0.33155242){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{A}\textbf{i}\textbf{r}\textbf{c}\textbf{r}\textbf{a}\textbf{f}\textbf{t}\textbf{ }\textbf{M}\textbf{o}\textbf{d}\textbf{e}\textbf{l}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{traces.pdf}}%
-    \put(-0.361175,-0.38943258){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{R}\textbf{e}\textbf{w}\textbf{a}\textbf{r}\textbf{d}\textbf{ }\textbf{\&}\textbf{ }\textbf{O}\textbf{u}\textbf{t}\textbf{p}\textbf{u}\textbf{t}\end{tabular}}}}%
-    \put(-0.34347862,-0.40064612){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{F}\textbf{u}\textbf{n}\textbf{c}\textbf{t}\textbf{i}\textbf{o}\textbf{n}\end{tabular}}}}%
+    \put(-0.3719277,-0.32706699){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{R}\textbf{e}\textbf{w}\textbf{a}\textbf{r}\textbf{d}\textbf{ }\textbf{\&}\textbf{ }\textbf{O}\textbf{u}\textbf{t}\textbf{p}\textbf{u}\textbf{t}\end{tabular}}}}%
+    \put(-0.35423132,-0.33828053){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{F}\textbf{u}\textbf{n}\textbf{c}\textbf{t}\textbf{i}\textbf{o}\textbf{n}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{traces.pdf}}%
-    \put(-0.34542603,-0.41154426){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}($\autoref{tab:mdp_env_summary}$)\end{tabular}}}}%
-    \put(-0.50636252,-0.40531404){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}($\autoref{eq:sp_lti}$)\end{tabular}}}}%
+    \put(-0.35617873,-0.34917867){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}($\autoref{tab:mdp_env_summary}$)\end{tabular}}}}%
+    \put(-0.51711522,-0.34294845){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}($\autoref{eq:sp_lti}$)\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{traces.pdf}}%
-    \put(-0.45388039,-0.34611861){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textbf{Environment}\end{tabular}}}}%
+    \put(-0.46463309,-0.28375302){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textbf{Environment}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{traces.pdf}}%
-    \put(-0.42753009,-0.53052719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textbf{Agent}\end{tabular}}}}%
+    \put(-0.43828279,-0.4681616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textbf{Agent}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{traces.pdf}}%
-    \put(-0.41670235,-0.36559784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l},\end{tabular}}}}%
+    \put(-0.42745505,-0.30323226){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l},\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{traces.pdf}}%
-    \put(0.60430078,0.23548384){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Times at which a state is visited\end{tabular}}}}%
+    \put(0.60430077,0.23548385){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Times at which a state is visited\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{traces.pdf}}%
-    \put(0.60430078,0.13225805){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Accumulating trace\end{tabular}}}}%
+    \put(0.60430077,0.13225806){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Accumulating trace\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{traces.pdf}}%
-    \put(0.60430078,0.04838711){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Replacing trace\end{tabular}}}}%
+    \put(0.60430077,0.04838711){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Replacing trace\end{tabular}}}}%
   \end{picture}%
 \endgroup%

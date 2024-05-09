@@ -39,6 +39,19 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "06fc77b0e673282f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -181,29 +194,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "40a6211751ab5b8c",
+  "active": "06fc77b0e673282f",
   "lastOpenFiles": [
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/RLS_model_error_norm.pdf",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/Weight_norms_evolution.pdf",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/States_and_action.pdf",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/RLS_parameter_norms.pdf",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/PSD_alpha_responses.pdf",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/NEGATIVE_Reward_history.pdf",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/metrics.txt",
-    "pictures/coding/hparam_search/midhprt/option1/shift_cg/States_and_action.pdf",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/metrics.pickle",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/idhp_config.txt",
-    "pictures/coding/hparam_search/midhprt/option2/shift_cg/idhp_config.pickle",
+    "pictures/coding/citation_sine_export/midhp/shift_cg/States_and_action.pdf",
+    "pictures/coding/citation_sine_export/midhp/shift_cg/RLS_model_error_norm.pdf",
+    "pictures/coding/citation_sine_export/midhp/shift_cg/PSD_alpha_responses.pdf",
+    "pictures/coding/citation_sine_export/midhp/shift_cg/Alpha_error.pdf",
+    "pictures/coding/citation_sine_export/midhp/None/States_and_action.pdf",
+    "pictures/coding/citation_sine_export/midhp/None/RLS_model_error_norm.pdf",
+    "pictures/coding/citation_sine_export/midhp/None/PSD_alpha_responses.pdf",
+    "pictures/coding/citation_sine_export/midhp/None/Alpha_error.pdf",
+    "pictures/coding/citation_sine_export/midhp/invert_elevator/States_and_action.pdf",
+    "pictures/coding/citation_sine_export/midhp/invert_elevator/RLS_model_error_norm.pdf",
+    "pictures/coding/citation_sine_export/midhp/invert_elevator/PSD_alpha_responses.pdf",
+    "@P/@P - Controller Options.md",
+    "@P/@P - 12th Progress meeting.md",
+    "Master_notes.md",
+    "pictures/Pasted image 20240505201607.png",
+    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
+    "@Q/@Q - Eligibility trace vs momentum.md",
+    "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
+    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
+    "@Q/@Q - Eligibility traces for neural networks.md",
+    "@L/@L - Adaptive Filter Theory Ch 13.md",
+    "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
+    "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
     "pictures/inkscape/traces.png",
     "pictures/inkscape/drawing.svg.2024_05_01_16_40_31.0.svg",
-    "@P/@P - Controller Options.md",
-    "Master_notes.md",
-    "@P/@P - 12th Progress meeting.md",
     "1_literature_study_notes/3rd_read_notes.md",
     "1_literature_study_notes/4th_read_notes.md",
-    "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
-    "@Q/@Q - Eligibility trace vs momentum.md",
-    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
     "@Q/@Q - What RLS covariance windup and why does it happen.md",
     "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
     "pictures/inkscape/drawing.svg.2024_04_24_17_52_16.0.svg",
@@ -216,19 +235,13 @@
     "pictures/inkscape/v_side.png",
     "pictures/inkscape/v_front.png",
     "pictures/drawio/rl_taxonomy.drawio.png",
-    "pictures/inkscape/nn.svg",
     "README.md",
-    "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
     "1_literature_study_notes/Previous_RL_MSc_theses.md",
     "@P/@P - 10th Progress meeting.md",
-    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-    "@L/@L - Adaptive Filter Theory Ch 13.md",
-    "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
     "2_old_notes/SAC is different from IDHP.md",
     "0_notes_template/@L - Literature note.md",
     "@P/@P - Cuda workshop.md",
     "@P/@P - 9th Progress meeting.md",
-    "@Q/@Q - Eligibility traces for neural networks.md",
     "Untitled.canvas"
   ]
 }
