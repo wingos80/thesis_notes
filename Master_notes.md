@@ -765,7 +765,7 @@ But an extra advantage that RL based controllers can have over traditional contr
 - Tune idhpat, and then go home and start writing code to count how many runs diverged in the inverted case and record this number, then write code to clean the data and plot the upper lower max bounds for the four controllers.
 - Divergence defined as if error did not settle below 0.5 degrees within 10 seconds of the fault
 	- idhp diverged: 26
-	- idhp(L) diverged: 89
+	- idhp(L) diverged: 98
 	- midhp diverged: 52
 	- midhp(L) diverged: 29
 - Results:
@@ -779,3 +779,8 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- comparing the settling time and final error in exp 1
 	- comparing sum tracking error in exp 2
 - do the weight comparisons between 4 algorithms
+
+### 10/5/2024
+
+- the single subplots dont need to be a square (too big!)
+- settling time boxplot data:
