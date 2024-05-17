@@ -13,13 +13,7 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 
 ## List of TODOs <a name="todo"></a>
 
-1. Write mid-term report
-	1. results
-		1. Need to make rls verification ahhhhh (think about how to work it in tho...)
-	2. theory
-		1. In the eligibility trace section, mention the biased gradient updates using momentum
-	3. introduction
-2. PDF changes to make:
+1. PDF changes to make:
 	1. Make sure that variable + unit convention is followed:
 		1. For units, write in normal text not math mode
 		2. Use abbreviated 
@@ -27,10 +21,21 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 	3. Change order of equation and variable explanation, explanation after equation!!!
 	4. remove all mention of flying v
 	5. Add SGD or nn weight optimizer section in ls?
-3. Change logs for future idhp:
+	7. Cite elias for cover picture
+2. Change logs for future idhp:
 	1. Change the adaptivity rule to be triggered based on mse of past 50 time steps
 	2. Change critic output to be derivative of value function wrt mdp states, instead of wrt model states.
-	3. 
+3. Decisions:
+	1. Nonlinear or linear?
+		1.  probably just linear? Huge asym + sym ss model to get p, q, r models? And then tracking p, q, r?
+	2. What reference signals? 
+		1. Sine, 321, saw tooth, random step?
+	3. What fault scenarios?
+		1. Shifted cg, damaged elevator, wing icing, stuck aileron/rudder/elevator?
+	4. How to make *traditional* robust controller??
+		1. LQR state feedback, mixed sensitivity H_inf?
+	5. Controller structure
+		1. Cascaded (q control, and then alpha control)
 
 ---
 
@@ -784,3 +789,30 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 - the single subplots dont need to be a square (too big!)
 - settling time boxplot data:
+
+### 13/5/2024
+
+- do final check and tweaks of objectives and put it into the thesis overleaf!!!!
+- finish introduction
+- finish conclusion for preliminary results
+
+## 17/05/2024
+
+- auto hparam work on later?
+- mid term note
+- write email to frank lewis
+
+Thesis change list:
+
+1. Add in results justifying the hparams and settings i used (number of neurons, MDP state selection, action selection, hyperparameters)
+2. Add plots showing how the policy function looks like at each time step.
+3. Add in conclusion, *definitive*.
+4. Elaborate in introduction.
+5. Flip the research objective
+6. For the gradient figures
+	1. increase label size DONE
+	2. standardize scales DONE
+7. Change boxplot scales to start from 0, dont leave misleading/difficult to comprehend plots!!! DONE
+8. Go through all Erik comments and address them all.
+9. Remove the "and" in objective!!!!
+10. Fix "In answering research question xxx"

@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0d29a781b32744fb",
+        "id": "58def086c9acff95",
         "type": "tabs",
         "children": [
           {
-            "id": "d417617fb86adf51",
+            "id": "8ff01574454de501",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_literature_study_notes/3rd_read_notes.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "f482f91ca858dbaf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
+                "file": "@P/@P - 14th Progress meeting.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,20 +21,7 @@
             }
           },
           {
-            "id": "40a6211751ab5b8c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "06fc77b0e673282f",
+            "id": "ece9c86e168529e3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -60,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,54 +168,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "06fc77b0e673282f",
+  "active": "ece9c86e168529e3",
   "lastOpenFiles": [
-    "report/Thesis.pdf.crdownload",
-    "report/figures/02/citation_sine_export/shift_cg_zoom_of_idhp.pdf",
-    "report/figures/02/citation_sine_export/shift_cg_zoom_comparison_btwn_idhpat_and_midhprt.pdf",
-    "report/figures/02/citation_sine_export/shift_cg_comparison_btwn_idhpat_and_midhprt.pdf",
-    "report/figures/02/citation_step_export/settling_times_cov.pdf",
-    "report/figures/02/citation_step_export/steadystate_errors_cov.pdf",
-    "report/figures/02/citation_step_export/steadystate_cov_errors.pdf",
-    "report/figures/02/citation_step_export/settling_cov_times.pdf",
-    "report/figures/02/citation_sine_export/return_cov_None.pdf",
-    "report/figures/02/citation_sine_export/return_cov_invert_elevator.pdf",
-    "report/figures/02/citation_sine_export/return_cov_damp_elevator.pdf",
-    "report/figures/02/elig_experiment/rewards.png",
-    "@P/@P - Controller Options.md",
+    "report/figures/02/weight_study/idhpat/Actor_gradients.pdf",
+    "report/figures/02/weight_study/midhprt/weights.pdf",
+    "report/figures/02/weight_study/midhprt/states.pdf",
+    "report/figures/02/weight_study/midhprt/c_gradients.pdf",
+    "report/figures/02/weight_study/midhprt/a_gradients.pdf",
+    "report/figures/02/weight_study/midhp/weights.pdf",
+    "report/figures/02/weight_study/midhp/states.pdf",
+    "report/figures/02/weight_study/midhp/c_gradients.pdf",
+    "report/figures/02/weight_study/midhp/a_gradients.pdf",
+    "report/figures/02/weight_study/idhpat/weights.pdf",
+    "report/figures/02/weight_study/idhpat/states.pdf",
+    "@P/@P - 14th Progress meeting.md",
+    "@P/@P - 13th progress meeting, Mid-term.md",
     "@P/@P - 12th Progress meeting.md",
     "Master_notes.md",
-    "pictures/Pasted image 20240505201607.png",
-    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-    "@Q/@Q - Eligibility trace vs momentum.md",
-    "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
-    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
+    "@P/@P - Robust course notes.md",
+    "@P/@P - Descriptions of a random variable.md",
+    "0_notes_template/@P - Personal note.md",
     "@Q/@Q - Eligibility traces for neural networks.md",
+    "@P/@P - LQR state feedback margins at input.md",
+    "@L/@L - Cramer's Rule.md",
+    "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
+    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
+    "@L/@L - The Complexities of Agent-Based Modeling Output Analysis.md",
+    "0_notes_template/@L - Literature note.md",
+    "@P/@P - Phase space.md",
+    "1_literature_study_notes/3rd_read_notes.md",
+    "report/figures/02/elig_experiment/rewards.png",
+    "@P/@P - Controller Options.md",
+    "pictures/Pasted image 20240505201607.png",
+    "@Q/@Q - Eligibility trace vs momentum.md",
+    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
     "@L/@L - Adaptive Filter Theory Ch 13.md",
     "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
     "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
     "pictures/inkscape/traces.png",
     "pictures/inkscape/drawing.svg.2024_05_01_16_40_31.0.svg",
-    "1_literature_study_notes/3rd_read_notes.md",
     "1_literature_study_notes/4th_read_notes.md",
     "@Q/@Q - What RLS covariance windup and why does it happen.md",
     "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
     "pictures/inkscape/drawing.svg.2024_04_24_17_52_16.0.svg",
     "pictures/inkscape/drawing.svg",
-    "1_literature_study_notes/1st_read_notes.md",
-    "1_literature_study_notes/2nd_read_notes.md",
-    "@P/@P - 11th Progress meeting.md",
     "pictures/drawing.svg",
     "pictures/inkscape/v_top.png",
     "pictures/inkscape/v_side.png",
     "pictures/inkscape/v_front.png",
-    "README.md",
-    "1_literature_study_notes/Previous_RL_MSc_theses.md",
-    "@P/@P - 10th Progress meeting.md",
-    "2_old_notes/SAC is different from IDHP.md",
-    "0_notes_template/@L - Literature note.md",
-    "@P/@P - Cuda workshop.md",
-    "@P/@P - 9th Progress meeting.md",
     "Untitled.canvas"
   ]
 }
