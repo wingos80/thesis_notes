@@ -8,25 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8ff01574454de501",
+            "id": "ea36ae5ab77de211",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@P/@P - 14th Progress meeting.md",
+                "file": "@P/@P - 15th Progress meeting.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": false
+                "source": true
               }
             }
           },
           {
-            "id": "ece9c86e168529e3",
+            "id": "1ecbf80342115a8f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@P/@P - Spilios Meeting Notes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5
+    "width": 359.5
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@P/@P - Spilios Meeting Notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@P/@P - Spilios Meeting Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master_notes.md"
+                "file": "@P/@P - Spilios Meeting Notes.md"
               }
             }
           }
@@ -142,7 +142,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#personal",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -155,7 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -168,54 +168,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ece9c86e168529e3",
+  "active": "1ecbf80342115a8f",
   "lastOpenFiles": [
-    "report/figures/02/weight_study/idhpat/Actor_gradients.pdf",
-    "report/figures/02/weight_study/midhprt/weights.pdf",
-    "report/figures/02/weight_study/midhprt/states.pdf",
-    "report/figures/02/weight_study/midhprt/c_gradients.pdf",
-    "report/figures/02/weight_study/midhprt/a_gradients.pdf",
-    "report/figures/02/weight_study/midhp/weights.pdf",
-    "report/figures/02/weight_study/midhp/states.pdf",
-    "report/figures/02/weight_study/midhp/c_gradients.pdf",
-    "report/figures/02/weight_study/midhp/a_gradients.pdf",
-    "report/figures/02/weight_study/idhpat/weights.pdf",
-    "report/figures/02/weight_study/idhpat/states.pdf",
-    "@P/@P - 14th Progress meeting.md",
-    "@P/@P - 13th progress meeting, Mid-term.md",
-    "@P/@P - 12th Progress meeting.md",
     "Master_notes.md",
+    "@P/@P - 15th Progress meeting.md",
+    "pictures/progress_report/15th/new_mdp_no_warmup_manoeuvre_q_tracking_error.pdf",
+    "pictures/progress_report/15th/new_mdp_yes_warmup_manoeuvre_q_tracking_weights.pdf",
+    "pictures/progress_report/15th/new_mdp_yes_warmup_manoeuvre_q_tracking_p1.pdf",
+    "pictures/progress_report/15th/new_mdp_yes_warmup_manoeuvre_q_tracking_error.pdf",
+    "pictures/progress_report/15th/new_mdp_yes_warmup_manoeuvre_q_tracking_p2.pdf",
+    "pictures/progress_report/15th/new_mdp_no_warmup_manoeuvre_q_tracking_weightd.pdf",
+    "pictures/progress_report/15th/new_mdp_no_warmup_manoeuvre_q_tracking_p1.pdf",
+    "pictures/progress_report/15th/new_mdp_no_warmup_manoeuvre_q_tracking_p2.pdf",
+    "pictures/progress_report/15th/new_mdp_s_q_errors.pdf",
+    "pictures/progress_report/15th/new_mdp_s_q_p1.pdf",
+    "pictures/progress_report/15th/bad_policy_colorplot.jpeg",
+    "pictures/Pasted image 20240604170146.png",
+    "@P/@P - Spilios Meeting Notes.md",
+    "@P/@P - Vlad chat notes.md",
+    "@P/@P - CitAST simulink to python notes.md",
+    "@P/@P - Deltares.md",
+    "@P/@P - 14th Progress meeting.md",
     "@P/@P - Robust course notes.md",
     "@P/@P - Descriptions of a random variable.md",
-    "0_notes_template/@P - Personal note.md",
-    "@Q/@Q - Eligibility traces for neural networks.md",
     "@P/@P - LQR state feedback margins at input.md",
-    "@L/@L - Cramer's Rule.md",
-    "@L/@L - Applicability of Momentum in the Methods of Temporal Learning.md",
-    "@L/@L - Learning with Eligibility Traces in Adaptive Critic Designs.md",
-    "@L/@L - The Complexities of Agent-Based Modeling Output Analysis.md",
-    "0_notes_template/@L - Literature note.md",
     "@P/@P - Phase space.md",
-    "1_literature_study_notes/3rd_read_notes.md",
-    "report/figures/02/elig_experiment/rewards.png",
+    "@P/@P - 13th progress meeting, Mid-term.md",
     "@P/@P - Controller Options.md",
-    "pictures/Pasted image 20240505201607.png",
-    "@Q/@Q - Eligibility trace vs momentum.md",
-    "@L/@L - A Comparison of Eligibility Trace and Momentum on SARSA in Continuous State- and Action-Space.md",
-    "@L/@L - Adaptive Filter Theory Ch 13.md",
-    "@L/@L - Adaptive and multiple time-scale eligibility traces for online deep reinforcement learning.md",
-    "@L/@L - Momentum and mood in policy-gradient reinforcement learning.md",
-    "pictures/inkscape/traces.png",
-    "pictures/inkscape/drawing.svg.2024_05_01_16_40_31.0.svg",
-    "1_literature_study_notes/4th_read_notes.md",
-    "@Q/@Q - What RLS covariance windup and why does it happen.md",
+    "@P/@P - 12th Progress meeting.md",
+    "@P/@P - 11th Progress meeting.md",
+    "@P/@P - Cuda workshop.md",
+    "@P/@P - 10th Progress meeting.md",
+    "@P/@P - 9th Progress meeting.md",
+    "@P/@P - 8th Progress meeting.md",
+    "@P/@P - Archimedes and interval analysis.md",
     "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
-    "pictures/inkscape/drawing.svg.2024_04_24_17_52_16.0.svg",
-    "pictures/inkscape/drawing.svg",
-    "pictures/drawing.svg",
-    "pictures/inkscape/v_top.png",
-    "pictures/inkscape/v_side.png",
-    "pictures/inkscape/v_front.png",
+    "@Q/@Q - Eligibility traces for neural networks.md",
+    "@Q/@Q - What is RLS covariance windup and why does it happen.md",
+    "@Q/@Q - Eligibility trace vs momentum.md",
+    "pictures/progress_report/14th/actor_update.png",
+    "pictures/Pasted image 20240529122913.png",
+    "pictures/Pasted image 20240529122918.png",
+    "pictures/Pasted image 20240528150034.png",
+    "pictures/Pasted image 20240528144047.png",
+    "pictures/Pasted image 20240528144445.png",
+    "pictures/Pasted image 20240528145717.png",
+    "pictures/Pasted image 20240528144357.png",
     "Untitled.canvas"
   ]
 }

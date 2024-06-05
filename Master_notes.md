@@ -13,30 +13,58 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 
 ## List of TODOs <a name="todo"></a>
 
-1. PDF changes to make:
-	1. Make sure that variable + unit convention is followed:
-		1. For units, write in normal text not math mode
-		2. Use abbreviated 
-	2. use s to represent states of the MDP/environment, x to represent the states of the model which is inside the environment.
-	3. Change order of equation and variable explanation, explanation after equation!!!
-	4. remove all mention of flying v
-	5. Add SGD or nn weight optimizer section in ls?
-	7. Cite elias for cover picture
-2. Change logs for future idhp:
+1. Change logs for future idhp:
 	1. Change the adaptivity rule to be triggered based on mse of past 50 time steps
 	2. Change critic output to be derivative of value function wrt mdp states, instead of wrt model states.
-3. Decisions:
-	1. Nonlinear or linear?
-		1.  probably just linear? Huge asym + sym ss model to get p, q, r models? And then tracking p, q, r?
-	2. What reference signals? 
-		1. Sine, 321, saw tooth, random step?
-	3. What fault scenarios?
-		1. Shifted cg, damaged elevator, wing icing, stuck aileron/rudder/elevator?
+	3. Change controller structure to cascaded (study how to do this using lee's work)
+	4. in the idhp_config dictionary, move rls_gamma to rls_config 
+	5. redo algo so that i dont need to do strided indexing to get lon and lat variables
+2. Decisions:
+	1. Nonlinear or linear? DECIDED
+		1.  Use nonlinear, it is working now. But need to figure out how to make faults (probably recompile the simulink code for different faults?).
+	2. What reference signals? DECIDED
+		1. Use some sinusoidal reference signals, right now i have designed the following pitch and roll rate references (no yaw rate reference):![[Pasted image 20240525141718.png]]
+		2. Planning for contingencies. First try using random smooth step functions on q and sawtooth on p. Then try using Sine on one of the rates, and smooth steps on some other.
+	3. What fault scenarios? 
+		1. Shifted cg, how to code this onto the simulink, use the same equations for changes to coefficients from the fd reader and add those changes to the simulink blocks?
+		2. damaged elevator, aileron, just divide elevator input by 2, no need to redo simulink
+		3. stuck rudder, set rudder command to constant, non need to change simulink
+		4. sudden C_Z decrease
+		5. sudden C_X decrease (which is an increase in drag, drag points to back, X force points to front)
 	4. How to make *traditional* robust controller??
 		1. LQR state feedback, mixed sensitivity H_inf?
 	5. Controller structure
 		1. Cascaded (q control, and then alpha control)
+3. Report change list
+	1. ~~change how "validity" of the short period model is talked about, add in sources from coen~~ DONE 
+		1. ~~talk about the values in a different way, say we trimmed it around some op...~~
+	2. ~~add in mention of why i used 4 neurons~~ DONE
+	3. ~~add in mention of how and where the hparams were selected, mention parallel processing~~ DONE
+	4. ~~add in statistical test results (p values and VD a values)~~ DONE 
+	5. ~~add in definitive conclusion for which controllers were most fault tolerant~~ DONE
+	6. ~~flip objective (remove the "and")~~ DONE
+	7. ~~elaborate in introduction chapter~~ DONE-ish, spend more time before thesis submission to add text to the intro
+	8. ~~add in more description of how complicated getting models can be,~~ DONE
+		1. ~~find sources? look up fpp thesis, papers, cite torenbeek to show that traditional ac design and modelling has a long history?~~ DONE
+		2. ~~add text~~ DONE
+	9. ~~expand on discussion of policy plots~~ DONE
+		1. ~~elaborate on explanation~~ DONE
+		2. ~~add plot of the policy at select discrete timesteps~~ DONE
+	10. ~~change gradient figures:~~ DONE
+		4. ~~increase label size~~ DONE
+		5. ~~standardize scales~~ DONE
+	11. ~~change boxplot scales to start from 0~~  DONE
 
+
+- checklist before submitting:
+	- spelling mistakes
+	- caption for table is before table
+	- caption for figure is after figure
+	- no wrong auto-refs
+	- make sure that variable + unit convention is followed:
+		-  For units, write in normal text not math mode
+		- Use abbreviated 
+	- make sure the order of equation and explanation is: equation first, explanation second
 ---
 
 ## Research Objective <a name="obj"></a>
@@ -713,8 +741,8 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 - write progress report summarize what happened in todays meeting
 - look into shift cg, derive the correct equations for it and note it down in latex (in the progress report)
-	- Use table 7-2 in FD reader for stability derivatives as a function of cg pos,
-	- for the control derivatives, only the pitching moment derivative wrt elevator deflection is affected by shift in cg (vertical force as derivative wrt deflection unaffected, use the following equation to derive cmde as a function of cg position: ![[Pasted image 20240416192244.png]]
+	- Use table 7-2 in FD reader (pg 198 in the pdf) for stability derivatives as a function of cg pos,
+		- for the control derivatives, only the pitching moment derivative wrt elevator deflection is affected by shift in cg (vertical force as derivative wrt deflection unaffected, use the following equation to derive cmde as a function of cg position (from pg 196 in fd reader pdf): ![[Pasted image 20240416192244.png]]
 - implement correct shifted cg
 - run shifted cg from start and middle and compare and note down observations on progress report
 
@@ -801,18 +829,132 @@ But an extra advantage that RL based controllers can have over traditional contr
 - auto hparam work on later?
 - mid term note
 - write email to frank lewis
+- what if we solve the lqr problem in real time by using RLS to recursively identify the system
 
-Thesis change list:
+### 19/5/2024
 
-1. Add in results justifying the hparams and settings i used (number of neurons, MDP state selection, action selection, hyperparameters)
-2. Add plots showing how the policy function looks like at each time step.
-3. Add in conclusion, *definitive*.
-4. Elaborate in introduction.
-5. Flip the research objective
-6. For the gradient figures
-	1. increase label size DONE
-	2. standardize scales DONE
-7. Change boxplot scales to start from 0, dont leave misleading/difficult to comprehend plots!!! DONE
-8. Go through all Erik comments and address them all.
-9. Remove the "and" in objective!!!!
-10. Fix "In answering research question xxx"
+- ask someone about this table3 s function or table3.c thing, the simulink model runs even though table3 is missing, plus the s-function calling table3 seems to just convert all the inputs to 0?
+
+
+### 21/5/2024
+
+- wow managed to finally compile the citation!! 
+![[verified_cit_compile.png]]
+- time to run 120 s with dt=0.01:
+	- nonlin: 0.206 s
+	- lin sp model: 0.25 s
+
+- my idea of obtaining faulty citation models:
+	1. go into simulink
+	2. add in blocks that models faults to the simulink model (multiply elevator effectiveness by 0.5 at t=20 seconds, change dynamics at t=20 seconds...)
+	3. compile the resulting model
+	4. repeat for whatever other faults i have
+
+- need to inspect throttle input for citation, throttle does not have effect...
+	- turns out it is because of autothrottle, currently the autothrottle stops throttle input from doing anything. But i changed the autothrottle so that it only provides variations to the user throttle input, which works better.
+	- need to find a trimming condition now bruh, maybe literally write a script to do this?
+		- Found a "trim" condition, states still oscillate for the first 10 seconds tho
+	- verifying that the python executable and the simulink model match, i gave the identical sine elevator input to both models and got the following altitude plot:
+		- ![[simulink verification sine input altitude plot.png]]
+	- verified shift cg:
+		- ![[Pasted image 20240524133141.png]]
+	- To model shift cg:
+		- model the changes in symmetric coefficients:
+			- from pg 196 in fd reader pdf:![[Pasted image 20240523162853.png]]
+			- from pg 198 in fd reader pdf: ![[Pasted image 20240523162837.png]]
+		- model changes in asymmetric coefficients, C_Y, C_l, C_n (C_Y_r derivative is of minor important apparently):
+			- from pg 250 in fd reader pdf: ![[Pasted image 20240523162931.png]]
+			- from pg 250 in fd reader pdf: ![[Pasted image 20240523162957.png]]
+			- from pg 240 in fd reader pdf: ![[Pasted image 20240523163433.png]]
+			- from pg 239 in fd reader pdf: ![[Pasted image 20240523163739.png]]
+			- from pg 215 in fd reader pdf: ![[Pasted image 20240523164138.png]]
+			- from pg 212 in fd reader pdf: ![[Pasted image 20240523164237.png]]
+			- from pg 250 in fd reader pdf: ![[Pasted image 20240523171201.png]]
+			- from pg 250 in fd reader pdf: ![[Pasted image 20240523171737.png]]
+	- To model icing:
+		- increase C_d by some percent
+		- decrease C_l by some percent
+		- find sources probably... 
+	- why don't i try simply changing these coefficients around instead?![[Pasted image 20240523175500.png]]
+
+- for now, i will leave the shift cg fault case behind, and only consider the actuator fault cases. These cases are much easier to model, and i cannot figure out a way to model cg shift.
+- In the period for obtaining nonlinear model, should also be sure to produce the env object upon finishing this work package (wp3.2). So find time to code the citation executable into some nice environment class, and have the fault trigger stuff be coded into the class as well.
+
+
+### 24/5/2024
+
+- get numba working before i start the job
+- made the minimum working skeleton of nonlinear citation class, need to flesh out the step function, returning rewards, gradients, setting up reference signals, docstrings...
+	- figured out the reward gradients wrt mdp states (i.e. wrt tracking errors), would need to implement the conversion between these gradients and gradients wrt model states, so that the actor critic update rules can function.
+
+
+### 27/5/2024
+
+- need to go through the objects.py file and figure out how to remove all the hard coded codes, so that the code can handle networks with any input and output size
+	- Eligibility traces for networks are hard coded
+	- weight update for networks are hard coded
+	- Record arrays in idhp are hard coded
+- need to also make the longitudinal lateral controller split work in the idhp class
+	- refactored the class so that stepping the networks forward one step and updating the networks by one step are done by class methods. Verified that behaviour of idhp before and after this change is identical (returns identical values).
+	- Need to initiate TWO sets of idhp (two actors, two critics, two target critics, two rls), which technically means TWO sets of hyperparameters as well but begin with just one set...
+	- Decided to just make a new class that uses the nonlinear model, instead of making one ugly class
+- Now need to figure out the weight gradients for arbitrary network sizes (but fixed to 1 hidden layer), or maybe i just hard code it again
+- turns out the shift cg scenario makes the airplane go like this: ![[Pasted image 20240528130532.png]], so maybe try doing a smooth transition?
+- Currently deriving the network jacobians, really need the general formula for this
+	- rough formulation of the network jacobians: ![[Pasted image 20240528144047.png]]
+	- Suppose we have this following hypothetical network:![[Pasted image 20240528145814.png]]
+	- the second layer weight's jacobian looks like:![[Pasted image 20240528150034.png]]
+	- the first layer weight jacobians look like:![[Pasted image 20240528145717.png]]
+
+### 29/5/2024
+
+- verified matlab python executable by plotting their difference in response: ![[Pasted image 20240529122918.png]], they are all zeros!
+- I last left work at the point where:
+	- a new idhp class is made for the nonlinear model
+	- realised i need to derive and implement the network jacobian for a bigger network, hopefully i also derive the automatic way to implement this
+- Now, i realised i dont yet need to derive the network jacobian. I can simply use the tensorflow auto-diff functions to update the networks. And then once i have tuned that a little bit, found some good network sizes, gotta familiar with this new setup, and found an idhp design that works well (maybe combined long lat controller works fine, maybe overlapping pitch roll maneuvers works fine,...), after all that i can go and properlyderive the network jacobians and implement them.
+- Regarding "choice" of model states:
+	- It would appear, from reading some of the previous theses, that it is a choice on what state variables to use when defining the aircraft state space. For e.g., even though the CitAST model's state space ahs 12 variables, Jun Hyeon's model state space is only \[q, alpha, theta, h, h^r\], and Stefan Heyer's model state space is \[q, alpha, theta, p, r, beta, phi\], even though the full CitAST state space is \[p, q, r, vtas, alpha, beta, phi, theta, psi, he, xe, ye\]. 
+	- Model state space is a design choice/variable
+	- Actually, maybe the state space which RLS identifies a model over should be the MDP state space, because reward gradient is a sparse vector when the model state space has more elements than the MDP state space???
+		- Actually yes, if we look at how the td error for the critic is computed, you will see that the RLS identified dynamics only matter to the TD error for the state variable which exists in both the MDP and the model!?
+- Do i need to grade the e lectures and grade the exam
+
+### 30/5/2024
+
+- how to model saturation and damaged elevator
+- now my idhp at least runs, right now it is:
+	- running super slow
+	- running without adapt_check
+	- running without recording _any_ variables
+
+### 31/5/2024
+
+- found out that purely proportional control of the citation for rate tracking is already difficult even with a traditional P controller.
+- possible way of framing a pid controller:
+	- use it as a benchmark/asymptotic performance mark. Show/demonstrate that idhp can reach such a mark, and that in addition to being able to reach this mark that it can adapt.
+
+### 3/6/2024
+
+- figure out good plan on how to get idhp working, maybe start by testing out various manoeuvres? Testing how a PID works for each of them? Replicated the same manoeuvres in rate and attitude and see how PID handles each? And then use that to decide which one to apply idhp on?
+- run idhp and do some small hparam tuning on etas!
+- Decided that i should try out the stefan heyer route:
+	- first train IDHP on a sinusoidal tracking task
+	- then use trained IDHP on some more realistic flight test, such as the one i designed at the beginning.
+	- found out for some reason if i multiply lateral controller output with 0 the longitudinal controller learning stops??
+	- try getting stefan's algo to work??
+
+### 4/6/2024
+- checking out stefan's code, his runs a lot faster and gives better results. Differences observed:
+	- he uses sessions and tf v1
+	- he uses full lon model states plus tracking error as network input
+	- he has an initial excitation to the airplane
+	- he uses these P matrices to convert from model states to mdp states
+- realised i lost the nasa technical note that reported on the closed loop state space models
+- algorithm works better, realised i messed up input to the two networks
+- need to do the policy colour plot for an oscillatory policy!!! DONE
+	- ![[Pasted image 20240604170146.png]]
+
+### 5/6/2024
+
+- 6.2.2 and 10.3.3 have different model answer and feedback script outputs, is the website checking student answer against model answer or script output?

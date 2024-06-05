@@ -1,6 +1,6 @@
 
 - Date & time:  24/04/2024
-- Tag: #personal
+- Tag: #personal #progress_meeting
 - Project:
 
 ---
