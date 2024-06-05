@@ -11,7 +11,7 @@ Wanted to meet with Spilios about this one research question i posed: "How well 
 Me and Erik's feeling was that the answer to this question is not useful, that it would be as if i am finding out a coin has two sides, that an adaptive controller can adapt and a fixed controller cannot adapt...
 ## Note
 
-Robustness, layers of robustness that you should have in mind when you refer to something as "robust":
+Robustness comes in layers. The layers that you should have in mind when you refer to something as "robust" are:
 	- layer 1, gain phase margins, which show relative robustness, that variations to the nominal plant will still yield stability (also performance?)...
 	- layer 2, robustness to uncertainty, that for the whole extent of possible plants given your uncertainty model (structured, unstructured) will still yield stability and/or performance
 	- layer 3, robust stability or robust performance, that you can guarantee the system is stable or even has the desired performance in the face of uncertainty, noise, disturbances, ... etc.
