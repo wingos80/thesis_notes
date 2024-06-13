@@ -17,8 +17,14 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 	1. Change the adaptivity rule to be triggered based on mse of past 50 time steps
 	2. Change critic output to be derivative of value function wrt mdp states, instead of wrt model states.
 	3. Change controller structure to cascaded (study how to do this using lee's work)
-	4. in the idhp_config dictionary, move rls_gamma to rls_config 
-	5. redo algo so that i dont need to do strided indexing to get lon and lat variables
+	4. QOL changes: 
+		1. ~~remove lateral controller :(~~ DONE
+		2. ~~make the mdp state space dimension pass on to the idhp algo and have it use that to define all the array sizes~~ DONE
+		3. redo the layer definition so that key is not layer size
+		4. ~~in the idhp_config dictionary, move rls_gamma to rls_config~~ DONE
+		5. prettify the gradient outputs from env
+		6. ~~make the saving directory be defined from idhp_nonlin.py instead of within functions.py~~ DONE
+		7. remove multiply defined variables (t_end, dt, yref, ...)
 2. Decisions:
 	1. Nonlinear or linear? DECIDED
 		1.  Use nonlinear, it is working now. But need to figure out how to make faults (probably recompile the simulink code for different faults?).
@@ -31,9 +37,7 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 		3. stuck rudder, set rudder command to constant, non need to change simulink
 		4. sudden C_Z decrease
 		5. sudden C_X decrease (which is an increase in drag, drag points to back, X force points to front)
-	4. How to make *traditional* robust controller??
-		1. LQR state feedback, mixed sensitivity H_inf?
-	5. Controller structure
+	4. Controller structure
 		1. Cascaded (q control, and then alpha control)
 3. Report change list
 	1. ~~change how "validity" of the short period model is talked about, add in sources from coen~~ DONE 
@@ -54,6 +58,7 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 		4. ~~increase label size~~ DONE
 		5. ~~standardize scales~~ DONE
 	11. ~~change boxplot scales to start from 0~~  DONE
+	12. add the research question labels, go through thesis and make sure questions are referred to using their labels
 
 
 - checklist before submitting:
@@ -69,9 +74,9 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 
 ## Research Objective <a name="obj"></a>
 
+
 > ~~*To advance the state-of-the-art RL based fault tolerant flight controllers and contribute to the safety of autonomous flight, by studying and developing novel methods of hybrid RL algorithms.*~~
 
-### **Research Objective**
 
 >~~*To advance the state-of-the-art RL based fault tolerant flight controllers and further the technological readiness level of the Flying-V, by developing a reinforcement learning based intelligent flight control system for the Flying-V.*~~
 
@@ -957,4 +962,45 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 ### 5/6/2024
 
-- 6.2.2 and 10.3.3 have different model answer and feedback script outputs, is the website checking student answer against model answer or script output?
+- ~~need to restate that the controllers are *marginally stable* and not *unstable*~~ DONE
+- Next steps:
+	- make idhp attitude tracking controller work. To do so, change the MDP state space to theta error, a reference should be given for theta, and the inputs of the idhp should be switched to theta error (which should be handled already by changing the output of the env to be theta error)
+	- Remove the lateral controller, i will focus on doing longitudinal tracking.
+
+
+### 7/6/2024
+
+- look for upper n lower ends of learning rates
+- run a couple monte carlo
+	- got really good hparam already, but airplane pitches from 0 to 20 to -10 degrees over less than 2 seconds, so now i want to check normal acceleration
+	- citation goes from +7gs to -9 gs over 3 seconds, not good, check if actuator dynamics exists in citation.
+		- to fix this, i have to train critic more aggressively, but training critic more aggressively makes it more likely to diverge, so i think best solution is to code in actuator dynamics in the citation.
+	> what if actually different warmup manoeuvres result in different behaviours in this regard? Like higher frequency sine to make this high g go away? Smaller amplitudes? Increasing amplitudes? Decreasing amplitudes?
+- run a couple faulty flights
+- make the quality of life improvements
+- start implementing jacobians and the multistep updates
+- and then do parallel hparam tuning
+
+
+## 8/6/2024
+
+- need to make detailed verification of system dynamics between .pyd and simulink file
+
+## 9/6/2024
+
+- How to compare the baseline ang augmented IDHP:
+	- compare the two in warmup, how quickly do they warmup, their total error, convergence time?
+	- compare the two in actual flight
+- plot agent commanded input and actual elevator deflection in the long plot
+
+## 11/6/2024
+
+- interesting hparams to use for comparing the 4 algorithms:
+	- etaah40_etaal2.0_etach0.9_etacl0.05_lh0.95_ll0.8
+
+## 12/6/2024
+
+- currently experimenting with CAPS
+	- it messes up with the steady state tracking, theres an offseet
+	- it can cause agent to converge to really bad network weights
+- need to go through hparams2 to see which idhpat is best

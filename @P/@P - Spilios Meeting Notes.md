@@ -22,8 +22,8 @@ Spilios posed the following more valid (in his opinion) alternative question to 
 
 Robust controllers are guaranteed to be robust, period.
 
-Spilios' remark regarding robust controller downfalls. Suppose we have a single controller which is robust for all regions of the flight envelope, that single robust controller will have certain downfalls. Primarily, its controller parameters will not vary, i.e. it is not adaptive. I followed up with a question:
-- would another downfall be that the model is linear? 
+On Spilios' remark regarding robust controller downfalls. Suppose we have a single controller which is robust for all regions of the flight envelope, that single robust controller will have certain downfalls. Primarily, its controller parameters will not vary, i.e. it is not adaptive. I followed up with a question:
+- would another downfall be that the model used is linear? 
 	- Answer: theoretically yes, practically not really, airplanes are very linear. Put it another way, nobody has complained that a robust controller is not robust.
 
 In his mind, data-driven controllers have one domain where they are the only feasible controller option, this domain are the situations where you cannot get any models simply. E.g:

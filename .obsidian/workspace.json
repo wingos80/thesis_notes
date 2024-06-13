@@ -13,28 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@P/@P - 15th Progress meeting.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "1ecbf80342115a8f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "@P/@P - Spilios Meeting Notes.md",
+                "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -69,7 +55,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 359.5
+    "width": 250.5
   },
   "right": {
     "id": "3de65c3cf609ad24",
@@ -85,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "@P/@P - Spilios Meeting Notes.md",
+                "file": "Master_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "@P/@P - Spilios Meeting Notes.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "@P/@P - Spilios Meeting Notes.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -168,23 +154,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1ecbf80342115a8f",
+  "active": "ea36ae5ab77de211",
   "lastOpenFiles": [
+    "pictures/progress_report/16th/caps_vbad.pdf",
+    "pictures/progress_report/16th/hparam_scatters.pdf",
+    "@P/@P - 8th Progress meeting.md",
+    "@P/@P - 16th Progress meeting.md",
+    "54C0BC00",
+    "pictures/progress_report/16th/without_caps.pdf",
+    "pictures/progress_report/16th/theta_tracking_p2.pdf",
+    "pictures/progress_report/16th/with_caps.pdf",
+    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/theta_tracking_p2.pdf",
+    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/Weights_evolution.pdf",
+    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/theta_tracking_p1.pdf",
+    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/seeds_used.txt",
+    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/q_error.pdf",
     "Master_notes.md",
+    "1_literature_study_notes/1st_read_notes.md",
+    "1_literature_study_notes/2nd_read_notes.md",
+    "1_literature_study_notes/3rd_read_notes.md",
+    "1_literature_study_notes/4th_read_notes.md",
+    "@P/@P - Cuda workshop.md",
+    "pictures/progress_report/16th/30 percent elevator effectiveness at 40 seconds.png",
+    "1_literature_study_notes/Previous_RL_MSc_theses.md",
     "@P/@P - 15th Progress meeting.md",
-    "pictures/progress_report/15th/new_mdp_no_warmup_manoeuvre_q_tracking_error.pdf",
-    "pictures/progress_report/15th/new_mdp_yes_warmup_manoeuvre_q_tracking_weights.pdf",
-    "pictures/progress_report/15th/new_mdp_yes_warmup_manoeuvre_q_tracking_p1.pdf",
-    "pictures/progress_report/15th/new_mdp_yes_warmup_manoeuvre_q_tracking_error.pdf",
-    "pictures/progress_report/15th/new_mdp_yes_warmup_manoeuvre_q_tracking_p2.pdf",
-    "pictures/progress_report/15th/new_mdp_no_warmup_manoeuvre_q_tracking_weightd.pdf",
-    "pictures/progress_report/15th/new_mdp_no_warmup_manoeuvre_q_tracking_p1.pdf",
-    "pictures/progress_report/15th/new_mdp_no_warmup_manoeuvre_q_tracking_p2.pdf",
-    "pictures/progress_report/15th/new_mdp_s_q_errors.pdf",
-    "pictures/progress_report/15th/new_mdp_s_q_p1.pdf",
+    "@P/@P - Spilios Meeting Notes.md",
+    "@P/@P - Interesting Companies and Organizations.md",
     "pictures/progress_report/15th/bad_policy_colorplot.jpeg",
     "pictures/Pasted image 20240604170146.png",
-    "@P/@P - Spilios Meeting Notes.md",
     "@P/@P - Vlad chat notes.md",
     "@P/@P - CitAST simulink to python notes.md",
     "@P/@P - Deltares.md",
@@ -197,15 +194,7 @@
     "@P/@P - Controller Options.md",
     "@P/@P - 12th Progress meeting.md",
     "@P/@P - 11th Progress meeting.md",
-    "@P/@P - Cuda workshop.md",
     "@P/@P - 10th Progress meeting.md",
-    "@P/@P - 9th Progress meeting.md",
-    "@P/@P - 8th Progress meeting.md",
-    "@P/@P - Archimedes and interval analysis.md",
-    "@P/@P - Extension of eligibility traces using ideas from ADAM.md",
-    "@Q/@Q - Eligibility traces for neural networks.md",
-    "@Q/@Q - What is RLS covariance windup and why does it happen.md",
-    "@Q/@Q - Eligibility trace vs momentum.md",
     "pictures/progress_report/14th/actor_update.png",
     "pictures/Pasted image 20240529122913.png",
     "pictures/Pasted image 20240529122918.png",
@@ -213,7 +202,6 @@
     "pictures/Pasted image 20240528144047.png",
     "pictures/Pasted image 20240528144445.png",
     "pictures/Pasted image 20240528145717.png",
-    "pictures/Pasted image 20240528144357.png",
     "Untitled.canvas"
   ]
 }
