@@ -985,6 +985,9 @@ But an extra advantage that RL based controllers can have over traditional contr
 ## 8/6/2024
 
 - need to make detailed verification of system dynamics between .pyd and simulink file
+	- use trim input verify state outputs are the same
+	- use sine input verify state outputs are the same
+	- verify shift cg is the same
 
 ## 9/6/2024
 
