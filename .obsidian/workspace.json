@@ -19,6 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c919a7de7e16e86b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "@P/@P - 16th Progress meeting.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -156,21 +169,22 @@
   },
   "active": "ea36ae5ab77de211",
   "lastOpenFiles": [
-    "pictures/progress_report/16th/caps_vbad.pdf",
-    "pictures/progress_report/16th/hparam_scatters.pdf",
-    "@P/@P - 8th Progress meeting.md",
     "@P/@P - 16th Progress meeting.md",
-    "54C0BC00",
-    "pictures/progress_report/16th/without_caps.pdf",
-    "pictures/progress_report/16th/theta_tracking_p2.pdf",
-    "pictures/progress_report/16th/with_caps.pdf",
-    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/theta_tracking_p2.pdf",
-    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/Weights_evolution.pdf",
-    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/theta_tracking_p1.pdf",
-    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/seeds_used.txt",
-    "pictures/progress_report/16th/etaah35_etaal5.0_etach1.4_etacl0.7_lh0.95_ll0.6/idhpat_112.66_8.56/q_error.pdf",
+    "@P/@P - 17th Progress meeting.md",
     "Master_notes.md",
+    "~$thesis gantt chart.xlsx",
+    "pictures/citast_verification/model_matching/shift_n_sine_errors.pdf",
+    "pictures/citast_verification/model_matching/sine_errors.pdf",
+    "pictures/citast_verification/model_matching/trim_errors.pdf",
+    "pictures/citast_verification/model_matching/errors.txt",
+    "pictures/citast_verification/model_matching/New Text Document.txt",
+    "pictures/citast_verification/model_matching/MATLAB_shift_n_sine_states.pdf",
+    "pictures/citast_verification/model_matching/Python_shift_n_sine_states.pdf",
+    "pictures/citast_verification/model_matching/Python_sine_states.pdf",
+    "pictures/citast_verification/model_matching/MATLAB_sine_states.pdf",
+    "pictures/progress_report/16th/hparam_scatters.png",
     "1_literature_study_notes/1st_read_notes.md",
+    "@P/@P - 8th Progress meeting.md",
     "1_literature_study_notes/2nd_read_notes.md",
     "1_literature_study_notes/3rd_read_notes.md",
     "1_literature_study_notes/4th_read_notes.md",
@@ -201,7 +215,6 @@
     "pictures/Pasted image 20240528150034.png",
     "pictures/Pasted image 20240528144047.png",
     "pictures/Pasted image 20240528144445.png",
-    "pictures/Pasted image 20240528145717.png",
     "Untitled.canvas"
   ]
 }

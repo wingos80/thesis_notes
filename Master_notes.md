@@ -967,7 +967,6 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- make idhp attitude tracking controller work. To do so, change the MDP state space to theta error, a reference should be given for theta, and the inputs of the idhp should be switched to theta error (which should be handled already by changing the output of the env to be theta error)
 	- Remove the lateral controller, i will focus on doing longitudinal tracking.
 
-
 ### 7/6/2024
 
 - look for upper n lower ends of learning rates
@@ -984,7 +983,7 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 ## 8/6/2024
 
-- need to make detailed verification of system dynamics between .pyd and simulink file
+- ~~need to make detailed verification of system dynamics between .pyd and simulink file~~ DONE
 	- use trim input verify state outputs are the same
 	- use sine input verify state outputs are the same
 	- verify shift cg is the same
@@ -1007,3 +1006,53 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- it messes up with the steady state tracking, theres an offseet
 	- it can cause agent to converge to really bad network weights
 - need to go through hparams2 to see which idhpat is best
+
+## 15/6/2024
+
+- rerun all the samples and save the rls param plots?
+	- 4 flight cases ("none, damp elev, shift cg, damp elev + sat elev")
+	- 4 algo each
+	- 100 iterations per algo
+	- 1600 flights, = 66 hours of run time :0
+
+
+## 16/6/2024
+
+- idea for result analysis:
+	- do the same split as before: warmup and flight metrics
+	- metrics to do: RSE, smoothness
+	- Plot raw trajectories?
+	- Plot mean min max?
+	- Plot mean +- sigma?
+- don't forget to transfer the midhp damp_saturate_elevator logs
+
+
+## 17/6/2024
+
+
+- after meeting with erik, decided to try running algos with rate saturated actuators. Found following source for modelling rate saturation:
+	- Stability properties and cross coupling performance of the control allocation scheme CAPIO
+	- by Yildiz and Kolmanovsky 
+- Notes from erik meeting:
+	- don't forget about observations versus mdp state space
+	- run with rate saturation
+	- need to define threshold for success and then calculate success ratio and stuff
+	- points for recommendations:
+		- no rate limits, maybe add (now added though so no need to recommend this)
+		- discussion on mdp state space
+		- increment inputs, might give good controls
+		- discussion on pareto-ness of idhp controller performance, e.g. that higher success rate means more noisy control and less noisy control means lower success rate. Could say this is akin to trade of in traditional control: balance of performant and robustness.
+	- continuous adaptive critic flight control aided with approximated plant dynamics
+- do aggressive rate saturation (lower the rate limit) and see how that performs
+	- Not very well, see exps folder "nlin/test_elevator_rate_saturation"
+- With rate saturation seems like i can get much smoother controller. So maybe do more hparam tuning and see if i can guarantee success of algo? But should consider that a) low on time and b) maybe makes augmentations less good heh.
+- Plan tmrw:
+	- Do some quick hparam tuning, maybe manual, maybe make a script to monte carlo the four algos with this rate saturated elevator (use just the damaged elevator fault case), spend maybe 80% of the day doing this, then last 20% dedicate to running or setting up the runs to gather 100 samples for each algo on each fault case. Call it end after this, write my paper, if i get better more useable results from this new batch then use it, otherwise use the old batch.
+
+## 18/6/2024
+
+- doing manual hparam search for algos with rate saturation on elevator, doing searches for the algos in the following order, try spend around 1.5 hours each
+	- IDHP - in progress (best so far (109.64_13.80): `etaah40_etaal10_etach0.5_etacl0.2_lh0.99_ll0.8`)
+	- IDHPAT - in progress (best so far (108.83_12.84) `etaah20_etaal7.5_etach0.5_etacl0.25_lh0.99_ll0.8`)
+	- MIDHP - in progress (best so far () ``) 
+	- MIDHPAT

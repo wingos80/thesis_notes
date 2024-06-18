@@ -1,0 +1,8 @@
+trim
+total p, q, r error: 0.000, 0.000, 0.000
+
+sine
+total p, q, r error: 1.093, 1.397, 0.248
+
+shift_n_sine
+total p, q, r error: 2.168, 2.638, 0.469
