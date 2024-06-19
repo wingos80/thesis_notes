@@ -1054,6 +1054,13 @@ But an extra advantage that RL based controllers can have over traditional contr
 - doing manual hparam search for algos with rate saturation on elevator, doing searches for the algos in the following order, try spend around 1.5 hours each
 	- IDHP - in progress (best so far (109.64_13.80): `etaah40_etaal10_etach0.5_etacl0.2_lh0.99_ll0.8`)
 	- IDHPAT - in progress (best so far (108.83_12.84) `etaah20_etaal7.5_etach0.5_etacl0.25_lh0.99_ll0.8`)
-	- MIDHP - in progress (best so far () ``) 
-	- MIDHPAT
+	- MIDHP - in progress (best so far () `etaah35_etaal10_etach0.5_etacl0.15_lh0.99_ll0.5`) 
+	- MIDHPAT - done (best so far () `etaah20_etaal7.5_etach0.5_etacl0.25_lh0.8_ll0.4`)
 - Try to spend tomorrow brainstorming/drafting layout of the paper (look at others for inspo n stuff)
+
+## 19/6/2024
+
+- figure out way to decrease spacing in the pdf
+- plan for intro:
+	- motivate why rl is good over gain scheduling/traditional control, then maybe motivate y its better tahn indi and ibs, then motivate why current rl algos need improving (or maybe just what can be improved instead of why)
+

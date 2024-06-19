@@ -32,8 +32,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6b4cc2e89a973b4e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "@P/@P - Spilios Meeting Notes.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -84,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@P/@P - 16th Progress meeting.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@P/@P - 16th Progress meeting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -124,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master_notes.md"
+                "file": "@P/@P - 16th Progress meeting.md"
               }
             }
           }
@@ -154,8 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 242.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,12 +180,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ea36ae5ab77de211",
+  "active": "c919a7de7e16e86b",
   "lastOpenFiles": [
-    "~$thesis gantt chart.xlsx",
-    "@P/@P - 16th Progress meeting.md",
-    "@P/@P - 17th Progress meeting.md",
     "Master_notes.md",
+    "@P/@P - Spilios Meeting Notes.md",
+    "@P/@P - Robust course notes.md",
+    "@P/@P - Phase space.md",
+    "@P/@P - LQR state feedback margins at input.md",
+    "@P/@P - Interesting Companies and Organizations.md",
+    "@P/@P - Descriptions of a random variable.md",
+    "@P/@P - Deltares.md",
+    "@P/@P - CitAST simulink to python notes.md",
+    "@P/@P - 14th Progress meeting.md",
+    "@P/@P - 13th progress meeting, Mid-term.md",
+    "@P/@P - 15th Progress meeting.md",
+    "@P/@P - Vlad chat notes.md",
+    "@P/@P - 16th Progress meeting.md",
+    "~$thesis gantt chart.xlsx",
+    "@P/@P - 17th Progress meeting.md",
     "pictures/citast_verification/model_matching/shift_n_sine_errors.pdf",
     "pictures/citast_verification/model_matching/sine_errors.pdf",
     "pictures/citast_verification/model_matching/trim_errors.pdf",
@@ -191,20 +216,8 @@
     "@P/@P - Cuda workshop.md",
     "pictures/progress_report/16th/30 percent elevator effectiveness at 40 seconds.png",
     "1_literature_study_notes/Previous_RL_MSc_theses.md",
-    "@P/@P - 15th Progress meeting.md",
-    "@P/@P - Spilios Meeting Notes.md",
-    "@P/@P - Interesting Companies and Organizations.md",
     "pictures/progress_report/15th/bad_policy_colorplot.jpeg",
     "pictures/Pasted image 20240604170146.png",
-    "@P/@P - Vlad chat notes.md",
-    "@P/@P - CitAST simulink to python notes.md",
-    "@P/@P - Deltares.md",
-    "@P/@P - 14th Progress meeting.md",
-    "@P/@P - Robust course notes.md",
-    "@P/@P - Descriptions of a random variable.md",
-    "@P/@P - LQR state feedback margins at input.md",
-    "@P/@P - Phase space.md",
-    "@P/@P - 13th progress meeting, Mid-term.md",
     "@P/@P - Controller Options.md",
     "@P/@P - 12th Progress meeting.md",
     "@P/@P - 11th Progress meeting.md",
