@@ -1056,3 +1056,4 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- IDHPAT - in progress (best so far (108.83_12.84) `etaah20_etaal7.5_etach0.5_etacl0.25_lh0.99_ll0.8`)
 	- MIDHP - in progress (best so far () ``) 
 	- MIDHPAT
+- Try to spend tomorrow brainstorming/drafting layout of the paper (look at others for inspo n stuff)
