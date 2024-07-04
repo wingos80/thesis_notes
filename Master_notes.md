@@ -1158,3 +1158,4 @@ Sm ratios (Sm threshold = 1e6):
 
 - make sure i am happy with the backgrounds n methodology sections, that i did not miss anything important to mention, and finally that it reads nicely. Then do the stat testing.
 - dooo the stat testinnggg
+- sa
