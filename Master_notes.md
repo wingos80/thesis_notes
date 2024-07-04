@@ -1157,4 +1157,4 @@ Sm ratios (Sm threshold = 1e6):
 ## 4/7/2024
 
 - make sure i am happy with the backgrounds n methodology sections, that i did not miss anything important to mention, and finally that it reads nicely. Then do the stat testing.
-- honestly, 
+- dooo the stat testinnggg
