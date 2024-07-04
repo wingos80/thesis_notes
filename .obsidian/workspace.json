@@ -16,7 +16,7 @@
                 "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": false
+                "source": true
               }
             }
           },
@@ -26,28 +26,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@P/@P - 16th Progress meeting.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6b4cc2e89a973b4e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "@P/@P - Spilios Meeting Notes.md",
+                "file": "@P/@P - 17th Progress meeting.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "@P/@P - 16th Progress meeting.md",
+                "file": "Master_notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "@P/@P - 16th Progress meeting.md",
+                "file": "Master_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -138,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "@P/@P - 16th Progress meeting.md"
+                "file": "Master_notes.md"
               }
             }
           }
@@ -168,7 +154,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242.5
+    "width": 242.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,9 +167,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c919a7de7e16e86b",
+  "active": "ea36ae5ab77de211",
   "lastOpenFiles": [
+    "pictures/inkscape/drawing.pdf_tex",
+    "pictures/inkscape/drawing.pdf",
+    "~$thesis gantt chart.xlsx",
+    "report/paper_figures/ref_theta.pdf",
+    "1_literature_study_notes/Previous_RL_MSc_theses.md",
+    "1_literature_study_notes/1st_read_notes.md",
     "Master_notes.md",
+    "74C07510",
+    "@P/@P - 17th Progress meeting.md",
+    "1_literature_study_notes/3rd_read_notes.md",
+    "report/Paper.pdf.crdownload",
+    "report/Paper.pdf",
+    "1_literature_study_notes/2nd_read_notes.md",
+    "pictures/progress_report/17th/actuator_model.png",
+    "pictures/progress_report/17th/Paper.pdf",
+    "pictures/progress_report/17th/Paper.pdf.crdownload",
+    "pictures/progress_report/17th/zoomed_Sm_inflight_boxplot_yes_saturation_damp_elevator.pdf",
+    "@P/@P - 16th Progress meeting.md",
+    "pictures/paper_boxplots/yes_rate_saturation/warmup/Sm_warmup_for_export_yes_rate_saturation_shift_cg.png",
+    "pictures/progress_report/17th/sm_discuss_Sm_inflight_for_export_no_rate_saturation_damp_elevator.pdf",
+    "1_literature_study_notes/4th_read_notes.md",
+    "pictures/progress_report/17th/RSE_inflight_for_export_no_rate_saturation_shift_cg.png",
+    "@P/@P - ASML hiring procedure.md",
     "@P/@P - Spilios Meeting Notes.md",
     "@P/@P - Robust course notes.md",
     "@P/@P - Phase space.md",
@@ -195,38 +204,17 @@
     "@P/@P - 13th progress meeting, Mid-term.md",
     "@P/@P - 15th Progress meeting.md",
     "@P/@P - Vlad chat notes.md",
-    "@P/@P - 16th Progress meeting.md",
-    "~$thesis gantt chart.xlsx",
-    "@P/@P - 17th Progress meeting.md",
-    "pictures/citast_verification/model_matching/shift_n_sine_errors.pdf",
-    "pictures/citast_verification/model_matching/sine_errors.pdf",
-    "pictures/citast_verification/model_matching/trim_errors.pdf",
-    "pictures/citast_verification/model_matching/errors.txt",
-    "pictures/citast_verification/model_matching/New Text Document.txt",
-    "pictures/citast_verification/model_matching/MATLAB_shift_n_sine_states.pdf",
-    "pictures/citast_verification/model_matching/Python_shift_n_sine_states.pdf",
-    "pictures/citast_verification/model_matching/Python_sine_states.pdf",
-    "pictures/citast_verification/model_matching/MATLAB_sine_states.pdf",
     "pictures/progress_report/16th/hparam_scatters.png",
-    "1_literature_study_notes/1st_read_notes.md",
     "@P/@P - 8th Progress meeting.md",
-    "1_literature_study_notes/2nd_read_notes.md",
-    "1_literature_study_notes/3rd_read_notes.md",
-    "1_literature_study_notes/4th_read_notes.md",
     "@P/@P - Cuda workshop.md",
     "pictures/progress_report/16th/30 percent elevator effectiveness at 40 seconds.png",
-    "1_literature_study_notes/Previous_RL_MSc_theses.md",
     "pictures/progress_report/15th/bad_policy_colorplot.jpeg",
     "pictures/Pasted image 20240604170146.png",
     "@P/@P - Controller Options.md",
     "@P/@P - 12th Progress meeting.md",
-    "@P/@P - 11th Progress meeting.md",
     "pictures/progress_report/14th/actor_update.png",
     "pictures/Pasted image 20240529122913.png",
     "pictures/Pasted image 20240529122918.png",
-    "pictures/Pasted image 20240528150034.png",
-    "pictures/Pasted image 20240528144047.png",
-    "pictures/Pasted image 20240528144445.png",
     "Untitled.canvas"
   ]
 }

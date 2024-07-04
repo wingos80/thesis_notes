@@ -16,8 +16,7 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 1. Change logs for future idhp:
 	1. Change the adaptivity rule to be triggered based on mse of past 50 time steps
 	2. Change critic output to be derivative of value function wrt mdp states, instead of wrt model states.
-	3. Change controller structure to cascaded (study how to do this using lee's work)
-	4. QOL changes: 
+	3. QOL changes: 
 		1. ~~remove lateral controller :(~~ DONE
 		2. ~~make the mdp state space dimension pass on to the idhp algo and have it use that to define all the array sizes~~ DONE
 		3. redo the layer definition so that key is not layer size
@@ -58,10 +57,16 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 		4. ~~increase label size~~ DONE
 		5. ~~standardize scales~~ DONE
 	11. ~~change boxplot scales to start from 0~~  DONE
-	12. add the research question labels, go through thesis and make sure questions are referred to using their labels
+4. Compile all my cited papers into one folder!!
 
-
-- checklist before submitting:
+- report checklist:
+	- note how in ACD the critic estimates *a* value function (no conditioning on the current policy when formulating the acd value function), versus in RL where the value function is conditioned on the policy's probability distribution?
+	- maybe try to add more description to the multi-step and elig trace subsection in the backgrounds section.
+	- make comparison of policy function with PID controlls more explicitly, because PID controllers can be framed very well in the RL context (a PID controller picks the "optimal" control action to steer the system states to whatever desired trajectory... think LQR...)
+	- check the time steps used in the thesis
+	- discuss or present how the network jacobians are derived, write down their expressions. Do this in additional results.
+	- add the research question labels, go through thesis and make sure questions are referred to using their labels
+	- elaborate in introduction chapter
 	- spelling mistakes
 	- caption for table is before table
 	- caption for figure is after figure
@@ -1015,7 +1020,6 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- 100 iterations per algo
 	- 1600 flights, = 66 hours of run time :0
 
-
 ## 16/6/2024
 
 - idea for result analysis:
@@ -1025,7 +1029,6 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- Plot mean min max?
 	- Plot mean +- sigma?
 - don't forget to transfer the midhp damp_saturate_elevator logs
-
 
 ## 17/6/2024
 
@@ -1040,8 +1043,12 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- points for recommendations:
 		- no rate limits, maybe add (now added though so no need to recommend this)
 		- discussion on mdp state space
+		- investigate using other function approximators like linear functions, or radial basis functions, or some kind of polynomial linear function, maybe even hermite functions (though this is a subset of polynomials)??
 		- increment inputs, might give good controls
+		- trying cascaded network for pitch control
+		- trying c* or q* control
 		- discussion on pareto-ness of idhp controller performance, e.g. that higher success rate means more noisy control and less noisy control means lower success rate. Could say this is akin to trade of in traditional control: balance of performant and robustness.
+		- weights would be frozen, you would never select random weights, it is too risky. However, monte carlo on weights was done in this paper since it allows for a demonstration of the algorithm's performance under a variety of network weights, so under a variety of conditions...
 	- continuous adaptive critic flight control aided with approximated plant dynamics
 - do aggressive rate saturation (lower the rate limit) and see how that performs
 	- Not very well, see exps folder "nlin/test_elevator_rate_saturation"
@@ -1062,5 +1069,92 @@ But an extra advantage that RL based controllers can have over traditional contr
 
 - figure out way to decrease spacing in the pdf
 - plan for intro:
-	- motivate why rl is good over gain scheduling/traditional control, then maybe motivate y its better tahn indi and ibs, then motivate why current rl algos need improving (or maybe just what can be improved instead of why)
+	- motivate why rl is good over gain scheduling/traditional control, then maybe motivate y its better than indi and ibs, then motivate why current rl algos need improving (or maybe just what can be improved instead of why)
 
+
+## 20/6/2024
+
+- need to fuse data back into 100 run logs....
+	- decide on what experiments to do this for:
+		- for the rate saturated runs, all fault cases
+		- for non rate saturated runs, all fault cases
+	- after fusing can start making boxplots!
+		- need to make a set for each fault case, and then for no rate saturation and with rate saturation:
+			- shift cg: 4 parallel box plots, each boxplot is the RSE or smoothness of each algo
+			- damaged elevator: 4 parallel box plots, each boxplot is the RSE or smoothness of each algo
+			- damaged and saturated elevator: 4 parallel box plots, each boxplot is the RSE or smoothness of each algo
+			- none: 4 parallel box plots, each boxplot is the RSE or smoothness of each algo
+
+## 23/6/2024
+
+- need to check resident permit, get process started:
+	- book exams, look for which exams need to do, what studying needs to be done
+	- book the exam taking longest to grade first (speaking, writing)
+- need to check zoekjaar visa, get process started:
+	- see how to apply, how long it takes to start working, cus it says i can start working whilst application is on going.
+- write progress report on monday
+
+## 24/6/2024
+
+- Move all the warmup smoothness pdfs to in flight and vice versa in the `thesis_notes\pictures\paper_boxplots\no_rate_saturation\warmup` directory 
+
+yes saturation
+Sm ratios (Sm threshold = 1e6):
+
+| Algo    | none | damaged elevator | shift cg | damaged & saturated elevator |
+| ------- | ---- | ---------------- | -------- | ----- |
+| idhp    | 0.88 | 0.88             | 0.89     | 0.89 |
+| idhpat  | 0.80 | 0.88             | 0.90     | 0.89 |
+| midhp   | 0.76 | 0.86             | 0.85     | 0.89 |
+| midhpat | 0.75 | 0.88             | 0.84     | 0.89 |
+
+no saturation
+Sm ratios (Sm threshold = 1e6):
+
+| Algo    | none | damaged elevator | shift cg | damaged & saturated elevator |
+| ------- | ---- | ---------------- | -------- | ----- |
+| idhp    | 0.22 | 0.45             | 0.67     | 0.72 |
+| idhpat  | 0.19 | 0.29             | 0.51     | 0.34 |
+| midhp   | 0.30 | 0.85             | 0.76     | 0.89 |
+| midhpat | 0.66 | 0.80             | 0.65     | 0.74 |
+
+
+## 26/6/2024
+
+- why do many journal papers not follow the format of 
+	- intro
+	- background
+	- method
+	- results and discussion
+	- conclusion
+
+## 27/6/2024
+
+- maybe make a return over time plot?
+
+## 28/6/2024
+
+- with abusive of notation, we will add the tracking error $e$ to the actor and critic cinputs, whilst keeping the MDP state domain to still only be q, theta, alpha
+
+## 1/7/2024
+
+- remember in the final week to go through the entire thesis and check off the accumulated todo list at the top of this file!!!!
+
+## 2/7/2024
+
+- see if i can make a compact IDHP pseudo code, if i can, replace the body of text with it.
+- state that in contrast to previous works, no high low adaptive learning rates are used (jun hyeon, stefan heyer)
+- get the stupid stat testing between the damn results cmon!!!!! fkkkk still didnt get it :skull emoji: 
+
+
+## 3/7/2024
+
+- add action scaling description
+- add neural network drawings
+- use the paper "deep reinforcement learning at the edge of statistical precipice" by agarwal et al for what metrics and statistics to use
+	- use interquartile means! and compare
+
+## 4/7/2024
+
+- make sure i am happy with the backgrounds n methodology sections, that i did not miss anything important to mention, and finally that it reads nicely. Then do the stat testing.
+- honestly, 

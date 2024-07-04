@@ -1,0 +1,86 @@
+%% Creator: Inkscape 1.3.2 (091e20e, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'mdp_agent_paper.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{590.22187961bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.53025051)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{mdp_agent_paper.pdf}}%
+    \put(0.49299941,0.38068233){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Agent}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{mdp_agent_paper.pdf}}%
+    \put(0.35286005,0.27911722){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\Theta_{t}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{mdp_agent_paper.pdf}}%
+    \put(0.61817661,0.221039){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Controller}\end{tabular}}}}%
+    \put(0.57060198,0.15893746){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\frac{\partial a_t}{\partial s_t}$\end{tabular}}}}%
+    \put(0.43801893,0.35484429){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$s_t$\end{tabular}}}}%
+    \put(0.43801893,0.32957373){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\frac{\partial r_t}{\partial s_t}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{mdp_agent_paper.pdf}}%
+    \put(0.24986038,0.15075875){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{mdp_agent_paper.pdf}}%
+    \put(0.67719445,0.19289479){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$s'_t$\end{tabular}}}}%
+    \put(0.74719076,0.15020068){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}$s'_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{mdp_agent_paper.pdf}}%
+    \put(0.48645415,0.08843574){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}$\lambda_{t-1}$, $\lambda'_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{mdp_agent_paper.pdf}}%
+    \put(0.49144639,0.48540501){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Environment}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{mdp_agent_paper.pdf}}%
+    \put(0.85978559,0.35575672){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$r_{t+1}, s_{t+1}, \theta_{r,t+1}$\end{tabular}}}}%
+    \put(0.85978559,0.32898493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$r_{t}, s_{t}, \theta_{r,t}$\end{tabular}}}}%
+    \put(0.1727973,0.21481087){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{mdp_agent_paper.pdf}}%
+    \put(0.59884795,0.11721872){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}(target)\\Critic\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{mdp_agent_paper.pdf}}%
+    \put(0.46635113,0.16838119){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}Actor\end{tabular}}}}%
+    \put(0.38477854,0.18141486){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{mdp_agent_paper.pdf}}%
+    \put(0.2888382,0.2694587){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}Model\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
