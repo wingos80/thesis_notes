@@ -1,0 +1,79 @@
+%% Creator: Inkscape 1.3.2 (091e20e, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'path1.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{630.21514893bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.5588612)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{path1.pdf}}%
+    \put(-0.00137982,0.07113429){\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Input Layer $\in$ $\mathcal{R}^1$\\\end{tabular}}}}%
+    \put(0.00003026,0.02999505){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Activation\end{tabular}}}}%
+    \put(0.12856791,0.02771872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}=\\\end{tabular}}}}%
+    \put(0.1494113,0.02999505){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Linear\\\end{tabular}}}}%
+    \put(0.00003026,0.00024174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Bias\end{tabular}}}}%
+    \put(0.12856791,-0.00203458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}=\\\end{tabular}}}}%
+    \put(0.1494113,0.00024174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}None\\\end{tabular}}}}%
+    \put(0.2923269,0.07080572){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hidden Layer $\in$ $\mathcal{R}^4$\\\end{tabular}}}}%
+    \put(0.29437155,0.02999505){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Activation\end{tabular}}}}%
+    \put(0.4376787,0.02771872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}=\\\end{tabular}}}}%
+    \put(0.46025975,0.02999505){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$tanh$\\\end{tabular}}}}%
+    \put(0.29437155,0.00024174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Bias\end{tabular}}}}%
+    \put(0.43757007,-0.00203458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}=\\\end{tabular}}}}%
+    \put(0.45841345,0.00024174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}None\\\end{tabular}}}}%
+    \put(0.60853374,0.07099345){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Output Layer $\in$ $\mathcal{R}^2$\end{tabular}}}}%
+    \put(0.60972232,0.02999503){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Activation\end{tabular}}}}%
+    \put(0.75407878,0.0277187){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}=\\\end{tabular}}}}%
+    \put(0.77492216,0.02999503){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$tanh$\\\end{tabular}}}}%
+    \put(0.60972232,0.00024174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Bias\end{tabular}}}}%
+    \put(0.75407878,-0.00203458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}=\\\end{tabular}}}}%
+    \put(0.77492216,0.00024174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}None\\\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

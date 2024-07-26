@@ -1,0 +1,139 @@
+%% Creator: Inkscape 1.3.2 (091e20e, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'drawing.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{595.27559055bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.41428571)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{drawing.pdf}}%
+    \put(5.90088312,1.26544336){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Aircraft Model\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{drawing.pdf}}%
+    \put(6.13764185,1.27691934){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Reward \& Output\end{tabular}}}}%
+    \put(6.16627128,1.25877787){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Function\end{tabular}}}}%
+    \put(6.16312106,1.24114664){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(\autoref{tab:mdp_env_summary})\end{tabular}}}}%
+    \put(5.90275482,1.24700664){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(\autoref{eq:sp_lti})\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{drawing.pdf}}%
+    \put(6.00904279,1.34277408){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Environment\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{drawing.pdf}}%
+    \put(6.04543653,1.04443463){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}Agent\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{drawing.pdf}}%
+    \put(6.04780872,1.31126022){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}\textit{,}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{drawing.pdf}}%
+    \put(5.09363048,1.1955495){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Agent}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{drawing.pdf}}%
+    \put(4.9172093,1.06768964){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\Theta_{t}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{drawing.pdf}}%
+    \put(5.25121561,0.99457518){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Controller}\end{tabular}}}}%
+    \put(5.19132354,0.91639581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\frac{\partial a_t}{\partial x_t}$\end{tabular}}}}%
+    \put(5.02441574,1.16302211){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$x_t$\end{tabular}}}}%
+    \put(5.02441574,1.13120911){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\frac{\partial r_t}{\partial x_t}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{drawing.pdf}}%
+    \put(4.78754344,0.90609967){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{drawing.pdf}}%
+    \put(5.32551247,0.95914453){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$s_t$\end{tabular}}}}%
+    \put(5.41363044,0.90539712){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}$s_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{drawing.pdf}}%
+    \put(5.08539055,0.8276415){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}$\lambda_{t-1}$, $\lambda'_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{drawing.pdf}}%
+    \put(5.09167493,1.32738447){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Environment}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{drawing.pdf}}%
+    \put(5.55537539,1.16417076){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$r_{t+1}, s_{t+1},x_{t+1}$\end{tabular}}}}%
+    \put(5.45741656,1.13046788){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$r_{t}, s_{t},x_{t}$\end{tabular}}}}%
+    \put(4.69052955,0.98673459){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{drawing.pdf}}%
+    \put(5.22688247,0.86387629){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}(target)\\Critic\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{drawing.pdf}}%
+    \put(5.06008295,0.92828448){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}Actor\end{tabular}}}}%
+    \put(4.95739187,0.94469254){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{drawing.pdf}}%
+    \put(4.83661275,1.05553053){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}Model\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{drawing.pdf}}%
+    \put(6.76936827,1.31206505){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.20000005}\smash{\begin{tabular}[t]{l}Agent\end{tabular}}}}%
+    \put(6.9710062,1.31206505){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.20000005}\smash{\begin{tabular}[t]{l}Plant\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{drawing.pdf}}%
+    \put(7.09524293,1.33916294){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.20000005}\smash{\begin{tabular}[t]{l}s\end{tabular}}}}%
+    \put(6.90987711,1.33916294){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.20000005}\smash{\begin{tabular}[t]{l}a\end{tabular}}}}%
+    \put(6.700913,1.33916294){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.20000005}\smash{\begin{tabular}[t]{l}s'\end{tabular}}}}%
+    \put(6.63007445,1.34670279){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.20000005}\smash{\begin{tabular}[t]{l}$\theta_r$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{drawing.pdf}}%
+    \put(7.73178438,1.17066119){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Agent}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{drawing.pdf}}%
+    \put(7.59283476,1.06995834){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\Theta_{t}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{drawing.pdf}}%
+    \put(7.85589886,1.01237318){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Controller}\end{tabular}}}}%
+    \put(7.80872812,0.95079887){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\frac{\partial a_t}{\partial s_t}$\end{tabular}}}}%
+    \put(7.67727066,1.14504251){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$s_t$\end{tabular}}}}%
+    \put(7.67727066,1.11998649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$\frac{\partial r_t}{\partial s_t}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{drawing.pdf}}%
+    \put(7.49070952,0.94268959){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{drawing.pdf}}%
+    \put(7.91441565,0.98446791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$s'_t$\end{tabular}}}}%
+    \put(7.98381772,0.94213626){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}$s'_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{drawing.pdf}}%
+    \put(7.72529468,0.88089568){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}$\lambda_{t-1}$, $\lambda'_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{drawing.pdf}}%
+    \put(7.73024454,1.27449481){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}\textbf{Environment}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{drawing.pdf}}%
+    \put(8.09545665,1.14594719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$r_{t+1}, s_{t+1}, \theta_{r,t+1}$\end{tabular}}}}%
+    \put(8.09545665,1.11940269){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$r_{t}, s_{t}, \theta_{r,t}$\end{tabular}}}}%
+    \put(7.41430068,1.00619792){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{drawing.pdf}}%
+    \put(7.83673429,0.9094343){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}(target)\\Critic\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{drawing.pdf}}%
+    \put(7.70536233,0.96016242){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}Actor\end{tabular}}}}%
+    \put(7.62448227,0.97308544){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{l}$a_t$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{drawing.pdf}}%
+    \put(7.52935643,1.06038181){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.79999995}\smash{\begin{tabular}[t]{c}Model\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{drawing.pdf}}%
+    \put(7.02169506,1.38011037){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.20000005}\smash{\begin{tabular}[t]{l}r\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{drawing.pdf}}%
+  \end{picture}%
+\endgroup%

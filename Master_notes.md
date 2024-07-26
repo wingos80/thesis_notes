@@ -60,19 +60,23 @@ File containing all miscellaneous/thinking-out-loud thoughts throughout my thesi
 4. Compile all my cited papers into one folder!!
 
 - report checklist:
+	- improvements to the paper:
+		- text in fig 3 and/or time in table 3
+		- add colour coding for the four algos in table 4 
+	- add formulae for a and t tests?
 	- note how in ACD the critic estimates *a* value function (no conditioning on the current policy when formulating the acd value function), versus in RL where the value function is conditioned on the policy's probability distribution?
 	- maybe try to add more description to the multi-step and elig trace subsection in the backgrounds section.
-	- make comparison of policy function with PID controlls more explicitly, because PID controllers can be framed very well in the RL context (a PID controller picks the "optimal" control action to steer the system states to whatever desired trajectory... think LQR...)
+	- make comparison of policy function with PID controlls more explicitly, because PID controllers can be framed very well in the RL context (a PID controller picks the "optimal" control action to steer the system states to whatever desired trajectory... think LQR...), put this in conclusion?
 	- check the time steps used in the thesis
-	- discuss or present how the network jacobians are derived, write down their expressions. Do this in additional results.
-	- add the research question labels, go through thesis and make sure questions are referred to using their labels
-	- elaborate in introduction chapter
+	- ~~discuss or present how the network jacobians are derived, write down their expressions. Do this in additional results.~~  **DONE**
+	- ~~add the research question labels, go through thesis and make sure questions are referred to using their labels~~  **DONE**
+	- ~~elaborate in introduction chapter~~  **DONE**
 	- spelling mistakes
 	- caption for table is before table
 	- caption for figure is after figure
 	- no wrong auto-refs
 	- make sure that variable + unit convention is followed:
-		-  For units, write in normal text not math mode
+		- For units, write in normal text not math mode
 		- Use abbreviated 
 	- make sure the order of equation and explanation is: equation first, explanation second
 ---
@@ -1041,7 +1045,8 @@ But an extra advantage that RL based controllers can have over traditional contr
 	- run with rate saturation
 	- need to define threshold for success and then calculate success ratio and stuff
 	- points for recommendations:
-		- no rate limits, maybe add (now added though so no need to recommend this)
+		- Perform deeper data analysis between controllers with noisey action versus smooth action, see if their weights are close, or their functions are similar (cross-correlation/cross-correlation in output? Clustering of weights and see how far the two sets are in parameter space?)
+		- Diffrent controller structure, try using cascaded control loop, inner learning with outer PID, inner and outer learning, outer learning inner PID...
 		- discussion on mdp state space
 		- investigate using other function approximators like linear functions, or radial basis functions, or some kind of polynomial linear function, maybe even hermite functions (though this is a subset of polynomials)??
 		- increment inputs, might give good controls
@@ -1158,4 +1163,26 @@ Sm ratios (Sm threshold = 1e6):
 
 - make sure i am happy with the backgrounds n methodology sections, that i did not miss anything important to mention, and finally that it reads nicely. Then do the stat testing.
 - dooo the stat testinnggg
-- sa
+
+## 5/7/2024
+
+| warmup phase | inflight case 1 | inflight case 2 | inflight case 3 | inflight case 4 | 
+| --- | --- | --- | --- | --- | 
+| Sm | Sm | Sm | Sm | Sm |
+| RSE | RSE | RSE | RSE | RSE | 
+
+5 cases, two metrics, 3 pairs, therefore:
+5*2*3 = 30 t-test
+5*2*3 = 30 a-test
+
+- all the inflight metrics can be on the same figure
+but all the warmup metrisc need to be on a seperate figure from the inflight ones
+- we can observe improvements in most metrics in most cases whether we use rate saturaiton or not. For consistency with previous research, i chose to use the no rate saturation to be put and discussed on the paper, and then rate saturation results will be discussed in the additional results sections (if i have time).
+
+
+
+## 6/7/2024
+
+# Distributional IDHP??
+
+i really want to see if there is some way to borrow the lesson learnt from DSAC, where using more statistical moments than just the mean helped with performance, can in some way translate to IDHP, which is online and much more sample efficient than DRL.

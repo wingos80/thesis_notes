@@ -13,10 +13,23 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Master_notes.md",
+                "file": "@P/@P - Greenlight meeting.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
+              }
+            }
+          },
+          {
+            "id": "054fa9b5ed7d6528",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "@P/@P - 18th Progress meeting.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           },
@@ -26,14 +39,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@P/@P - 17th Progress meeting.md",
+                "file": "Master_notes.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": false
+                "source": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -167,54 +181,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ea36ae5ab77de211",
+  "active": "85dd5a2a55a30a4a",
   "lastOpenFiles": [
-    "pictures/inkscape/drawing.pdf_tex",
-    "pictures/inkscape/drawing.pdf",
-    "~$thesis gantt chart.xlsx",
-    "report/paper_figures/ref_theta.pdf",
+    "@P/@P - IDHP(A) stats.md",
+    "@P/@P - Greenlight meeting.md",
+    "@P/@P - 18th Progress meeting.md",
+    "Master_notes.md",
+    "pictures/citast_verification/model_matching/MATLAB_and_Python_trim_states.pdf",
+    "pictures/citast_verification/model_matching/MATLAB_and_Python_sine_states.pdf",
+    "pictures/citast_verification/model_matching/MATLAB_and_Python_shift_n_sine_states.pdf",
+    "@P/@P - ASML notes.md",
+    "report/figures/03/yesrate_idhp_none_theta_tracking_p2.pdf",
+    "report/figures/03/yesrate_idhp_nonetheta_tracking_p2.pdf",
+    "report/figures/03/theta_tracking_p2.pdf",
+    "report/figures/03/norate_idhp_none_theta_tracking_p2.pdf",
+    "report/figures/03/norate_theta_tracking_p2.pdf",
+    "report/figures/03/tree_algos.pdf",
+    "report/figures/03/tree_algos.pdf_tex",
+    "pictures/actor.svg",
+    "pictures/coding/elig_experiment/rt_States_and_action.png",
+    "pictures/coding/elig_experiment/rt_PSD_alpha_responses.png",
+    "pictures/coding/elig_experiment/rt_Alpha_error.png",
+    "pictures/inkscape/drawing.svg.2024_04_24_17_52_16.0.svg",
+    "pictures/inkscape/traces.png",
+    "pictures/inkscape/drawing.svg.2024_05_01_16_40_31.0.svg",
+    "report/figures/02/elig_experiment/rewards.png",
+    "Pasted image 20240528130319.png",
+    "Pasted image 20240528130323.png",
+    "@P/@P - Interesting Companies and Organizations.md",
+    "@P/@P - Descriptions of a random variable.md",
+    "@P/@P - AE4352 MHD course notes.md",
+    "0_notes_template/@P - Personal note.md",
+    "1_literature_study_notes/2nd_read_notes.md",
+    "@P/@P - 10th Progress meeting.md",
+    "@P/@P - 17th Progress meeting.md",
     "1_literature_study_notes/Previous_RL_MSc_theses.md",
     "1_literature_study_notes/1st_read_notes.md",
-    "Master_notes.md",
-    "74C07510",
-    "@P/@P - 17th Progress meeting.md",
     "1_literature_study_notes/3rd_read_notes.md",
-    "report/Paper.pdf.crdownload",
-    "report/Paper.pdf",
-    "1_literature_study_notes/2nd_read_notes.md",
-    "pictures/progress_report/17th/actuator_model.png",
-    "pictures/progress_report/17th/Paper.pdf",
-    "pictures/progress_report/17th/Paper.pdf.crdownload",
-    "pictures/progress_report/17th/zoomed_Sm_inflight_boxplot_yes_saturation_damp_elevator.pdf",
     "@P/@P - 16th Progress meeting.md",
-    "pictures/paper_boxplots/yes_rate_saturation/warmup/Sm_warmup_for_export_yes_rate_saturation_shift_cg.png",
-    "pictures/progress_report/17th/sm_discuss_Sm_inflight_for_export_no_rate_saturation_damp_elevator.pdf",
     "1_literature_study_notes/4th_read_notes.md",
-    "pictures/progress_report/17th/RSE_inflight_for_export_no_rate_saturation_shift_cg.png",
-    "@P/@P - ASML hiring procedure.md",
     "@P/@P - Spilios Meeting Notes.md",
     "@P/@P - Robust course notes.md",
     "@P/@P - Phase space.md",
     "@P/@P - LQR state feedback margins at input.md",
-    "@P/@P - Interesting Companies and Organizations.md",
-    "@P/@P - Descriptions of a random variable.md",
     "@P/@P - Deltares.md",
     "@P/@P - CitAST simulink to python notes.md",
     "@P/@P - 14th Progress meeting.md",
     "@P/@P - 13th progress meeting, Mid-term.md",
-    "@P/@P - 15th Progress meeting.md",
-    "@P/@P - Vlad chat notes.md",
-    "pictures/progress_report/16th/hparam_scatters.png",
-    "@P/@P - 8th Progress meeting.md",
-    "@P/@P - Cuda workshop.md",
-    "pictures/progress_report/16th/30 percent elevator effectiveness at 40 seconds.png",
-    "pictures/progress_report/15th/bad_policy_colorplot.jpeg",
-    "pictures/Pasted image 20240604170146.png",
-    "@P/@P - Controller Options.md",
-    "@P/@P - 12th Progress meeting.md",
-    "pictures/progress_report/14th/actor_update.png",
-    "pictures/Pasted image 20240529122913.png",
-    "pictures/Pasted image 20240529122918.png",
     "Untitled.canvas"
   ]
 }

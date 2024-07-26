@@ -1,0 +1,3 @@
+it can be seen that in the top row of scatter plots, the points cluster along vertical lines with somewhat of an even spacing. These line clusters are a result of experiments where the same number of controllers converged to an extremely unusable policy. Specifically, policies which ended up causing the agent to command full elevator deflection as soon as the elevator inversion fault was triggered. For instance, the left most line corresponds to experiments which did not have any controllers converge to such a policy, the line cluster one-over are experiments with one such controller, the line one-more-over are experiments with 2 such controllers, and so on. 
+
+
