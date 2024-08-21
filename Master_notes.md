@@ -1186,3 +1186,56 @@ but all the warmup metrisc need to be on a seperate figure from the inflight one
 # Distributional IDHP??
 
 i really want to see if there is some way to borrow the lesson learnt from DSAC, where using more statistical moments than just the mean helped with performance, can in some way translate to IDHP, which is online and much more sample efficient than DRL.
+
+
+## 12/8/2024
+
+- look at the hk voter registration form
+- look for job
+- maybe work on thesis
+
+
+## 13/8/2024
+
+- regarding verification of my IDHP implementation:
+	- i compared my implementation with that of others, through looking at the controller's time traces and comparing code, where it was seen that they're more or less similar. Therefore, if it looks like a duck, walks like a duck, quacks like a duck, then it is a duck. 
+
+## 20/8/2024
+
+- look at printing the thesis
+	- ![[Pasted image 20240820151845.png]]
+- work on slides
+	- TODO:
+		- Find a video of some kind of actuator fault to put in *inspiration* slide
+		- Use animations to show the reasons on *motivation* slide
+		- clean the subtitles on the chapter slides
+	- Order:
+		1. **Opening**: Reinforcement learning for fault tolerant flight 
+		2. **Inspiration**: find a list of crashes due to faults? !!
+		3. **Outline**:
+			1. Objective
+			2. Backgrounds
+			3. Methods
+			4. Experiments
+			5. Results
+			6. Conclusion
+		4. **Objective**: motivations for reinforcement learning to flight control, culminate in the research objective and questions. E.g. This is worthwhile to pursue partly because of pure unadulterated technological enthusiasm, who doesn't want an airplane that learns to fly on it's own. But there are also serious practical benefits to this
+		5. **Backgrounds**: what is reinforcement learning, how does it work with flight control?
+		6. **Methods**: IDHP, novelty: trying to experiment with eligibility traces and multi-step updates (learn faster = recover from faults better?)
+		7. **Experiments**: 90 seconds flight with some warm up and then executing a flight maneuvre, think of this as giving some student pilot 1 minute of time with an airplane and then telling them to start flying some maneuvers, luckily for the student this maneuver will be pretty simple. (total flight time was kept simple to keep data generation times down). What the student pilot doesn't know is that suddenly during the maneuvre, I am going to mess with the airplane, and the student has to adapt to that tom foolery. (cg shift fault has the cg of aircraft moved towards nose by 0.5)
+		8. **Results**: using t test and a test to see if my proposals improved the algorithm, and by "how much" each one improved it by. Then show that MIDHP(lambda) is the best!
+		9. **Conclusion**: relate to my first story of the various crashes, relate to the research objective and questions, then say thanks.
+	- 
+- look at the hk voter registration form
+- look at numerics quant trader tests
+
+
+
+
+
+1. SERA
+2. AMS
+3. GAMMA
+4. SERAI
+5. CAMERA
+6. AMPS
