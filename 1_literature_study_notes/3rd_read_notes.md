@@ -358,7 +358,7 @@ MBPO from item 18
 
 ---
 
-## Item 21: # Adaptive optimal control for continuous-time linear systems based on policy iteration
+## Item 21: Adaptive optimal control for continuous-time linear systems based on policy iteration
 
 
 ### Notes-
