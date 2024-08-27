@@ -1221,9 +1221,10 @@ i really want to see if there is some way to borrow the lesson learnt from DSAC,
 			6. Conclusion
 		4. **Objective**: motivations for reinforcement learning to flight control, culminate in the research objective and questions. E.g. This is worthwhile to pursue partly because of pure unadulterated technological enthusiasm, who doesn't want an airplane that learns to fly on it's own. But there are also serious practical benefits to this...
 		5. **Backgrounds**: what is reinforcement learning, what algorithm to choose!? How does it work with flight control? Mention what automatic flight control is (the autopilot, pilot sets altitude, climb rate, pitch angle... And the autopilot automatically steers the aircraft to flow that commands, aka the "reference signal")
-		6. **Methods**: present IDHP, describe the algo more (actor, critic, model), describe the novelty: trying to experiment with eligibility traces and multi-step updates (learn faster = recover from faults better?)
-		7. **Experiments**: 90 seconds flight with some warm up and then executing a flight maneuvre, think of this as giving some student pilot 1 minute of time with an airplane and then telling them to start flying some maneuvers, luckily for the student this maneuver will be pretty simple. (total flight time was kept simple to keep data generation times down). What the student pilot doesn't know is that suddenly during the maneuvre, I am going to mess with the airplane, and the student has to adapt to that tom foolery. (cg shift fault has the cg of aircraft moved towards nose by 0.5)
+		6. **Methods 1**: present IDHP, describe the algo more (actor, critic, model), describe the novelty: trying to experiment with eligibility traces and multi-step updates (learn faster = recover from faults better?)
+		7. **Methods 2**: 90 seconds flight with some warm up and then executing a flight maneuver, think of this as giving some student pilot 1 minute of time with an airplane and then telling them to start flying some maneuvers, luckily for the student this maneuver will be pretty simple. (total flight time was kept simple to keep data generation times down). What the student pilot doesn't know is that suddenly during the maneuver, I am going to mess with the airplane, and the student has to adapt to that tom foolery. (cg shift fault has the cg of aircraft moved towards nose by 0.5)
 		8. **Results**: using t test and a test to see if my proposals improved the algorithm, and by "how much" each one improved it by. Then show that MIDHP(lambda) is the best!
+			1. Maybe take snapshots of the time traces and talk about those results? Figure if i should do this? How it could be best done? What snapshots to show??
 		9. **Conclusion**: relate to my first story of the various crashes, relate to the research objective and questions, then say thanks.
 	- 
 - look at the hk voter registration form 25th
@@ -1241,3 +1242,35 @@ What makes SAC an off-policy algorithm according to Casper Teirlinck:
 ## 24/8/2024
 
 - dont forget to change the thesis! Make sure paper intro of warmup phase is adequate, look at RLS model changes see everything is in order, go look at the thesis!!!!!! Once all done, upload to repo.
+
+b748:
+VTAS = 118.322 ms
+roc = 12.7 ms
+
+cessna citation 2 c550
+VTAS = 74.6 ms
+roc = 10.16
+
+![[Pasted image 20240825190239.png]]
+![[Pasted image 20240825192957.png]]
+
+
+## 26/8/2024
+
+shouldve asked for more input on how to design the experiments, or ask for comment on what he thinks about the maneuvre/warmup split i used.
+
+## 27/8/2024
+
+TODO LIST GRADUATION:
+- unenroll
+- finalize edits to paper and thesis report and upload to repo
+
+agenda- find word to put above the overview
+
+methods section- add slide explain eligibility traces and multistep in the background 
+
+slide 14- explain why idhp over sac (what is sac? what is td3?)
+
+slide 18- state it is current sota 
+
+- reframe how warmup phase n manuvre phase is talked about
