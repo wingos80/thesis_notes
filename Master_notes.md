@@ -1265,12 +1265,14 @@ TODO LIST GRADUATION:
 - unenroll
 - finalize edits to paper and thesis report and upload to repo
 
-agenda- find word to put above the overview
+TODO LIST SLIDES:
+- finish conclusion slides
+- Add pictures of n-step and elig in slide 20
+- reframe how warmup phase n maneuvre phase is talked about OR clearly explain the need for warmup versus no maneuve
+- ~~methods section- add slide explain eligibility traces and multistep in the background ~~
+	- I cannot see a good way of doing this without adding too many slides to the backgrounds section. Keeping it in the methods section allows me to naturally segue into elig and n-step (current state of the art of idhp is xyz, however, there also exists elig and n-step algorithms, so what if we figure out a way to augment these theories into the idhp algorithm?)
+- ~~slide 14- explain why idhp over sac (what is sac? what is td3?)~~
+- ~~slide 18- state it is current SOTA, emphasize how the elig traces and n-step idhp are novelties~~
+- agenda- find word to put above the overview
 
-methods section- add slide explain eligibility traces and multistep in the background 
-
-slide 14- explain why idhp over sac (what is sac? what is td3?)
-
-slide 18- state it is current sota 
-
-- reframe how warmup phase n manuvre phase is talked about
+normal airlines pull abut 1.3 gs max.
