@@ -24,8 +24,9 @@ Covariance windup is when the covariances of the estimator increases exponential
 
 There are certain steps in the RLS algorithm that requires some sort of division or inversion of matrices, so eventually a division by zero would happen when the system is not excited. 
 
-### Mathematical Proof
+### Mathematical Proof...?
 
+Try to show that the norm of P matrix explodes to infinity when there is **no** persistent excitation.
 
 $$
 \begin{align*}

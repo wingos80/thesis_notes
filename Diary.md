@@ -1,4 +1,4 @@
-# Master Notes
+[]()# Master Notes
 
 
 File containing all miscellaneous/thinking-out-loud thoughts throughout my thesis.
